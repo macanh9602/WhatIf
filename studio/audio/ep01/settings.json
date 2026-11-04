@@ -1,0 +1,326 @@
+{
+ "duration": 162.2,
+ "bpm": 104,
+ "seed": 10101,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "music_sections": [
+  [
+   "Hook: green drains",
+   0,
+   6.2,
+   -14,
+   "pulse"
+  ],
+  [
+   "Morning montage",
+   6.2,
+   41.6,
+   -14,
+   "bounce"
+  ],
+  [
+   "Eyes, colours, night",
+   41.6,
+   82.0,
+   -15,
+   "explain"
+  ],
+  [
+   "Turn: the part that hurts",
+   82.0,
+   87.0,
+   -18,
+   "pad"
+  ],
+  [
+   "Cooling, ice, snowball",
+   87.0,
+   123.6,
+   -14,
+   "dark"
+  ],
+  [
+   "Frozen pink planet",
+   123.6,
+   133.0,
+   -17,
+   "pad"
+  ],
+  [
+   "You see: the leaf",
+   133.0,
+   151.6,
+   -15,
+   "warm"
+  ],
+  [
+   "Green returns",
+   151.6,
+   162.2,
+   -13,
+   "resolve"
+  ]
+ ],
+ "theme": [
+  [
+   0,
+   72
+  ],
+  [
+   0.5,
+   76
+  ],
+  [
+   1,
+   79
+  ],
+  [
+   2,
+   77
+  ],
+  [
+   2.5,
+   76
+  ],
+  [
+   3,
+   74
+  ],
+  [
+   4,
+   72
+  ],
+  [
+   4.5,
+   74
+  ],
+  [
+   5,
+   76
+  ],
+  [
+   6,
+   79
+  ],
+  [
+   7,
+   76
+  ]
+ ],
+ "major_chords": [
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ]
+ ],
+ "minor_chords": [
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   38,
+   45,
+   50,
+   53
+  ],
+  [
+   40,
+   47,
+   52,
+   56
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -15,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "sfx": [
+  [
+   1.4,
+   "whoosh",
+   1.2,
+   -24,
+   0,
+   "green drains from the horizon"
+  ],
+  [
+   6.15,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   7.55,
+   "whoosh",
+   0.6,
+   -22,
+   -0.2,
+   "curtains swish open"
+  ],
+  [
+   18.3,
+   "roll",
+   4.6,
+   -30,
+   0.3,
+   "push mower rolling"
+  ],
+  [
+   32.99,
+   "click",
+   0.12,
+   -22,
+   0.4,
+   "light switches to amber"
+  ],
+  [
+   34.01,
+   "click",
+   0.12,
+   -22,
+   0.4,
+   "amber off, green slot dark"
+  ],
+  [
+   35.06,
+   "boing",
+   0.4,
+   -26,
+   0,
+   "shrug"
+  ],
+  [
+   38.0,
+   "tape",
+   1.4,
+   -30,
+   0,
+   "dimmer knob turning"
+  ],
+  [
+   56.24,
+   "whoosh",
+   0.3,
+   -24,
+   0,
+   "sunglasses slap on"
+  ],
+  [
+   61.39,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "ring"
+  ],
+  [
+   80.35,
+   "thump",
+   0.25,
+   -18,
+   -0.2,
+   "bonk on the lamppost"
+  ],
+  [
+   80.45,
+   "boing",
+   0.5,
+   -24,
+   -0.2,
+   "dizzy"
+  ],
+  [
+   122.29,
+   "flash",
+   0.6,
+   -22,
+   0,
+   "Snowball Earth reveal"
+  ],
+  [
+   132.23,
+   "tink",
+   0.25,
+   -24,
+   0.3,
+   "bud pops"
+  ],
+  [
+   152.0,
+   "flash",
+   0.8,
+   -22,
+   0,
+   "green comes back"
+  ],
+  [
+   159.89,
+   "bell",
+   0.8,
+   -26,
+   0,
+   "the gift"
+  ]
+ ]
+}

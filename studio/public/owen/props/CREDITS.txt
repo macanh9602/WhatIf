@@ -1,0 +1,8 @@
+microwave.glb: "Kitchen Microwave" by Kenney, https://poly.pizza/m/vUsvf2HGDv. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+toaster.glb: "Toaster" by Kenney, https://poly.pizza/m/wALulTo6gm. CC0 1.0
+stove.glb: "Kitchen Stove" by Kenney, https://poly.pizza/m/kTJU2y4R15. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+bookcase_books.glb: "Bookcase with Books" by Quaternius, https://poly.pizza/m/tACDGJ4CGW. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+houseplant.glb: "Houseplant" by Quaternius, https://poly.pizza/m/bfLOqIV5uP. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+tree.glb: "Tree" by Quaternius, https://poly.pizza/m/9nvGuZlbpE. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+palm.glb: "Palm Tree" by Quaternius, https://poly.pizza/m/nr1B5DbICA. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+duck.glb: "Rubber Duck" by CreativeTrio, https://poly.pizza/m/oH3dEdlDpB. Licence at https://creativecommons.org/publicdomain/zero/1.0/
