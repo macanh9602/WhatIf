@@ -1,0 +1,302 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000000715254,
+    "true_peak_dbtp": -1.7271140159797151,
+    "lra_lu": 2.269751482681567,
+    "sample_peak_dbfs": -1.739662566104574
+  },
+  "voice": {
+    "integrated_lufs": -16.000123553904068,
+    "true_peak_dbtp": -1.779742462122085,
+    "lra_lu": 2.2903984559594512,
+    "sample_peak_dbfs": -1.7951006981403737
+  },
+  "music": {
+    "integrated_lufs": -37.55707709352807,
+    "true_peak_dbtp": -16.83727509561092,
+    "lra_lu": 4.263823835625551,
+    "sample_peak_dbfs": -16.842802470641992
+  },
+  "sfx": {
+    "integrated_lufs": -35.186402299655256,
+    "true_peak_dbtp": -10.813658591334608,
+    "lra_lu": 8.201138069581823,
+    "sample_peak_dbfs": -10.845071936459776
+  },
+  "master_gain_db": -1.7507714307989186,
+  "voice_gain_db": -1.7507714307989186,
+  "source_duration_seconds": 95.71666666666667,
+  "source_sha256": "c1b32f053a55b300dd62d9543e783317ff6207315c132f9e73650b31bd4b8bbb",
+  "words_sha256": "1aa89bef7319bed8d1fbf8e820d1d18f4b3c53b7ad7783bd637c743dba1ea378",
+  "music_sections": [
+    {
+      "name": "Hook: the richest teenagers",
+      "start": 0,
+      "end": 6.5,
+      "base_margin": -14,
+      "gain_db": -7.524539947275784
+    },
+    {
+      "name": "The menu, the deal, level-ups",
+      "start": 6.5,
+      "end": 28.5,
+      "base_margin": -14,
+      "gain_db": -7.928269058671415
+    },
+    {
+      "name": "The world does the math",
+      "start": 28.5,
+      "end": 53.6,
+      "base_margin": -14,
+      "gain_db": -1.8099621630748004
+    },
+    {
+      "name": "Banks lend years",
+      "start": 53.6,
+      "end": 57.0,
+      "base_margin": -16,
+      "gain_db": 6.96114080598997
+    },
+    {
+      "name": "You see: discounting",
+      "start": 57.0,
+      "end": 71.2,
+      "base_margin": -15,
+      "gain_db": -6.870623600953724
+    },
+    {
+      "name": "Nature plays the game: dogs",
+      "start": 71.2,
+      "end": 92.5,
+      "base_margin": -15,
+      "gain_db": -1.7802040806988089
+    },
+    {
+      "name": "The question",
+      "start": 92.5,
+      "end": 97.0,
+      "base_margin": -13,
+      "gain_db": -9.214518345050145
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 4.87,
+      "end": 5.2700000000000005,
+      "kind": "tink",
+      "description": "coins of years sparkle",
+      "target": -32.249352123105844,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.45,
+      "end": 6.95,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.78,
+      "end": 9.18,
+      "kind": "whoosh",
+      "description": "menu pops",
+      "target": -32.249352123105844,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.55,
+      "end": 9.67,
+      "kind": "click",
+      "description": "+1 level highlight",
+      "target": -30.249352123105844,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.61,
+      "end": 10.729999999999999,
+      "kind": "click",
+      "description": "-1 year highlight",
+      "target": -30.249352123105844,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.43,
+      "end": 18.03,
+      "kind": "whoosh",
+      "description": "last year peels off",
+      "target": -34.249352123105844,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.99,
+      "end": 20.59,
+      "kind": "flash",
+      "description": "level up 1",
+      "target": -28.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.87,
+      "end": 21.470000000000002,
+      "kind": "flash",
+      "description": "level up 2",
+      "target": -28.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.8,
+      "end": 26.8,
+      "kind": "steps",
+      "description": "running",
+      "target": -36.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.64,
+      "end": 28.04,
+      "kind": "boing",
+      "description": "ten years gone",
+      "target": -32.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.7,
+      "end": 38.400000000000006,
+      "kind": "flash",
+      "description": "superhero aura",
+      "target": -28.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.18,
+      "end": 44.48,
+      "kind": "tink",
+      "description": "hourglass",
+      "target": -34.249352123105844,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.04,
+      "end": 51.74,
+      "kind": "bell",
+      "description": "gold medal",
+      "target": -32.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.68,
+      "end": 53.08,
+      "kind": "boing",
+      "description": "retired at 41",
+      "target": -32.249352123105844,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 56.18,
+      "end": 56.38,
+      "kind": "stamp",
+      "description": "12% stamp",
+      "target": -28.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 69.41,
+      "end": 69.91,
+      "kind": "whoosh",
+      "description": "credit card slides in",
+      "target": -32.249352123105844,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.47,
+      "end": 79.97,
+      "kind": "whoosh",
+      "description": "Great Dane appears",
+      "target": -34.249352123105844,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 84.18,
+      "end": 84.48,
+      "kind": "tink",
+      "description": "Chihuahua appears",
+      "target": -32.249352123105844,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 87.5,
+      "end": 87.7,
+      "kind": "stamp",
+      "description": "study card",
+      "target": -28.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 95.2,
+      "end": 95.32000000000001,
+      "kind": "click",
+      "description": "menu click",
+      "target": -30.249352123105844,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999769307724897,
+    "p10": 16.598387556576395,
+    "median": 22.50772875884469
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 4656000,
+    "duration_seconds": 97.0,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

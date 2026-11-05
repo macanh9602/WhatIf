@@ -5,12 +5,23 @@ Vertical 50-60 s shorts. Each episode answers one absurd "what if" with real phy
 - Script formula: video-pipeline `references/story.md` + the hypothetical format in `_ref/STUDY.md`
   (consequence-as-fact hook → "Imagine you…" → consequences you can see → "You see," mechanism → ironic payoff).
 - Voice of the answer: literal, honest numbers, deadpan understatement. Every number is computed and sourced in SCRIPT.md.
-- One recurring protagonist "you" (cast sheet to approve before ep01 stills). Story, characters, voice are OUR OWN.
+- Length: ~1:05-1:15 after the 1.1x speed-up (user 2026-11-05, from ep04; ep01-03 were ~1:30). Publish 07:00 VN, one per day.
+- Ops: `node ops/upload.mjs` (schedule), evening report 21:00 (`ops/report.cmd` → bible/reports/<date>.md).
+- Identity (user decisions 2026-11-05):
+  - Look: the reference's construction (bean heads + bean torsos, 2.5D form shading, thin ink limbs, small detailed hair /
+    accessories that never cover the brows), navy card ink, 3D ink world + 2D blueprint inserts for the "how it works" beat.
+  - Lead "you": one curly hair on a pale bean head (follows motion) + red varsity jacket, white tee, blue jeans. Same look in
+    every shot. Cast: eps/people.ts (Neighbor with suspenders, Grandma with bow tie, Teen, Runner).
+  - Narrator: the "Theo" LibriVox clone (reused on purpose). Captions: Segoe UI Black, navy stroke, cyan current word.
 
 ## Skills (D:/DucanBag/_Trick/_Short_Skill/skills)
-video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (decision pending, see ep01 notes).
+video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (studio from templates/studio).
 
 ## Continuity log
 | ep | topic | status |
 |---|---|---|
-| 01 | What if green didn't exist | script v1, waiting approval #1 |
+| 01 | What if green didn't exist | v2 rebuilt on the clean studio; 1.1x (1:28) published 2026-11-05 07:00 (rGsbDC-srRg) |
+| 02 | What if you could change your weight like volume | v1; 1.1x (1:22) published 2026-11-05 07:00 (K8_9z4otNiI) |
+| 03 | What if leveling up cost you years of your life | v1; 1.1x (1:28) published 2026-11-05 07:00 (U8LgA5o3et0) |
+| 04 | What if humans had a second face on the back of their heads | v1; 1.1x (1:14) published 2026-11-05 07:00 (S_5RbYfQy64) |
+| 05 | What if everyone on Earth ground their teeth at the same time | v1; 1.1x (1:14) published 2026-11-05 07:00 (5mWsXt0IXAc) |

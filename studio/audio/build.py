@@ -1,6 +1,6 @@
-"""Rebuild Owen Ep01 v3 audio: python audio/build.py. No downloads or package installs.
+"""Rebuild an episode's audio: EP=<ep> python audio/build.py. No downloads or package installs.
 
-All writes are confined to audio/ and public/owen/<ep>/mix.wav. WAV IO uses stdlib
+All writes are confined to audio/ and public/eps/<ep>/mix.wav. WAV IO uses stdlib
 wave via dsp.py; ffmpeg only decodes the supplied MP3 and cross-checks EBU R128.
 """
 import os
@@ -21,8 +21,8 @@ import effects
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-EP = os.environ.get('EP') or sorted(d.name for d in (ROOT/'src/videos/owen/eps').iterdir() if re.fullmatch(r'ep\d+', d.name))[-1]  # same rule as scripts/ep.mjs
-PUB = ROOT / 'public/owen' / EP
+EP = os.environ.get('EP') or sorted(d.name for d in (ROOT/'src/videos/engine/eps').iterdir() if re.fullmatch(r'ep\d+', d.name))[-1]  # same rule as scripts/ep.mjs
+PUB = ROOT / 'public/eps' / EP
 # ep01 keeps its files in audio/; later episodes get audio/<ep>/ (settings.json in, stems + report out), D9
 WORK = HERE / EP  # every episode keeps its audio in audio/<ep>/
 FINAL = PUB / 'mix.wav'
@@ -147,13 +147,13 @@ def report(cfg, words, v, m, s, y, g, sections, cues, stats, summary):
     }
     stats['checks'] = checks
     (WORK/'measurements.json').write_text(json.dumps(stats, indent=2)+'\n', encoding='utf-8')
-    lines = ['# Owen Ep01 v3 — The Broken Arm: audio cues', '',
+    lines = [f'# {EP} audio cues', '',
              'Nhạc và SFX được tổng hợp bằng Python/numpy/scipy; không dùng sample, download hoặc melody có sẵn. '
              'Reuse DSP/instrument/SFX building blocks từ template `claude-animated-shorts/templates/audio/`; '
              'melody và arrangement mới hoàn toàn.', '',
              'Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue nằm trong `audio/settings.json`.', '',
              '## Deliverables', '',
-             f"- `public/owen/<ep>/mix.wav`: 48 kHz, stereo, PCM 24-bit, **{y.shape[1]:,} frames = {cfg['duration']:.3f} s**.",
+             f"- `public/eps/<ep>/mix.wav`: 48 kHz, stereo, PCM 24-bit, **{y.shape[1]:,} frames = {cfg['duration']:.3f} s**.",
              f"- Supplied voice: **{stats['source_duration_seconds']:.3f} s**; `words.json` giữ nguyên timing và speaker tags (`who`).",
              '- `audio/voice.wav`: voice MP3 được decode/resample 48 kHz, không đổi timing.',
              '- `audio/stem_voice.wav`, `stem_music.wav`, `stem_sfx.wav`: stems tại final gain, trước master limiter.',
@@ -282,7 +282,7 @@ def main():
     summary = ffmpeg_check()
     log(summary)
     report(cfg, words, v, m, s, y_disk, gain, sections, cues, stats, summary)
-    log('PASS: exact 63.000 s / 48 kHz / stereo / 24-bit, loudness, true peak, speech margins, silent stop and fades.')
+    log(f'PASS: exact {cfg["duration"]:.3f} s / 48 kHz / stereo / 24-bit, loudness, true peak, speech margins, silent stop and fades.')
 
 
 if __name__ == '__main__':

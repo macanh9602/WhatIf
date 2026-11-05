@@ -4,9 +4,9 @@
 # act: 6 frames per shot at 270 x 480, faces readable across each beat, for the producer acting review (fb0036)
 # big: 2 frames per shot (1/3, 2/3) at 540 x 960 for the animation-lead review (art defects need real pixels)
 # Per shot 4 frames (start, 1/3, 2/3, end) with burned captions, shots in screen order, `per_sheet` shots per image,
-# plus transcript.md (narration words with times from public/owen/<ep>/words.json) and index.md (sheet -> shots, times).
+# plus transcript.md (narration words with times from public/eps/<ep>/words.json) and index.md (sheet -> shots, times).
 import csv, json, os, re, subprocess, sys
-EP = os.environ.get("EP") or sorted(d for d in os.listdir("src/videos/owen/eps") if re.fullmatch(r"ep\d+", d))[-1]  # same rule as scripts/ep.mjs
+EP = os.environ.get("EP") or sorted(d for d in os.listdir("src/videos/engine/eps") if re.fullmatch(r"ep\d+", d))[-1]  # same rule as scripts/ep.mjs
 from PIL import Image, ImageDraw
 
 FPS = 30
@@ -47,7 +47,7 @@ if __name__ == "__main__":
         name = f"sheet_{k // per + 1:02d}.jpg"
         sheet.save(os.path.join(out, name), quality=88)
         index.append(f"- {name}: " + ", ".join(f"shot {s} ({a / FPS:.1f}-{(b + 1) / FPS:.1f} s)" for s, a, b in group))
-    words = json.load(open(f"public/owen/{EP}/words.json", encoding="utf-8"))
+    words = json.load(open(f"public/eps/{EP}/words.json", encoding="utf-8"))
     words = words.get("words", words) if isinstance(words, dict) else words
     # words.json has no punctuation: a new line at every pause > 0.25 s
     lines, cur, t0 = [], [], None

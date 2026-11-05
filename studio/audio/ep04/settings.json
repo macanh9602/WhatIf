@@ -1,0 +1,389 @@
+{
+ "bpm": 104,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   72
+  ],
+  [
+   0.5,
+   76
+  ],
+  [
+   1,
+   79
+  ],
+  [
+   2,
+   77
+  ],
+  [
+   2.5,
+   76
+  ],
+  [
+   3,
+   74
+  ],
+  [
+   4,
+   72
+  ],
+  [
+   4.5,
+   74
+  ],
+  [
+   5,
+   76
+  ],
+  [
+   6,
+   79
+  ],
+  [
+   7,
+   76
+  ]
+ ],
+ "major_chords": [
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ]
+ ],
+ "minor_chords": [
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   38,
+   45,
+   50,
+   53
+  ],
+  [
+   40,
+   47,
+   52,
+   56
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -15,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 81.0,
+ "seed": 40404,
+ "music_sections": [
+  [
+   "Hook: the back face",
+   0,
+   5.65,
+   -14,
+   "pulse"
+  ],
+  [
+   "Seeing all around, the queue",
+   5.65,
+   21.93,
+   -14,
+   "bounce"
+  ],
+  [
+   "Sleeping",
+   21.93,
+   32.69,
+   -15,
+   "bounce"
+  ],
+  [
+   "The brain, nature tried",
+   32.69,
+   42.5,
+   -15,
+   "explain"
+  ],
+  [
+   "Rabbits: prey",
+   42.5,
+   51.89,
+   -15,
+   "dark"
+  ],
+  [
+   "Hunters: depth",
+   51.89,
+   65.14,
+   -15,
+   "explain"
+  ],
+  [
+   "Not safer: prey",
+   65.14,
+   71.38,
+   -15,
+   "dark"
+  ],
+  [
+   "Ancestors chased",
+   71.38,
+   76.39,
+   -14,
+   "warm"
+  ],
+  [
+   "The question",
+   76.39,
+   81.0,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   0.3,
+   "steps",
+   3.4,
+   -30,
+   0.3,
+   "neighbour tiptoes"
+  ],
+  [
+   4.15,
+   "whoop",
+   0.4,
+   -22,
+   0.3,
+   "neighbour startled"
+  ],
+  [
+   5.6,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   6.4,
+   "whoosh",
+   0.9,
+   -28,
+   0,
+   "front cone sweeps"
+  ],
+  [
+   10.0,
+   "stamp",
+   0.3,
+   -26,
+   0,
+   "blind spot"
+  ],
+  [
+   11.3,
+   "whoosh",
+   1.2,
+   -26,
+   0,
+   "second cone sweeps"
+  ],
+  [
+   14.4,
+   "bell",
+   0.6,
+   -26,
+   0,
+   "the whole circle"
+  ],
+  [
+   19.5,
+   "tink",
+   0.25,
+   -24,
+   0,
+   "the stare"
+  ],
+  [
+   24.2,
+   "thump",
+   0.25,
+   -22,
+   0,
+   "lies on the back"
+  ],
+  [
+   25.4,
+   "tape",
+   0.4,
+   -28,
+   0,
+   "squash"
+  ],
+  [
+   27.5,
+   "thump",
+   0.25,
+   -22,
+   0,
+   "rolls onto the front"
+  ],
+  [
+   28.4,
+   "tape",
+   0.4,
+   -28,
+   0,
+   "squash"
+  ],
+  [
+   31.1,
+   "whoosh",
+   0.5,
+   -28,
+   0,
+   "rolls onto the side"
+  ],
+  [
+   37.3,
+   "click",
+   0.12,
+   -22,
+   0,
+   "two pictures pop"
+  ],
+  [
+   38.7,
+   "tink",
+   0.6,
+   -24,
+   0,
+   "dizzy stars"
+  ],
+  [
+   43.7,
+   "whoosh",
+   0.9,
+   -28,
+   0,
+   "rabbit cones"
+  ],
+  [
+   57.2,
+   "whoosh",
+   0.8,
+   -28,
+   0,
+   "hunter cones"
+  ],
+  [
+   60.0,
+   "bell",
+   0.5,
+   -27,
+   0,
+   "overlap"
+  ],
+  [
+   63.8,
+   "stamp",
+   0.3,
+   -24,
+   0,
+   "target"
+  ],
+  [
+   69.6,
+   "whoosh",
+   1.6,
+   -24,
+   -0.2,
+   "hawk overhead"
+  ],
+  [
+   70.4,
+   "whoop",
+   0.4,
+   -22,
+   0,
+   "prey"
+  ],
+  [
+   75.4,
+   "stamp",
+   0.3,
+   -22,
+   0,
+   "fist pump"
+  ],
+  [
+   78.0,
+   "boing",
+   0.35,
+   -26,
+   0,
+   "the wink"
+  ]
+ ]
+}

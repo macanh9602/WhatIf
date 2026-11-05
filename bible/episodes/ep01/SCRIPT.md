@@ -1,4 +1,4 @@
-# ep01 "What If Green Didn't Exist?" — script v2 (2026-11-04, long cut 2-3 min)
+# ep01 "What If Green Didn't Exist?" — v3 = the 1:30 cut in eps/ep01/script.txt (2026-11-05); v2 below kept for the facts
 v1 (190-word short) replaced at the user's request: "làm video với nội dung 2-3 p".
 
 ## Premise

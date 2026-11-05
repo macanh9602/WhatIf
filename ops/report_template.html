@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo What If</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f4f6fb; --card:#ffffff; --ink:#1d1a3a; --muted:#5b6078; --line:#e2e6f0; --accent:#2f6df6; --accent-soft:#e6eeff;
+  --good:#12a150; --warn:#d97706; --zebra:#f8f9fd; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd;
+  --line:#2a3048; --accent:#7aa2ff; --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; } }
+:root[data-theme="dark"] { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd; --line:#2a3048; --accent:#7aa2ff;
+  --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; }
+header { background:linear-gradient(135deg,#1d1a3a,#2f3f8f); color:#fff; padding:28px 16px 22px; }
+header .wrap { max-width:860px; margin:0 auto; }
+header .kicker { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.75; }
+header h1 { margin:4px 0 0; font-size:clamp(22px,5vw,30px); font-weight:800; line-height:1.25; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+#doc > h1 { display:none; }
+#doc > h2 { margin:22px 0 10px; font-size:19px; font-weight:800; display:flex; align-items:center; gap:10px; }
+#doc > h2::before { content:""; width:6px; height:22px; border-radius:3px; background:var(--accent); }
+section.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px 18px 12px; margin-bottom:14px;
+  box-shadow:0 1px 2px rgba(20,24,60,.05); }
+h3 { font-size:16px; margin:16px 0 4px; }
+p, li { color:var(--ink); }
+ul, ol { padding-left:22px; }
+li { margin:4px 0; }
+strong { font-weight:800; }
+em { color:var(--muted); }
+code { background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.88em; }
+.table { overflow-x:auto; margin:8px -4px; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px; }
+th, td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+tr:nth-child(even) td { background:var(--zebra); }
+td:first-child { white-space:normal; min-width:9em; }
+blockquote { margin:10px 0; padding:8px 14px; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 10px 10px 0; }
+li:has(> input[type=checkbox]) { list-style:none; margin-left:-22px; }
+input[type=checkbox] { width:17px; height:17px; vertical-align:-3px; margin-right:8px; accent-color:var(--accent); }
+hr { border:0; border-top:1px dashed var(--line); margin:16px 0; }
+footer { max-width:860px; margin:0 auto; padding:4px 16px 32px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="kicker">What If · báo cáo tối</div><h1 id="title">__DATE__</h1></div></header>
+<main id="doc"></main>
+<footer>Tạo tự động từ ops/report.mjs · số liệu YouTube Data + Analytics API</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const MD = __MD__;
+const doc = document.getElementById("doc");
+try { doc.innerHTML = marked.parse(MD, { gfm: true }); }
+catch { doc.textContent = MD; doc.style.whiteSpace = "pre-wrap"; } // offline: still readable
+const h1 = doc.querySelector("h1"); if (h1) document.getElementById("title").textContent = h1.textContent;
+// wrap each h2 + its content in a card; tables scroll sideways on phones
+[...doc.querySelectorAll("table")].forEach((t) => { const w = document.createElement("div"); w.className = "table"; t.replaceWith(w); w.append(t); });
+let card = null;
+[...doc.childNodes].forEach((n) => {
+  if (n.nodeName === "H2") { card = document.createElement("section"); card.className = "card"; n.after(card); return; }
+  if (card && n.nodeName !== "H1") card.append(n);
+});
+doc.querySelectorAll("input[type=checkbox]").forEach((c) => (c.disabled = false));
+</script>
+</body>
+</html>

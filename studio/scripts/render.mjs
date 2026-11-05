@@ -1,9 +1,9 @@
 // usage: node scripts/render.mjs <name> [all | 7,12,...]   e.g. node scripts/render.mjs ep01 7,12
 // Renders one h264 chunk per shot into out/<COMP>/chunks/ (bundles once), re-renders only the shots given
-// (default all; any chunk that is missing is rendered too), concats + muxes public/owen/<name>/mix.wav, then copies
+// (default all; any chunk that is missing is rendered too), concats + muxes public/eps/<name>/mix.wav, then copies
 // <name>_<stamp>_<sha>{_master,_upload}.mp4 to OUT_ROOT (shared MEGA folder) and appends a row to ../RENDERS.md.
 // Shared code (ink, toon, cast, captions) or new words.json → pass "all": old chunks would be stale.
-// Shot ranges are regex-parsed from src/videos/owen/eps/<name>/story.ts (S(id, a, b, ...) + XFADE); <name> also picks the @ep bundle.
+// Shot ranges are regex-parsed from src/videos/engine/eps/<name>/story.ts (S(id, a, b, ...) + XFADE); <name> also picks the @ep bundle.
 import fs from "node:fs";
 if (process.env.REMOTION_TMP) { fs.mkdirSync(process.env.REMOTION_TMP, { recursive: true }); process.env.TEMP = process.env.TMP = process.env.REMOTION_TMP; }
 import { bundle } from "@remotion/bundler";
@@ -15,8 +15,8 @@ import os from "node:os";
 
 const [name, pick = "all"] = process.argv.slice(2);
 if (!name) throw new Error("usage: node scripts/render.mjs <name> [all | 7,12,...]");
-const COMP = process.env.COMP || "OwenShort";
-const OUT_ROOT = process.env.OUT_ROOT || path.join(os.homedir(), "Documents/MEGA/OwenShorts");
+const COMP = process.env.COMP || "Short";
+const OUT_ROOT = process.env.OUT_ROOT || path.resolve("out/final"); // a synced folder via env
 // PREVIEW=1: a 1080p review copy for the user, kept in out/<COMP>/ (own chunk dir; no MEGA copy, no RENDERS.md row)
 // PREVIEW=half: 540 x 960 for the reviewer loop (packs are <= 540 wide): ~4x fewer pixels, own chunk dir
 const PREVIEW = !!process.env.PREVIEW;
@@ -24,14 +24,14 @@ const HALF = process.env.PREVIEW === "half";
 const SCALE = HALF ? 0.5 : PREVIEW ? 1 : 1.3333333333333333; // 2K; "1.3333" breaks the stitching step (AGENTS.md log)
 // look gate (fb0016): a 2K render needs bible/episodes/<name>-*/LOOK_SCORES.md with every "n/10" score >= 7
 if (!PREVIEW) {
-  const ep = fs.readdirSync("../bible/episodes").find((d) => d.startsWith(name + "-"));
+  const ep = fs.readdirSync("../bible/episodes").find((d) => d === name || d.startsWith(name + "-"));
   const scores = ep && fs.existsSync(`../bible/episodes/${ep}/LOOK_SCORES.md`) ? fs.readFileSync(`../bible/episodes/${ep}/LOOK_SCORES.md`, "utf8") : "";
   const low = [...scores.matchAll(/([\d.]+)\s*\/\s*10/g)].map((m) => +m[1]).filter((v) => v < 7);
   if (!scores || low.length) throw new Error(`look gate: ${scores ? `scores below 7: ${low.join(", ")}` : `no LOOK_SCORES.md for ${name}`} (PREVIEW=1 skips)`);
   // self-check gate (fb0099): SELF_CHECK.md (scripts/selfcheck.mjs sheets + review_prompts/F.md) with a "<shot> CLEAN" line for every
   // shot, written AFTER the last change to the episode code: a verdict on older frames proves nothing
-  const sc = `../bible/episodes/${ep}/SELF_CHECK.md`, src = "src/videos/owen", P = epPaths(name);
-  // the shared engine (files directly in owen/) + this episode's folder; other episodes' edits do not stale this verdict
+  const sc = `../bible/episodes/${ep}/SELF_CHECK.md`, src = "src/videos/engine", P = epPaths(name);
+  // the shared engine (files directly in engine/) + this episode's folder; other episodes' edits do not stale this verdict
   const code = [...fs.readdirSync(src).map((f) => `${src}/${f}`).filter((f) => fs.statSync(f).isFile()), ...fs.readdirSync(P.code).map((f) => `${P.code}/${f}`)];
   const newest = Math.max(...code.map((f) => fs.statSync(f).mtimeMs));
   const text = fs.existsSync(sc) ? fs.readFileSync(sc, "utf8") : "";
@@ -40,14 +40,14 @@ if (!PREVIEW) {
   if (!text || fs.statSync(sc).mtimeMs < newest || notClean.length)
     throw new Error(`self-check gate: ${!text ? "no SELF_CHECK.md" : fs.statSync(sc).mtimeMs < newest ? "SELF_CHECK.md is older than the code" : `shots not CLEAN: ${notClean.join(", ")}`} (PREVIEW=1 skips)`);
   // muted-viewer + said-not-shown gate (fb0110): the script was reviewed muted, and every shot says what its words show
-  if (name !== "ep01") {
+  {
     const script = fs.readFileSync(`../bible/episodes/${ep}/SCRIPT.md`, "utf8");
     if (!/^- \[x\] .*tắt tiếng/m.test(script)) throw new Error("muted-review gate: tick the muted viewer review in SCRIPT.md (PREVIEW=1 skips)");
     const missing = ids.filter((i) => !new RegExp(`^\\s*-?\\s*${i}\\s+CLEAN\\b.*said-not-shown OK`, "m").test(text));
     if (missing.length) throw new Error(`said-not-shown gate: SELF_CHECK.md lines without "said-not-shown OK": ${missing.join(", ")} (PREVIEW=1 skips)`);
   }
-  // expression gate (fb0106): faces hold a baseline per shot; ep01 (published before the gate) is exempt
-  if (name !== "ep01" && spawnSync(process.execPath, ["scripts/expr_qa.mjs"], { stdio: "inherit", env: { ...process.env, EP: name } }).status !== 0)
+  // expression gate (fb0106): faces hold a baseline per shot (no per-episode exemptions: a tool never names an episode)
+  if (spawnSync(process.execPath, ["scripts/expr_qa.mjs"], { stdio: "inherit", env: { ...process.env, EP: name } }).status !== 0)
     throw new Error("expression gate: scripts/expr_qa.mjs failed (PREVIEW=1 skips)");
 }
 const mix = path.resolve(epPaths(name).mix);
@@ -57,7 +57,8 @@ if (!fs.existsSync(mix)) throw new Error(`${mix} missing: run studio/audio/build
 const story = fs.readFileSync(epPaths(name).story, "utf8");
 const FPS = 30;
 const xfade = Object.fromEntries([...(story.match(/XFADE[^=]*=\s*\{([^}]*)\}/)?.[1] ?? "").matchAll(/(\d+):\s*(\d+)/g)].map((m) => [+m[1], +m[2]]));
-const shots = [...story.matchAll(/^\s*S\((\d+),\s*([\d.]+),/gm)].map((m) => ({ id: +m[1], start: Math.round(+m[2] * FPS) - Math.floor((xfade[+m[1]] ?? 0) / 2) }))
+// I(...) = a full-screen 2D insert shot (2D card): its own chunk, and the blank-frame check skips it (a space card is mostly black)
+const shots = [...story.matchAll(/^\s*([SI])\((\d+),\s*([\d.]+),/gm)].map((m) => ({ id: +m[2], insert: m[1] === "I", start: Math.round(+m[3] * FPS) - Math.floor((xfade[+m[2]] ?? 0) / 2) }))
   .sort((p, q) => p.start - q.start);
 
 const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
@@ -67,7 +68,7 @@ const composition = await selectComposition({ serveUrl, id: COMP, browserExecuta
 shots.forEach((s, i) => (s.end = (shots[i + 1]?.start ?? composition.durationInFrames) - 1));
 if (shots[0].start !== 0 || shots.some((s) => s.end < s.start)) throw new Error("shot ranges do not tile the video: " + JSON.stringify(shots));
 
-const dir = path.resolve("out", COMP, HALF ? "chunks_half" : PREVIEW ? "chunks_preview" : "chunks");
+const dir = path.resolve("out", COMP, name, HALF ? "chunks_half" : PREVIEW ? "chunks_preview" : "chunks"); // per episode: parallel renders of two episodes overwrote each other's shotNN.mp4
 fs.mkdirSync(dir, { recursive: true });
 const file = (s) => path.join(dir, `shot${String(s.id).padStart(2, "0")}.mp4`);
 const want = new Set(pick === "all" ? shots.map((s) => s.id) : pick.split(",").map(Number));
@@ -77,7 +78,7 @@ const CONCURRENCY = Number(process.env.CONCURRENCY || 2);
 /** chunk frame indices where the 3D is gone: > 85 % of a 36 x 64 thumbnail is the composition background (#cfe3f2), white or black.
  * Needs 2+ frames in a row, so the 1-frame white flash after the hook passes. */
 const FLAT = [[0xcf, 0xe3, 0xf2], [255, 255, 255], [0, 0, 0]];
-// the hook's white flash fades over 4 frames (Owen.tsx): those frames are flat by design
+// the hook's white flash fades over 4 frames (Short.tsx): those frames are flat by design
 const FLASH = Math.round(Number(story.match(/FLASH_AT\s*=\s*F\(([\d.]+)\)/)?.[1] ?? -1) * FPS);
 const blankAt = (f) => {
   const W = 36, H = 64, n = W * H, px = spawnSync("ffmpeg", ["-v", "error", "-i", f, "-vf", `scale=${W}:${H}`, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], { maxBuffer: 1 << 30 }).stdout;
@@ -97,7 +98,7 @@ for (const s of shots) {
     const t0 = Date.now();
     await renderMedia({ composition, serveUrl, codec: "h264", crf: 16, muted: true, frameRange: [s.start, s.end], outputLocation: file(s),
       scale: SCALE, browserExecutable, chromiumOptions, timeoutInMilliseconds: 180000, concurrency });
-    const bad = blankAt(file(s)).filter((i) => s.start + i < FLASH || s.start + i > FLASH + 3);
+    const bad = s.insert ? [] : blankAt(file(s)).filter((i) => s.start + i < FLASH || s.start + i > FLASH + 3);
     console.log(`shot ${s.id} [${s.start}-${s.end}] ${((Date.now() - t0) / 1000).toFixed(0)}s x${concurrency}${bad.length ? ` BLANK frames ${bad.slice(0, 8).join(", ")}${bad.length > 8 ? " ..." : ""}` : ""}`);
     if (!bad.length) break;
     if (concurrency === 1) { fs.rmSync(file(s)); throw new Error(`shot ${s.id} still renders blank frames with 1 tab`); }
@@ -122,7 +123,7 @@ const dest = path.join(OUT_ROOT, name);
 fs.mkdirSync(dest, { recursive: true });
 for (const f of [master, upload]) fs.copyFileSync(f, path.join(dest, path.basename(f)));
 const log = path.resolve("../RENDERS.md");
-if (!fs.existsSync(log)) fs.writeFileSync(log, "# Renders\n\nFiles live in the shared MEGA folder (`OUT_ROOT`, default `MEGA/OwenShorts/<name>/`). One row per render, newest last.\n\n| date | name | commit | shots re-rendered | upload MB | note |\n|---|---|---|---|---|---|\n");
+if (!fs.existsSync(log)) fs.writeFileSync(log, "# Renders\n\nFiles live in the shared MEGA folder (`OUT_ROOT`, default `out/final/<name>/`). One row per render, newest last.\n\n| date | name | commit | shots re-rendered | upload MB | note |\n|---|---|---|---|---|---|\n");
 const mb = (fs.statSync(upload).size / 1e6).toFixed(1);
 fs.appendFileSync(log, `| ${day} ${hm} | ${base} | ${sha} | ${done.length === shots.length ? "all" : done.join(",")} | ${mb} | ${process.env.NOTE ?? ""} |\n`);
 console.log("→", path.join(dest, path.basename(upload)), mb, "MB");

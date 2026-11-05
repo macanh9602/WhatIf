@@ -1,6 +1,6 @@
-// self-check for the card rig helpers (src/videos/owen/rig.ts): node scripts/rig.test.mjs
+// self-check for the card rig helpers (src/videos/engine/rig.ts): node scripts/rig.test.mjs
 import assert from "node:assert/strict";
-import { pieces, distinctHands, sliced } from "../src/videos/owen/rig.ts";
+import { pieces, distinctHands, sliced } from "../src/videos/engine/rig.ts";
 
 const card = (rects, w = 100, h = 100) => (x, y) => (rects.some(([x0, y0, x1, y1]) => x >= x0 && x < x1 && y >= y0 && y < y1) ? 255 : 0);
 assert.deepEqual(pieces(card([[20, 10, 80, 90]]), 100, 100), []);                       // one body: nothing floats

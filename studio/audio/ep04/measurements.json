@@ -1,0 +1,346 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999998541602,
+    "true_peak_dbtp": -1.2995462985370008,
+    "lra_lu": 2.3058440926023067,
+    "sample_peak_dbfs": -1.3445021961861459
+  },
+  "voice": {
+    "integrated_lufs": -16.003103929438886,
+    "true_peak_dbtp": -1.693443744618244,
+    "lra_lu": 2.325449428384676,
+    "sample_peak_dbfs": -1.6989711196493134
+  },
+  "music": {
+    "integrated_lufs": -37.8006760004014,
+    "true_peak_dbtp": -21.359026392696272,
+    "lra_lu": 3.203902538355841,
+    "sample_peak_dbfs": -21.381419087712
+  },
+  "sfx": {
+    "integrated_lufs": -36.48577014175132,
+    "true_peak_dbtp": -12.986256185421725,
+    "lra_lu": 8.278758968331609,
+    "sample_peak_dbfs": -12.992506522971304
+  },
+  "master_gain_db": -1.698971119649313,
+  "voice_gain_db": -1.698971119649313,
+  "source_duration_seconds": 79.97145833333333,
+  "source_sha256": "4fb94372a0abeffd373bb197e798d56de3a78d693ec0c853be742f942b890897",
+  "words_sha256": "fbb3776684d2db46ad2b1289648f4313ad083db2250091412e94741326c560e2",
+  "music_sections": [
+    {
+      "name": "Hook: the back face",
+      "start": 0,
+      "end": 5.65,
+      "base_margin": -14,
+      "gain_db": -7.070235255198355
+    },
+    {
+      "name": "Seeing all around, the queue",
+      "start": 5.65,
+      "end": 21.93,
+      "base_margin": -14,
+      "gain_db": -7.4543065787962135
+    },
+    {
+      "name": "Sleeping",
+      "start": 21.93,
+      "end": 32.69,
+      "base_margin": -15,
+      "gain_db": -9.295356827160585
+    },
+    {
+      "name": "The brain, nature tried",
+      "start": 32.69,
+      "end": 42.5,
+      "base_margin": -15,
+      "gain_db": -2.5133920915813377
+    },
+    {
+      "name": "Rabbits: prey",
+      "start": 42.5,
+      "end": 51.89,
+      "base_margin": -15,
+      "gain_db": -0.8159010998848828
+    },
+    {
+      "name": "Hunters: depth",
+      "start": 51.89,
+      "end": 65.14,
+      "base_margin": -15,
+      "gain_db": -2.226060321629774
+    },
+    {
+      "name": "Not safer: prey",
+      "start": 65.14,
+      "end": 71.38,
+      "base_margin": -15,
+      "gain_db": -1.827753824138746
+    },
+    {
+      "name": "Ancestors chased",
+      "start": 71.38,
+      "end": 76.39,
+      "base_margin": -14,
+      "gain_db": -6.255949534023369
+    },
+    {
+      "name": "The question",
+      "start": 76.39,
+      "end": 81.0,
+      "base_margin": -13,
+      "gain_db": -7.766905154834419
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.3,
+      "end": 3.6999999999999997,
+      "kind": "steps",
+      "description": "neighbour tiptoes",
+      "target": -38.30413280978953,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.15,
+      "end": 4.550000000000001,
+      "kind": "whoop",
+      "description": "neighbour startled",
+      "target": -30.30413280978953,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.6,
+      "end": 6.1,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.4,
+      "end": 7.300000000000001,
+      "kind": "whoosh",
+      "description": "front cone sweeps",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.0,
+      "end": 10.3,
+      "kind": "stamp",
+      "description": "blind spot",
+      "target": -34.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.3,
+      "end": 12.5,
+      "kind": "whoosh",
+      "description": "second cone sweeps",
+      "target": -34.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.4,
+      "end": 15.0,
+      "kind": "bell",
+      "description": "the whole circle",
+      "target": -34.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.5,
+      "end": 19.75,
+      "kind": "tink",
+      "description": "the stare",
+      "target": -32.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.2,
+      "end": 24.45,
+      "kind": "thump",
+      "description": "lies on the back",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.4,
+      "end": 25.799999999999997,
+      "kind": "tape",
+      "description": "squash",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.5,
+      "end": 27.75,
+      "kind": "thump",
+      "description": "rolls onto the front",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.4,
+      "end": 28.799999999999997,
+      "kind": "tape",
+      "description": "squash",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.1,
+      "end": 31.6,
+      "kind": "whoosh",
+      "description": "rolls onto the side",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.3,
+      "end": 37.419999999999995,
+      "kind": "click",
+      "description": "two pictures pop",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.7,
+      "end": 39.300000000000004,
+      "kind": "tink",
+      "description": "dizzy stars",
+      "target": -32.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.7,
+      "end": 44.6,
+      "kind": "whoosh",
+      "description": "rabbit cones",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 57.2,
+      "end": 58.0,
+      "kind": "whoosh",
+      "description": "hunter cones",
+      "target": -36.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.0,
+      "end": 60.5,
+      "kind": "bell",
+      "description": "overlap",
+      "target": -35.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 63.8,
+      "end": 64.1,
+      "kind": "stamp",
+      "description": "target",
+      "target": -32.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 69.6,
+      "end": 71.19999999999999,
+      "kind": "whoosh",
+      "description": "hawk overhead",
+      "target": -32.30413280978953,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.4,
+      "end": 70.80000000000001,
+      "kind": "whoop",
+      "description": "prey",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.4,
+      "end": 75.7,
+      "kind": "stamp",
+      "description": "fist pump",
+      "target": -30.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 78.0,
+      "end": 78.35,
+      "kind": "boing",
+      "description": "the wink",
+      "target": -34.30413280978953,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999895699338143,
+    "p10": 16.356910673798936,
+    "median": 22.14154675703358
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3888000,
+    "duration_seconds": 81.0,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

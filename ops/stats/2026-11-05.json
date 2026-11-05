@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-05T01:41:21.399Z",
+  "channel": {
+    "id": "UC35_1F5Vl6BdJSCR5F3T6zQ",
+    "title": "devzanki_001",
+    "uploads": "UU35_1F5Vl6BdJSCR5F3T6zQ"
+  },
+  "videos": [
+    {
+      "ep": "ep01",
+      "id": "rGsbDC-srRg",
+      "title": "What If Green Didn't Exist? 🌲➡️⚫",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M29S",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep02",
+      "id": "K8_9z4otNiI",
+      "title": "What If You Could Turn Your Weight Down Like Volume? 🎚️",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M23S",
+      "views": 272,
+      "likes": 4,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep03",
+      "id": "U8LgA5o3et0",
+      "title": "What If Leveling Up Cost You Years of Your Life? ⏳",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M29S",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep04",
+      "id": "S_5RbYfQy64",
+      "title": "What If Humans Had a Second Face on the Back of Their Heads? 👀",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M14S",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep05",
+      "id": "5mWsXt0IXAc",
+      "title": "What If Everyone on Earth Ground Their Teeth at the Same Time? 😬",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M15S",
+      "views": 424,
+      "likes": 10,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    }
+  ],
+  "countries": []
+}

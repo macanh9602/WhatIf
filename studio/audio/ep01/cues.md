@@ -1,4 +1,4 @@
-# Owen Ep01 v3 — The Broken Arm: audio cues
+# ep01 audio cues
 
 Nhạc và SFX được tổng hợp bằng Python/numpy/scipy; không dùng sample, download hoặc melody có sẵn. Reuse DSP/instrument/SFX building blocks từ template `claude-animated-shorts/templates/audio/`; melody và arrangement mới hoàn toàn.
 
@@ -6,8 +6,8 @@ Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue n�
 
 ## Deliverables
 
-- `public/owen/<ep>/mix.wav`: 48 kHz, stereo, PCM 24-bit, **7,785,600 frames = 162.200 s**.
-- Supplied voice: **160.821 s**; `words.json` giữ nguyên timing và speaker tags (`who`).
+- `public/eps/<ep>/mix.wav`: 48 kHz, stereo, PCM 24-bit, **4,646,400 frames = 96.800 s**.
+- Supplied voice: **95.435 s**; `words.json` giữ nguyên timing và speaker tags (`who`).
 - `audio/voice.wav`: voice MP3 được decode/resample 48 kHz, không đổi timing.
 - `audio/stem_voice.wav`, `stem_music.wav`, `stem_sfx.wav`: stems tại final gain, trước master limiter.
 - `audio/music_raw.wav`, `sfx_raw.wav`: synthesis trước mix automation; `duck_envelope.csv`: duck/ride mỗi 10 ms.
@@ -17,12 +17,12 @@ Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue n�
 
 | Signal | Integrated LUFS | True peak dBTP | LRA LU |
 |---|---:|---:|---:|
-| master | -16.00 | -1.58 | 2.35 |
-| voice | -16.01 | -1.73 | 2.36 |
-| music | -37.51 | -18.82 | 4.02 |
-| sfx | -34.88 | -10.50 | 16.66 |
+| master | -16.00 | -1.48 | 2.50 |
+| voice | -16.02 | -1.76 | 2.49 |
+| music | -37.31 | -18.39 | 5.17 |
+| sfx | -35.07 | -10.50 | 14.73 |
 
-Voice gain tổng: **-1.73 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
+Voice gain tổng: **-1.71 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
 Master limiter linked stereo, detector 4x, look-ahead 3 ms, release 80 ms, ceiling -1.2 dBTP. Max reduction **-0.00 dB**; active >0.1 dB trên 0.00% samples.
 
 ffmpeg `ebur128=peak=true` cross-check:
@@ -35,13 +35,13 @@ Summary:
     Threshold: -26.4 LUFS
 
   Loudness range:
-    LRA:         2.4 LU
+    LRA:         2.5 LU
     Threshold: -36.4 LUFS
     LRA low:   -17.6 LUFS
-    LRA high:  -15.2 LUFS
+    LRA high:  -15.1 LUFS
 
   True peak:
-    Peak:       -1.6 dBFS
+    Peak:       -1.5 dBFS
 ```
 
 ## Music
@@ -53,13 +53,13 @@ Standard balance: music **-7 dB** so với baseline −14 LU dưới voice (sect
 | Time s | Cue | Music target dưới voice, LU |
 |---|---|---:|
 | 0.00–6.20 | Hook: green drains | -21.0 |
-| 6.20–41.60 | Morning montage | -21.0 |
-| 41.60–82.00 | Eyes, colours, night | -22.0 |
-| 82.00–87.00 | Turn: the part that hurts | -25.0 |
-| 87.00–123.60 | Cooling, ice, snowball | -21.0 |
-| 123.60–133.00 | Frozen pink planet | -24.0 |
-| 133.00–151.60 | You see: the leaf | -22.0 |
-| 151.60–162.20 | Green returns | -20.0 |
+| 6.20–37.20 | Morning in a pink world | -21.0 |
+| 37.20–51.00 | Eyes, parrot | -22.0 |
+| 51.00–54.00 | Turn: the part that hurts | -25.0 |
+| 54.00–71.80 | Cooling and snow | -21.0 |
+| 71.80–75.90 | Black trees still growing | -24.0 |
+| 75.90–91.40 | You see: the leaf | -22.0 |
+| 91.40–96.80 | Green returns | -20.0 |
 
 10.50 s: toàn ensemble dừng, chỉ một D5 pad rất nhỏ đến 11.60. 22.20 s: stop + stinger 120 ms; score bằng 0 từ **22.32–25.50 s**. Không có reverb tail vượt các điểm stop.
 
@@ -73,24 +73,21 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 | 6.15–6.65 | hook flash | -32.0 | +0.00 |
 | 7.55–8.15 | curtains swish open | -32.0 | -0.20 |
 | 18.30–22.90 | push mower rolling | -40.0 | +0.30 |
-| 32.99–33.11 | light switches to amber | -32.0 | +0.40 |
-| 34.01–34.13 | amber off, green slot dark | -32.0 | +0.40 |
-| 35.06–35.46 | shrug | -36.0 | +0.00 |
-| 38.00–39.40 | dimmer knob turning | -40.0 | +0.00 |
-| 56.24–56.54 | sunglasses slap on | -34.0 | +0.00 |
-| 61.39–61.69 | ring | -34.0 | +0.20 |
-| 80.35–80.60 | bonk on the lamppost | -28.0 | -0.20 |
-| 80.45–80.95 | dizzy | -34.0 | -0.20 |
-| 122.29–122.89 | Snowball Earth reveal | -32.0 | +0.00 |
-| 132.23–132.48 | bud pops | -34.0 | +0.30 |
-| 152.00–152.80 | green comes back | -32.0 | +0.00 |
-| 159.89–160.69 | the gift | -36.0 | +0.00 |
+| 32.78–32.90 | amber | -32.0 | +0.40 |
+| 33.74–33.86 | green slot dark | -32.0 | +0.40 |
+| 34.81–35.21 | shrug | -36.0 | +0.00 |
+| 49.16–49.46 | parrot blink | -34.0 | +0.20 |
+| 53.22–53.47 | the part that hurts | -34.0 | +0.00 |
+| 70.76–71.36 | the planet freezes | -32.0 | +0.00 |
+| 74.96–75.21 | bud pops | -34.0 | +0.30 |
+| 91.60–92.40 | green comes back | -32.0 | +0.00 |
+| 94.53–95.33 | the gift | -36.0 | +0.00 |
 
 ## Voice clarity và QA
 
 Đo margin voice − (music + SFX) bằng cửa sổ 400 ms, hop 10 ms, tâm nằm trong spoken word; chỉ loại voice thấp hơn integrated voice 14 LU hoặc bed dưới −70 LUFS.
 
-- Speech margin toàn tập: min **8.00 LU**, p10 **17.18 LU**, median **22.62 LU**.
+- Speech margin toàn tập: min **8.00 LU**, p10 **17.37 LU**, median **22.24 LU**.
 - Tất cả cue có fades; SFX endpoint bằng 0. Master bắt đầu/kết thúc bằng 0; không hard clipping.
 - WAV được đọc lại để kiểm tra frame count, format, peak và loudness sau quantization.
 - Voice stem được so với decoded source × gain: sai số tối đa ≤ 1 LSB 24-bit.
@@ -99,10 +96,10 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 | Section | Voice LUFS | Music LUFS | SFX LUFS | Speech min / p10 LU |
 |---|---:|---:|---:|---:|
 | Hook: green drains | -16.8 | -38.1 | -36.8 | 13.0 / 17.5 |
-| Morning montage | -15.8 | -36.8 | -35.9 | 8.0 / 16.7 |
-| Eyes, colours, night | -15.8 | -38.0 | -31.3 | 8.0 / 17.2 |
-| Turn: the part that hurts | -16.4 | -41.4 | silence | 20.8 / 23.4 |
-| Cooling, ice, snowball | -16.0 | -37.1 | -39.8 | 8.0 / 16.8 |
-| Frozen pink planet | -16.4 | -40.4 | -34.0 | 12.5 / 18.5 |
-| You see: the leaf | -16.1 | -38.1 | silence | 8.4 / 18.8 |
-| Green returns | -16.7 | -36.6 | -36.7 | 8.0 / 16.8 |
+| Morning in a pink world | -15.6 | -36.6 | -34.5 | 8.0 / 17.0 |
+| Eyes, parrot | -16.8 | -38.8 | -34.1 | 10.8 / 17.4 |
+| Turn: the part that hurts | -17.6 | -42.6 | -34.1 | 12.0 / 15.4 |
+| Cooling and snow | -15.4 | -36.4 | -34.3 | 8.2 / 17.2 |
+| Black trees still growing | -16.7 | -40.7 | -34.1 | 16.0 / 18.0 |
+| You see: the leaf | -16.0 | -38.0 | silence | 9.4 / 18.6 |
+| Green returns | -16.3 | -43.0 | -36.6 | 14.6 / 19.5 |

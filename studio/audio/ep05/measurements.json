@@ -1,0 +1,305 @@
+{
+  "master": {
+    "integrated_lufs": -16.00000000100594,
+    "true_peak_dbtp": -1.588839843693053,
+    "lra_lu": 2.9908070665248037,
+    "sample_peak_dbfs": -1.6592686787638542
+  },
+  "voice": {
+    "integrated_lufs": -16.00774469669846,
+    "true_peak_dbtp": -1.9733619099539932,
+    "lra_lu": 2.9978772831410048,
+    "sample_peak_dbfs": -1.9788892849850623
+  },
+  "music": {
+    "integrated_lufs": -37.61232261576729,
+    "true_peak_dbtp": -17.0750443624621,
+    "lra_lu": 3.302208566672995,
+    "sample_peak_dbfs": -17.09510729923855
+  },
+  "sfx": {
+    "integrated_lufs": -34.256894974030956,
+    "true_peak_dbtp": -11.266540998239911,
+    "lra_lu": 13.997699921436315,
+    "sample_peak_dbfs": -11.287217987261657
+  },
+  "master_gain_db": -1.978889284985062,
+  "voice_gain_db": -1.978889284985062,
+  "source_duration_seconds": 80.586,
+  "source_sha256": "901fdcba8e79a5e72ac357398bf01b23089e4060a711db23a7d321fe4245466b",
+  "words_sha256": "c7bc5fa8dd9836ba268a0b7ceaf1c5e7116fb3a011b90470cfef08e359048268",
+  "music_sections": [
+    {
+      "name": "Hook: everyone grinds",
+      "start": 0,
+      "end": 7.4,
+      "base_margin": -14,
+      "gain_db": -5.150157863554469
+    },
+    {
+      "name": "Countdown + inside your head",
+      "start": 7.4,
+      "end": 21.8,
+      "base_margin": -14,
+      "gain_db": -9.00454062373566
+    },
+    {
+      "name": "Explain: sound, force, Earth",
+      "start": 21.8,
+      "end": 44.3,
+      "base_margin": -15,
+      "gain_db": -1.1736847433697761
+    },
+    {
+      "name": "The real damage: enamel",
+      "start": 44.3,
+      "end": 59.0,
+      "base_margin": -15,
+      "gain_db": -1.1453640755145642
+    },
+    {
+      "name": "Night shift",
+      "start": 59.0,
+      "end": 77.6,
+      "base_margin": -14,
+      "gain_db": -6.22900438205329
+    },
+    {
+      "name": "The question",
+      "start": 77.6,
+      "end": 81.5,
+      "base_margin": -13,
+      "gain_db": -7.6290547088912675
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 2.0,
+      "end": 3.6,
+      "kind": "crinkle",
+      "description": "everyone grinds",
+      "target": -34.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.3,
+      "end": 6.9,
+      "kind": "crinkle",
+      "description": "the loudest: you",
+      "target": -30.02885541171306,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.35,
+      "end": 7.85,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.61,
+      "end": 7.73,
+      "kind": "click",
+      "description": "three",
+      "target": -30.02885541171306,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.33,
+      "end": 8.45,
+      "kind": "click",
+      "description": "two",
+      "target": -30.02885541171306,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.21,
+      "end": 9.33,
+      "kind": "click",
+      "description": "one",
+      "target": -30.02885541171306,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.2,
+      "end": 11.7,
+      "kind": "crinkle",
+      "description": "grind",
+      "target": -28.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.0,
+      "end": 14.6,
+      "kind": "crinkle",
+      "description": "gravel in a blender",
+      "target": -30.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.8,
+      "end": 21.2,
+      "kind": "tape",
+      "description": "the tiny squeak",
+      "target": -36.02885541171306,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.95,
+      "end": 30.25,
+      "kind": "thump",
+      "description": "hard bite",
+      "target": -28.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.4,
+      "end": 32.75,
+      "kind": "thump",
+      "description": "seventy kilos",
+      "target": -30.02885541171306,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.2,
+      "end": 36.5,
+      "kind": "tink",
+      "description": "pyramids pop",
+      "target": -32.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.4,
+      "end": 40.519999999999996,
+      "kind": "click",
+      "description": "jaw pushes",
+      "target": -32.02885541171306,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.7,
+      "end": 42.82,
+      "kind": "click",
+      "description": "skull pushes back",
+      "target": -32.02885541171306,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.3,
+      "end": 53.3,
+      "kind": "crinkle",
+      "description": "grinding wears it down",
+      "target": -34.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.8,
+      "end": 55.4,
+      "kind": "bell",
+      "description": "never grows back",
+      "target": -34.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 57.6,
+      "end": 58.2,
+      "kind": "whoosh",
+      "description": "already happening",
+      "target": -32.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.8,
+      "end": 64.2,
+      "kind": "crinkle",
+      "description": "grinding in their sleep",
+      "target": -36.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 69.3,
+      "end": 71.1,
+      "kind": "crinkle",
+      "description": "sanding away",
+      "target": -36.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 76.8,
+      "end": 77.1,
+      "kind": "tink",
+      "description": "night shift badge",
+      "target": -32.02885541171306,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.5,
+      "end": 80.3,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.02885541171306,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.99979644189272,
+    "p10": 15.113761107730518,
+    "median": 21.3719143800799
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3912000,
+    "duration_seconds": 81.5,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

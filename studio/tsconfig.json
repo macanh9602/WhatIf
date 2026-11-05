@@ -13,7 +13,7 @@
     ],
     "paths": {
       "@ep/*": [
-        "./src/videos/owen/eps/ep01/*"
+        "./src/videos/engine/eps/ep01/*"
       ]
     }
   },

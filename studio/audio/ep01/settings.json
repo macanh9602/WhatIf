@@ -1,5 +1,5 @@
 {
- "duration": 162.2,
+ "duration": 96.8,
  "bpm": 104,
  "seed": 10101,
  "target_lufs": -16.0,
@@ -36,51 +36,51 @@
    "pulse"
   ],
   [
-   "Morning montage",
+   "Morning in a pink world",
    6.2,
-   41.6,
+   37.2,
    -14,
    "bounce"
   ],
   [
-   "Eyes, colours, night",
-   41.6,
-   82.0,
+   "Eyes, parrot",
+   37.2,
+   51.0,
    -15,
    "explain"
   ],
   [
    "Turn: the part that hurts",
-   82.0,
-   87.0,
+   51.0,
+   54.0,
    -18,
    "pad"
   ],
   [
-   "Cooling, ice, snowball",
-   87.0,
-   123.6,
+   "Cooling and snow",
+   54.0,
+   71.8,
    -14,
    "dark"
   ],
   [
-   "Frozen pink planet",
-   123.6,
-   133.0,
+   "Black trees still growing",
+   71.8,
+   75.9,
    -17,
    "pad"
   ],
   [
    "You see: the leaf",
-   133.0,
-   151.6,
+   75.9,
+   91.4,
    -15,
    "warm"
   ],
   [
    "Green returns",
-   151.6,
-   162.2,
+   91.4,
+   96.8,
    -13,
    "resolve"
   ]
@@ -227,23 +227,23 @@
    "push mower rolling"
   ],
   [
-   32.99,
+   32.78,
    "click",
    0.12,
    -22,
    0.4,
-   "light switches to amber"
+   "amber"
   ],
   [
-   34.01,
+   33.74,
    "click",
    0.12,
    -22,
    0.4,
-   "amber off, green slot dark"
+   "green slot dark"
   ],
   [
-   35.06,
+   34.81,
    "boing",
    0.4,
    -26,
@@ -251,55 +251,31 @@
    "shrug"
   ],
   [
-   38.0,
-   "tape",
-   1.4,
-   -30,
-   0,
-   "dimmer knob turning"
-  ],
-  [
-   56.24,
-   "whoosh",
-   0.3,
-   -24,
-   0,
-   "sunglasses slap on"
-  ],
-  [
-   61.39,
+   49.16,
    "tink",
    0.3,
    -24,
    0.2,
-   "ring"
+   "parrot blink"
   ],
   [
-   80.35,
+   53.22,
    "thump",
    0.25,
-   -18,
-   -0.2,
-   "bonk on the lamppost"
-  ],
-  [
-   80.45,
-   "boing",
-   0.5,
    -24,
-   -0.2,
-   "dizzy"
+   0,
+   "the part that hurts"
   ],
   [
-   122.29,
+   70.76,
    "flash",
    0.6,
    -22,
    0,
-   "Snowball Earth reveal"
+   "the planet freezes"
   ],
   [
-   132.23,
+   74.96,
    "tink",
    0.25,
    -24,
@@ -307,7 +283,7 @@
    "bud pops"
   ],
   [
-   152.0,
+   91.6,
    "flash",
    0.8,
    -22,
@@ -315,7 +291,7 @@
    "green comes back"
   ],
   [
-   159.89,
+   94.53,
    "bell",
    0.8,
    -26,

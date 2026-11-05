@@ -1,5 +1,5 @@
 // Producer self-check pack (fb0099): what a viewer pauses on, at a size where defects show.
-// usage: COMP=OwenShort node scripts/selfcheck.mjs <outDir> [shotIds e.g. 6,11]
+// usage: COMP=Short node scripts/selfcheck.mjs <outDir> [shotIds e.g. 6,11]
 // Per shot: a frame at every caption phrase start (where a viewer's screenshot lands) + the shot midpoint, at scale 0.75 WITH
 // captions, joined into one sheet per shot (scripts/selfcheck_sheet.py). The ep01 self-check at 0.25 scale, 3 frames per shot,
 // missed every defect the user then found at full size (floating pen, a 3rd hand, chair rails through bodies, a desk top across
@@ -17,7 +17,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const chromiumOptions = { gl: "angle" };
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts"), publicDir: path.resolve("public"), webpackOverride: epOverride() });
-const id = process.env.COMP || "OwenShort";
+const id = process.env.COMP || "Short";
 const comp = async (inputProps) => selectComposition({ serveUrl, id, browserExecutable, chromiumOptions, inputProps });
 const qaComp = await comp({ qa: true, captions: false });
 const logs = [];

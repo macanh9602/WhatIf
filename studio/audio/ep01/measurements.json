@@ -1,33 +1,33 @@
 {
   "master": {
-    "integrated_lufs": -16.000000000013742,
-    "true_peak_dbtp": -1.5761734236987681,
-    "lra_lu": 2.3504733294643074,
-    "sample_peak_dbfs": -1.5913863087256859
+    "integrated_lufs": -15.999999999502442,
+    "true_peak_dbtp": -1.4845457476608819,
+    "lra_lu": 2.496078360332712,
+    "sample_peak_dbfs": -1.5367563481116773
   },
   "voice": {
-    "integrated_lufs": -16.014412786709993,
-    "true_peak_dbtp": -1.7291709094230299,
-    "lra_lu": 2.3574162062542463,
-    "sample_peak_dbfs": -1.7346982844540988
+    "integrated_lufs": -16.019298154303247,
+    "true_peak_dbtp": -1.7607629668681566,
+    "lra_lu": 2.487425084857504,
+    "sample_peak_dbfs": -1.766290341899225
   },
   "music": {
-    "integrated_lufs": -37.510881629414605,
-    "true_peak_dbtp": -18.817100327199377,
-    "lra_lu": 4.024582174832325,
-    "sample_peak_dbfs": -18.82262770223045
+    "integrated_lufs": -37.313460910707725,
+    "true_peak_dbtp": -18.394968702526985,
+    "lra_lu": 5.166006116444969,
+    "sample_peak_dbfs": -18.400496077558053
   },
   "sfx": {
-    "integrated_lufs": -34.8784051810533,
-    "true_peak_dbtp": -10.498005019815277,
-    "lra_lu": 16.655244880475053,
-    "sample_peak_dbfs": -10.52438852248314
+    "integrated_lufs": -35.06933439334311,
+    "true_peak_dbtp": -10.50289038740919,
+    "lra_lu": 14.729721170155294,
+    "sample_peak_dbfs": -10.52927389007705
   },
-  "master_gain_db": -1.7346982844540992,
-  "voice_gain_db": -1.7346982844540992,
-  "source_duration_seconds": 160.82129166666667,
-  "source_sha256": "6b7ceaba5507ccaccd5153d6f9a5c5d7f809414146dbc4a98740a7c4f02a9bb6",
-  "words_sha256": "275dd849af38258bdf99696f7e66836e64258f7ff5b834cf9a0d5499d93a180c",
+  "master_gain_db": -1.7110504263854889,
+  "voice_gain_db": -1.7110504263854889,
+  "source_duration_seconds": 95.43454166666666,
+  "source_sha256": "c0db95cfd115190d01973d6117e368607cb932240ea8eb8d204c2510f546f9ff",
+  "words_sha256": "2b8ac899b6e21569ff07eff6c6be196741e13aa43c1fa7f4274bf66285442f4a",
   "music_sections": [
     {
       "name": "Hook: green drains",
@@ -37,53 +37,53 @@
       "gain_db": -8.562597462697855
     },
     {
-      "name": "Morning montage",
+      "name": "Morning in a pink world",
       "start": 6.2,
-      "end": 41.6,
+      "end": 37.2,
       "base_margin": -14,
-      "gain_db": -7.558326275279384
+      "gain_db": -7.576710883099064
     },
     {
-      "name": "Eyes, colours, night",
-      "start": 41.6,
-      "end": 82.0,
+      "name": "Eyes, parrot",
+      "start": 37.2,
+      "end": 51.0,
       "base_margin": -15,
-      "gain_db": -1.4971489324842011
+      "gain_db": -2.645935173804915
     },
     {
       "name": "Turn: the part that hurts",
-      "start": 82.0,
-      "end": 87.0,
+      "start": 51.0,
+      "end": 54.0,
       "base_margin": -18,
-      "gain_db": 2.5292228335246136
+      "gain_db": 3.7179032796725124
     },
     {
-      "name": "Cooling, ice, snowball",
-      "start": 87.0,
-      "end": 123.6,
+      "name": "Cooling and snow",
+      "start": 54.0,
+      "end": 71.8,
       "base_margin": -14,
-      "gain_db": -1.0211659996954054
+      "gain_db": -0.2857411977437678
     },
     {
-      "name": "Frozen pink planet",
-      "start": 123.6,
-      "end": 133.0,
+      "name": "Black trees still growing",
+      "start": 71.8,
+      "end": 75.9,
       "base_margin": -17,
-      "gain_db": 4.131460017487861
+      "gain_db": 4.18880812717785
     },
     {
       "name": "You see: the leaf",
-      "start": 133.0,
-      "end": 151.6,
+      "start": 75.9,
+      "end": 91.4,
       "base_margin": -15,
-      "gain_db": -7.49176626556083
+      "gain_db": -7.346046379453053
     },
     {
       "name": "Green returns",
-      "start": 151.6,
-      "end": 162.2,
+      "start": 91.4,
+      "end": 96.8,
       "base_margin": -13,
-      "gain_db": -5.331367484703861
+      "gain_db": -9.399488258285896
     }
   ],
   "sfx_cues": [
@@ -92,7 +92,7 @@
       "end": 2.5999999999999996,
       "kind": "whoosh",
       "description": "green drains from the horizon",
-      "target": -32.2797145022558,
+      "target": -32.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -102,7 +102,7 @@
       "end": 6.65,
       "kind": "flash",
       "description": "hook flash",
-      "target": -30.2797145022558,
+      "target": -30.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -112,7 +112,7 @@
       "end": 8.15,
       "kind": "whoosh",
       "description": "curtains swish open",
-      "target": -30.2797145022558,
+      "target": -30.30824772791832,
       "pan": -0.2,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -122,143 +122,113 @@
       "end": 22.9,
       "kind": "roll",
       "description": "push mower rolling",
-      "target": -38.2797145022558,
+      "target": -38.30824772791832,
       "pan": 0.3,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 32.99,
-      "end": 33.11,
+      "start": 32.78,
+      "end": 32.9,
       "kind": "click",
-      "description": "light switches to amber",
-      "target": -30.2797145022558,
+      "description": "amber",
+      "target": -30.30824772791832,
       "pan": 0.4,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 34.01,
-      "end": 34.129999999999995,
+      "start": 33.74,
+      "end": 33.86,
       "kind": "click",
-      "description": "amber off, green slot dark",
-      "target": -30.2797145022558,
+      "description": "green slot dark",
+      "target": -30.30824772791832,
       "pan": 0.4,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 35.06,
-      "end": 35.46,
+      "start": 34.81,
+      "end": 35.21,
       "kind": "boing",
       "description": "shrug",
-      "target": -34.2797145022558,
+      "target": -34.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 38.0,
-      "end": 39.4,
-      "kind": "tape",
-      "description": "dimmer knob turning",
-      "target": -38.2797145022558,
-      "pan": 0,
-      "mode": "momentary",
-      "edge_abs_max": 0.0
-    },
-    {
-      "start": 56.24,
-      "end": 56.54,
-      "kind": "whoosh",
-      "description": "sunglasses slap on",
-      "target": -32.2797145022558,
-      "pan": 0,
-      "mode": "momentary",
-      "edge_abs_max": 0.0
-    },
-    {
-      "start": 61.39,
-      "end": 61.69,
+      "start": 49.16,
+      "end": 49.459999999999994,
       "kind": "tink",
-      "description": "ring",
-      "target": -32.2797145022558,
+      "description": "parrot blink",
+      "target": -32.30824772791832,
       "pan": 0.2,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 80.35,
-      "end": 80.6,
+      "start": 53.22,
+      "end": 53.47,
       "kind": "thump",
-      "description": "bonk on the lamppost",
-      "target": -26.2797145022558,
-      "pan": -0.2,
-      "mode": "momentary",
-      "edge_abs_max": 0.0
-    },
-    {
-      "start": 80.45,
-      "end": 80.95,
-      "kind": "boing",
-      "description": "dizzy",
-      "target": -32.2797145022558,
-      "pan": -0.2,
-      "mode": "momentary",
-      "edge_abs_max": 0.0
-    },
-    {
-      "start": 122.29,
-      "end": 122.89,
-      "kind": "flash",
-      "description": "Snowball Earth reveal",
-      "target": -30.2797145022558,
+      "description": "the part that hurts",
+      "target": -32.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 132.23,
-      "end": 132.48,
+      "start": 70.76,
+      "end": 71.36,
+      "kind": "flash",
+      "description": "the planet freezes",
+      "target": -30.30824772791832,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.96,
+      "end": 75.21,
       "kind": "tink",
       "description": "bud pops",
-      "target": -32.2797145022558,
+      "target": -32.30824772791832,
       "pan": 0.3,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 152.0,
-      "end": 152.8,
+      "start": 91.6,
+      "end": 92.39999999999999,
       "kind": "flash",
       "description": "green comes back",
-      "target": -30.2797145022558,
+      "target": -30.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
     },
     {
-      "start": 159.89,
-      "end": 160.69,
+      "start": 94.53,
+      "end": 95.33,
       "kind": "bell",
       "description": "the gift",
-      "target": -34.2797145022558,
+      "target": -34.30824772791832,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
     }
   ],
   "speech_margin_lu": {
-    "minimum": 7.999810775068237,
-    "p10": 17.181767900436064,
-    "median": 22.622563901019294
+    "minimum": 7.999978099641378,
+    "p10": 17.369757661485156,
+    "median": 22.243595683208227
   },
   "checks": {
     "sample_rate": 48000,
     "channels": 2,
     "bits": 24,
-    "frames": 7785600,
-    "duration_seconds": 162.2,
+    "frames": 4646400,
+    "duration_seconds": 96.8,
     "clipped_samples": 0,
     "max_sfx_endpoint_amplitude": 0.0,
     "final_endpoint_amplitude": 0.0,

@@ -1,0 +1,37 @@
+{
+  "ep01": {
+    "id": "rGsbDC-srRg",
+    "publishAt": "2026-11-05T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-04T18:42:58.771Z",
+    "file": "studio/out/Short/ep01_x1.1_upload.mp4"
+  },
+  "ep02": {
+    "id": "K8_9z4otNiI",
+    "publishAt": "2026-11-05T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-04T18:43:02.317Z",
+    "file": "studio/out/Short/ep02_x1.1_upload.mp4"
+  },
+  "ep03": {
+    "id": "U8LgA5o3et0",
+    "publishAt": "2026-11-05T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-04T18:43:06.066Z",
+    "file": "studio/out/Short/ep03_x1.1_upload.mp4"
+  },
+  "ep04": {
+    "id": "S_5RbYfQy64",
+    "publishAt": "2026-11-05T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-04T19:17:24.476Z",
+    "file": "studio/out/Short/ep04_x1.1_upload.mp4"
+  },
+  "ep05": {
+    "id": "5mWsXt0IXAc",
+    "publishAt": "2026-11-05T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-04T19:17:47.909Z",
+    "file": "studio/out/Short/ep05_x1.1_upload.mp4"
+  }
+}

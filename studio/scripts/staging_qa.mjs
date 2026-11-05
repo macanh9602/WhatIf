@@ -1,6 +1,6 @@
 // Staging gate (skill-evolution fb0015b): exit 1 if any shot fails, run before every 2K render.
-// usage: COMP=OwenShort node scripts/staging_qa.mjs <outDir> [shotIds e.g. 10,11] (renders first / mid / last frame of each shot
-// at scale 0.25 with inputProps {qa:true}; the composition logs "QA {...}" per layer, see src/videos/owen/qa.ts)
+// usage: COMP=Short node scripts/staging_qa.mjs <outDir> [shotIds e.g. 10,11] (renders first / mid / last frame of each shot
+// at scale 0.25 with inputProps {qa:true}; the composition logs "QA {...}" per layer, see src/videos/engine/qa.ts)
 import fs from "node:fs";
 if (process.env.REMOTION_TMP) { fs.mkdirSync(process.env.REMOTION_TMP, { recursive: true }); process.env.TEMP = process.env.TMP = process.env.REMOTION_TMP; }
 import { bundle } from "@remotion/bundler";
@@ -61,7 +61,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const chromiumOptions = { gl: "angle" };
   const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts"), publicDir: path.resolve("public"), webpackOverride: epOverride() });
   const inputProps = { qa: true, captions: false };
-  const composition = await selectComposition({ serveUrl, id: process.env.COMP || "OwenShort", browserExecutable, chromiumOptions, inputProps });
+  const composition = await selectComposition({ serveUrl, id: process.env.COMP || "Short", browserExecutable, chromiumOptions, inputProps });
   const still = async (frame) => {
     const logs = [];
     await renderStill({ composition, serveUrl, frame, output: `${outDir}/f${frame}.jpg`, imageFormat: "jpeg", jpegQuality: 80, inputProps, scale: 0.25,

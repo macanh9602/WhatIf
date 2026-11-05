@@ -1,0 +1,4 @@
+Reference clips for voice cloning (Chatterbox). All LibriVox recordings are in the public domain.
+
+theo_ref.wav — 12 s (60-72 s) of "Tom Swift and His Electric Runabout" ch. 1 by Victor Appleton,
+  read by Tom Weiss for LibriVox. https://archive.org/details/tomswift-runabout_0904_librivox

@@ -43,7 +43,7 @@ async function main() {
   const out = path.join(os.tmpdir(), `expr_qa_${ep}_${process.pid}.mjs`);
   await build({
     entryPoints: [entry], bundle: true, platform: "node", format: "esm", outfile: out, logLevel: "error",
-    alias: { "@ep": path.join(STUDIO, "src/videos/owen/eps", ep) },
+    alias: { "@ep": path.join(STUDIO, "src/videos/engine/eps", ep) },
     loader: { ".png": "empty", ".jpg": "empty", ".glb": "empty", ".ttf": "empty", ".woff2": "empty", ".mp3": "empty", ".wav": "empty" },
   });
   const { SHOTS, acts, FAMILY, FPS } = await import(pathToFileURL(out).href);

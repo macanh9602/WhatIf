@@ -1,6 +1,6 @@
 # Camera-grammar gate (camera grammar in cartoon-3d-short SKILL.md): two consecutive shots on the same subject must change
 # the angle by >= 30 degrees or the shot size by one step, or the cut reads as a jump cut.
-#   python scripts/continuity_qa.py [src/videos/owen/eps/<ep>/story.ts]      (exit 1 on a jump cut)
+#   python scripts/continuity_qa.py [src/videos/engine/eps/<ep>/story.ts]      (exit 1 on a jump cut)
 # Shots with a named camera ({ cam: "door" }) are skipped (their vectors live in sets.ts). "Same subject" = look points < 1.2 m apart.
 import math, os, re, sys
 
@@ -34,8 +34,8 @@ if __name__ == "__main__":
              'S(3, 4, 6, "x", { local: [3, 1, 0.5], lookAt: [0, 1, 0], fov: 40 }, "mid"),\n'   # ~70 deg -> ok
              'S(4, 6, 8, "x", { local: [3, 1, 0.8], lookAt: [0, 1, 0], fov: 40 }, "close"),')  # same angle, size step -> ok
         r = jump_cuts(shots(t)); assert len(r) == 1 and r[0].startswith("shot 1 -> 2"), r; print("continuity_qa self-check ok"); sys.exit(0)
-    EP = os.environ.get("EP") or sorted(d for d in os.listdir("src/videos/owen/eps") if re.fullmatch(r"ep\d+", d))[-1]  # same rule as scripts/ep.mjs
+    EP = os.environ.get("EP") or sorted(d for d in os.listdir("src/videos/engine/eps") if re.fullmatch(r"ep\d+", d))[-1]  # same rule as scripts/ep.mjs
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    src = open(args[0] if args else f"src/videos/owen/eps/{EP}/story.ts", encoding="utf-8").read()
+    src = open(args[0] if args else f"src/videos/engine/eps/{EP}/story.ts", encoding="utf-8").read()
     shs = shots(src); bad = jump_cuts(shs)
     print(f"{len(shs)} shots checked"); print("\n".join(bad) or "PASSED"); sys.exit(1 if bad else 0)

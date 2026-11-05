@@ -1,4 +1,4 @@
-"""Short, entirely procedural Foley and crowd beds for Owen Ep01."""
+"""Short, entirely procedural Foley and crowd beds."""
 import numpy as np
 from dsp import SR, ns, tt, rng, phase, modal, fades, bp, lp, hp, pan, place, norm_to
 import instruments as I

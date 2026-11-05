@@ -1,0 +1,305 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999999927887,
+    "true_peak_dbtp": -1.6214238091435234,
+    "lra_lu": 2.4951879408593403,
+    "sample_peak_dbfs": -1.6269511841745923
+  },
+  "voice": {
+    "integrated_lufs": -16.01083904068463,
+    "true_peak_dbtp": -1.7479650814697856,
+    "lra_lu": 2.5021390897072564,
+    "sample_peak_dbfs": -1.7666083370877335
+  },
+  "music": {
+    "integrated_lufs": -37.346759498575565,
+    "true_peak_dbtp": -18.005765449100647,
+    "lra_lu": 4.943683137225555,
+    "sample_peak_dbfs": -18.016063090117612
+  },
+  "sfx": {
+    "integrated_lufs": -35.26634211260151,
+    "true_peak_dbtp": -11.297194332836312,
+    "lra_lu": 9.106793890928856,
+    "sample_peak_dbfs": -11.327404477395165
+  },
+  "master_gain_db": -1.7666083370877335,
+  "voice_gain_db": -1.7666083370877335,
+  "source_duration_seconds": 88.88066666666667,
+  "source_sha256": "5ec7e87d277e8f01420984cccd011438530ff57feed3738b10139a70adda487b",
+  "words_sha256": "09f9a598e00f872e38e38fced264b2146c87815b5448555daa2e41304ff623cf",
+  "music_sections": [
+    {
+      "name": "Hook: floating away",
+      "start": 0,
+      "end": 6.0,
+      "base_margin": -14,
+      "gain_db": -6.501682933308583
+    },
+    {
+      "name": "Dial down: bouncy montage",
+      "start": 6.0,
+      "end": 44.4,
+      "base_margin": -14,
+      "gain_db": -7.542901310896543
+    },
+    {
+      "name": "Turning it up",
+      "start": 44.4,
+      "end": 59.1,
+      "base_margin": -15,
+      "gain_db": -2.5699443823120163
+    },
+    {
+      "name": "You see: Earth's pull",
+      "start": 59.1,
+      "end": 73.0,
+      "base_margin": -15,
+      "gain_db": -2.8704433981995834
+    },
+    {
+      "name": "Equator, plane ticket",
+      "start": 73.0,
+      "end": 86.2,
+      "base_margin": -14,
+      "gain_db": -6.531643386378516
+    },
+    {
+      "name": "The question",
+      "start": 86.2,
+      "end": 90.3,
+      "base_margin": -13,
+      "gain_db": -11.051322883154594
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 4.45,
+      "end": 5.3500000000000005,
+      "kind": "whoosh",
+      "description": "rising like a balloon",
+      "target": -32.24423070359717,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.95,
+      "end": 6.45,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.244230703597168,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.49,
+      "end": 9.61,
+      "kind": "click",
+      "description": "dial click",
+      "target": -30.244230703597168,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.7,
+      "end": 12.049999999999999,
+      "kind": "boing",
+      "description": "trampoline bounce",
+      "target": -34.24423070359717,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.65,
+      "end": 13.0,
+      "kind": "boing",
+      "description": "trampoline bounce",
+      "target": -34.24423070359717,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.6,
+      "end": 13.95,
+      "kind": "boing",
+      "description": "trampoline bounce",
+      "target": -34.24423070359717,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.55,
+      "end": 14.9,
+      "kind": "boing",
+      "description": "trampoline bounce",
+      "target": -34.24423070359717,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.5,
+      "end": 15.85,
+      "kind": "boing",
+      "description": "trampoline bounce",
+      "target": -34.24423070359717,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.58,
+      "end": 20.38,
+      "kind": "whoosh",
+      "description": "big jump",
+      "target": -30.244230703597168,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.08,
+      "end": 21.33,
+      "kind": "thump",
+      "description": "lands on the roof",
+      "target": -30.244230703597168,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.96,
+      "end": 26.96,
+      "kind": "tape",
+      "description": "shoes squeak/skid",
+      "target": -36.24423070359717,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.88,
+      "end": 31.48,
+      "kind": "whoosh",
+      "description": "wind gust",
+      "target": -32.24423070359717,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.2,
+      "end": 36.6,
+      "kind": "whoosh",
+      "description": "blown down the street",
+      "target": -34.24423070359717,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.58,
+      "end": 44.48,
+      "kind": "whoosh",
+      "description": "rise",
+      "target": -34.24423070359717,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.94,
+      "end": 45.059999999999995,
+      "kind": "click",
+      "description": "dial up",
+      "target": -30.244230703597168,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 55.44,
+      "end": 55.739999999999995,
+      "kind": "thump",
+      "description": "chair crash",
+      "target": -24.244230703597168,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 55.47,
+      "end": 56.37,
+      "kind": "crinkle",
+      "description": "splinters",
+      "target": -30.244230703597168,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 57.0,
+      "end": 57.6,
+      "kind": "bell",
+      "description": "elevator overload ding",
+      "target": -32.24423070359717,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.84,
+      "end": 71.14,
+      "kind": "tink",
+      "description": "tiny dial",
+      "target": -32.24423070359717,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 85.27,
+      "end": 85.67,
+      "kind": "paper",
+      "description": "ticket",
+      "target": -32.24423070359717,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 82.14,
+      "end": 82.94,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.24423070359717,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999705415744504,
+    "p10": 15.951744397929446,
+    "median": 21.980379331441803
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 4334400,
+    "duration_seconds": 90.3,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

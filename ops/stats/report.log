@@ -1,0 +1,9 @@
+ep01      0 views (no analytics yet)
+ep02    272 views (no analytics yet)
+ep03      0 views (no analytics yet)
+ep04      0 views (no analytics yet)
+ep05    408 views (no analytics yet)
+→ D:\_UnityProject\WhatIf\ops\stats\2026-11-05.json
+→ D:\_UnityProject\WhatIf\bible\reports\2026-11-05.md
+→ D:\_UnityProject\WhatIf\bible\reports\2026-11-05.html
+page: Error: permission to use `mcp__claude_ai_Claude_Docs__read` was denied, so I couldn't read https://claude.ai/artifact/BpJXYcVqr8iChoAtt3suUw. This session also has no Artifact tool with read/publish actions, so the file wasn't published.

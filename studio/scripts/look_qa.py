@@ -1,5 +1,5 @@
 # Look gate (skill-evolution fb0015a + fb0016): exit 1 on any failure. Run before every 2K render.
-#   python scripts/look_qa.py <video folder name, e.g. owen> <frames, one per set: 45,560,1240,1580> [ref frames glob]
+#   python scripts/look_qa.py <video folder name, e.g. engine> <frames, one per set: 45,560,1240,1580> [ref frames glob]
 # 1. wiring: no shader factory / light uniforms imported from another video folder (singletons split the light rig)
 # 2. speckle: renders the ink MASK only at FULL scale (a 0.5 downscale turns faint solid lines into fake dots) and counts
 #    lone dots (dark blobs < 40 px with no other ink within 6 px); > 15 per frame fails. An empty mask fails (ink broken).
@@ -110,7 +110,7 @@ def tone(p):
     return float(y.mean()), float(np.percentile(y, 2)), float(np.median(s))
 
 def still(prefix, frames, props, scale="0.5"):
-    env = dict(os.environ, COMP=os.environ.get("COMP", "OwenShort"), PROPS=json.dumps(props), PNG="1")
+    env = dict(os.environ, COMP=os.environ.get("COMP", "Short"), PROPS=json.dumps(props), PNG="1")
     subprocess.run(["node", "scripts/stills.mjs", prefix, frames, scale], check=True, env=env, stdout=subprocess.DEVNULL)
 
 if __name__ == "__main__":
