@@ -12,7 +12,8 @@ export const glide = (u: number) => { const x = clamp01(u); return x * x * x * (
 export const F = (s: number) => Math.round(s * FPS);
 
 /** lamp = night interior lit by one lamp, window = day interior lit through one window (both use sets.ts POOLS) */
-export type Light = "day" | "golden" | "lamp" | "window";
+/** sea = deep underwater (blue haze from 2 m), shallow = sunny lagoon water (turquoise haze) */
+export type Light = "day" | "golden" | "lamp" | "window" | "sea" | "shallow";
 /** close = a face or hands fills the frame (lens blur 12-14 px), mid = waist up (10), wide = sharp */
 export type Size = "close" | "mid" | "wide";
 export type CamSpec = { cam: string } | { on: string; dist: number; h: number; from: string; side?: number; fov?: number }

@@ -5,7 +5,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export const STUDIO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// the Remotion CLI loads remotion.config.ts as CommonJS, where import.meta.url is undefined; it always runs from studio/
+export const STUDIO = import.meta.url ? path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..") : process.cwd();
 const EPS = path.join(STUDIO, "src/videos/engine/eps");
 
 export const episodes = () => fs.readdirSync(EPS).filter((d) => /^ep\d+$/.test(d)).sort();

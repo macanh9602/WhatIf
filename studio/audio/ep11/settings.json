@@ -1,0 +1,505 @@
+{
+ "bpm": 100,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   0.5,
+   76
+  ],
+  [
+   1,
+   79
+  ],
+  [
+   1.5,
+   83
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   76
+  ],
+  [
+   4.5,
+   79
+  ],
+  [
+   5,
+   81
+  ],
+  [
+   5.5,
+   79
+  ],
+  [
+   6,
+   74
+  ],
+  [
+   7,
+   71
+  ]
+ ],
+ "major_chords": [
+  [
+   43,
+   50,
+   55,
+   59
+  ],
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   40,
+   47,
+   52,
+   55
+  ],
+  [
+   38,
+   45,
+   50,
+   54
+  ]
+ ],
+ "minor_chords": [
+  [
+   40,
+   47,
+   52,
+   55
+  ],
+  [
+   36,
+   43,
+   48,
+   52
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ],
+  [
+   38,
+   45,
+   50,
+   54
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 65.5,
+ "seed": 111111,
+ "music_sections": [
+  [
+   "Hook: one bite of toast",
+   0,
+   4.3,
+   -14,
+   "pulse"
+  ],
+  [
+   "Wake up green, step outside",
+   4.3,
+   10.7,
+   -14,
+   "bounce"
+  ],
+  [
+   "The long stand in the sun",
+   10.7,
+   15.95,
+   -14,
+   "warm"
+  ],
+  [
+   "1 percent, the leaf",
+   15.95,
+   27.5,
+   -15,
+   "explain"
+  ],
+  [
+   "Tree, brain, skin",
+   27.5,
+   40.1,
+   -15,
+   "explain"
+  ],
+  [
+   "The tennis court",
+   40.1,
+   44.3,
+   -14,
+   "pulse"
+  ],
+  [
+   "The sea slug",
+   44.3,
+   55.4,
+   -15,
+   "bounce"
+  ],
+  [
+   "Sunset and the one bite",
+   55.4,
+   62.7,
+   -15,
+   "warm"
+  ],
+  [
+   "The question",
+   62.7,
+   65.5,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   3.6,
+   "tink",
+   0.3,
+   -24,
+   -0.2,
+   "one bite"
+  ],
+  [
+   4.25,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   5.78,
+   "boing",
+   0.4,
+   -28,
+   0,
+   "green"
+  ],
+  [
+   7.65,
+   "tink",
+   0.3,
+   -26,
+   0.2,
+   "sunlight"
+  ],
+  [
+   8.75,
+   "whoosh",
+   0.5,
+   -28,
+   -0.2,
+   "plate shoved"
+  ],
+  [
+   8.95,
+   "thump",
+   0.3,
+   -26,
+   -0.2,
+   "cancelled stamp"
+  ],
+  [
+   9.55,
+   "steps",
+   0.8,
+   -30,
+   0,
+   "steps out"
+  ],
+  [
+   10.2,
+   "whoosh",
+   0.5,
+   -28,
+   0,
+   "sun glare"
+  ],
+  [
+   10.75,
+   "fastclock",
+   3.2,
+   -30,
+   0.2,
+   "the clock spins"
+  ],
+  [
+   15.15,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "panel glint"
+  ],
+  [
+   16.7,
+   "click",
+   0.12,
+   -22,
+   0,
+   "HUD opens"
+  ],
+  [
+   18.9,
+   "bell",
+   0.6,
+   -26,
+   0,
+   "1 percent"
+  ],
+  [
+   22.05,
+   "whoosh",
+   0.5,
+   -28,
+   0,
+   "leaf"
+  ],
+  [
+   25.3,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "2 percent"
+  ],
+  [
+   25.8,
+   "boing",
+   0.4,
+   -30,
+   0.3,
+   "light bounces"
+  ],
+  [
+   26.8,
+   "tink",
+   0.3,
+   -26,
+   -0.2,
+   "food"
+  ],
+  [
+   29.6,
+   "steps",
+   0.8,
+   -30,
+   0,
+   "you run"
+  ],
+  [
+   29.95,
+   "thump",
+   0.3,
+   -28,
+   0,
+   "no legs tag"
+  ],
+  [
+   30.87,
+   "thump",
+   0.3,
+   -26,
+   0,
+   "no brain tag"
+  ],
+  [
+   32.5,
+   "crinkle",
+   0.8,
+   -30,
+   0,
+   "thousands of leaves"
+  ],
+  [
+   34.95,
+   "crinkle",
+   0.5,
+   -28,
+   -0.2,
+   "brain chews"
+  ],
+  [
+   35.8,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "a fifth"
+  ],
+  [
+   37.9,
+   "whoosh",
+   0.9,
+   -28,
+   0,
+   "skin unfolds"
+  ],
+  [
+   38.15,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "2 m2"
+  ],
+  [
+   42.0,
+   "whoosh",
+   2.0,
+   -26,
+   0,
+   "skin rolls out"
+  ],
+  [
+   43.8,
+   "thump",
+   0.3,
+   -24,
+   0,
+   "court covered"
+  ],
+  [
+   46.9,
+   "water",
+   2.0,
+   -36,
+   0,
+   "under water"
+  ],
+  [
+   47.4,
+   "sip",
+   0.3,
+   -28,
+   0.2,
+   "slug steals"
+  ],
+  [
+   49.55,
+   "crinkle",
+   0.4,
+   -30,
+   0.2,
+   "eats"
+  ],
+  [
+   50.75,
+   "fastclock",
+   1.2,
+   -30,
+   -0.2,
+   "calendar flips"
+  ],
+  [
+   51.65,
+   "tink",
+   0.3,
+   -26,
+   0.2,
+   "no meal"
+  ],
+  [
+   53.35,
+   "thump",
+   0.3,
+   -20,
+   0,
+   "GROWTH: NO stamp"
+  ],
+  [
+   56.3,
+   "steps",
+   1.2,
+   -32,
+   0,
+   "walks in"
+  ],
+  [
+   58.05,
+   "boing",
+   0.4,
+   -26,
+   -0.3,
+   "toast pops"
+  ],
+  [
+   59.25,
+   "crinkle",
+   0.4,
+   -24,
+   0,
+   "the bite"
+  ],
+  [
+   60.3,
+   "wince",
+   0.7,
+   -30,
+   0,
+   "HUD falls"
+  ],
+  [
+   63.9,
+   "bell",
+   0.8,
+   -26,
+   0,
+   "the question"
+  ]
+ ]
+}

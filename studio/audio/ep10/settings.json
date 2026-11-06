@@ -1,0 +1,551 @@
+{
+ "bpm": 128,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   67
+  ],
+  [
+   0.5,
+   72
+  ],
+  [
+   1,
+   76
+  ],
+  [
+   1.5,
+   74
+  ],
+  [
+   2,
+   72
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   3.5,
+   77
+  ],
+  [
+   4,
+   76
+  ],
+  [
+   4.5,
+   74
+  ],
+  [
+   5,
+   72
+  ],
+  [
+   5.5,
+   71
+  ],
+  [
+   6,
+   72
+  ],
+  [
+   7,
+   67
+  ]
+ ],
+ "major_chords": [
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   43,
+   50,
+   55,
+   62
+  ],
+  [
+   45,
+   52,
+   57,
+   64
+  ]
+ ],
+ "minor_chords": [
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ],
+  [
+   40,
+   47,
+   52,
+   56
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -15,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 81.4,
+ "seed": 101010,
+ "music_sections": [
+  [
+   "Hook: thin air",
+   0,
+   4.6,
+   -14,
+   "pulse"
+  ],
+  [
+   "Cartoon morning, the run",
+   4.6,
+   24.85,
+   -14,
+   "bounce"
+  ],
+  [
+   "Hanging, the 1980 law",
+   24.85,
+   37.45,
+   -15,
+   "explain"
+  ],
+  [
+   "Anvil, pancake, pop",
+   37.45,
+   48.6,
+   -14,
+   "bounce"
+  ],
+  [
+   "Squash and stretch",
+   48.6,
+   64.95,
+   -15,
+   "explain"
+  ],
+  [
+   "11:59, midnight",
+   64.95,
+   75.6,
+   -15,
+   "dark"
+  ],
+  [
+   "The question",
+   75.6,
+   81.4,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   3.9,
+   "wince",
+   0.35,
+   -30,
+   0.1,
+   "glance down gulp"
+  ],
+  [
+   4.55,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   6.65,
+   "scribble",
+   0.85,
+   -30,
+   0,
+   "outline inks thick"
+  ],
+  [
+   9.75,
+   "boing",
+   0.5,
+   -20,
+   0,
+   "saucer eyes"
+  ],
+  [
+   11.0,
+   "tink",
+   0.2,
+   -28,
+   -0.2,
+   "finger 1"
+  ],
+  [
+   11.29,
+   "tink",
+   0.2,
+   -28,
+   -0.2,
+   "finger 2"
+  ],
+  [
+   11.58,
+   "tink",
+   0.2,
+   -27,
+   -0.2,
+   "finger 3"
+  ],
+  [
+   11.86,
+   "tink",
+   0.25,
+   -25,
+   -0.2,
+   "finger 4"
+  ],
+  [
+   13.55,
+   "scribble",
+   0.7,
+   -28,
+   0.2,
+   "eraser"
+  ],
+  [
+   15.3,
+   "rustle",
+   3.0,
+   -30,
+   0,
+   "flipbook riffle"
+  ],
+  [
+   18.55,
+   "tink",
+   0.3,
+   -22,
+   0,
+   "5,040"
+  ],
+  [
+   19.9,
+   "whoosh",
+   0.3,
+   -28,
+   0,
+   "run start"
+  ],
+  [
+   20.73,
+   "roll",
+   2.12,
+   -24,
+   0,
+   "leg-spin whirr + stomp"
+  ],
+  [
+   22.98,
+   "whoosh",
+   0.4,
+   -20,
+   0.3,
+   "zip off the edge"
+  ],
+  [
+   23.75,
+   "whoosh",
+   0.35,
+   -24,
+   0.1,
+   "you zip past the lip"
+  ],
+  [
+   26.35,
+   "sheet",
+   1.2,
+   -30,
+   -0.2,
+   "page flutters past"
+  ],
+  [
+   30.7,
+   "tink",
+   0.3,
+   -28,
+   0.2,
+   "the law"
+  ],
+  [
+   34.5,
+   "whoosh",
+   1.0,
+   -32,
+   0,
+   "ghost drops"
+  ],
+  [
+   35.88,
+   "click",
+   0.12,
+   -28,
+   0,
+   "storey tag"
+  ],
+  [
+   38.0,
+   "wince",
+   0.35,
+   -26,
+   0,
+   "look down gulp"
+  ],
+  [
+   38.85,
+   "paper",
+   0.8,
+   -24,
+   0,
+   "fall whistle"
+  ],
+  [
+   39.85,
+   "thump",
+   0.3,
+   -20,
+   0,
+   "land on the street"
+  ],
+  [
+   40.05,
+   "wince",
+   0.4,
+   -30,
+   0,
+   "anvil whistle"
+  ],
+  [
+   40.43,
+   "tray",
+   0.6,
+   -16,
+   0,
+   "anvil clang"
+  ],
+  [
+   40.43,
+   "thump",
+   0.35,
+   -18,
+   0,
+   "anvil impact"
+  ],
+  [
+   41.75,
+   "thump",
+   0.3,
+   -24,
+   0.3,
+   "anvil hops off"
+  ],
+  [
+   44.0,
+   "tear",
+   1.1,
+   -26,
+   0,
+   "peel off the street"
+  ],
+  [
+   45.88,
+   "rustle",
+   0.5,
+   -28,
+   0,
+   "shake"
+  ],
+  [
+   46.83,
+   "boing",
+   0.5,
+   -18,
+   0,
+   "pop back"
+  ],
+  [
+   50.62,
+   "boing",
+   0.4,
+   -26,
+   -0.2,
+   "squash"
+  ],
+  [
+   51.45,
+   "whoosh",
+   0.3,
+   -30,
+   -0.2,
+   "stretch"
+  ],
+  [
+   52.42,
+   "tink",
+   0.3,
+   -26,
+   0,
+   "rule #1"
+  ],
+  [
+   54.8,
+   "bell",
+   0.6,
+   -30,
+   0.2,
+   "one condition"
+  ],
+  [
+   56.4,
+   "stamp",
+   0.25,
+   -24,
+   0,
+   "press flattens"
+  ],
+  [
+   60.38,
+   "stamp",
+   0.3,
+   -22,
+   0,
+   "SAME"
+  ],
+  [
+   63.6,
+   "thump",
+   0.3,
+   -20,
+   0.2,
+   "real body lands"
+  ],
+  [
+   64.1,
+   "stamp",
+   0.3,
+   -22,
+   0.2,
+   "NO BOUNCE"
+  ],
+  [
+   65.0,
+   "clock",
+   6.3,
+   -34,
+   -0.2,
+   "11:59 ticking"
+  ],
+  [
+   71.38,
+   "bell",
+   1.0,
+   -22,
+   0,
+   "midnight"
+  ],
+  [
+   72.7,
+   "boing",
+   0.35,
+   -24,
+   0.3,
+   "fifth finger"
+  ],
+  [
+   74.5,
+   "paper",
+   1.0,
+   -24,
+   0,
+   "fall whistle"
+  ],
+  [
+   75.83,
+   "thump",
+   0.3,
+   -22,
+   0,
+   "land on the awning"
+  ],
+  [
+   75.86,
+   "boing",
+   0.4,
+   -26,
+   0.2,
+   "awning springs"
+  ],
+  [
+   80.3,
+   "bell",
+   0.8,
+   -30,
+   0,
+   "the question"
+  ]
+ ]
+}

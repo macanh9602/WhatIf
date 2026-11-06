@@ -16,6 +16,8 @@
 //       coverage is continuous in the width (no width popping when the camera moves), width shrinks a little with
 //       distance (3.4 px at 6 m -> 2.2 px at 90 m, log-distance), opacity to 0.75, fades out by 450 m;
 //       no ink where the main depth buffer has something nearer than the world (characters / cards in front).
+//     Steps 1-2 repeat for INK_SAMPLES sub-texel camera jitters and the masks sum: thin trims and grazing side faces
+//     flip the crease and depth decisions at any one sub-pixel position, and the camera creep moves that position every frame.
 //  3. Composite: 3x3 tent-filtered mask (anti-aliasing), near-black ink blended in display gamma (like Canvas2D),
 //     written back into the input buffer (colour only; the composer's depth texture stays intact).
 //     This is a Pass (not an Effect), so R3F's <EffectComposer> keeps it as its own pass BEFORE the merged
@@ -56,6 +58,11 @@ const DEF: Required<InkOptions> = {
 };
 
 const INK_SS = 2; // ink supersampling factor (see setSize)
+const INK_SAMPLES = 16; // sub-texel jittered masks summed per frame; boil on the 7 worst ep02 shots against 1 sample: 8 = -81 %, 16 = -84 %, 32 = -84 % (temporal_qa.mjs); 16 costs ~1.5x render time
+
+const hal = (i: number, b: number) => { let f = 1, r = 0; for (let k = i + 1; k > 0; k = Math.floor(k / b)) { f /= b; r += f * (k % b); } return r; };
+/** Halton (2, 3) offsets inside one mask texel, -0.5 .. 0.5: no wider than the texel, so lines do not get softer */
+const JITTER = Array.from({ length: INK_SAMPLES }, (_, i) => [hal(i, 2) - 0.5, hal(i, 3) - 0.5]);
 
 const FS_VERT = /* glsl */ `
 varying vec2 vUv;
@@ -118,6 +125,7 @@ uniform float fadeFar;
 uniform float strength;
 uniform float useMain;
 uniform float pxScale;   // output px per 1080x1920 px
+uniform float weight;    // 1 / jitter samples (the mask target sums them)
 uniform vec2 fogRange;   // scene fog near / far (m); far <= near = no fog tint
 uniform float fogStart;  // ink stays pure black up to here (m), then tints toward the fog colour
 varying vec2 vUv;
@@ -184,7 +192,7 @@ void main() {
   float ink = max(eD, eN) * strength * mix(1.0, farOpacity, t) * (1.0 - smoothstep(fadeNear, fadeFar, zc));
   float f0 = max(fogRange.x, fogStart);
   float fogK = fogRange.y > f0 ? clamp((zc - f0) / (fogRange.y - f0), 0.0, 1.0) : 0.0;
-  gl_FragColor = vec4(ink, fogK, 0.0, 1.0);
+  gl_FragColor = vec4(ink, fogK, 0.0, 1.0) * weight;
 }`;
 
 const COMP_FRAG = /* glsl */ `
@@ -202,14 +210,6 @@ void main() {
   float a = (4.0 * m(0.0, 0.0)
     + 2.0 * (m(1.0, 0.0) + m(-1.0, 0.0) + m(0.0, 1.0) + m(0.0, -1.0))
     + m(1.0, 1.0) + m(-1.0, 1.0) + m(1.0, -1.0) + m(-1.0, -1.0)) / 16.0;   // 1-2-1 tent = anti-aliasing
-  // fb0016 gap bridge: thin bars (mullions, trims, board edges) 1-2 px wide at range are detected on and off, so their
-  // lines came out dashed; a pixel with line on BOTH opposite sides (<= 6 texels = 3 output px) is line too
-  float br = 0.0;
-  for (float d = 2.0; d <= 6.0; d += 2.0) {
-    br = max(br, max(min(m(d, 0.0), m(-d, 0.0)), min(m(0.0, d), m(0.0, -d))));
-    br = max(br, max(min(m(d * 0.7, d * 0.7), m(-d * 0.7, -d * 0.7)), min(m(d * 0.7, -d * 0.7), m(-d * 0.7, d * 0.7))));
-  }
-  a = max(a, br);
   // fb0016 speckle filter: a real line continues 5 output px away in some direction; a lone 1-2 texel hit where two
   // boxes touch or interpenetrate does not, and showed as dotted "noise" along trims, frames and pool edges
   // (mask is 2x the output: a 3 px dot spans ~6 texels, so probe 10 texels = 5 output px out)
@@ -269,7 +269,7 @@ export class InkPass extends Pass {
       depthTexture: new THREE.DepthTexture(1, 1, THREE.UnsignedIntType),
     });
     this.maskRT = new THREE.WebGLRenderTarget(1, 1, { // linear: the composite reads it as a 2x -> 1x downsample
-      type: THREE.UnsignedByteType, minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter,
+      type: THREE.HalfFloatType, minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter,
       generateMipmaps: false, depthBuffer: false,
     });
     this.tmpRT = new THREE.WebGLRenderTarget(1, 1, {
@@ -302,8 +302,9 @@ export class InkPass extends Pass {
       creaseScale: { value: o.creaseScale }, depthLo: { value: o.depthLo }, depthHi: { value: o.depthHi },
       cosLo: { value: Math.cos((o.angleLo * Math.PI) / 180) }, cosHi: { value: Math.cos((o.angleHi * Math.PI) / 180) },
       concaveGain: { value: o.concaveGain }, farOpacity: { value: o.farOpacity },
-      fadeNear: { value: o.fadeNear }, fadeFar: { value: o.fadeFar }, strength: { value: o.strength }, useMain: { value: 0 }, pxScale: { value: 1 }, fogRange: { value: new THREE.Vector2(0, 0) }, fogStart: { value: 60 },
+      fadeNear: { value: o.fadeNear }, fadeFar: { value: o.fadeFar }, strength: { value: o.strength }, useMain: { value: 0 }, pxScale: { value: 1 }, weight: { value: 1 }, fogRange: { value: new THREE.Vector2(0, 0) }, fogStart: { value: 60 },
     });
+    Object.assign(this.maskMat, { blending: THREE.CustomBlending, blendSrc: THREE.OneFactor, blendDst: THREE.OneFactor }); // the mask target sums the jitter samples
     this.compMat = fs(COMP_FRAG, {
       inputBuffer: { value: null }, tMask: { value: this.maskRT.texture }, tNormal: { value: this.rt.texture },
       texel: { value: new THREE.Vector2(1, 1) }, inkColor: { value: new THREE.Color(o.color) }, debug: { value: 0 },
@@ -352,30 +353,41 @@ export class InkPass extends Pass {
     const clearAlpha = renderer.getClearAlpha();
     renderer.autoClear = false;
 
-    // 1) world-only normals + depth (no characters / sprites / sky; shadow maps are not re-rendered)
-    cam.layers.disable(NOINK);
-    scene.overrideMaterial = this.normalMat;
-    scene.background = null;
-    renderer.shadowMap.autoUpdate = false;
-    renderer.setClearColor(0x000000, 0);
-    renderer.setRenderTarget(this.rt);
-    renderer.clear(true, true, false);
-    renderer.render(scene, cam);
-    cam.layers.mask = mask;
-    scene.overrideMaterial = override;
-    scene.background = background;
-    renderer.shadowMap.autoUpdate = shadowAuto;
-    renderer.setClearColor(this.clearCol, clearAlpha);
-
-    // 2) edge mask
-    const u = this.maskMat.uniforms, e = cam.projectionMatrix.elements;
-    u.cNear.value = cam.near; u.cFar.value = cam.far; u.p00.value = e[0]; u.p11.value = e[5];
+    // sub-texel jitter: each mask texel integrates its whole footprint instead of one lucky point, so an edge that flips a
+    // near-binary decision at one sub-pixel position gives a steady partial coverage (scripts/temporal_qa.mjs)
+    const u = this.maskMat.uniforms, W = this.rt.width, H = this.rt.height;
+    u.weight.value = 1 / INK_SAMPLES;
     const fog = scene.fog as THREE.Fog | null;
     if (fog && (fog as THREE.Fog).isFog) { (u.fogRange.value as THREE.Vector2).set(fog.near, fog.far); (this.compMat.uniforms.fogColor.value as THREE.Color).copy(fog.color); }
     else (u.fogRange.value as THREE.Vector2).set(0, 0);
-    this.quad.material = this.maskMat;
+    u.cNear.value = cam.near; u.cFar.value = cam.far;
+    renderer.setClearColor(0x000000, 0);
     renderer.setRenderTarget(this.maskRT);
-    renderer.render(this.fsScene, this.fsCam);
+    renderer.clear(true, false, false);
+    for (const [jx, jy] of JITTER) {
+      // 1) world-only normals + depth (no characters / sprites / sky; shadow maps are not re-rendered)
+      cam.setViewOffset(W, H, jx, jy, W, H);
+      cam.layers.disable(NOINK);
+      scene.overrideMaterial = this.normalMat;
+      scene.background = null;
+      renderer.shadowMap.autoUpdate = false;
+      renderer.setRenderTarget(this.rt);
+      renderer.clear(true, true, false);
+      renderer.render(scene, cam);
+      cam.layers.mask = mask;
+      scene.overrideMaterial = override;
+      scene.background = background;
+      renderer.shadowMap.autoUpdate = shadowAuto;
+
+      // 2) edge mask (summed into the target; the projection scale does not change with the jitter)
+      const e = cam.projectionMatrix.elements;
+      u.p00.value = e[0]; u.p11.value = e[5];
+      this.quad.material = this.maskMat;
+      renderer.setRenderTarget(this.maskRT);
+      renderer.render(this.fsScene, this.fsCam);
+    }
+    cam.clearViewOffset();
+    renderer.setClearColor(this.clearCol, clearAlpha);
 
     // 3) composite into a temp target, 4) copy back into the input buffer (colour only; depth untouched)
     this.compMat.uniforms.inputBuffer.value = inputBuffer.texture;

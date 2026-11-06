@@ -33,8 +33,8 @@ const PHRASES = chunk(words.map((w, i) => (STOPS.has(i) ? { ...w, stop: true } :
 export const SHORT_FRAMES = TOTAL;
 
 /** A/B switches for test stills only (Remotion inputProps `{ post: { ink: false, ... } }`); everything is on by default. */
-type PostToggles = { inkMask?: boolean; ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };
-const toggles = (): PostToggles => ({ ink: true, lens: true, pre: true, bloom: true, grade: true, grain: false, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
+type PostToggles = { inkMask?: boolean; cast: boolean; ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };
+const toggles = (): PostToggles => ({ cast: true, ink: true, lens: true, pre: true, bloom: true, grade: true, grain: false, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
 
 /** Bloom for emissive sources only (depth.md 6.4). Its MIP chain always starts at 540x960 (half of 1080x1920),
  *  whatever the output size, so the glow keeps the same size relative to the frame (e-fold ~30 px at 1080p,
@@ -82,6 +82,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
   ), [fx, on]);
   const cam = camera as THREE.PerspectiveCamera;
   target.copy(world.update(id, f, cam, scene));
+  if (!on.cast) world.hideCast(); // scripts/temporal_qa.mjs measures the static world alone
   noInkFallback(world.root);
   if (QA) {
     console.warn("QASHOTS " + JSON.stringify(SHOTS.map((s) => [s.id, s.a, s.b])));

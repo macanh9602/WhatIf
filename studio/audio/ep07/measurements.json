@@ -1,0 +1,412 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000000084757,
+    "true_peak_dbtp": -1.7172568639097208,
+    "lra_lu": 2.190061806720051,
+    "sample_peak_dbfs": -1.7227842389407892
+  },
+  "voice": {
+    "integrated_lufs": -16.023500542451252,
+    "true_peak_dbtp": -1.7518791024013858,
+    "lra_lu": 2.2083516991715655,
+    "sample_peak_dbfs": -1.757406477432455
+  },
+  "music": {
+    "integrated_lufs": -37.7022963466684,
+    "true_peak_dbtp": -18.509118342783747,
+    "lra_lu": 4.004744780591466,
+    "sample_peak_dbfs": -18.539259092153383
+  },
+  "sfx": {
+    "integrated_lufs": -36.700069954483176,
+    "true_peak_dbtp": -9.270277711908363,
+    "lra_lu": 11.837482099534128,
+    "sample_peak_dbfs": -9.301599294383502
+  },
+  "master_gain_db": -1.6912046303564399,
+  "voice_gain_db": -1.6912046303564399,
+  "source_duration_seconds": 68.56995833333333,
+  "source_sha256": "b27242762d1d07fc0a95df52e76eac2904545f11cdb9aeb6c6504f3424a8368f",
+  "words_sha256": "030d0e993bc95e66d50123908841dd1ac14ef16c0b5957986a827a53ff79d1cf",
+  "music_sections": [
+    {
+      "name": "Hook: survive any fall, starve by lunch",
+      "start": 0,
+      "end": 5.2,
+      "base_margin": -14,
+      "gain_db": -6.348127998678844
+    },
+    {
+      "name": "The dial, the step off the counter",
+      "start": 5.2,
+      "end": 16.8,
+      "base_margin": -14,
+      "gain_db": -8.207468026175448
+    },
+    {
+      "name": "Square and cube",
+      "start": 16.8,
+      "end": 29.15,
+      "base_margin": -15,
+      "gain_db": -3.477738535738645
+    },
+    {
+      "name": "Heat, the shrew, the cold wins",
+      "start": 29.15,
+      "end": 43.6,
+      "base_margin": -15,
+      "gain_db": -1.8520292560594243
+    },
+    {
+      "name": "The drip, the shout, the cat",
+      "start": 43.6,
+      "end": 60.3,
+      "base_margin": -15,
+      "gain_db": -8.206070403233756
+    },
+    {
+      "name": "Full size, a giant lunch",
+      "start": 60.3,
+      "end": 65.85,
+      "base_margin": -14,
+      "gain_db": -6.555930112472932
+    },
+    {
+      "name": "The question",
+      "start": 65.85,
+      "end": 69.5,
+      "base_margin": -13,
+      "gain_db": -8.680217728536949
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 5.15,
+      "end": 5.65,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.75,
+      "end": 7.87,
+      "kind": "click",
+      "description": "dial click",
+      "target": -28.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.8,
+      "end": 9.9,
+      "kind": "fastclock",
+      "description": "dial ratchet down",
+      "target": -34.33229591209482,
+      "pan": 0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.95,
+      "end": 10.25,
+      "kind": "tink",
+      "description": "1 cm",
+      "target": -32.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.7,
+      "end": 11.6,
+      "kind": "steps",
+      "description": "steps to the edge",
+      "target": -38.33229591209482,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.7,
+      "end": 13.6,
+      "kind": "whoosh",
+      "description": "drift down",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.1,
+      "end": 15.4,
+      "kind": "thump",
+      "description": "land",
+      "target": -34.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.5,
+      "end": 19.0,
+      "kind": "whoosh",
+      "description": "cube shrinks",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.95,
+      "end": 21.25,
+      "kind": "tink",
+      "description": "square",
+      "target": -32.33229591209482,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.95,
+      "end": 23.25,
+      "kind": "thump",
+      "description": "cube",
+      "target": -30.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.2,
+      "end": 24.5,
+      "kind": "tink",
+      "description": "five million",
+      "target": -32.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.7,
+      "end": 27.599999999999998,
+      "kind": "whoosh",
+      "description": "air catches you",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.15,
+      "end": 31.75,
+      "kind": "whoosh",
+      "description": "heat out",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.1,
+      "end": 32.4,
+      "kind": "tink",
+      "description": "x170",
+      "target": -32.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.4,
+      "end": 38.0,
+      "kind": "crinkle",
+      "description": "shrew eats",
+      "target": -38.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.3,
+      "end": 40.9,
+      "kind": "bell",
+      "description": "every day",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.4,
+      "end": 42.4,
+      "kind": "fastclock",
+      "description": "hours pass",
+      "target": -38.33229591209482,
+      "pan": -0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.8,
+      "end": 43.4,
+      "kind": "whoosh",
+      "description": "the cold wins",
+      "target": -34.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.8,
+      "end": 45.099999999999994,
+      "kind": "sip",
+      "description": "drop lets go",
+      "target": -36.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.6,
+      "end": 47.5,
+      "kind": "splash",
+      "description": "drop hits",
+      "target": -30.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.3,
+      "end": 49.9,
+      "kind": "water",
+      "description": "inside the drop",
+      "target": -44.33229591209482,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.3,
+      "end": 50.9,
+      "kind": "whistle",
+      "description": "tiny shout",
+      "target": -38.33229591209482,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.95,
+      "end": 54.85,
+      "kind": "whistle",
+      "description": "too high",
+      "target": -36.33229591209482,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 56.8,
+      "end": 57.199999999999996,
+      "kind": "boing",
+      "description": "cat eye opens",
+      "target": -38.33229591209482,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 59.4,
+      "end": 60.1,
+      "kind": "wince",
+      "description": "cat: mrrow",
+      "target": -36.33229591209482,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 59.6,
+      "end": 59.9,
+      "kind": "thump",
+      "description": "paw lands",
+      "target": -32.33229591209482,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.8,
+      "end": 60.919999999999995,
+      "kind": "click",
+      "description": "dial click up",
+      "target": -28.33229591209482,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.85,
+      "end": 62.15,
+      "kind": "fastclock",
+      "description": "dial ratchet up",
+      "target": -34.33229591209482,
+      "pan": 0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.4,
+      "end": 62.199999999999996,
+      "kind": "whoosh",
+      "description": "grow",
+      "target": -34.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 64.75,
+      "end": 65.15,
+      "kind": "crinkle",
+      "description": "bite",
+      "target": -36.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.4,
+      "end": 67.2,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.33229591209482,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.9999463491122,
+    "p10": 15.409857787424684,
+    "median": 21.430247194924338
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3336000,
+    "duration_seconds": 69.5,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

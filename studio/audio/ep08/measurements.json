@@ -1,0 +1,479 @@
+{
+  "master": {
+    "integrated_lufs": -15.99999999968601,
+    "true_peak_dbtp": -1.643759992233684,
+    "lra_lu": 2.6557608300999185,
+    "sample_peak_dbfs": -1.6492873672647534
+  },
+  "voice": {
+    "integrated_lufs": -16.032557620497812,
+    "true_peak_dbtp": -1.895127185440575,
+    "lra_lu": 2.652200813824914,
+    "sample_peak_dbfs": -1.90315296736726
+  },
+  "music": {
+    "integrated_lufs": -37.58522595270044,
+    "true_peak_dbtp": -19.000953707658617,
+    "lra_lu": 4.173079927137181,
+    "sample_peak_dbfs": -19.00648108268969
+  },
+  "sfx": {
+    "integrated_lufs": -38.572653849141645,
+    "true_peak_dbtp": -15.846391058583958,
+    "lra_lu": 8.87760377096398,
+    "sample_peak_dbfs": -15.851918433615024
+  },
+  "master_gain_db": -1.9031529673672605,
+  "voice_gain_db": -1.9031529673672605,
+  "source_duration_seconds": 71.62241666666667,
+  "source_sha256": "030aa1efdf204c34054d1c9bafda71e746f548b8a8a27c2907e0c82feeca6aca",
+  "words_sha256": "b66ac4a52b2251b5113ff14cdb572a0d7da96590fb4064fcc2325a85b6fd72ab",
+  "music_sections": [
+    {
+      "name": "Hook: breathing the bath",
+      "start": 0,
+      "end": 5.2,
+      "base_margin": -14,
+      "gain_db": -8.71490685358425
+    },
+    {
+      "name": "Gills, the beach",
+      "start": 5.2,
+      "end": 11.4,
+      "base_margin": -14,
+      "gain_db": -5.837012742225699
+    },
+    {
+      "name": "Heavy and thin",
+      "start": 11.4,
+      "end": 24.15,
+      "base_margin": -15,
+      "gain_db": -0.7626694347480623
+    },
+    {
+      "name": "The reef is yours",
+      "start": 24.15,
+      "end": 29.85,
+      "base_margin": -14,
+      "gain_db": -6.202973744996516
+    },
+    {
+      "name": "Shiver, the radiator",
+      "start": 29.85,
+      "end": 49.2,
+      "base_margin": -15,
+      "gain_db": -2.009772447361776
+    },
+    {
+      "name": "Cold fish, the opah",
+      "start": 49.2,
+      "end": 59.85,
+      "base_margin": -15,
+      "gain_db": 4.136412256371486
+    },
+    {
+      "name": "Back to shore, the hot bath",
+      "start": 59.85,
+      "end": 69.05,
+      "base_margin": -14,
+      "gain_db": -7.738037336060394
+    },
+    {
+      "name": "The question",
+      "start": 69.05,
+      "end": 72.5,
+      "base_margin": -13,
+      "gain_db": -10.508457503346182
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.05,
+      "end": 4.95,
+      "kind": "sip",
+      "description": "bath bubbles (hook)",
+      "target": -38.12940465313075,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.05,
+      "end": 5.05,
+      "kind": "room",
+      "description": "pump hum (hook)",
+      "target": -44.12940465313075,
+      "pan": -0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.15,
+      "end": 5.65,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.6,
+      "end": 6.8999999999999995,
+      "kind": "tink",
+      "description": "gills!",
+      "target": -32.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.9,
+      "end": 10.2,
+      "kind": "water",
+      "description": "wading in",
+      "target": -40.12940465313075,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.07,
+      "end": 10.97,
+      "kind": "splash",
+      "description": "dunk, first breath",
+      "target": -30.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.8,
+      "end": 11.600000000000001,
+      "kind": "sip",
+      "description": "first breath bubbles",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.6,
+      "end": 12.2,
+      "kind": "sip",
+      "description": "it works",
+      "target": -38.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.25,
+      "end": 13.55,
+      "kind": "thump",
+      "description": "heavy",
+      "target": -32.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.1,
+      "end": 14.6,
+      "kind": "whoosh",
+      "description": "water cube drops",
+      "target": -34.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.95,
+      "end": 15.299999999999999,
+      "kind": "thump",
+      "description": "x800 slam",
+      "target": -28.12940465313075,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.35,
+      "end": 18.650000000000002,
+      "kind": "tink",
+      "description": "thirty",
+      "target": -32.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.0,
+      "end": 23.6,
+      "kind": "water",
+      "description": "a bathtub through your chest",
+      "target": -40.12940465313075,
+      "pan": -0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.3,
+      "end": 24.3,
+      "kind": "clock",
+      "description": "every few minutes",
+      "target": -40.12940465313075,
+      "pan": 0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.3,
+      "end": 25.5,
+      "kind": "sip",
+      "description": "swim bubbles",
+      "target": -38.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.9,
+      "end": 28.7,
+      "kind": "bell",
+      "description": "the whole reef",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.75,
+      "end": 31.95,
+      "kind": "scribble",
+      "description": "shiver, teeth chatter",
+      "target": -40.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.4,
+      "end": 32.699999999999996,
+      "kind": "tink",
+      "description": "felt warm?",
+      "target": -36.12940465313075,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.0,
+      "end": 36.3,
+      "kind": "thump",
+      "description": "radiator",
+      "target": -32.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.75,
+      "end": 39.05,
+      "kind": "tink",
+      "description": "oxygen in",
+      "target": -36.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.1,
+      "end": 40.6,
+      "kind": "whoosh",
+      "description": "heat out",
+      "target": -34.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.5,
+      "end": 43.85,
+      "kind": "thump",
+      "description": "x25",
+      "target": -28.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.9,
+      "end": 47.699999999999996,
+      "kind": "whoosh",
+      "description": "flows past your blood",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.4,
+      "end": 50.4,
+      "kind": "sip",
+      "description": "reef bubbles",
+      "target": -40.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.75,
+      "end": 52.55,
+      "kind": "scribble",
+      "description": "cold shiver",
+      "target": -42.12940465313075,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.3,
+      "end": 54.599999999999994,
+      "kind": "tink",
+      "description": "opah",
+      "target": -34.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 56.3,
+      "end": 56.9,
+      "kind": "bell",
+      "description": "warm heart",
+      "target": -36.12940465313075,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 57.95,
+      "end": 58.25,
+      "kind": "thump",
+      "description": "+5 C",
+      "target": -30.12940465313075,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.3,
+      "end": 61.699999999999996,
+      "kind": "water",
+      "description": "wading out",
+      "target": -40.12940465313075,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.9,
+      "end": 64.4,
+      "kind": "water",
+      "description": "hot tap running",
+      "target": -36.12940465313075,
+      "pan": -0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 64.85,
+      "end": 65.44999999999999,
+      "kind": "splash",
+      "description": "air stone drops in",
+      "target": -34.12940465313075,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.2,
+      "end": 72.4,
+      "kind": "room",
+      "description": "pump hum",
+      "target": -42.12940465313075,
+      "pan": -0.1,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.4,
+      "end": 66.30000000000001,
+      "kind": "sip",
+      "description": "pump bubbles",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.2,
+      "end": 67.8,
+      "kind": "splash",
+      "description": "lie down",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.0,
+      "end": 69.0,
+      "kind": "sip",
+      "description": "breathe the bath",
+      "target": -36.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 69.8,
+      "end": 70.6,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.5,
+      "end": 72.0,
+      "kind": "sip",
+      "description": "bubbles",
+      "target": -40.12940465313075,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999756606600016,
+    "p10": 15.149421396631102,
+    "median": 21.01538920466954
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3480000,
+    "duration_seconds": 72.5,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

@@ -49,6 +49,9 @@ if (!PREVIEW) {
   // expression gate (fb0106): faces hold a baseline per shot (no per-episode exemptions: a tool never names an episode)
   if (spawnSync(process.execPath, ["scripts/expr_qa.mjs"], { stdio: "inherit", env: { ...process.env, EP: name } }).status !== 0)
     throw new Error("expression gate: scripts/expr_qa.mjs failed (PREVIEW=1 skips)");
+  // temporal gate: set lines must hold still under the creeping camera, which stills and sheets cannot show
+  if (spawnSync(process.execPath, ["scripts/temporal_qa.mjs"], { stdio: "inherit", env: { ...process.env, EP: name } }).status !== 0)
+    throw new Error("temporal gate: scripts/temporal_qa.mjs failed (PREVIEW=1 skips)");
 }
 const mix = path.resolve(epPaths(name).mix);
 if (!fs.existsSync(mix)) throw new Error(`${mix} missing: run studio/audio/build.py first`);

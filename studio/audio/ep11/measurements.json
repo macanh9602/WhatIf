@@ -1,0 +1,486 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000000983544,
+    "true_peak_dbtp": -1.9550613664778322,
+    "lra_lu": 2.410497044983906,
+    "sample_peak_dbfs": -1.969013074427307
+  },
+  "voice": {
+    "integrated_lufs": -16.0345683046368,
+    "true_peak_dbtp": -1.9921172395152442,
+    "lra_lu": 2.407125185473779,
+    "sample_peak_dbfs": -2.032534975454333
+  },
+  "music": {
+    "integrated_lufs": -37.63201281969458,
+    "true_peak_dbtp": -17.033266197744005,
+    "lra_lu": 3.8230951613712563,
+    "sample_peak_dbfs": -17.038793572775074
+  },
+  "sfx": {
+    "integrated_lufs": -37.63084557437233,
+    "true_peak_dbtp": -12.792725765974176,
+    "lra_lu": 8.192629731908418,
+    "sample_peak_dbfs": -12.799867538877269
+  },
+  "master_gain_db": -2.0325349754543325,
+  "voice_gain_db": -2.0325349754543325,
+  "source_duration_seconds": 64.57904166666667,
+  "source_sha256": "75d616571ac8367c422f81689a894111199896de8beebc3b69c85674e6183cf6",
+  "words_sha256": "57ac28a067c3ea83d7a0c63c0d63d1a6f569c8ec74e1629832affb1cec36ba7c",
+  "music_sections": [
+    {
+      "name": "Hook: one bite of toast",
+      "start": 0,
+      "end": 4.3,
+      "base_margin": -14,
+      "gain_db": -5.763821922303098
+    },
+    {
+      "name": "Wake up green, step outside",
+      "start": 4.3,
+      "end": 10.7,
+      "base_margin": -14,
+      "gain_db": -7.3630493258912075
+    },
+    {
+      "name": "The long stand in the sun",
+      "start": 10.7,
+      "end": 15.95,
+      "base_margin": -14,
+      "gain_db": -6.325491865849742
+    },
+    {
+      "name": "1 percent, the leaf",
+      "start": 15.95,
+      "end": 27.5,
+      "base_margin": -15,
+      "gain_db": -1.1407657865217828
+    },
+    {
+      "name": "Tree, brain, skin",
+      "start": 27.5,
+      "end": 40.1,
+      "base_margin": -15,
+      "gain_db": -1.257345158499426
+    },
+    {
+      "name": "The tennis court",
+      "start": 40.1,
+      "end": 44.3,
+      "base_margin": -14,
+      "gain_db": -6.797660959739943
+    },
+    {
+      "name": "The sea slug",
+      "start": 44.3,
+      "end": 55.4,
+      "base_margin": -15,
+      "gain_db": -8.880577707755794
+    },
+    {
+      "name": "Sunset and the one bite",
+      "start": 55.4,
+      "end": 62.7,
+      "base_margin": -15,
+      "gain_db": -7.877028145130918
+    },
+    {
+      "name": "The question",
+      "start": 62.7,
+      "end": 65.5,
+      "base_margin": -13,
+      "gain_db": -8.920490691901584
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 3.6,
+      "end": 3.9,
+      "kind": "tink",
+      "description": "one bite",
+      "target": -32.00203332918241,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.25,
+      "end": 4.75,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.78,
+      "end": 6.180000000000001,
+      "kind": "boing",
+      "description": "green",
+      "target": -36.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.65,
+      "end": 7.95,
+      "kind": "tink",
+      "description": "sunlight",
+      "target": -34.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.75,
+      "end": 9.25,
+      "kind": "whoosh",
+      "description": "plate shoved",
+      "target": -36.00203332918241,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.95,
+      "end": 9.25,
+      "kind": "thump",
+      "description": "cancelled stamp",
+      "target": -34.00203332918241,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.55,
+      "end": 10.350000000000001,
+      "kind": "steps",
+      "description": "steps out",
+      "target": -38.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.2,
+      "end": 10.7,
+      "kind": "whoosh",
+      "description": "sun glare",
+      "target": -36.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.75,
+      "end": 13.95,
+      "kind": "fastclock",
+      "description": "the clock spins",
+      "target": -38.00203332918241,
+      "pan": 0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.15,
+      "end": 15.450000000000001,
+      "kind": "tink",
+      "description": "panel glint",
+      "target": -32.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.7,
+      "end": 16.82,
+      "kind": "click",
+      "description": "HUD opens",
+      "target": -30.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.9,
+      "end": 19.5,
+      "kind": "bell",
+      "description": "1 percent",
+      "target": -34.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.05,
+      "end": 22.55,
+      "kind": "whoosh",
+      "description": "leaf",
+      "target": -36.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.3,
+      "end": 25.6,
+      "kind": "tink",
+      "description": "2 percent",
+      "target": -32.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.8,
+      "end": 26.2,
+      "kind": "boing",
+      "description": "light bounces",
+      "target": -38.00203332918241,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.8,
+      "end": 27.1,
+      "kind": "tink",
+      "description": "food",
+      "target": -34.00203332918241,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.6,
+      "end": 30.400000000000002,
+      "kind": "steps",
+      "description": "you run",
+      "target": -38.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.95,
+      "end": 30.25,
+      "kind": "thump",
+      "description": "no legs tag",
+      "target": -36.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.87,
+      "end": 31.17,
+      "kind": "thump",
+      "description": "no brain tag",
+      "target": -34.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.5,
+      "end": 33.3,
+      "kind": "crinkle",
+      "description": "thousands of leaves",
+      "target": -38.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.95,
+      "end": 35.45,
+      "kind": "crinkle",
+      "description": "brain chews",
+      "target": -36.00203332918241,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.8,
+      "end": 36.099999999999994,
+      "kind": "tink",
+      "description": "a fifth",
+      "target": -32.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.9,
+      "end": 38.8,
+      "kind": "whoosh",
+      "description": "skin unfolds",
+      "target": -36.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.15,
+      "end": 38.449999999999996,
+      "kind": "tink",
+      "description": "2 m2",
+      "target": -32.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.0,
+      "end": 44.0,
+      "kind": "whoosh",
+      "description": "skin rolls out",
+      "target": -34.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.8,
+      "end": 44.099999999999994,
+      "kind": "thump",
+      "description": "court covered",
+      "target": -32.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.9,
+      "end": 48.9,
+      "kind": "water",
+      "description": "under water",
+      "target": -44.00203332918241,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.4,
+      "end": 47.699999999999996,
+      "kind": "sip",
+      "description": "slug steals",
+      "target": -36.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.55,
+      "end": 49.949999999999996,
+      "kind": "crinkle",
+      "description": "eats",
+      "target": -38.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.75,
+      "end": 51.95,
+      "kind": "fastclock",
+      "description": "calendar flips",
+      "target": -38.00203332918241,
+      "pan": -0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.65,
+      "end": 51.949999999999996,
+      "kind": "tink",
+      "description": "no meal",
+      "target": -34.00203332918241,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.35,
+      "end": 53.65,
+      "kind": "thump",
+      "description": "GROWTH: NO stamp",
+      "target": -28.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 56.3,
+      "end": 57.5,
+      "kind": "steps",
+      "description": "walks in",
+      "target": -40.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 58.05,
+      "end": 58.449999999999996,
+      "kind": "boing",
+      "description": "toast pops",
+      "target": -34.00203332918241,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 59.25,
+      "end": 59.65,
+      "kind": "crinkle",
+      "description": "the bite",
+      "target": -32.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.3,
+      "end": 61.0,
+      "kind": "wince",
+      "description": "HUD falls",
+      "target": -38.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 63.9,
+      "end": 64.7,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.00203332918241,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999968220493489,
+    "p10": 16.35596143235881,
+    "median": 21.466862883329483
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3144000,
+    "duration_seconds": 65.5,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

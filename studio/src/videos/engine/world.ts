@@ -27,6 +27,7 @@ export class World {
   private fog = new THREE.Fog("#bccbec", 25, 420);
   private sunDisc: THREE.Sprite;
   private sunCache = new Map<number, THREE.Vector3>();
+  private fitCache = new Map<number, { center: THREE.Vector3; R: number }>();
   private cloudMaps: Record<"day" | "golden", THREE.Texture[]>;
   private clouds: THREE.Mesh[] = [];
   private frustum = new THREE.Frustum();
@@ -86,6 +87,27 @@ export class World {
     return v;
   }
 
+  /** nothing animated left in the frame: actors and effect cards off (the next update brings them back) */
+  hideCast() { for (const a of [...this.actors, ...this.fxs]) a.mesh.visible = false; }
+
+  /** shadow fit frozen per shot like the sun: a fit that follows the camera slides the texel grid under every shadow edge */
+  private shotFit(id: number, s: ShotDef, indoor: boolean) {
+    let v = this.fitCache.get(id);
+    if (v) return v;
+    const c = new THREE.Vector3(), p = new THREE.Vector3(), cams: THREE.Vector3[] = [];
+    let far = 0, n = 0;
+    for (let f = s.a; f < s.b; f += 3, n++) {
+      const k = camAt(id, f);
+      cams.push(new THREE.Vector3(...k.look)); c.add(cams[n]);
+      far = Math.max(far, p.set(...k.pos).distanceTo(cams[n]));
+    }
+    c.divideScalar(n);
+    const reach = Math.max(...cams.map((l) => l.distanceTo(c)));
+    v = { center: c, R: THREE.MathUtils.clamp(far * 1.15 + 6 + reach, 10, indoor ? 16 : 60) };
+    this.fitCache.set(id, v);
+    return v;
+  }
+
   private actor(i: number) { while (this.actors.length <= i) this.actors.push(new Actor(this.root)); return this.actors[i]; }
   private fx(i: number) { while (this.fxs.length <= i) this.fxs.push(new Fx(this.root)); return this.fxs[i]; }
 
@@ -94,7 +116,7 @@ export class World {
     const c = camAt(id, f);
     cam.position.set(...c.pos); cam.up.set(0, 1, 0); cam.lookAt(...c.look); cam.rotateZ(c.roll);
     cam.fov = c.fov; cam.near = 0.05; cam.far = 1500; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
-    const focus = new THREE.Vector3(...c.look), dist = cam.position.distanceTo(focus);
+    const focus = new THREE.Vector3(...c.look), fit = this.shotFit(id, s, indoor);
     cam.layers.enable(NOINK);
     // ---- light rig: camera-relative sun frozen per shot, two-tone uniforms, shadow fit around the focus ----
     const sunDir = this.shotSun(id, s, L).clone();
@@ -103,13 +125,13 @@ export class World {
     POOL.uPoolR.value = pc ? L.pool : 0;
     if (pc) {
       const pw = new THREE.Vector3(pc[0] + SETS[s.set].origin[0], pc[1], pc[2]);
-      sunDir.copy(pw).sub(focus).normalize();
+      sunDir.copy(pw).sub(fit.center).normalize();
       POOL.uPoolV.value.copy(pw).applyMatrix4(cam.matrixWorldInverse);
     }
     this.hemi.color.set(L.sky); this.hemi.groundColor.set(L.ground); this.hemi.intensity = L.hemiI;
     this.sun.color.set(L.sunCol); this.sun.intensity = L.sunI;
-    const Rr = THREE.MathUtils.clamp(dist * 1.15 + 6, 10, indoor ? 16 : 60);
-    this.sun.position.copy(focus).addScaledVector(sunDir, 120); this.sun.target.position.copy(focus);
+    const Rr = fit.R;
+    this.sun.position.copy(fit.center).addScaledVector(sunDir, 120); this.sun.target.position.copy(fit.center);
     const sc = this.sun.shadow.camera;
     sc.left = -Rr; sc.right = Rr; sc.top = Rr; sc.bottom = -Rr; sc.near = 20; sc.far = 260; sc.updateProjectionMatrix();
     this.sun.shadow.bias = L.bias; this.sun.shadow.normalBias = L.normalBias * (Rr / 12);
@@ -132,7 +154,7 @@ export class World {
     }
     const o = SETS[s.set].origin;
     this.clouds.forEach((m, i) => {
-      m.visible = !indoor;
+      m.visible = !indoor && s.light !== "sea" && s.light !== "shallow";
       const a = (i / 9) * Math.PI * 2 + 0.3, d = 520 + (i % 3) * 60, w = 120 + (i % 4) * 30;
       m.position.set(o[0] + Math.cos(a) * d, 110 + (i % 4) * 36, o[2] + Math.sin(a) * d); m.scale.set(w, w / 2, 1);
       m.lookAt(cam.position.x, m.position.y, cam.position.z);

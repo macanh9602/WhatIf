@@ -1,0 +1,542 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999999056604,
+    "true_peak_dbtp": -1.6331979738084894,
+    "lra_lu": 2.7370412017843506,
+    "sample_peak_dbfs": -1.6630334387021777
+  },
+  "voice": {
+    "integrated_lufs": -16.001088577624152,
+    "true_peak_dbtp": -1.8860274627273177,
+    "lra_lu": 2.764892302687519,
+    "sample_peak_dbfs": -1.8915548377583866
+  },
+  "music": {
+    "integrated_lufs": -37.57931855763782,
+    "true_peak_dbtp": -16.406486511930304,
+    "lra_lu": 4.533821686900772,
+    "sample_peak_dbfs": -16.412682370158226
+  },
+  "sfx": {
+    "integrated_lufs": -36.11950747638585,
+    "true_peak_dbtp": -8.273549442978108,
+    "lra_lu": 11.496267942666009,
+    "sample_peak_dbfs": -8.281893165058992
+  },
+  "master_gain_db": -1.8915548377583864,
+  "voice_gain_db": -1.8915548377583864,
+  "source_duration_seconds": 80.56320833333334,
+  "source_sha256": "3faf0ec6eb2f82455e613ab9a063ffc8ff1a22eb349aad62e532a4f23aa95d28",
+  "words_sha256": "9cb850a2391d3f1bdfe697141fc5dee72c0aaaa04e5c9b0bcdbf52c9a0bdc36e",
+  "music_sections": [
+    {
+      "name": "Hook: thin air",
+      "start": 0,
+      "end": 4.6,
+      "base_margin": -14,
+      "gain_db": -6.076065768806217
+    },
+    {
+      "name": "Cartoon morning, the run",
+      "start": 4.6,
+      "end": 24.85,
+      "base_margin": -14,
+      "gain_db": -9.184926953188079
+    },
+    {
+      "name": "Hanging, the 1980 law",
+      "start": 24.85,
+      "end": 37.45,
+      "base_margin": -15,
+      "gain_db": -3.6390618193730973
+    },
+    {
+      "name": "Anvil, pancake, pop",
+      "start": 37.45,
+      "end": 48.6,
+      "base_margin": -14,
+      "gain_db": -9.230152348013469
+    },
+    {
+      "name": "Squash and stretch",
+      "start": 48.6,
+      "end": 64.95,
+      "base_margin": -15,
+      "gain_db": -3.3732211792989943
+    },
+    {
+      "name": "11:59, midnight",
+      "start": 64.95,
+      "end": 75.6,
+      "base_margin": -15,
+      "gain_db": -1.2856847633576862
+    },
+    {
+      "name": "The question",
+      "start": 75.6,
+      "end": 81.4,
+      "base_margin": -13,
+      "gain_db": -9.058317082537528
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 3.9,
+      "end": 4.25,
+      "kind": "wince",
+      "description": "glance down gulp",
+      "target": -38.10953373986613,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.55,
+      "end": 5.05,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.65,
+      "end": 7.5,
+      "kind": "scribble",
+      "description": "outline inks thick",
+      "target": -38.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.75,
+      "end": 10.25,
+      "kind": "boing",
+      "description": "saucer eyes",
+      "target": -28.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.0,
+      "end": 11.2,
+      "kind": "tink",
+      "description": "finger 1",
+      "target": -36.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.29,
+      "end": 11.489999999999998,
+      "kind": "tink",
+      "description": "finger 2",
+      "target": -36.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.58,
+      "end": 11.78,
+      "kind": "tink",
+      "description": "finger 3",
+      "target": -35.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.86,
+      "end": 12.11,
+      "kind": "tink",
+      "description": "finger 4",
+      "target": -33.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.55,
+      "end": 14.25,
+      "kind": "scribble",
+      "description": "eraser",
+      "target": -36.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.3,
+      "end": 18.3,
+      "kind": "rustle",
+      "description": "flipbook riffle",
+      "target": -38.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.55,
+      "end": 18.85,
+      "kind": "tink",
+      "description": "5,040",
+      "target": -30.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.9,
+      "end": 20.2,
+      "kind": "whoosh",
+      "description": "run start",
+      "target": -36.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.73,
+      "end": 22.85,
+      "kind": "roll",
+      "description": "leg-spin whirr + stomp",
+      "target": -32.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.98,
+      "end": 23.38,
+      "kind": "whoosh",
+      "description": "zip off the edge",
+      "target": -28.10953373986613,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.75,
+      "end": 24.1,
+      "kind": "whoosh",
+      "description": "you zip past the lip",
+      "target": -32.10953373986613,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.35,
+      "end": 27.55,
+      "kind": "sheet",
+      "description": "page flutters past",
+      "target": -38.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.7,
+      "end": 31.0,
+      "kind": "tink",
+      "description": "the law",
+      "target": -36.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.5,
+      "end": 35.5,
+      "kind": "whoosh",
+      "description": "ghost drops",
+      "target": -40.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.88,
+      "end": 36.0,
+      "kind": "click",
+      "description": "storey tag",
+      "target": -36.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.0,
+      "end": 38.35,
+      "kind": "wince",
+      "description": "look down gulp",
+      "target": -34.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.85,
+      "end": 39.65,
+      "kind": "paper",
+      "description": "fall whistle",
+      "target": -32.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.85,
+      "end": 40.15,
+      "kind": "thump",
+      "description": "land on the street",
+      "target": -28.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.05,
+      "end": 40.449999999999996,
+      "kind": "wince",
+      "description": "anvil whistle",
+      "target": -38.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.43,
+      "end": 41.03,
+      "kind": "tray",
+      "description": "anvil clang",
+      "target": -24.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.43,
+      "end": 40.78,
+      "kind": "thump",
+      "description": "anvil impact",
+      "target": -26.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.75,
+      "end": 42.05,
+      "kind": "thump",
+      "description": "anvil hops off",
+      "target": -32.10953373986613,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.0,
+      "end": 45.1,
+      "kind": "tear",
+      "description": "peel off the street",
+      "target": -34.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.88,
+      "end": 46.38,
+      "kind": "rustle",
+      "description": "shake",
+      "target": -36.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.83,
+      "end": 47.33,
+      "kind": "boing",
+      "description": "pop back",
+      "target": -26.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.62,
+      "end": 51.019999999999996,
+      "kind": "boing",
+      "description": "squash",
+      "target": -34.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.45,
+      "end": 51.75,
+      "kind": "whoosh",
+      "description": "stretch",
+      "target": -38.10953373986613,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.42,
+      "end": 52.72,
+      "kind": "tink",
+      "description": "rule #1",
+      "target": -34.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.8,
+      "end": 55.4,
+      "kind": "bell",
+      "description": "one condition",
+      "target": -38.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 56.4,
+      "end": 56.65,
+      "kind": "stamp",
+      "description": "press flattens",
+      "target": -32.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.38,
+      "end": 60.68,
+      "kind": "stamp",
+      "description": "SAME",
+      "target": -30.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 63.6,
+      "end": 63.9,
+      "kind": "thump",
+      "description": "real body lands",
+      "target": -28.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 64.1,
+      "end": 64.39999999999999,
+      "kind": "stamp",
+      "description": "NO BOUNCE",
+      "target": -30.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.0,
+      "end": 71.3,
+      "kind": "clock",
+      "description": "11:59 ticking",
+      "target": -42.10953373986613,
+      "pan": -0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.38,
+      "end": 72.38,
+      "kind": "bell",
+      "description": "midnight",
+      "target": -30.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 72.7,
+      "end": 73.05,
+      "kind": "boing",
+      "description": "fifth finger",
+      "target": -32.10953373986613,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.5,
+      "end": 75.5,
+      "kind": "paper",
+      "description": "fall whistle",
+      "target": -32.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.83,
+      "end": 76.13,
+      "kind": "thump",
+      "description": "land on the awning",
+      "target": -30.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.86,
+      "end": 76.26,
+      "kind": "boing",
+      "description": "awning springs",
+      "target": -34.10953373986613,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 80.3,
+      "end": 81.1,
+      "kind": "bell",
+      "description": "the question",
+      "target": -38.10953373986613,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999651996544781,
+    "p10": 14.92584369400314,
+    "median": 21.399626260110523
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3907200,
+    "duration_seconds": 81.4,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

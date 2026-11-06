@@ -1,0 +1,616 @@
+{
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -15,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "bpm": 118,
+ "theme": [
+  [
+   0,
+   72
+  ],
+  [
+   0.75,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   77
+  ],
+  [
+   2.5,
+   76
+  ],
+  [
+   3,
+   72
+  ],
+  [
+   4,
+   69
+  ],
+  [
+   4.5,
+   72
+  ],
+  [
+   5.25,
+   74
+  ],
+  [
+   6,
+   72
+  ],
+  [
+   6.5,
+   70
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   38,
+   45,
+   50,
+   53
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   48,
+   55,
+   60,
+   64
+  ]
+ ],
+ "minor_chords": [
+  [
+   38,
+   45,
+   50,
+   53
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "duration": 75.9,
+ "seed": 90909,
+ "music_sections": [
+  [
+   "Hook: the reef's biggest party",
+   0,
+   5.6,
+   -14,
+   "pulse"
+  ],
+  [
+   "The party, the loudest person",
+   5.6,
+   9.7,
+   -13,
+   "bounce"
+  ],
+  [
+   "Wake up a sponge: nothing",
+   9.7,
+   18.4,
+   -15,
+   "pad"
+  ],
+  [
+   "Water through you, a pool a day",
+   18.4,
+   30.25,
+   -15,
+   "explain"
+  ],
+  [
+   "Eat, sneeze, the guests move in",
+   30.25,
+   43.6,
+   -14,
+   "bounce"
+  ],
+  [
+   "A crowd of cells",
+   43.6,
+   50.05,
+   -15,
+   "explain"
+  ],
+  [
+   "1907: squeezed through a cloth",
+   50.05,
+   58.75,
+   -15,
+   "dark"
+  ],
+  [
+   "Your cells find each other",
+   58.75,
+   66.1,
+   -14,
+   "warm"
+  ],
+  [
+   "The party you can't feel",
+   66.1,
+   72.2,
+   -14,
+   "bounce"
+  ],
+  [
+   "The question",
+   72.2,
+   75.9,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   0.0,
+   "water",
+   5.5,
+   -34,
+   0,
+   "lagoon bed (hook)"
+  ],
+  [
+   0.6,
+   "click",
+   0.12,
+   -26,
+   -0.3,
+   "shrimp snap"
+  ],
+  [
+   1.6,
+   "click",
+   0.12,
+   -26,
+   0.3,
+   "shrimp snap"
+  ],
+  [
+   2.6,
+   "sip",
+   0.6,
+   -32,
+   0.1,
+   "bubbles"
+  ],
+  [
+   3.6,
+   "click",
+   0.12,
+   -26,
+   -0.2,
+   "shrimp snap"
+  ],
+  [
+   5.5,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   5.6,
+   "happy",
+   4.0,
+   -32,
+   0,
+   "party chatter + laughs"
+  ],
+  [
+   9.7,
+   "water",
+   8.6,
+   -36,
+   0,
+   "lagoon bed"
+  ],
+  [
+   10.0,
+   "tink",
+   0.3,
+   -26,
+   0,
+   "eyes open"
+  ],
+  [
+   12.65,
+   "stamp",
+   0.2,
+   -26,
+   -0.3,
+   "X: mouth"
+  ],
+  [
+   14.05,
+   "stamp",
+   0.2,
+   -26,
+   0,
+   "X: legs"
+  ],
+  [
+   15.6,
+   "stamp",
+   0.2,
+   -26,
+   0.3,
+   "X: brain"
+  ],
+  [
+   16.0,
+   "whoosh",
+   0.6,
+   -30,
+   0.4,
+   "fish swims past"
+  ],
+  [
+   18.6,
+   "sip",
+   1.2,
+   -32,
+   0,
+   "water arrows, bubbles"
+  ],
+  [
+   21.7,
+   "water",
+   3.2,
+   -34,
+   0,
+   "water pours in"
+  ],
+  [
+   26.9,
+   "whoosh",
+   1.2,
+   -30,
+   -0.2,
+   "pool drains"
+  ],
+  [
+   29.8,
+   "tink",
+   0.3,
+   -26,
+   0.3,
+   "one day"
+  ],
+  [
+   30.6,
+   "sip",
+   1.2,
+   -32,
+   0,
+   "food drifts in"
+  ],
+  [
+   32.3,
+   "clock",
+   1.0,
+   -36,
+   -0.3,
+   "every few hours"
+  ],
+  [
+   33.3,
+   "whoosh",
+   0.4,
+   -24,
+   0,
+   "SNEEZE puff"
+  ],
+  [
+   33.4,
+   "sip",
+   0.9,
+   -28,
+   0,
+   "slime bubbles"
+  ],
+  [
+   34.85,
+   "whoosh",
+   0.5,
+   -30,
+   -0.4,
+   "fish dart in"
+  ],
+  [
+   35.6,
+   "click",
+   0.12,
+   -26,
+   0,
+   "nibble"
+  ],
+  [
+   35.8,
+   "click",
+   0.12,
+   -26,
+   0.1,
+   "nibble"
+  ],
+  [
+   37.75,
+   "boing",
+   0.3,
+   -30,
+   -0.3,
+   "shrimp moves in"
+  ],
+  [
+   38.3,
+   "boing",
+   0.3,
+   -30,
+   0.3,
+   "crab moves in"
+  ],
+  [
+   38.9,
+   "boing",
+   0.3,
+   -30,
+   0,
+   "worm moves in"
+  ],
+  [
+   41.2,
+   "fastclock",
+   1.7,
+   -34,
+   0,
+   "guest counter climbs"
+  ],
+  [
+   42.95,
+   "tink",
+   0.3,
+   -24,
+   0,
+   "300"
+  ],
+  [
+   45.95,
+   "stamp",
+   0.2,
+   -26,
+   0,
+   "1 CREATURE? crossed"
+  ],
+  [
+   46.9,
+   "sip",
+   0.8,
+   -32,
+   0,
+   "cells split"
+  ],
+  [
+   50.3,
+   "stamp",
+   0.25,
+   -22,
+   -0.3,
+   "1907 stamp"
+  ],
+  [
+   52.1,
+   "sheet",
+   1.5,
+   -30,
+   0,
+   "squeeze through cloth"
+  ],
+  [
+   54.4,
+   "sip",
+   0.9,
+   -30,
+   0,
+   "cells drip"
+  ],
+  [
+   55.9,
+   "rustle",
+   1.2,
+   -34,
+   0,
+   "cells crawl"
+  ],
+  [
+   57.6,
+   "tink",
+   0.3,
+   -24,
+   0,
+   "a new sponge"
+  ],
+  [
+   61.4,
+   "whoosh",
+   1.2,
+   -28,
+   0,
+   "cells regroup"
+  ],
+  [
+   62.75,
+   "boing",
+   0.35,
+   -24,
+   0,
+   "curl pops back"
+  ],
+  [
+   63.6,
+   "bell",
+   0.6,
+   -30,
+   0,
+   "hearts"
+  ],
+  [
+   66.1,
+   "happy",
+   6.0,
+   -36,
+   0,
+   "party inside you (far)"
+  ],
+  [
+   66.9,
+   "click",
+   0.12,
+   -24,
+   -0.3,
+   "shrimp snap"
+  ],
+  [
+   67.9,
+   "click",
+   0.12,
+   -24,
+   0.3,
+   "shrimp snap"
+  ],
+  [
+   68.7,
+   "click",
+   0.12,
+   -24,
+   -0.3,
+   "shrimp snap"
+  ],
+  [
+   69.5,
+   "click",
+   0.12,
+   -24,
+   0.3,
+   "shrimp snap"
+  ],
+  [
+   70.25,
+   "thump",
+   0.3,
+   -24,
+   0,
+   "FELT: 0"
+  ],
+  [
+   70.6,
+   "click",
+   0.12,
+   -26,
+   -0.3,
+   "shrimp snap"
+  ],
+  [
+   71.4,
+   "click",
+   0.12,
+   -26,
+   0.3,
+   "shrimp snap"
+  ],
+  [
+   72.2,
+   "room",
+   1.75,
+   -38,
+   0,
+   "empty room"
+  ],
+  [
+   73.95,
+   "sip",
+   1.0,
+   -32,
+   0,
+   "back to the bubbles"
+  ],
+  [
+   74.4,
+   "bell",
+   0.8,
+   -28,
+   0,
+   "the question"
+  ]
+ ]
+}

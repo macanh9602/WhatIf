@@ -17,7 +17,8 @@ export const loadProps = () => (kitP ??= Promise.all(PROP_FILES.map((n) =>
   new GLTFLoader().loadAsync(staticFile(`props/${n}.glb`)).then((g) => { g.scene.updateMatrixWorld(true); KIT.set(n, g.scene); }))).then(() => undefined));
 
 export type V3 = [number, number, number];
-export type SetId = "home" | "yard" | "forest" | "snow" | "bedroom";
+export type SetId = "home" | "yard" | "forest" | "snow" | "bedroom"
+  | "counter" | "floor" | "kitchen" | "beach" | "reef" | "bathroom" | "party" | "lagoon" | "rooftops" | "street" | "park";
 export type CamHint = { pos: V3; look: V3; fov: number };
 export type SetInfo = { origin: V3; indoor: boolean; spots: Record<string, V3>; cams: Record<string, CamHint> };
 
@@ -48,6 +49,49 @@ export const SETS: Record<SetId, SetInfo> = {
   bedroom: info(2200, true, { you: [0.9, 0, -0.9], bed: [-1.1, 0, -2.35], nightstand: [0.15, 0, -3.05], window: [1.75, 1.65, -3.5] }, {
     wide: cam([0.4, 1.6, 5.2], [0.2, 0.9, -1.2], 44),
   }),
+  // ---- ep07+ (user 2026-11-06: new settings per episode) ----
+  // you at 1 cm on a kitchen countertop, everything x170: tiles 17 m, a mug tower, a crumb boulder, the tap and its drip;
+  // the counter edge at z = +4 is a 150 m cliff (the floor set is its foot)
+  counter: info(2400, false, { you: [0, 0, 0], edge: [1.5, 0, 3.6], crumb: [-2.2, 0, -0.8], drip: [3.2, 0, -2.2], mug: [-9, 0, -16] }, {
+    wide: cam([0.5, 1.4, 6.5], [0, 1.2, -3], 46),
+  }),
+  // the floor under the counter at x170: planks 25 m wide, the cabinet kick plate as a wall behind; the cat comes from +x
+  floor: info(2600, false, { you: [0, 0, 0], land: [0.6, 0, 0.8], cat: [9, 0, -3] }, {
+    wide: cam([0.5, 1.4, 6.5], [0, 1.2, -3], 46),
+  }),
+  // a normal-scale kitchen corner (mint + white, not the channel's peach home): the full-size ending
+  kitchen: info(2800, true, { you: [0.3, 0, -0.9], counter: [0, 0, -3.0] }, {
+    wide: cam([0.4, 1.6, 5.2], [0.2, 1.0, -1.2], 44),
+  }),
+  beach: info(3000, false, { you: [0, 0, 0], water: [0, 0, -6], chair: [-4.5, 0, -2.5] }, {
+    wide: cam([0, 1.5, 7], [0, 1.0, -4], 46),
+  }),
+  // deep blue reef, rocky and dark (ep08); light "sea"
+  reef: info(3200, false, { you: [0, 1.2, 0], rock: [-3, 0, -3] }, {
+    wide: cam([0, 1.8, 7], [0, 1.4, -3], 50),
+  }),
+  bathroom: info(3400, true, { you: [0.9, 0, -0.9], tub: [-0.9, 0, -2.3], tap: [-2.1, 0.75, -2.3] }, {
+    wide: cam([0.4, 1.6, 5.2], [0.0, 0.9, -1.2], 44),
+  }),
+  // a night house party: string lights, sofa, speaker, balloons (ep09)
+  party: info(3600, true, { you: [-0.4, 0, -1.6], sofa: [-0.4, 0, -2.6], speaker: [2.6, 0, -2.8] }, {
+    wide: cam([0.4, 1.6, 5.2], [0.0, 1.0, -1.2], 44),
+  }),
+  // shallow turquoise lagoon, white sand, a sponge garden (ep09); light "shallow"; spot "sponge" = where the lead sponge sits
+  lagoon: info(3800, false, { you: [0, 0, 0], sponge: [0, 0, 0], grass: [-3, 0, -2] }, {
+    wide: cam([0, 1.4, 6], [0, 0.9, -3], 48),
+  }),
+  // city rooftops at y = 0; the street is 12 m below past the roof edge at z = +3 (ep10)
+  rooftops: info(4000, false, { you: [0, 0, 0], edge: [0, 0, 3], tower: [-6, 0, -6], air: [0, 0, 5.5] }, {
+    wide: cam([3, 1.6, 6], [0, 1.2, -2], 48),
+  }),
+  // a sunny hill lawn with one big tree, sunflowers, a bench and a tennis court (ep11)
+  park: info(4400, false, { you: [0, 0, 0], tree: [-5, 0, -4], bench: [3.2, 0, -2.4], court: [12, 0, -6] }, {
+    wide: cam([0, 1.5, 7], [0, 1.2, -3], 46),
+  }),
+  street: info(4200, false, { you: [0, 0, 1.5], anvil: [0.5, 0, 1.8], lamp: [-3, 0, 2.6], awning: [3.5, 0, -1.2] }, {
+    wide: cam([0, 1.5, 8.5], [0, 1.4, -2], 46),
+  }),
 };
 
 // Static art profile. Change palette, architecture sizes and prop placement here; no runtime/domain decisions.
@@ -59,7 +103,8 @@ export const SET_ART = {
   home: { tableTop: 0.76, window: { x: 0.6, w: 2.4 } },
   bedroom: { window: { x: 1.75, w: 2.0 } },
 };
-export const POOLS: Partial<Record<SetId, V3>> = { home: [0.2, 2.15, 0.25], yard: [-3.2, 3.5, 0.85], bedroom: [0.05, 1.05, -3.05] }; // the pendant over the table, the street lamp
+export const POOLS: Partial<Record<SetId, V3>> = { home: [0.2, 2.15, 0.25], yard: [-3.2, 3.5, 0.85], bedroom: [0.05, 1.05, -3.05],
+  kitchen: [0.2, 2.15, -0.6], bathroom: [0.2, 2.2, -1.0], party: [0.0, 2.1, -1.0], street: [-3, 4.3, 2.85] }; // the pendant over the table, the street lamp
 const P = SET_ART.palette;
 // the engine's own twoTone: a lam() from another video folder binds THAT folder's light uniforms (a silently split rig)
 const mats = new Map<string, THREE.MeshLambertMaterial>();
@@ -443,13 +488,239 @@ function plant(b: SetBuilder, x: number, z: number, y = 0, scale = 1) {
 }
 
 
+// ---------------- ep07-ep10 sets (2026-11-06) ----------------
+let rs = 11; const rnd = () => ((rs = (rs * 16807) % 2147483647) / 2147483647);
+const sph = (r: number, sx = 1, sy = 1, sz = 1, seg = 14) => new THREE.SphereGeometry(r, seg, Math.max(6, seg >> 1)).scale(sx, sy, sz);
+/** an emissive bulb (fairy light, string light): no ink, no shadow */
+function bulb(b: SetBuilder, p: V3, r: number, col: [number, number, number]) {
+  const m = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 6), new THREE.MeshBasicMaterial({ color: new THREE.Color(...col) }));
+  m.position.set(...p); m.layers.set(NOINK); m.userData.noCast = true; b.group.add(m);
+}
+
+/** x170 countertop: 17 m tiles with 0.6 m grout trenches, the counter edge cliff at z = +4, a mug tower, the tap overhead */
+function counter(b: SetBuilder) {
+  b.box([0, -1.2, -43.2], [220, 1.6, 93.5], "#6f6a78"); // grout bed, ends behind the edge (a ledge past it read as a slope)
+  b.box([0, -150.5, 30], [260, 1, 240], "#a06d42", "wood"); // the kitchen floor far below the cliff
+  for (let x = -102; x <= 102; x += 17) for (let z = -4.5; z > -95; z -= 17) b.box([x, -0.3, z], [16.4, 0.6, 16.4], (Math.abs(x / 17 + z / 17) | 0) % 2 ? "#f1ece0" : "#e7dfcf");
+  b.box([0, -1.1, 3.85], [220, 2.2, 0.6], "#d8cfbd"); // the worktop's front edge: thin, so the drop shows below it
+  b.box([0, -80, -0.5], [220, 146, 0.8], "#7fb7a8", "wood"); // cabinet doors far below
+  b.box([0, 100, -96], [240, 200, 1], "#cfe3ee"); // backsplash wall
+  for (let y = 17; y < 200; y += 17) b.box([0, y, -95.4], [240, 0.5, 0.3], "#9fb6c4");
+  // the mug (10 cm -> 17 m): a red tower with a handle
+  const [mx, , mz] = SETS.counter.spots.mug.map((v, i) => v - SETS.counter.origin[i]) as V3;
+  b.geo(new THREE.CylinderGeometry(6.8, 6.4, 17, 40), [mx, 8.5, mz], "#c63939");
+  b.geo(new THREE.CylinderGeometry(6.0, 6.0, 0.4, 40), [mx, 16.9, mz], "#5a3220");
+  b.geo(new THREE.TorusGeometry(4, 1.1, 10, 24, Math.PI).rotateZ(-Math.PI / 2), [mx + 6.8, 9, mz], "#c63939");
+  // tap: a steel column far back, its spout overhead ending above the drip spot; a puddle under it
+  const [dx, , dz] = SETS.counter.spots.drip.map((v, i) => v - SETS.counter.origin[i]) as V3;
+  b.cylinder([14, 21, -30], 3.2, 42, "#aab4c3");
+  b.beam([14, 40, -30], [dx, 40, dz], 3, "#aab4c3");
+  b.geo(new THREE.CylinderGeometry(1.4, 1.6, 3, 20), [dx, 37.6, dz], "#8e99aa");
+  b.geo(new THREE.CylinderGeometry(1.6, 1.6, 0.02, 24), [dx, 0.012, dz], "#8fd3e6");
+  // crumbs, sugar grains, a coin: things whose real size tells your size
+  const [cx, , cz] = SETS.counter.spots.crumb.map((v, i) => v - SETS.counter.origin[i]) as V3;
+  b.geo(new THREE.DodecahedronGeometry(0.55, 0).scale(1.2, 0.8, 1), [cx, 0.4, cz], "#d9a55a");
+  for (const [x, z, r] of [[cx + 0.9, cz + 0.5, 0.18], [cx - 0.8, cz - 0.4, 0.24], [cx + 2.5, cz - 2.2, 0.3]] as V3[]) b.geo(new THREE.DodecahedronGeometry(r, 0), [x, r * 0.7, z], "#c98f45");
+  for (let i = 0; i < 14; i++) b.box([(rnd() - 0.5) * 14, 0.08, -rnd() * 9 + 2], [0.16, 0.16, 0.16], "#fbfaf6", "plain", rnd() * 3);
+  b.geo(new THREE.CylinderGeometry(2.1, 2.1, 0.3, 40), [5.5, 0.15, -4], "#d9b44a");
+  b.geo(new THREE.CylinderGeometry(1.7, 1.7, 0.05, 40), [5.5, 0.32, -4], "#e8c45a");
+  // a bread slice standing far left
+  b.box([-30, 7, -30], [26, 14, 2.4], "#e6b56a"); b.box([-30, 7, -28.7], [24, 12, 0.3], "#f6e3b4");
+}
+/** x170 floor under the counter: 25 m planks, the kick plate + cabinet doors as a wall behind, dust and a lost button */
+function floor(b: SetBuilder) {
+  for (let x = -112.5; x <= 112.5; x += 25) b.box([x, -0.3, 30], [24.6, 0.6, 140], (Math.round(x / 25) & 1) ? "#b07a4a" : "#a06d42", "wood");
+  b.box([0, -1, 30], [240, 1, 140], "#3a2a22");
+  b.box([0, 8.5, -9], [240, 17, 1], "#2f3b46"); // kick plate (10 cm)
+  b.box([0, 95, -14], [240, 156, 1], "#7fb7a8"); // cabinet doors above
+  for (let x = -100; x <= 100; x += 34) b.box([x, 95, -13.4], [0.6, 150, 0.3], "#5c8f82");
+  for (let x = -100; x <= 100; x += 34) b.box([x + 14, 150, -13.3], [6, 1.2, 1.2], "#aab4c3"); // handles
+  for (const [x, z, r] of [[-6, -4, 1.3], [-9.5, -2, 0.8], [7, -5, 1.0], [-14, 1, 1.6]] as V3[]) b.geo(sph(r, 1.2, 0.8, 1, 10), [x, r * 0.75, z], "#b9b4c4"); // dust bunnies
+  b.geo(new THREE.CylinderGeometry(2.4, 2.4, 0.5, 36), [-5, 0.25, 4], "#3f6c8c");
+  for (const [x, z] of [[-0.6, -0.6], [0.6, -0.6], [-0.6, 0.6], [0.6, 0.6]]) b.geo(new THREE.CylinderGeometry(0.28, 0.28, 0.02, 12), [-5 + x, 0.51, 4 + z], "#1d2a3a");
+}
+/** normal-scale kitchen corner: mint walls, white cabinets, butcher-block top, a pendant over the worktop */
+function kitchen(b: SetBuilder) {
+  const z = SET_ART.back;
+  room(b, "#cfe8dc", false, { x: 1.8, w: 1.8 });
+  windowView(b, 1.8, 1.8, true);
+  for (const x of [-2.4, -1.5, -0.6, 0.3, 1.2, 2.1, 3.0]) { b.box([x, 0.44, z + 0.5], [0.88, 0.88, 0.78], "#f4f1ea", "wood"); b.box([x, 0.7, z + 0.9], [0.3, 0.04, 0.04], P.metal); }
+  b.box([0.3, 0.91, z + 0.5], [6.4, 0.06, 0.86], "#c08a54", "wood");
+  for (const x of [-2.4, -1.4, -0.4]) b.box([x, 1.95, z + 0.2], [0.95, 0.75, 0.38], "#f4f1ea", "wood");
+  for (let i = 0; i < 8; i++) b.box([-2.6 + i * 0.6, 1.25, z + 0.08], [0.58, 0.52, 0.03], i % 2 ? "#f7efe0" : "#8fc7b4", "tile");
+  prop(b, "toaster", [-1.6, 0.94, z + 0.45], 0.22); prop(b, "microwave", [-0.3, 0.94, z + 0.5], 0.3);
+  b.box([-3.3, 1.0, z + 0.6], [0.9, 2.0, 0.8], "#e9b44c"); // a yellow fridge
+  b.geo(new THREE.CylinderGeometry(0.4, 0.4, 0.06, 28), [-1.9, 0.97, -0.6], "#f4f1ea"); // a plate on a small island
+  b.box([-1.9, 0.45, -0.6], [1.6, 0.9, 0.8], "#2F6E73", "wood"); b.box([-1.9, 0.92, -0.6], [1.7, 0.05, 0.9], "#c08a54", "wood");
+  lamp(b, POOLS.kitchen!);
+  plant(b, 3.3, 2.6, 0, 1.2);
+}
+/** morning beach: sand, a flat sea with foam bands, lifeguard chair, umbrella, towel, rocks, palms */
+function beach(b: SetBuilder) {
+  groundPatch(b, [-80, -4, 80, 40], "#ecd6a4", "plain");
+  groundPatch(b, [-80, -6, 80, -4], "#d9bf8a", "plain"); // wet sand
+  b.box([0, -0.08, -60], [200, 0.1, 108], "#2a8fb8"); b.box([0, -0.02, -9], [200, 0.012, 6], "#3fb6cf");
+  for (const z of [-6.2, -11, -18]) b.box([0, 0.005, z], [200, 0.012, z > -7 ? 0.6 : 0.35], "#e9f7fb"); // foam bands (flat: no ink)
+  const [hx, , hz] = SETS.beach.spots.chair.map((v, i) => v - SETS.beach.origin[i]) as V3;
+  for (const dx of [-0.6, 0.6]) for (const dz of [-0.5, 0.5]) b.beam([hx + dx, 0, hz + dz], [hx + dx * 0.6, 2.2, hz + dz * 0.6], 0.1, "#f4f1ea");
+  b.box([hx, 2.25, hz], [1.0, 0.1, 0.8], "#c63939"); b.box([hx, 2.7, hz - 0.35], [1.0, 0.8, 0.1], "#c63939");
+  b.box([hx, 1.1, hz + 0.45], [0.9, 0.08, 0.08], "#f4f1ea");
+  sign(b, "guard", [hx, 3.4, hz - 0.35], 1.1, 0.4, "#c63939", "#f4f1ea", "LIFEGUARD");
+  b.beam([3.5, 0, -1.5], [3.4, 2.3, -1.5], 0.06, "#f4f1ea");
+  b.geo(new THREE.ConeGeometry(1.5, 0.6, 12), [3.4, 2.4, -1.5], "#f0b93a");
+  b.box([3.0, 0.012, -0.6], [0.8, 0.02, 1.8], "#5b8eaa"); // towel (flat)
+  for (const [x, z, r] of [[-9, -5, 1.6], [-7.5, -6.5, 1.0], [10, -7, 2.2], [12, -4.5, 1.1]] as V3[]) b.geo(sph(r, 1.3, 0.7, 1, 10), [x, r * 0.25, z], "#8a8178");
+  plant(b, -11, 3, 0, 1.8); plant(b, 13, 4, 0, 2.0); plant(b, -16, -1, 0, 1.9);
+  for (const [x, z] of [[1.5, 1.5], [-2.4, 2.4], [5, 3]]) b.geo(sph(0.12, 1.4, 0.5, 1, 8), [x, 0.03, z], "#f4f1ea"); // shells
+}
+/** deep reef (ep08): sand floor, dark rocks, coral heads, kelp, the silver surface overhead */
+function reef(b: SetBuilder) {
+  groundPatch(b, [-80, -80, 80, 40], "#c9b98e", "plain");
+  b.paint = true; b.box([0, 11, -20], [300, 0.2, 300], "#9fe3f0"); b.paint = false; // the surface from below
+  for (const [x, z, r] of [[-3, -3, 1.6], [-6, -6, 2.4], [4.5, -4, 1.9], [8, -9, 3], [-10, -12, 3.5], [1, -13, 2.6], [-14, -2, 2.0], [13, -2, 1.8]] as V3[]) b.geo(sph(r, 1.2, 0.75, 1, 12), [x, r * 0.35, z], "#5a5f72");
+  const CORAL = ["#e8705e", "#f0b93a", "#b45fa0", "#5ce1c0", "#ff8fa3"];
+  for (let i = 0; i < 26; i++) {
+    const x = (rnd() - 0.5) * 30, z = -rnd() * 18 + 1.5, c = CORAL[i % 5];
+    if (Math.abs(x) < 2.2 && z > -2.5) continue; // the swim lane stays clear
+    if (i % 3 === 0) for (let k = 0; k < 4; k++) b.cylinder([x + (k % 2) * 0.25 - 0.1, 0.35 + k * 0.08, z + (k >> 1) * 0.25], 0.09, 0.7 + k * 0.16, c); // tube coral
+    else if (i % 3 === 1) b.geo(sph(0.45 + rnd() * 0.3, 1, 0.7, 1, 12), [x, 0.25, z], c); // brain coral
+    else for (let k = 0; k < 5; k++) b.geo(sph(0.22, 1, 1, 1, 8), [x + Math.cos(k) * 0.3, 0.25 + (k % 3) * 0.2, z + Math.sin(k) * 0.3], c);
+  }
+  for (let i = 0; i < 12; i++) { const x = (rnd() - 0.5) * 34, z = -6 - rnd() * 16, h = 3 + rnd() * 4; b.beam([x, 0, z], [x + 0.3, h, z], 0.14, "#3f7a52"); }
+}
+/** a tiled bathroom: clawfoot tub with water, tap, towel rail, mirror, a window */
+function bathroom(b: SetBuilder) {
+  const z = SET_ART.back;
+  room(b, "#e3eef2", false, { x: 1.9, w: 1.4 });
+  windowView(b, 1.9, 1.4, true);
+  for (let i = 0; i < 13; i++) b.box([-3.6 + i * 0.6, 0.6, z + 0.08], [0.58, 1.2, 0.03], i % 2 ? "#f4f1ea" : "#7fc3cf", "tile");
+  b.box([0, 0.006, -0.8], [7.6, 0.012, 6], "#d9e2e8", "tile");
+  const [tx, , tz] = SETS.bathroom.spots.tub.map((v, i) => v - SETS.bathroom.origin[i]) as V3;
+  b.geo(new RoundedBoxGeometry(1.8, 0.6, 0.85, 4, 0.25), [tx, 0.48, tz], "#fbfaf6");
+  b.box([tx, 0.73, tz], [1.6, 0.012, 0.66], "#6fd0de"); // water (flat)
+  for (const dx of [-0.7, 0.7]) for (const dz of [-0.3, 0.3]) b.geo(sph(0.08, 1, 1.4, 1, 8), [tx + dx, 0.1, tz + dz], "#e8c45a");
+  b.beam([tx - 0.85, 0.75, tz], [tx - 0.85, 1.0, tz], 0.05, P.metal); b.beam([tx - 0.85, 1.0, tz], [tx - 0.68, 1.0, tz], 0.05, P.metal);
+  b.box([tx + 0.55, 0.81, tz - 0.32], [0.16, 0.1, 0.1], "#2b2f3a"); // the aquarium pump on the rim
+  framed(b, -0.2, 1.75, z + 0.06, 0.8, 0.9, "#cfe3ee"); // mirror
+  b.box([-0.2, 0.85, z + 0.3], [0.7, 0.12, 0.45], "#fbfaf6"); b.beam([-0.2, 0, z + 0.3], [-0.2, 0.8, z + 0.3], 0.12, "#fbfaf6");
+  b.beam([3.85, 1.2, -1.6], [3.85, 1.2, -0.6], 0.04, P.metal);
+  b.box([3.82, 0.95, -1.1], [0.06, 0.55, 0.7], "#e9b44c", "cloth");
+  b.box([-2.6, 0.006, -1.0], [0.9, 0.014, 0.6], "#c8603f", "cloth"); // bath mat (flat)
+  lamp(b, POOLS.bathroom!);
+  plant(b, 3.2, -2.6, 0, 0.9);
+}
+/** night party room: purple walls, string lights, a sofa, a speaker stack, balloons, snacks */
+function party(b: SetBuilder) {
+  const z = SET_ART.back;
+  room(b, "#5a4f8f", true);
+  for (let i = 0; i <= 20; i++) { const u = i / 20, x = -3.6 + 7.2 * u; bulb(b, [x, 2.35 - 0.35 * Math.sin(u * Math.PI), z + 0.18], 0.045, [[5, 3.6, 1.6], [5, 1.8, 2.4], [1.6, 3.6, 5]][i % 3] as [number, number, number]); }
+  const [sx, , sz] = SETS.party.spots.sofa.map((v, i) => v - SETS.party.origin[i]) as V3;
+  b.box([sx, 0.25, sz], [2.4, 0.5, 0.9], "#e9b44c", "cloth"); b.box([sx, 0.7, sz - 0.38], [2.4, 0.6, 0.18], "#e9b44c", "cloth");
+  for (const dx of [-1.25, 1.25]) b.box([sx + dx, 0.45, sz], [0.2, 0.6, 0.9], "#d39a30", "cloth");
+  for (const dx of [-0.6, 0.6]) b.box([sx + dx, 0.56, sz + 0.05], [1.1, 0.14, 0.75], "#f0c25e", "cloth");
+  const [px, , pz] = SETS.party.spots.speaker.map((v, i) => v - SETS.party.origin[i]) as V3;
+  b.box([px, 0.6, pz], [0.6, 1.2, 0.5], "#1d1a3a");
+  for (const [y, r] of [[0.35, 0.2], [0.85, 0.14]] as [number, number][]) b.geo(new THREE.CylinderGeometry(r, r, 0.04, 20).rotateX(Math.PI / 2), [px, y, pz + 0.26], "#5a5f72");
+  table(b, [1.1, 0, -1.0], 0.9, 0.6, 0.45, "#c08a54");
+  for (const [dx, c] of [[-0.25, "#c63939"], [0.05, "#f0b93a"], [0.3, "#5ce1ff"]] as [number, string][]) b.cylinder([1.1 + dx, 0.51, -1.0], 0.06, 0.12, c); // cups
+  for (const [x, y, zz, c] of [[-3.2, 2.0, -2.6, "#c63939"], [-2.8, 1.8, -3.0, "#5ce1ff"], [3.2, 2.1, -2.2, "#f0b93a"], [2.9, 1.85, -1.6, "#ff8fa3"]] as [number, number, number, string][]) b.geo(sph(0.22, 1, 1.2, 1, 12), [x, y, zz], c);
+  b.box([-1.2, 0.006, -1.4], [3.4, 0.012, 2.4], "#2F6E73", "cloth");
+  lamp(b, POOLS.party!);
+}
+/** shallow lagoon (ep09): bright sand, seagrass tufts, a garden of tube and barrel sponges, ripple-lit surface overhead */
+function lagoon(b: SetBuilder) {
+  groundPatch(b, [-80, -80, 80, 40], "#f2e6c4", "plain");
+  b.paint = true; b.box([0, 5, -20], [300, 0.2, 300], "#c8f6f2"); b.paint = false;
+  for (let i = 0; i < 40; i++) { // seagrass tufts: few, fat blades (thin ones boil at range)
+    const x = (rnd() - 0.5) * 34, z = -rnd() * 20 + 2;
+    if (Math.abs(x) < 2.5 && z > -2) continue;
+    for (let k = 0; k < 3; k++) b.geo(new THREE.ConeGeometry(0.09, 0.6 + rnd() * 0.4, 6), [x + (k - 1) * 0.16, 0.35, z + (k % 2) * 0.12], k % 2 ? "#6fae5a" : "#86c06a");
+  }
+  const SP = ["#f0b93a", "#b45fa0", "#e8705e", "#5ca8d8"];
+  for (let i = 0; i < 16; i++) {
+    const x = (rnd() - 0.5) * 26, z = -2.5 - rnd() * 14, c = SP[i % 4];
+    if (i % 2) { // barrel sponge: a lumpy body, a knobbly rim round a dark mouth (smooth open cylinders read as trash cans)
+      b.geo(sph(0.46, 1, 1.05, 1, 12), [x, 0.42, z], c);
+      for (let k = 0; k < 9; k++) { const a = k * 0.7; b.geo(sph(0.15, 1, 1, 1, 7), [x + Math.cos(a) * 0.36, 0.76 + (k % 2) * 0.03, z + Math.sin(a) * 0.36], c); }
+      for (let k = 0; k < 7; k++) { const a = k * 0.9 + 0.4; b.geo(sph(0.12, 1, 1.3, 1, 7), [x + Math.cos(a) * 0.44, 0.3 + (k % 3) * 0.12, z + Math.sin(a) * 0.44], c); }
+      b.geo(sph(0.25, 1, 0.3, 1, 10), [x, 0.84, z], "#3a2c46");
+    } else for (let k = 0; k < 3; k++) { const tx = x + (k - 1) * 0.24, h = 0.7 + k * 0.24; // tube sponges: fat fingers with a dark tip
+      b.cylinder([tx, h / 2, z], 0.11, h, c); b.geo(sph(0.13, 1, 0.6, 1, 8), [tx, h, z], c); b.geo(sph(0.06, 1, 0.4, 1, 6), [tx, h + 0.07, z], "#3a2c46"); }
+  }
+  for (const [x, z, r] of [[-5, -5, 1.0], [6, -7, 1.4], [-9, -10, 1.8]] as V3[]) b.geo(sph(r, 1.3, 0.6, 1, 10), [x, r * 0.25, z], "#b8ad94");
+}
+/** city rooftops at y = 0 over a 12 m street (ep10): parapets, water tower, vents, AC units, a stair hut, neighbours */
+function rooftops(b: SetBuilder) {
+  b.box([0, -6.05, -4.5], [20, 12.1, 15], "#a76a66", "brick"); // our building, top at y = 0, front face at z = +3
+  b.box([0, 0.01, -4.5], [19.6, 0.02, 14.6], "#7d7a86"); // tar roof (flat)
+  for (const x of [-9.9, 9.9]) b.box([x, 0.3, -4.5], [0.25, 0.6, 15], "#c9b79a");
+  b.box([0, 0.3, -11.9], [20, 0.6, 0.25], "#c9b79a"); b.box([0, 0.15, 2.9], [20, 0.3, 0.25], "#c9b79a"); // low front lip
+  const [tx, , tz] = SETS.rooftops.spots.tower.map((v, i) => v - SETS.rooftops.origin[i]) as V3;
+  for (const [dx, dz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) b.beam([tx + dx, 0, tz + dz], [tx + dx * 0.9, 3, tz + dz * 0.9], 0.18, "#5a4a3a");
+  b.cylinder([tx, 4.5, tz], 1.5, 3, "#8a5a3a"); b.geo(new THREE.ConeGeometry(1.7, 1.2, 16), [tx, 6.6, tz], "#5a4a3a");
+  for (const [x, z] of [[4, -3], [6.5, -7]]) { b.box([x, 0.5, z], [1.4, 1, 1.0], "#b9c2cf"); b.geo(new THREE.CylinderGeometry(0.4, 0.4, 0.06, 18), [x, 1.03, z], "#5a5f72"); }
+  for (const x of [-3, -1.5]) b.cylinder([x, 0.6, -9], 0.25, 1.2, "#aab4c3");
+  b.box([7, 1.3, -10.5], [2.6, 2.6, 2.4], "#c96b55", "brick"); framed(b, 7, 1.0, -9.28, 0.9, 1.9, P.teal);
+  // the street below and the far side
+  b.box([0, -12.05, 10], [120, 0.1, 16], "#5d6382");
+  for (const z of [3.8, 16.2]) b.box([0, -11.9, z], [120, 0.2, 1.6], "#c9b79a");
+  for (let x = -20; x <= 20; x += 5) b.box([x, -11.98, 10], [2.2, 0.012, 0.2], P.yellow);
+  for (const [x, h, c] of [[-14, 18, "#c96b55"], [-5, 26, "#6f9f9a"], [5, 20, "#d58a4b"], [15, 30, "#5b8eaa"]] as [number, number, string][]) {
+    b.box([x, -12 + h / 2, 21], [9, h, 6], c, "brick");
+    for (let y = -10; y < h - 12; y += 3.2) for (const dx of [-2.6, 0, 2.6]) b.box([x + dx, y, 17.97], [1.3, 1.6, 0.06], "#9cc3d6");
+  }
+  for (const [x, top, c] of [[-18, 3.5, "#b9748f"], [18, -4, "#e2b04e"]] as [number, number, string][]) b.box([x, (top - 12) / 2, -4], [14, top + 12, 14], c, "brick"); // neighbour roofs
+}
+/** a city street at y = 0 (ep10): road, kerbs, shop fronts with striped awnings, a lamp post, manhole, hydrant */
+function street(b: SetBuilder) {
+  groundPatch(b, [-80, 4, 80, 40], "#5d6382", "plain");
+  groundPatch(b, [-80, -3, 80, 4], "#c9b79a", "tile");
+  groundPatch(b, [-80, -60, 80, -3], "#8a8f9e", "plain");
+  b.box([0, 0.08, 4.0], [160, 0.16, 0.18], "#a69a85");
+  for (let x = -30; x <= 30; x += 4) b.box([x, 0.008, 9], [2, 0.016, 0.16], P.yellow);
+  b.geo(new THREE.CylinderGeometry(0.45, 0.45, 0.02, 24), [-1.5, 0.012, 2.2], "#3b3f52"); // manhole (flat)
+  const SHOPS: [number, string, string, string][] = [[-9, "#d58a4b", "#c63939", "BAKERY"], [-3, "#6f9f9a", "#2F6E73", "BOOKS"], [3.5, "#e2b04e", "#5b8eaa", "DINER"], [10, "#b9748f", "#7a4a8c", "SHOES"]];
+  for (const [x, wall, aw, name] of SHOPS) {
+    b.box([x, 6, -6], [6, 12, 6], wall, "brick");
+    b.box([x - 0.4, 1.3, -2.95], [3.4, 2.2, 0.08], "#9cc3d6"); framed(b, x + 2.3, 1.1, -2.95, 0.9, 2.1, aw);
+    for (let k = 0; k < 6; k++) b.box([x - 2.5 + k + 0.5, 3.0, -2.45], [1, 0.08, 1.1], k % 2 ? "#f4f1ea" : aw, "plain", 0);
+    sign(b, `shop.${name}`, [x, 3.9, -2.93], 3, 0.6, "#f4f1ea", "#1d1a3a", name);
+    for (let y = 6; y < 11.5; y += 2.6) for (const dx of [-1.6, 1.6]) b.box([x + dx, y, -2.97], [1.1, 1.4, 0.06], "#9cc3d6");
+  }
+  const [lx, , lz] = SETS.street.spots.lamp.map((v, i) => v - SETS.street.origin[i]) as V3;
+  b.beam([lx, 0, lz], [lx, 4.2, lz], 0.14, "#2f3e4f"); b.box([lx, 4.45, lz + 0.25], [0.5, 0.18, 0.7], "#2f3e4f");
+  b.cylinder([5.6, 0.35, 2.8], 0.18, 0.7, "#c63939"); b.cylinder([-6, 0.45, 2.9], 0.3, 0.9, "#3f6c8c"); // hydrant, bin
+  for (const x of [-14, 15]) tree(b, x, 2.6, 0.8);
+  for (const [x, c] of [[-20, "#c96b55"], [-10, "#83ad69"], [10, "#d58a4b"], [20, "#6f9f9a"]] as [number, string][]) b.box([x, 7, 22], [9, 14, 5], c, "brick");
+}
+
+/** sunny park (ep11): lawn, far hills, one big tree, sunflowers, a bench, a green tennis court with white lines and a net */
+function park(b: SetBuilder) {
+  groundPatch(b, [-80, -80, 80, 40], "#7fbf5e", "plain");
+  for (let k = 0; k < 5; k++) b.geo(new THREE.SphereGeometry(14 + k * 3, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), [-36 + k * 18, -4, -46 - (k % 2) * 8], "#6aa956");
+  const c = SETS.park.spots, o = SETS.park.origin, l = (v: V3): V3 => [v[0] - o[0], v[1], v[2]];
+  const [tx, , tz] = l(c.tree), [bx, , bz] = l(c.bench), [cx, , cz] = l(c.court);
+  tree(b, tx, tz, 1.7); tree(b, -12, -9, 1.2); tree(b, 6, -14, 1.3); tree(b, 24, -12, 1.2);
+  for (let i = 0; i < 9; i++) { const x = -3.4 + i * 0.5 + (i % 2) * 0.12, z = -3.4 - (i % 3) * 0.3, h = 1.0 + (i % 3) * 0.14; // sunflowers
+    b.beam([x, 0, z], [x, h, z], 0.05, "#4f8a42");
+    b.geo(new THREE.CylinderGeometry(0.2, 0.2, 0.04, 14).rotateX(Math.PI / 2), [x, h, z + 0.04], "#f5c733");
+    b.geo(new THREE.CylinderGeometry(0.1, 0.1, 0.05, 12).rotateX(Math.PI / 2), [x, h, z + 0.07], "#6a3f22"); }
+  b.box([bx, 0.45, bz], [1.6, 0.07, 0.42], P.wood, "wood"); b.box([bx, 0.75, bz - 0.2], [1.6, 0.4, 0.06], P.wood, "wood");
+  for (const dx of [-0.65, 0.65]) b.box([bx + dx, 0.22, bz], [0.08, 0.44, 0.38], P.metal);
+  b.box([cx, 0.006, cz], [13, 0.012, 24.8], "#3f8f6e"); b.box([cx, 0.008, cz], [10.97, 0.012, 23.77], "#4aa37e");
+  for (const dz of [-11.885, 11.885, -6.4, 6.4]) b.box([cx, 0.016, cz + dz], [Math.abs(dz) > 10 ? 10.97 : 8.23, 0.012, 0.1], "#f4f7fb");
+  for (const dx of [-5.485, 5.485, -4.115, 4.115, 0]) b.box([cx + dx, 0.016, cz], [0.1, 0.012, dx === 0 ? 12.8 : Math.abs(dx) > 5 ? 23.77 : 23.77], "#f4f7fb");
+  b.box([cx, 0.5, cz], [11.6, 0.9, 0.05], "#e8edf2"); for (const dx of [-5.9, 5.9]) b.cylinder([cx + dx, 0.53, cz], 0.06, 1.06, P.metal);
+}
+
 /** Builds every static set once. Caller owns root lifecycle, lighting, fog, cards and animation.
  * Geometry is owned by root; palette materials / CanvasTextures are shared caches (do not dispose per set).
  * No asset loading, environment mutation, actors, lights, cameras or runtime gameplay behavior.
  */
 export function buildSets(root: THREE.Object3D): void {
   const start = performance.now();
-  const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow, bedroom };
+  const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow, bedroom,
+    counter, floor, kitchen, beach, reef, bathroom, party, lagoon, rooftops, street, park };
   let triangles = 0;
   for (const id of Object.keys(SETS) as SetId[]) {
     const group = new THREE.Group(); group.name = `set:${id}`; group.position.set(...SETS[id].origin);

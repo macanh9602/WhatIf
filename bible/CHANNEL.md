@@ -25,3 +25,10 @@ video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (st
 | 03 | What if leveling up cost you years of your life | v1; 1.1x (1:28) published 2026-11-05 07:00 (U8LgA5o3et0) |
 | 04 | What if humans had a second face on the back of their heads | v1; 1.1x (1:14) published 2026-11-05 07:00 (S_5RbYfQy64) |
 | 05 | What if everyone on Earth ground their teeth at the same time | v1; 1.1x (1:14) published 2026-11-05 07:00 (5mWsXt0IXAc) |
+| 06 | What if you could sell your sleep | v1; 1.1x (1:18) scheduled 2026-11-07 07:00 (sZyZj7lwwBs); new bedroom set + booth from Blender, new Billionaire |
+| 07 | What if you could shrink yourself with a dial | v1; 1.1x (1:03) scheduled 2026-11-07 07:00 (sJ_8216KdSQ); new counter/floor/kitchen sets, redrawn cat |
+| 08 | What if you could breathe underwater | v1; 1.1x (1:06) scheduled 2026-11-08 07:00 (SFDp4bVjJOk); new beach/reef/bathroom sets |
+| 09 | What if you woke up as a sponge (extrovert premise) | v1; 1.1x (1:09) scheduled 2026-11-09 07:00 (7ppXxciUNcM); new party/lagoon sets; lead as a red sponge needs sign-off |
+| 10 | What if you lived one day inside a cartoon | v1; 1.1x (1:14) scheduled 2026-11-08 07:00 (-evU9ACFrQA); generic tropes only; new rooftops/street sets |
+| 11 | What if you could photosynthesize | v1; 1.1x (0:60) scheduled 2026-11-09 07:00 (62YTQU1p1Hs); new park set; green lead for this episode only |
+| bts | I Fixed the Cat (8 s before/after test, not a story) | scheduled 2026-11-10 07:00 (9Lz2k5owq_8) |

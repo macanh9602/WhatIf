@@ -1,0 +1,623 @@
+{
+  "master": {
+    "integrated_lufs": -16.00000000078148,
+    "true_peak_dbtp": -1.523286321270827,
+    "lra_lu": 2.2522299291457877,
+    "sample_peak_dbfs": -1.5370925030780884
+  },
+  "voice": {
+    "integrated_lufs": -16.01258870700387,
+    "true_peak_dbtp": -1.6689633810172335,
+    "lra_lu": 2.262902884912286,
+    "sample_peak_dbfs": -1.711994917371026
+  },
+  "music": {
+    "integrated_lufs": -37.2245984871619,
+    "true_peak_dbtp": -18.151968780631492,
+    "lra_lu": 4.001789412688311,
+    "sample_peak_dbfs": -18.157496155662564
+  },
+  "sfx": {
+    "integrated_lufs": -39.67834841838379,
+    "true_peak_dbtp": -12.727731512215893,
+    "lra_lu": 10.083046138377597,
+    "sample_peak_dbfs": -12.733258887246963
+  },
+  "master_gain_db": -1.7119938819322318,
+  "voice_gain_db": -1.7119938819322318,
+  "source_duration_seconds": 75.07395833333334,
+  "source_sha256": "611395e41ed71a0dce1e448b9a41a9bcd311ded3fa0f6536866851e71d910b1f",
+  "words_sha256": "8b737e8cfd1573ae405acb9e056844520a0fb849e662ac74b107ad7962e5b875",
+  "music_sections": [
+    {
+      "name": "Hook: the reef's biggest party",
+      "start": 0,
+      "end": 5.6,
+      "base_margin": -14,
+      "gain_db": -8.095882761007811
+    },
+    {
+      "name": "The party, the loudest person",
+      "start": 5.6,
+      "end": 9.7,
+      "base_margin": -13,
+      "gain_db": -6.386582861109812
+    },
+    {
+      "name": "Wake up a sponge: nothing",
+      "start": 9.7,
+      "end": 18.4,
+      "base_margin": -15,
+      "gain_db": 4.52823787454593
+    },
+    {
+      "name": "Water through you, a pool a day",
+      "start": 18.4,
+      "end": 30.25,
+      "base_margin": -15,
+      "gain_db": -1.5512404126189026
+    },
+    {
+      "name": "Eat, sneeze, the guests move in",
+      "start": 30.25,
+      "end": 43.6,
+      "base_margin": -14,
+      "gain_db": -8.038897929686634
+    },
+    {
+      "name": "A crowd of cells",
+      "start": 43.6,
+      "end": 50.05,
+      "base_margin": -15,
+      "gain_db": -2.8947333951539633
+    },
+    {
+      "name": "1907: squeezed through a cloth",
+      "start": 50.05,
+      "end": 58.75,
+      "base_margin": -15,
+      "gain_db": -0.7404751677768999
+    },
+    {
+      "name": "Your cells find each other",
+      "start": 58.75,
+      "end": 66.1,
+      "base_margin": -14,
+      "gain_db": -7.071404254167216
+    },
+    {
+      "name": "The party you can't feel",
+      "start": 66.1,
+      "end": 72.2,
+      "base_margin": -14,
+      "gain_db": -10.105561381478505
+    },
+    {
+      "name": "The question",
+      "start": 72.2,
+      "end": 75.9,
+      "base_margin": -13,
+      "gain_db": -8.888821012445305
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.0,
+      "end": 5.5,
+      "kind": "water",
+      "description": "lagoon bed (hook)",
+      "target": -42.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.6,
+      "end": 0.72,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -34.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.6,
+      "end": 1.7200000000000002,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -34.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.6,
+      "end": 3.2,
+      "kind": "sip",
+      "description": "bubbles",
+      "target": -40.300594825071904,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.6,
+      "end": 3.72,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -34.300594825071904,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.5,
+      "end": 6.0,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.6,
+      "end": 9.6,
+      "kind": "happy",
+      "description": "party chatter + laughs",
+      "target": -40.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.7,
+      "end": 18.299999999999997,
+      "kind": "water",
+      "description": "lagoon bed",
+      "target": -44.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.0,
+      "end": 10.3,
+      "kind": "tink",
+      "description": "eyes open",
+      "target": -34.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.65,
+      "end": 12.85,
+      "kind": "stamp",
+      "description": "X: mouth",
+      "target": -34.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.05,
+      "end": 14.25,
+      "kind": "stamp",
+      "description": "X: legs",
+      "target": -34.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.6,
+      "end": 15.799999999999999,
+      "kind": "stamp",
+      "description": "X: brain",
+      "target": -34.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.0,
+      "end": 16.6,
+      "kind": "whoosh",
+      "description": "fish swims past",
+      "target": -38.300594825071904,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.6,
+      "end": 19.8,
+      "kind": "sip",
+      "description": "water arrows, bubbles",
+      "target": -40.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.7,
+      "end": 24.9,
+      "kind": "water",
+      "description": "water pours in",
+      "target": -42.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.9,
+      "end": 28.099999999999998,
+      "kind": "whoosh",
+      "description": "pool drains",
+      "target": -38.300594825071904,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.8,
+      "end": 30.1,
+      "kind": "tink",
+      "description": "one day",
+      "target": -34.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.6,
+      "end": 31.8,
+      "kind": "sip",
+      "description": "food drifts in",
+      "target": -40.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.3,
+      "end": 33.3,
+      "kind": "clock",
+      "description": "every few hours",
+      "target": -44.300594825071904,
+      "pan": -0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.3,
+      "end": 33.699999999999996,
+      "kind": "whoosh",
+      "description": "SNEEZE puff",
+      "target": -32.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.4,
+      "end": 34.3,
+      "kind": "sip",
+      "description": "slime bubbles",
+      "target": -36.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.85,
+      "end": 35.35,
+      "kind": "whoosh",
+      "description": "fish dart in",
+      "target": -38.300594825071904,
+      "pan": -0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.6,
+      "end": 35.72,
+      "kind": "click",
+      "description": "nibble",
+      "target": -34.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.8,
+      "end": 35.919999999999995,
+      "kind": "click",
+      "description": "nibble",
+      "target": -34.300594825071904,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.75,
+      "end": 38.05,
+      "kind": "boing",
+      "description": "shrimp moves in",
+      "target": -38.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.3,
+      "end": 38.599999999999994,
+      "kind": "boing",
+      "description": "crab moves in",
+      "target": -38.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.9,
+      "end": 39.199999999999996,
+      "kind": "boing",
+      "description": "worm moves in",
+      "target": -38.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.2,
+      "end": 42.900000000000006,
+      "kind": "fastclock",
+      "description": "guest counter climbs",
+      "target": -42.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.95,
+      "end": 43.25,
+      "kind": "tink",
+      "description": "300",
+      "target": -32.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.95,
+      "end": 46.150000000000006,
+      "kind": "stamp",
+      "description": "1 CREATURE? crossed",
+      "target": -34.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.9,
+      "end": 47.699999999999996,
+      "kind": "sip",
+      "description": "cells split",
+      "target": -40.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.3,
+      "end": 50.55,
+      "kind": "stamp",
+      "description": "1907 stamp",
+      "target": -30.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.1,
+      "end": 53.6,
+      "kind": "sheet",
+      "description": "squeeze through cloth",
+      "target": -38.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.4,
+      "end": 55.3,
+      "kind": "sip",
+      "description": "cells drip",
+      "target": -38.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 55.9,
+      "end": 57.1,
+      "kind": "rustle",
+      "description": "cells crawl",
+      "target": -42.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 57.6,
+      "end": 57.9,
+      "kind": "tink",
+      "description": "a new sponge",
+      "target": -32.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.4,
+      "end": 62.6,
+      "kind": "whoosh",
+      "description": "cells regroup",
+      "target": -36.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 62.75,
+      "end": 63.1,
+      "kind": "boing",
+      "description": "curl pops back",
+      "target": -32.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 63.6,
+      "end": 64.2,
+      "kind": "bell",
+      "description": "hearts",
+      "target": -38.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.1,
+      "end": 72.1,
+      "kind": "happy",
+      "description": "party inside you (far)",
+      "target": -44.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.9,
+      "end": 67.02000000000001,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -32.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.9,
+      "end": 68.02000000000001,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -32.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.7,
+      "end": 68.82000000000001,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -32.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 69.5,
+      "end": 69.62,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -32.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.25,
+      "end": 70.55,
+      "kind": "thump",
+      "description": "FELT: 0",
+      "target": -32.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.6,
+      "end": 70.72,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -34.300594825071904,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.4,
+      "end": 71.52000000000001,
+      "kind": "click",
+      "description": "shrimp snap",
+      "target": -34.300594825071904,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 72.2,
+      "end": 73.95,
+      "kind": "room",
+      "description": "empty room",
+      "target": -46.300594825071904,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 73.95,
+      "end": 74.95,
+      "kind": "sip",
+      "description": "back to the bubbles",
+      "target": -40.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.4,
+      "end": 75.2,
+      "kind": "bell",
+      "description": "the question",
+      "target": -36.300594825071904,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.9995950269275085,
+    "p10": 16.091150880842903,
+    "median": 21.263340391435094
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3643200,
+    "duration_seconds": 75.9,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}
