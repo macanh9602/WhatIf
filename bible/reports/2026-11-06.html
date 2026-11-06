@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo What If</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f4f6fb; --card:#ffffff; --ink:#1d1a3a; --muted:#5b6078; --line:#e2e6f0; --accent:#2f6df6; --accent-soft:#e6eeff;
+  --good:#12a150; --warn:#d97706; --zebra:#f8f9fd; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd;
+  --line:#2a3048; --accent:#7aa2ff; --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; } }
+:root[data-theme="dark"] { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd; --line:#2a3048; --accent:#7aa2ff;
+  --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; }
+header { background:linear-gradient(135deg,#1d1a3a,#2f3f8f); color:#fff; padding:28px 16px 22px; }
+header .wrap { max-width:860px; margin:0 auto; }
+header .kicker { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.75; }
+header h1 { margin:4px 0 0; font-size:clamp(22px,5vw,30px); font-weight:800; line-height:1.25; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+#doc > h1 { display:none; }
+#doc > h2 { margin:22px 0 10px; font-size:19px; font-weight:800; display:flex; align-items:center; gap:10px; }
+#doc > h2::before { content:""; width:6px; height:22px; border-radius:3px; background:var(--accent); }
+section.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px 18px 12px; margin-bottom:14px;
+  box-shadow:0 1px 2px rgba(20,24,60,.05); }
+h3 { font-size:16px; margin:16px 0 4px; }
+p, li { color:var(--ink); }
+ul, ol { padding-left:22px; }
+li { margin:4px 0; }
+strong { font-weight:800; }
+em { color:var(--muted); }
+code { background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.88em; }
+.table { overflow-x:auto; margin:8px -4px; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px; }
+th, td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+tr:nth-child(even) td { background:var(--zebra); }
+td:first-child { white-space:normal; min-width:9em; }
+blockquote { margin:10px 0; padding:8px 14px; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 10px 10px 0; }
+li:has(> input[type=checkbox]) { list-style:none; margin-left:-22px; }
+input[type=checkbox] { width:17px; height:17px; vertical-align:-3px; margin-right:8px; accent-color:var(--accent); }
+hr { border:0; border-top:1px dashed var(--line); margin:16px 0; }
+footer { max-width:860px; margin:0 auto; padding:4px 16px 32px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="kicker">What If · báo cáo tối</div><h1 id="title">2026-11-06</h1></div></header>
+<main id="doc"></main>
+<footer>Tạo tự động từ ops/report.mjs · số liệu YouTube Data + Analytics API</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const MD = "# Báo cáo tối 2026-11-06, kênh What If\n\nCó 2 bản chụp: 05/11 lúc 01:41Z và 06/11 lúc **14:00Z (21:00 VN)**, cách nhau 36,3 giờ. Các video đã đăng được 38 giờ. Vẫn chưa có `analytics`, `retention`, `traffic` và `countries`, nên các cột % xem, giây TB, subs và nguồn đều là n/a.\n\n## 1. Thực trạng\n\n| Tập | Dài | Views (Δ) | % xem | Giây TB | Likes (Δ) | Like/view | Subs | Nguồn |\n|---|---|---|---|---|---|---|---|---|\n| ep05 Nghiến răng | 1:15 | **1.269** (+845) | n/a | n/a | 22 (+12), 1 cmt | 1,73 % | n/a | n/a |\n| ep02 Cân nặng | 1:23 | **1.266** (+994) | n/a | n/a | 24 (+20) | 1,90 % | n/a | n/a |\n| ep03 Lên cấp | 1:29 | **1.084** (+1.084) | n/a | n/a | 28 (+28) | **2,58 %** | n/a | n/a |\n| ep04 Mặt sau gáy | 1:14 | 14 (+14) | n/a | n/a | 0 | – | n/a | n/a |\n| ep01 Không màu xanh | 1:29 | 7 (+7) | n/a | n/a | 0 | – | n/a | n/a |\n\n- Cả kênh có 3.640 views (+2.944) và 74 likes (+60).\n- **Feed đã đẩy ep05, ep02 và ep03, nhưng gần như đã dừng.** So với lần chạy 13:18Z (42 phút trước), chỉ ep02 tăng thêm 4 views, các tập còn lại đứng yên. Có thể bộ đếm của Data API đang trễ, nên tối mai mới chắc được.\n- **ep01 và ep04 đứng yên** sau 38 giờ. Với 7 và 14 views, gần như feed chưa thử hai tập này.\n- Chưa có ep06 trong `ops/uploaded.json`, nên sáng 07/11 sẽ không có video nào lên.\n\n### Người xem đến từ đâu\n**Chưa có dữ liệu**, vì `countries` trống ở cả cấp kênh lẫn từng tập. Giờ 07:00 VN (= 00:00 UTC = 19:00 miền Đông Mỹ) chỉ đúng nếu khán giả chính ở Mỹ, mà điều này chưa kiểm được. Tạm giữ giờ đăng và giữ tiếng Anh.\n\n## 2. Chẩn đoán\n\n- **Chưa có retention**, nên chưa biết người xem rời đi ở câu thoại nào. Báo cáo không đoán phần này.\n- **Hai tập đứng yên chưa phải là tập thua.** Gần như chưa ai xem chúng, nên không thể kết luận hook của ep01 (\"every forest… turn black\") hay của ep04 là kém. Cả 5 tập lên cùng giờ, và feed chỉ chọn thử 3.\n- **Điểm chung của 3 tập được đẩy.** Mẫu chỉ có 5 tập nên đây chỉ là gợi ý:\n  - Tiêu đề có \"You\" hoặc \"Everyone on Earth\".\n  - Người xem có một nút để chọn (dial ở ep02, menu ở ep03), hoặc làm theo được (đếm ngược ở ep05).\n  - Có giao diện hoặc con số trên hình rất sớm.\n  - Hai tập đứng yên mở bằng cảnh, không có con số nào.\n- **Độ dài không phân biệt được** tập được đẩy (1:15–1:29) với tập đứng yên (1:14–1:29).\n- **ep03 có like/view cao nhất** (2,58 %), dù được đẩy muộn nhất.\n\n## 3. Feedback cho ep06\n\n1. **Chủ đề:** một sức mạnh kèm cái giá, người xem tự chọn dùng bao nhiêu (khuôn của ep03).\n2. **Tiêu đề** bắt đầu bằng \"What If You…\".\n3. **2 giây đầu:** \"you\" xuất hiện cùng HUD hoặc con số của sức mạnh đó ngay ở shot 1.\n4. **Hook** là một hệ quả có chủ thể là người, tối đa 15 từ, không mở bằng cảnh rộng.\n5. **Độ dài khoảng 1:15**, giữ như bible cho đến khi có retention.\n\n## 4. Đề xuất tập tiếp theo\nCác số dưới đây là kiến thức phổ biến, **chưa kiểm**. Phải tính lại và ghi nguồn trong `SCRIPT.md`.\n\n**A. What If You Could Sell Your Sleep? 💤 ⭐ Đề xuất**\n- Hook: *\"If you could sell your sleep, billionaires would never close their eyes again.\"*\n- Chuỗi: ngủ chiếm khoảng 1/3 cuộc đời → người bán mất trí nhớ và phản xạ → kỷ lục thức liền khoảng 11 ngày (Gardner, 1964) → cá heo ngủ từng nửa não một.\n- Lý do: đúng khuôn của ep03 (cái giá, có thị trường mua bán, kết bằng \"how many hours would you sell?\").\n\n**B. What If You Could Shrink Yourself With a Dial? 🔬**\n- Hook: *\"Shrink yourself to ant size, and you could lift hundreds of times your weight.\"*\n- Chuỗi: sức mạnh tăng theo L², cân nặng tăng theo L³ → từ 1,7 m xuống 5 mm là nhỏ đi khoảng 340 lần → mất nhiệt rất nhanh, phải ăn liên tục như chuột chù.\n- Lý do: khuôn dial của ep02.\n\n**C. What If Everyone on Earth Held Their Breath at Once? 😮‍💨**\n- Hook: *\"If everyone held their breath at once, the air wouldn't notice, but you would.\"*\n- Chuỗi: \"Three, two, one, hold\" → cơn thèm thở đến từ CO₂, không phải từ hết O₂ → phản xạ lặn làm tim chậm lại → cá nhà táng nhịn thở hàng chục phút.\n- Lý do: khuôn làm theo của ep05. Điểm yếu: lặp lại ý \"Trái Đất không cảm thấy gì\" của ep05.\n\n## 5. Việc cần làm tối nay\n\n- [ ] Chốt ep06 = A, viết `SCRIPT.md` và kiểm từng con số.\n- [ ] Upload và đặt lịch lúc **2026-11-07T00:00Z**, vì hiện chưa có ep06 nào được upload.\n- [ ] Mở Studio xem ep01 và ep04 có bị giới hạn hoặc gắn nhãn \"made for kids\" không.\n- [ ] Analytics vẫn null sau 38 giờ. Hàm `report()` trong `ops/stats.mjs:12-16` nuốt lỗi API: nếu API trả về `error` (ví dụ 403 thiếu scope) thì kết quả thành rỗng, không bao giờ ra `analyticsError`. Cần log `r.error` một lần để biết là thiếu quyền hay dữ liệu chưa về.\n\n---\nNhững gì chưa kiểm: các số ở mục 4. Mức 13:18Z lấy từ báo cáo trước, không lấy từ file JSON.\n\nRủi ro: chừng nào `stats.mjs` còn che lỗi API thì \"chưa có analytics\" có thể là lỗi token chứ không phải do dữ liệu về chậm.\n";
+const doc = document.getElementById("doc");
+try { doc.innerHTML = marked.parse(MD, { gfm: true }); }
+catch { doc.textContent = MD; doc.style.whiteSpace = "pre-wrap"; } // offline: still readable
+const h1 = doc.querySelector("h1"); if (h1) document.getElementById("title").textContent = h1.textContent;
+// wrap each h2 + its content in a card; tables scroll sideways on phones
+[...doc.querySelectorAll("table")].forEach((t) => { const w = document.createElement("div"); w.className = "table"; t.replaceWith(w); w.append(t); });
+let card = null;
+[...doc.childNodes].forEach((n) => {
+  if (n.nodeName === "H2") { card = document.createElement("section"); card.className = "card"; n.after(card); return; }
+  if (card && n.nodeName !== "H1") card.append(n);
+});
+doc.querySelectorAll("input[type=checkbox]").forEach((c) => (c.disabled = false));
+</script>
+</body>
+</html>

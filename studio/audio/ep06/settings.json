@@ -1,0 +1,351 @@
+{
+ "bpm": 100,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   72
+  ],
+  [
+   0.5,
+   76
+  ],
+  [
+   1,
+   79
+  ],
+  [
+   2,
+   77
+  ],
+  [
+   2.5,
+   76
+  ],
+  [
+   3,
+   74
+  ],
+  [
+   4,
+   72
+  ],
+  [
+   4.5,
+   74
+  ],
+  [
+   5,
+   76
+  ],
+  [
+   6,
+   79
+  ],
+  [
+   7,
+   76
+  ]
+ ],
+ "major_chords": [
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ]
+ ],
+ "minor_chords": [
+  [
+   45,
+   52,
+   57,
+   60
+  ],
+  [
+   41,
+   48,
+   53,
+   57
+  ],
+  [
+   38,
+   45,
+   50,
+   53
+  ],
+  [
+   40,
+   47,
+   52,
+   56
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -15,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 85.7,
+ "seed": 60606,
+ "music_sections": [
+  [
+   "Hook: billionaires never sleep",
+   0,
+   4.8,
+   -14,
+   "pulse"
+  ],
+  [
+   "The app, the billionaire",
+   4.8,
+   26.7,
+   -14,
+   "bounce"
+  ],
+  [
+   "The trap",
+   26.7,
+   38.4,
+   -15,
+   "dark"
+  ],
+  [
+   "The cleaning crew",
+   38.4,
+   54.2,
+   -15,
+   "explain"
+  ],
+  [
+   "The limit, 1964",
+   54.2,
+   68.5,
+   -15,
+   "dark"
+  ],
+  [
+   "Dolphins, already sold",
+   68.5,
+   81.8,
+   -14,
+   "warm"
+  ],
+  [
+   "The question",
+   81.8,
+   85.7,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   4.75,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   9.25,
+   "click",
+   0.12,
+   -22,
+   -0.2,
+   "tap sell"
+  ],
+  [
+   9.3,
+   "tink",
+   0.3,
+   -24,
+   -0.2,
+   "sold"
+  ],
+  [
+   11.15,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "paid"
+  ],
+  [
+   18.95,
+   "thump",
+   0.3,
+   -22,
+   -0.3,
+   "no bed"
+  ],
+  [
+   22.4,
+   "tink",
+   0.3,
+   -24,
+   0,
+   "twenty-six years"
+  ],
+  [
+   25.95,
+   "thump",
+   0.3,
+   -20,
+   0.1,
+   "PAID stamp"
+  ],
+  [
+   31.25,
+   "thump",
+   0.35,
+   -20,
+   0,
+   "the trap"
+  ],
+  [
+   36.1,
+   "whoosh",
+   0.5,
+   -26,
+   0,
+   "bars level"
+  ],
+  [
+   37.2,
+   "bell",
+   0.6,
+   -28,
+   -0.2,
+   "I'm fine"
+  ],
+  [
+   41.7,
+   "whoosh",
+   0.5,
+   -26,
+   0.2,
+   "trash thrown"
+  ],
+  [
+   47.4,
+   "whoosh",
+   0.8,
+   -24,
+   0,
+   "fluid"
+  ],
+  [
+   52.55,
+   "thump",
+   0.3,
+   -20,
+   0.2,
+   "SOLD"
+  ],
+  [
+   58.6,
+   "thump",
+   0.35,
+   -20,
+   0,
+   "hard limit"
+  ],
+  [
+   62.8,
+   "bell",
+   0.6,
+   -26,
+   0.2,
+   "day eleven"
+  ],
+  [
+   66.8,
+   "tape",
+   0.4,
+   -28,
+   0.2,
+   "memory goes"
+  ],
+  [
+   70.4,
+   "whoosh",
+   0.5,
+   -26,
+   0,
+   "breath spout"
+  ],
+  [
+   75.0,
+   "tink",
+   0.3,
+   -24,
+   0,
+   "one in three"
+  ],
+  [
+   81.3,
+   "thump",
+   0.3,
+   -20,
+   0,
+   "PAID $0.00"
+  ],
+  [
+   83.2,
+   "bell",
+   0.8,
+   -26,
+   0,
+   "the question"
+  ]
+ ]
+}

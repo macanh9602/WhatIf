@@ -9,7 +9,7 @@ import { staticFile } from "remotion";
 
 /** CC0 Poly Pizza models (Kenney / Quaternius / CreativeTrio), exported from Blender into public/props
  *  (credits in CREDITS.txt). buildSets places them only once loadProps() has resolved. */
-const PROP_FILES = ["toaster", "microwave", "stove", "houseplant", "tree", "palm"] as const;
+const PROP_FILES = ["toaster", "microwave", "stove", "houseplant", "tree", "palm", "bed_single", "nightstand", "alarm_clock", "bookcase_books", "sell_booth"] as const;
 type PropName = (typeof PROP_FILES)[number];
 const KIT = new Map<PropName, THREE.Object3D>();
 let kitP: Promise<void> | undefined;
@@ -17,7 +17,7 @@ export const loadProps = () => (kitP ??= Promise.all(PROP_FILES.map((n) =>
   new GLTFLoader().loadAsync(staticFile(`props/${n}.glb`)).then((g) => { g.scene.updateMatrixWorld(true); KIT.set(n, g.scene); }))).then(() => undefined));
 
 export type V3 = [number, number, number];
-export type SetId = "home" | "yard" | "forest" | "snow";
+export type SetId = "home" | "yard" | "forest" | "snow" | "bedroom";
 export type CamHint = { pos: V3; look: V3; fov: number };
 export type SetInfo = { origin: V3; indoor: boolean; spots: Record<string, V3>; cams: Record<string, CamHint> };
 
@@ -35,7 +35,7 @@ export const SETS: Record<SetId, SetInfo> = {
     wide: cam([0.4, 1.6, 6.0], [0.2, 0.9, -1.2], 44),
   }),
   // front yards + a crossing
-  yard: info(1600, false, { you: [-1.4, 0, -1.2], neighbor: [3.2, 0, -3.2], corner: [7.2, 0, 0.5], lamp: [-3.2, 0, 0.6], light: [8.4, 0, 1.1] }, {
+  yard: info(1600, false, { you: [-1.4, 0, -1.2], neighbor: [3.2, 0, -3.2], corner: [7.2, 0, 0.5], lamp: [-3.2, 0, 0.6], light: [8.4, 0, 1.1], booth: [-18, 0, 0.6] }, {
     wide: cam([0, 1.5, 8.5], [0.8, 1.0, -3], 46),
   }),
   forest: info(1800, false, { you: [0, 0, 0], bud: [1.1, 0, -1.2] }, {
@@ -43,6 +43,10 @@ export const SETS: Record<SetId, SetInfo> = {
   }),
   snow: info(2000, false, { you: [0, 0, 0], bud: [1.1, 0, -1.2] }, {
     wide: cam([0, 1.4, 6], [0, 1.6, -4], 46),
+  }),
+  // the sleep room: bed against the back wall, nightstand lamp, a night window
+  bedroom: info(2200, true, { you: [0.9, 0, -0.9], bed: [-1.1, 0, -2.35], nightstand: [0.15, 0, -3.05], window: [1.75, 1.65, -3.5] }, {
+    wide: cam([0.4, 1.6, 5.2], [0.2, 0.9, -1.2], 44),
   }),
 };
 
@@ -53,8 +57,9 @@ export const SET_ART = {
     teal: "#2F6E73", red: "#b93c51", yellow: "#edcf53", metal: "#536479", paper: "#f5efd9",
     brick: "#a76a66", green: "#83ad69", foliage: "#68945d", siding: "#D9C7A3", roof: "#5B4636", pool: "#3fc1c9" },
   home: { tableTop: 0.76, window: { x: 0.6, w: 2.4 } },
+  bedroom: { window: { x: 1.75, w: 2.0 } },
 };
-export const POOLS: Partial<Record<SetId, V3>> = { home: [0.2, 2.15, 0.25], yard: [-3.2, 3.5, 0.85] }; // the pendant over the table, the street lamp
+export const POOLS: Partial<Record<SetId, V3>> = { home: [0.2, 2.15, 0.25], yard: [-3.2, 3.5, 0.85], bedroom: [0.05, 1.05, -3.05] }; // the pendant over the table, the street lamp
 const P = SET_ART.palette;
 // the engine's own twoTone: a lam() from another video folder binds THAT folder's light uniforms (a silently split rig)
 const mats = new Map<string, THREE.MeshLambertMaterial>();
@@ -335,6 +340,39 @@ function home(b: SetBuilder) {
   plant(b, -3.4, 2.4, 0, 1.6); plant(b, 3.3, 2.6, 0, 1.2);
 }
 
+/** the sleep room: dusk-blue walls, a bed under two pictures, nightstand with a lamp + alarm clock, a night window, clutter. */
+function bedroom(b: SetBuilder) {
+  const { x: wx, w: ww } = SET_ART.bedroom.window, z = SET_ART.back, [lx, ly, lz] = POOLS.bedroom!;
+  room(b, "#a9bbd4", false, { x: wx, w: ww });
+  windowView(b, wx, ww, false);
+  b.beam([wx - ww / 2 - 0.4, 2.42, z + 0.16], [wx + ww / 2 + 0.4, 2.42, z + 0.16], 0.04, P.metal); // curtain rod
+  for (const s of [-1, 1]) b.box([wx + s * (ww / 2 + 0.2), 1.48, z + 0.2], [0.42, 1.88, 0.08], P.teal, "cloth");
+  const wood = "#8a5a3a";
+  b.box([-1.1, 0.006, -1.9], [3.2, 0.012, 2.8], "#7a4a8c", "cloth"); // rug
+  prop(b, "bed_single", [-1.1, 0, -2.35], 0.67, Math.PI, { wood, carpet: "#3f6c8c", carpetWhite: "#f3e7ce", metal: P.metal });
+  prop(b, "nightstand", [lx + 0.1, 0, lz], 0.55, 0, { wood, _defaultMat: "#6e452c", metal: P.metal });
+  lamp(b, [lx, ly, lz], 0.55);
+  prop(b, "alarm_clock", [lx + 0.28, 0.55, lz + 0.05], 0.2);
+  sign(b, "moon", [-1.65, 1.75, z + 0.11], 0.7, 0.9, "#1d2a55", "#ffd23f", (g, W) => { // a poster + a picture, not blank colour cards
+    g.fillStyle = "#ffd23f"; g.beginPath(); g.arc(W / 2, 110, 62, 0, Math.PI * 2); g.fill();
+    g.fillStyle = "#1d2a55"; g.beginPath(); g.arc(W / 2 + 28, 96, 54, 0, Math.PI * 2); g.fill();
+    g.fillStyle = "#f5efd9"; for (const [x, y] of [[.2, .2], [.8, .3], [.25, .75], [.7, .8], [.5, .9]]) g.fillRect(x * W, y * 256, 9, 9);
+  });
+  sign(b, "hills", [-0.65, 1.8, z + 0.11], 0.6, 0.6, "#e9b44c", "#7a4a2a", (g, W) => {
+    g.fillStyle = "#7a4a2a"; g.beginPath(); g.moveTo(10, 246); g.lineTo(W * .35, 90); g.lineTo(W * .6, 180); g.lineTo(W * .78, 110); g.lineTo(W - 10, 246); g.fill();
+  });
+  prop(b, "bookcase_books", [-3.3, 0, -2.6], 2.0, Math.PI / 2);
+  // a low dresser under the window, in the main camera's view, with its clutter
+  const dz = z + 0.42, dy = 0.42;
+  b.box([wx, dy, dz], [1.5, 0.84, 0.56], wood, "wood");
+  for (const y of [0.24, 0.6]) { b.box([wx, y, dz + 0.3], [1.36, 0.3, 0.04], "#b5763f"); for (const dx of [-0.35, 0.35]) b.box([wx + dx, y, dz + 0.33], [0.14, 0.05, 0.04], P.metal); }
+  b.box([wx - 0.4, 0.9, dz], [0.3, 0.12, 0.22], "#c63939"); b.cylinder([wx + 0.45, 0.94, dz], 0.06, 0.2, P.yellow);
+  // the morning's mess: a chair with a towel, a laundry basket, a plant
+  chair(b, 3.0, 1.2, "#c8603f"); b.box([3.0, 0.8, 1.42], [0.34, 0.34, 0.09], "#f4f1ea", "cloth");
+  b.cylinder([-2.45, 0.26, -2.85], 0.26, 0.52, "#c9b79a"); ball(b, [-2.45, 0.55, -2.85], 0.2, "#c63939");
+  plant(b, -3.4, 2.2, 0, 1.2);
+}
+
 // ---------------- outdoor sets ----------------
 function house(b: SetBuilder, x: number, z: number, wall: string, roof: string, door: string) {
   b.box([x, 1.9, z], [6.4, 3.8, 5], wall, "wood");
@@ -372,6 +410,7 @@ function yard(b: SetBuilder) {
   b.beam([2.1, 0, -0.1], [2.1, 1.0, -0.1], 0.08, P.wood); b.box([2.1, 1.15, -0.1], [0.3, 0.3, 0.5], P.red);
   // traffic-light pole at the corner (fx draws the head and its state)
   b.beam([8.4, 0, 1.1], [8.4, 2.9, 1.1], 0.12, "#2f3e4f");
+  prop(b, "sell_booth", [-18, 0, -1.4], 2.67); // ep06's kiosk: far left of every earlier yard camera, its sign board stays blank for the episode's card
   // houses across the road
   for (const [x, c] of [[-9, "#c96b55"], [0, "#83ad69"], [9, "#d58a4b"], [18, "#6f9f9a"]] as [number, string][]) b.box([x, 2.2, 16], [6, 4.4, 4], c, "brick");
 }
@@ -410,7 +449,7 @@ function plant(b: SetBuilder, x: number, z: number, y = 0, scale = 1) {
  */
 export function buildSets(root: THREE.Object3D): void {
   const start = performance.now();
-  const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow };
+  const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow, bedroom };
   let triangles = 0;
   for (const id of Object.keys(SETS) as SetId[]) {
     const group = new THREE.Group(); group.name = `set:${id}`; group.position.set(...SETS[id].origin);

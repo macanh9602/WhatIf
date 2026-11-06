@@ -13,5 +13,7 @@ export const TEEN: Outfit = { jacket: "#7a4a8c", pants: "#2c3550", boots: "#f4f1
   style: "curls", curly: true, hair: "#2a1e16", skin: SKINS[1] };
 export const RUNNER: Outfit = { jacket: "#f0b93a", pants: "#2c3550", boots: "#f4f1ea", hat: null, build: "adult", top: "jersey", pattern: "number", num: "7",
   bottom: "shorts", shoe: "sneaker", style: "smooth", hair: "#1e1a1a", skin: SKINS[2], acc: ["headband"] };
+export const BILLIONAIRE: Outfit = { jacket: "#f4f1ea", pants: "#2b2f3d", boots: "#1e1a1a", hat: null, build: "adult", top: "button", bottom: "jeans",
+  layer: { kind: "jacket", color: "#2b2f3d", long: true }, style: "spiky", hair: "#c9ccd4", shoe: "boot", skin: SKINS[1], acc: ["bowtie"], accCol: "#e8c45a" };
 /** the cast sheet row (CastSheet composition) */
-export const CHANNEL_CAST: [string, Outfit][] = [["You", YOU], ["Neighbor", NEIGHBOR], ["Grandma", GRANDMA], ["Teen", TEEN], ["Runner", RUNNER]];
+export const CHANNEL_CAST: [string, Outfit][] = [["You", YOU], ["Neighbor", NEIGHBOR], ["Grandma", GRANDMA], ["Teen", TEEN], ["Runner", RUNNER], ["Billionaire", BILLIONAIRE]];

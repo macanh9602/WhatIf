@@ -6,3 +6,9 @@ houseplant.glb: "Houseplant" by Quaternius, https://poly.pizza/m/bfLOqIV5uP. Lic
 tree.glb: "Tree" by Quaternius, https://poly.pizza/m/9nvGuZlbpE. Licence at https://creativecommons.org/publicdomain/zero/1.0/
 palm.glb: "Palm Tree" by Quaternius, https://poly.pizza/m/nr1B5DbICA. Licence at https://creativecommons.org/publicdomain/zero/1.0/
 duck.glb: "Rubber Duck" by CreativeTrio, https://poly.pizza/m/oH3dEdlDpB. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+bed_single.glb: "Bed Single" by Kenney, https://poly.pizza/m/sn8az3odMR. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+bed_double.glb: "Bed Double" by Kenney, https://poly.pizza/m/wcmbCZ63mg. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+nightstand.glb: "Cabinet Bed Drawer" by Kenney, https://poly.pizza/m/sssyoQUBUu. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+alarm_clock.glb: "Alarm Clock" by CreativeTrio, https://poly.pizza/m/y5f363OS9C. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+dolphin.glb: "Dolphin" by Quaternius, https://poly.pizza/m/3LzFgI3GLO. Licence at https://creativecommons.org/publicdomain/zero/1.0/
+sell_booth.glb: modelled for this channel in Blender (2026-11-06), no third-party assets.

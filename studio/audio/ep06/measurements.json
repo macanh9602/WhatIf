@@ -1,0 +1,302 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000000169518,
+    "true_peak_dbtp": -1.7227344596040859,
+    "lra_lu": 2.4567920282985476,
+    "sample_peak_dbfs": -1.728261834635155
+  },
+  "voice": {
+    "integrated_lufs": -16.01979398043692,
+    "true_peak_dbtp": -1.869785893995764,
+    "lra_lu": 2.4960111579641158,
+    "sample_peak_dbfs": -1.9127083030285417
+  },
+  "music": {
+    "integrated_lufs": -37.39804674092615,
+    "true_peak_dbtp": -16.58750898887673,
+    "lra_lu": 4.5270758503202515,
+    "sample_peak_dbfs": -16.5930363639078
+  },
+  "sfx": {
+    "integrated_lufs": -34.14560465135702,
+    "true_peak_dbtp": -11.640502392267004,
+    "lra_lu": 8.126046371127103,
+    "sample_peak_dbfs": -11.646029767298074
+  },
+  "master_gain_db": -1.9127083030285412,
+  "voice_gain_db": -1.9127083030285412,
+  "source_duration_seconds": 84.63479166666667,
+  "source_sha256": "b270f59d386b87d72137f160539db4ce31024ccf189fbd87f1bf3fdf242499dd",
+  "words_sha256": "029384df6a728d6e47bc8920a677b5cec80375af19279abe65055823b1350610",
+  "music_sections": [
+    {
+      "name": "Hook: billionaires never sleep",
+      "start": 0,
+      "end": 4.8,
+      "base_margin": -14,
+      "gain_db": -6.538791920963675
+    },
+    {
+      "name": "The app, the billionaire",
+      "start": 4.8,
+      "end": 26.7,
+      "base_margin": -14,
+      "gain_db": -7.38602985142985
+    },
+    {
+      "name": "The trap",
+      "start": 26.7,
+      "end": 38.4,
+      "base_margin": -15,
+      "gain_db": -1.3702913235034941
+    },
+    {
+      "name": "The cleaning crew",
+      "start": 38.4,
+      "end": 54.2,
+      "base_margin": -15,
+      "gain_db": -2.3551411415473993
+    },
+    {
+      "name": "The limit, 1964",
+      "start": 54.2,
+      "end": 68.5,
+      "base_margin": -15,
+      "gain_db": -1.018431732323819
+    },
+    {
+      "name": "Dolphins, already sold",
+      "start": 68.5,
+      "end": 81.8,
+      "base_margin": -14,
+      "gain_db": -5.93961638136555
+    },
+    {
+      "name": "The question",
+      "start": 81.8,
+      "end": 85.7,
+      "base_margin": -13,
+      "gain_db": -8.275332738364508
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 4.75,
+      "end": 5.25,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.25,
+      "end": 9.37,
+      "kind": "click",
+      "description": "tap sell",
+      "target": -30.107085677408584,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.3,
+      "end": 9.600000000000001,
+      "kind": "tink",
+      "description": "sold",
+      "target": -32.107085677408584,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.15,
+      "end": 11.450000000000001,
+      "kind": "tink",
+      "description": "paid",
+      "target": -32.107085677408584,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.95,
+      "end": 19.25,
+      "kind": "thump",
+      "description": "no bed",
+      "target": -30.107085677408584,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.4,
+      "end": 22.7,
+      "kind": "tink",
+      "description": "twenty-six years",
+      "target": -32.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.95,
+      "end": 26.25,
+      "kind": "thump",
+      "description": "PAID stamp",
+      "target": -28.107085677408584,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.25,
+      "end": 31.6,
+      "kind": "thump",
+      "description": "the trap",
+      "target": -28.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.1,
+      "end": 36.6,
+      "kind": "whoosh",
+      "description": "bars level",
+      "target": -34.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.2,
+      "end": 37.800000000000004,
+      "kind": "bell",
+      "description": "I'm fine",
+      "target": -36.107085677408584,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.7,
+      "end": 42.2,
+      "kind": "whoosh",
+      "description": "trash thrown",
+      "target": -34.107085677408584,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.4,
+      "end": 48.199999999999996,
+      "kind": "whoosh",
+      "description": "fluid",
+      "target": -32.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.55,
+      "end": 52.849999999999994,
+      "kind": "thump",
+      "description": "SOLD",
+      "target": -28.107085677408584,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 58.6,
+      "end": 58.95,
+      "kind": "thump",
+      "description": "hard limit",
+      "target": -28.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 62.8,
+      "end": 63.4,
+      "kind": "bell",
+      "description": "day eleven",
+      "target": -34.107085677408584,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.8,
+      "end": 67.2,
+      "kind": "tape",
+      "description": "memory goes",
+      "target": -36.107085677408584,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.4,
+      "end": 70.9,
+      "kind": "whoosh",
+      "description": "breath spout",
+      "target": -34.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.0,
+      "end": 75.3,
+      "kind": "tink",
+      "description": "one in three",
+      "target": -32.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 81.3,
+      "end": 81.6,
+      "kind": "thump",
+      "description": "PAID $0.00",
+      "target": -28.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 83.2,
+      "end": 84.0,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.107085677408584,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999838668873004,
+    "p10": 16.64201265236691,
+    "median": 22.203718858963974
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 4113600,
+    "duration_seconds": 85.7,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}
