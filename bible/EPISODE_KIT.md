@@ -9,9 +9,9 @@
 A new episode starts in a new chat session.
 
 ## SHOTLIST (in SCRIPT.md, one row per shot, written before any code)
-| id | line | set + light | camera (size, angle) | lead's pose / verb | card | prop / near dark | in-transition |
+| id | line | set + light | camera (size, angle, MOVE + why) | lead's pose / verb | card | prop / near dark | in-transition |
 Check it before asking for approval: lying or sleeping = lie_back + card flat, never a standing card; the payoff prop is sharp;
-each location has a wide; insert time <= 15 %; >= 60 % outdoors.
+each location has a wide; insert time <= 15 %; >= 60 % outdoors; action shots have a flown move; a chase is shown from at least 3 views; every subject named on the line fits the vertical frame.
 
 ## Files (write only here)
 `engine/eps/<ep>/`: story.ts, cast.ts, inserts.tsx, words.ts (+ kit.tsx). `public/eps/<ep>/`, `audio/<ep>/settings.json`, `bible/episodes/<ep>/`.
@@ -40,6 +40,9 @@ Shared engine files: smallest fix only when blocked, list it in the report, ep01
 - Air shots: pin with `fallPos(id, t)` under a fall cam, or a set-local point + `card:"cam"` (ep12 AIR).
 - A card lying on a bed sits at pillow height (ep12 ON_PILLOW) or the pillow covers the head.
 
+## Episode exports from ep13 worth copying
+`eps/ep13/cast.ts`: horse (side, front, top), rider pinned to the seat, breathing light (lightAt: size + 4 opacity steps, not redrawn lines), staged blast (fireball, sootCol, flashCard, ring, flung), hinged ramp (the card's normal must be square to the board: a wrong sign tilts it the other way and it reads as flipped).
+
 ## Assets
 `public/props/outdoor/MANIFEST.md`: 46 GLBs. A new file must also be listed in PROP_FILES (sets.ts). CC-BY props seen on screen go in the description.
 `public/backdrops/<biome>_<far|mid>.png` via set `backdrop:{biome}`. Fence and meadow flowers are too thin at range (they boil).
@@ -51,6 +54,12 @@ Shared engine files: smallest fix only when blocked, list it in the report, ep01
 - Roofs from straight above read as flat blocks: use a slight angle so ridges and chimneys show.
 - Keep heads clear of the frame edge in flat-card shots.
 - Balloon from above reads as a striped ball: side views only.
+
+## Traps from ep13
+- One render at a time even for stills: a job started beside a render died with ERR_ABORTED (port 3000).
+- A full render with many soft fx passes the 600 s tool limit: run it in the background.
+- In a heredoc through Bash an apostrophe can break the outer quoting: write patch scripts with the Write tool.
+- Before scheduling, read what is already booked: the channel takes 2 videos a day. The OAuth token can upload but not edit a video, so a schedule cannot be moved by API.
 
 ## Checks, cheapest first (studio/, GPU through `sh scripts/gpu.sh`, logs to a file)
 1. One contact sheet per round (one frame per shot, changed shots only), grayscale first. `python scripts/value_qa.py <sheet> --grid CxR` (CPU, seconds).

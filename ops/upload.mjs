@@ -60,4 +60,7 @@ for (const c of cards.videos.filter((v) => !only.length || only.includes(v.ep)))
   fs.writeFileSync(LOG, JSON.stringify(done, null, 2));
   console.log(`  → https://studio.youtube.com/video/${v.id}/edit  (status ${v.status?.privacyStatus}, publishAt ${v.status?.publishAt})`);
 }
+// shortcut: counts cards, not what is live on the channel; a video deleted in Studio still counts until its card is removed
+const perDay = {}; for (const c of cards.videos) if (Date.parse(c.publishAt) > Date.now()) (perDay[c.publishAt.slice(0, 10)] ??= []).push(c.ep);
+for (const [d, eps] of Object.entries(perDay)) if (eps.length > 2) console.log(`WARNING ${d}: ${eps.length} videos (${eps.join(", ")}), the channel takes 2 a day`);
 if (!go) console.log("dry run only. Upload: node ops/upload.mjs --go");
