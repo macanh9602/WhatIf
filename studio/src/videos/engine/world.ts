@@ -1,21 +1,48 @@
 // Ep01 world: sky + two-tone light rig (the template's, camera-relative sun frozen per shot), all five sets from
 // sets.ts, and the cast. update(id, f, camera) poses everything for shot `id` at frame f (pure function of id + f).
 import * as THREE from "three";
+import { getInputProps } from "remotion";
+import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { ctex, cloudHD } from "./paint";
-import { LIGHTS, LOOK, LightPreset, base } from "./lights";
+import { LIGHTS, LOOK, LightPreset, base, CLOUD_TINT } from "./lights";
 import { TONE, CHAR, POOL, untone } from "./shade";
 import { NOINK } from "./ink";
 import { Pool, Actor, Fx, stage } from "./cast";
-import { FPS, SHOTS, camAt, ShotDef } from "./story";
-import { SETS, POOLS, buildSets } from "./sets";
+import { FPS, SHOTS, camAt, ShotDef, CardMode } from "./story";
+import { SETS, POOLS, BACKDROP, buildSets } from "./sets";
 
 const discTex = () => ctex("sunDisc", 128, 128, (g) => {
   const gr = g.createRadialGradient(64, 64, 58, 64, 64, 64); gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(1, "rgba(255,255,255,0)");
   g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
 });
+/** sky-fall cloud palettes: lit top, shade side, projected ground-shadow tint */
+type TopPal = { lit: string; shade: string; ink: [number, number, number] };
+const TOPCLOUD: Partial<Record<string, TopPal>> = {
+  day: { lit: "#ffffff", shade: "#9fb3d6", ink: [0.12, 0.16, 0.3] }, golden: { lit: "#fff0d6", shade: "#a98cc0", ink: [0.2, 0.12, 0.28] }, dawn: { lit: "#ffe3e6", shade: "#a595c6", ink: [0.18, 0.13, 0.3] },
+};
+/** one cloud volume, unit radius: 3-4 lobes of overlapping spheres, tall in the middle, flat underneath. k = shape 0..3 */
+const puffs = (k: number) => {
+  let sd = k * 97 + 13; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647, B: [number, number, number, number][] = [];
+  for (let i = 0, n = 3 + (k % 2); i < n; i++) { const cx = (r() - 0.5) * 1.0, cz = (r() - 0.5) * 1.0, R = 0.3 + r() * 0.14; B.push([cx, 0.1, cz, R]);
+    for (let j = 0; j < 8; j++) { const a = (j / 8) * Math.PI * 2 + r() * 0.4, q = R * (0.75 + 0.3 * r()); B.push([cx + q * Math.cos(a), -0.02 + 0.08 * r(), cz + q * Math.sin(a), R * (0.42 + 0.26 * r())]); } }
+  return B;
+};
+const geoCache = new Map<number, THREE.BufferGeometry>();
+const cloudGeo = (k: number) => { let g = geoCache.get(k); if (g) return g;
+  const parts = puffs(k).map(([x, y, z, r], i) => { const b = new THREE.SphereGeometry(1, 20, 14), p = b.attributes.position; // lumpy: displaced along the normal
+    for (let v = 0; v < p.count; v++) { const nx = p.getX(v), ny = p.getY(v), nz = p.getZ(v), d = 1 + 0.09 * Math.sin(nx * 7 + i) * Math.sin(ny * 6 + i * 2) + 0.06 * Math.sin(nz * 11 + i * 3); p.setXYZ(v, nx * d, ny * d, nz * d); }
+    b.computeVertexNormals(); b.scale(r, r * 0.72, r); b.translate(x, y, z); return b; });
+  g = mergeGeometries(parts)!; parts.forEach((b) => b.dispose()); geoCache.set(k, g); return g; };
+/** lit by the frozen sun of the shot: bright tops, soft terminator, blue-grey sides, darker low down (the shading sells the volume) */
+const cloudMat = (fade: boolean) => new THREE.ShaderMaterial({ transparent: fade, uniforms: { uSun: { value: new THREE.Vector3(0, 1, 0) }, uLit: { value: new THREE.Color() }, uShade: { value: new THREE.Color() }, uOp: { value: 1 } },
+  vertexShader: "varying vec3 vN; varying float vH; void main() { vN = normalize(mat3(modelMatrix) * normal); vH = position.y; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+  fragmentShader: "uniform vec3 uSun, uLit, uShade; uniform float uOp; varying vec3 vN; varying float vH; void main() { float k = smoothstep(0.02, 0.5, dot(normalize(vN), uSun)) * mix(0.45, 1.0, smoothstep(-0.12, 0.22, vH)); gl_FragColor = vec4(mix(uShade, uLit * 1.08, k), uOp); }" });
+const topShadow = (k: number) => ctex(`topshadow|${k}`, 512, 512, (g) => { g.filter = "blur(14px)"; g.fillStyle = "#fff"; for (const [x, , z, r] of puffs(k)) { g.beginPath(); g.arc(256 + x * 230, 256 + z * 230, r * 230, 0, Math.PI * 2); g.fill(); } g.filter = "none"; });
 /** per-shot sun override: indoors a high sun over the open wall tops reads as window light */
 const SUN_SHOT: Record<number, { az?: number; el?: number }> = {};
 const INDOOR_EL = 58;
+/** A/B for scripts (backdrop_check.py): inputProps `{ post: { backdrop: false } }` hides the panorama layers */
+const NO_BACKDROP = (getInputProps() as { post?: { backdrop?: boolean } }).post?.backdrop === false;
 
 export class World {
   root = new THREE.Group();
@@ -30,6 +57,7 @@ export class World {
   private fitCache = new Map<number, { center: THREE.Vector3; R: number }>();
   private cloudMaps: Record<"day" | "golden", THREE.Texture[]>;
   private clouds: THREE.Mesh[] = [];
+  private rush: THREE.Mesh[] = []; // sky-fall: cloud layers rushing up past the lens (hidden on other shots)
   private frustum = new THREE.Frustum();
   private m4 = new THREE.Matrix4(); private v = new THREE.Vector3(); private sph = new THREE.Sphere();
 
@@ -64,7 +92,15 @@ export class World {
       m.layers.set(NOINK);
       this.clouds.push(m); R.add(m);
     }
-    buildSets(R);
+    // sky-fall layers: 0-2 far clouds, 3-5 their projected ground shadows, 6-7 mid clouds, 8 near cloud (fades), 9 altitude haze.
+    // NOINK: no world ink on the clouds; they and the haze write depth, so ink.ts draws no set lines on top of them either
+    for (let i = 0; i < 10; i++) {
+      const plane = (i >= 3 && i <= 5) || i === 9;
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2), plane ? new THREE.MeshBasicMaterial({ transparent: true, depthWrite: i === 9, fog: false, side: THREE.DoubleSide }) : cloudMat(i === 8));
+      m.layers.set(NOINK); m.visible = false; m.renderOrder = i === 9 ? 1.5 : i === 8 ? 2 : 1; m.userData.noCast = true;
+      this.rush.push(m); R.add(m);
+    }
+    buildSets(R, new Set(SHOTS.map((s) => s.set)));
     R.traverse((o) => { const m = o as THREE.Mesh; if (m.isMesh && m.layers.mask === 1 && !m.userData.noCast) { m.castShadow = true; m.receiveShadow = true; } });
   }
 
@@ -115,7 +151,9 @@ export class World {
     const t = f / FPS, s = SHOTS[id - 1], L = LIGHTS[s.light], K = LOOK[s.light], indoor = SETS[s.set].indoor;
     const c = camAt(id, f);
     cam.position.set(...c.pos); cam.up.set(0, 1, 0); cam.lookAt(...c.look); cam.rotateZ(c.roll);
-    cam.fov = c.fov; cam.near = 0.05; cam.far = 1500; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+    // big outdoor sets seen from high up: a near plane ~1 % of the height keeps the depth buffer fine at 300+ m (older sets: 0.05 as before)
+    const near = !SETS[s.set].fog ? 0.05 : "fall" in s.cam ? 1 : Math.min(2, Math.max(0.05, c.pos[1] / 100));
+    cam.fov = c.fov; cam.near = near; cam.far = 1500; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
     const focus = new THREE.Vector3(...c.look), fit = this.shotFit(id, s, indoor);
     cam.layers.enable(NOINK);
     // ---- light rig: camera-relative sun frozen per shot, two-tone uniforms, shadow fit around the focus ----
@@ -145,21 +183,54 @@ export class World {
     const e = K.sky.e.map((deg) => THREE.MathUtils.degToRad(deg));
     su.e.value.set(e[1], e[2], e[3], e[4]);
     this.sky.position.copy(cam.position);
-    untone(L.fog, this.fog.color); this.fog.near = indoor ? 60 : L.fogNear; this.fog.far = indoor ? 600 : L.fogFar;
+    const sf = s.haze ?? SETS[s.set].fog; // big outdoor sets: their own haze range (far layers fade into the horizon)
+    untone(L.fog, this.fog.color); this.fog.near = indoor ? 60 : sf ? sf[0] : L.fogNear; this.fog.far = indoor ? 600 : sf ? sf[1] : L.fogFar;
     scene.fog = this.fog; scene.background = null;
-    this.sunDisc.visible = !indoor && s.light === "golden";
+    const fall = "fall" in s.cam, moon = s.light === "night";
+    untone(L.fog, BACKDROP.uFog.value); BACKDROP.uMul.value.setRGB(...(CLOUD_TINT[s.light] ?? [1, 1, 1])); BACKDROP.uOn.value = fall || NO_BACKDROP ? 0 : 1;
+    this.sunDisc.visible = !indoor && !fall && (s.light === "golden" || s.light === "dawn" || moon);
     if (this.sunDisc.visible) {
+      (this.sunDisc.material as THREE.SpriteMaterial).color.setRGB(...(moon ? [1.6, 1.7, 2.0] : [6.0, 4.4, 2.4]) as [number, number, number]);
       this.sunDisc.position.copy(cam.position).addScaledVector(sunDir, 900);
       this.sunDisc.scale.setScalar(2 * 900 * Math.tan(THREE.MathUtils.degToRad(1.7)));
     }
     const o = SETS[s.set].origin;
     this.clouds.forEach((m, i) => {
-      m.visible = !indoor && s.light !== "sea" && s.light !== "shallow";
+      m.visible = !indoor && !fall && s.light !== "sea" && s.light !== "shallow";
+      (m.material as THREE.MeshBasicMaterial).color.setRGB(...(CLOUD_TINT[s.light] ?? [1.1, 1.1, 1.1]));
       const a = (i / 9) * Math.PI * 2 + 0.3, d = 520 + (i % 3) * 60, w = 120 + (i % 4) * 30;
       m.position.set(o[0] + Math.cos(a) * d, 110 + (i % 4) * 36, o[2] + Math.sin(a) * d); m.scale.set(w, w / 2, 1);
       m.lookAt(cam.position.x, m.position.y, cam.position.z);
       (m.material as THREE.MeshBasicMaterial).map = this.cloudMaps[base(s.light)][i % 4];
     });
+    // ---- sky-fall (ep12 #12): real cloud volumes fixed in the world at true heights, so the fall itself grows them and slides
+    // them outward. Far: below you, hazed, with projected ground shadows. Mid: two at the frame edges. Near: one passes a top
+    // corner through the lens plane, fading by distance. None starts over the face or the caption band; below 60 m (rooftops) none.
+    const sky = fall && c.pos[1] - o[1] >= 60;
+    this.rush.forEach((m) => { m.visible = false; });
+    if (sky) {
+      const c0 = camAt(id, s.a), c1 = camAt(id, s.b - 1), h0 = c0.pos[1] - o[1], drop = c0.pos[1] - c1.pos[1], y0 = c0.pos[1], hNow = c.pos[1] - o[1];
+      const tv = Math.tan((c0.fov * Math.PI) / 360), th = (tv * 9) / 16, mir = id % 2 ? 1 : -1, pal = TOPCLOUD[s.light] ?? TOPCLOUD.day!;
+      const lit = new THREE.Color(pal.lit), shade = new THREE.Color(pal.shade), hl = Math.hypot(sunDir.x, sunDir.z) || 1;
+      const cloud = (i: number, k: number, x: number, y: number, z: number, w: number, op = 1) => {
+        const m = this.rush[i], u = (m.material as THREE.ShaderMaterial).uniforms;
+        m.geometry = cloudGeo(k); m.visible = op > 0.01; m.position.set(x, y, z); m.scale.setScalar(w / 2); m.rotation.set(0, (k + id) * 1.7 + i, 0);
+        u.uSun.value.copy(sunDir); u.uLit.value.copy(lit); u.uShade.value.copy(shade); u.uOp.value = op; };
+      const dF = 0.52 * h0, wF = 0.9 * dF * th, dM = 1.5 * drop + 20, wM = 0.8 * dM * th, gy = o[1] + 40;
+      [[-0.78, 0.05], [0.8, -0.88], [0.72, 0.62]].forEach(([sx, sy], i) => {
+        const k = (i + id) % 4, x = c0.pos[0] + mir * sx * dF * th, z = c0.pos[2] - sy * dF * tv;
+        cloud(i, k, x, y0 - dF, z, wF);
+        const off = Math.min(0.28 * h0 * th, ((y0 - dF - gy) * hl) / Math.max(0.2, sunDir.y)), m = this.rush[3 + i], mat = m.material as THREE.MeshBasicMaterial; // falls away from the sun
+        m.visible = true; m.position.set(x - (sunDir.x / hl) * off, gy, z - (sunDir.z / hl) * off); m.scale.set(wF, 1, wF); m.rotation.set(0, (k + id) * 1.7 + i, 0);
+        mat.map = topShadow(k); mat.opacity = 0.34; mat.color.setRGB(...pal.ink);
+      });
+      [[0.85, 0.2], [-0.9, -0.85]].forEach(([sx, sy], j) => cloud(6 + j, (id + j * 2 + 1) % 4, c0.pos[0] + mir * sx * dM * th, y0 - dM, c0.pos[2] - sy * dM * tv, wM));
+      const dN = 0.7 * drop + 4, rN = 0.5 * dN, inner = 0.75 * dN * th + rN; // reaches the lens ~70 % into the shot
+      cloud(8, (id + 3) % 4, c0.pos[0] - mir * inner, y0 - dN, c0.pos[2] - 0.75 * dN * tv - rN, 2 * rN, Math.min(1, Math.max(0, (c.pos[1] - (y0 - dN) - 3) / 8)));
+      const haze = this.rush[9], hm = haze.material as THREE.MeshBasicMaterial;
+      haze.visible = true; haze.position.set(c.pos[0], y0 - (dM + 0.25 * wM + 2), c.pos[2]); haze.scale.set(8000, 1, 8000);
+      hm.opacity = 0.36 * Math.min(1, Math.max(0, (hNow - 30) / 300)); untone(L.fog, hm.color); // 36 % at 330 m+, gone near the ground
+    }
     // ---- cast + effects ----
     const right = new THREE.Vector3().setFromMatrixColumn(cam.matrixWorld, 0);
     const st = stage(id, t, { pos: cam.position, right, sun: sunDir }, base(s.light) === "golden");
@@ -174,7 +245,11 @@ export class World {
       a.r = this.pool.req(p.key, w, h, k, p.draw);
       a.mesh.visible = true;
       a.mesh.position.set(p.x, p.y, p.z);
-      a.mesh.rotation.set(0, p.yaw ?? Math.atan2(cam.position.x - p.x, cam.position.z - p.z), 0);
+      const card = (p as { card?: CardMode }).card ?? s.card ?? (fall ? "cam" : undefined);
+      if (card === "cam") a.mesh.quaternion.copy(cam.quaternion);
+      else if (card) { a.mesh.rotation.set(-Math.PI / 2, card.flat, 0); a.mesh.position.y += 0.02; } // lies on the ground (YXZ: yaw after the tip-over)
+      else a.mesh.rotation.set(0, p.yaw ?? Math.atan2(cam.position.x - p.x, cam.position.z - p.z), 0);
+      if (p.roll) a.mesh.rotateZ(p.roll); // the card is rotated about its normal (the roll about the view axis for "cam" cards)
       a.mesh.scale.set(p.mirror ? -sc2 : sc2, sc2, sc2);
       a.mesh.castShadow = L.actorShadow && !indoor;
       used.push(a);

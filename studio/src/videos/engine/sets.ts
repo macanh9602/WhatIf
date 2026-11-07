@@ -13,19 +13,39 @@ const PROP_FILES = ["toaster", "microwave", "stove", "houseplant", "tree", "palm
 type PropName = (typeof PROP_FILES)[number];
 const KIT = new Map<PropName, THREE.Object3D>();
 let kitP: Promise<void> | undefined;
-export const loadProps = () => (kitP ??= Promise.all(PROP_FILES.map((n) =>
-  new GLTFLoader().loadAsync(staticFile(`props/${n}.glb`)).then((g) => { g.scene.updateMatrixWorld(true); KIT.set(n, g.scene); }))).then(() => undefined));
+/** Outdoor GLB kit (public/props/outdoor/, MANIFEST.md: metres, base-centre origin, fronts +Z). outdoor() places a listed
+ *  name and falls back to primitives when a file is missing or broken (a failed load is skipped, not fatal). */
+const OUTDOOR_FILES = ["house_a", "house_b", "apartment_block", "tree_round", "tree_pine", "pine_cluster", "cactus", "mesa_rock", "dune",
+  "haystack", "sailboat", "buoy", "wave_tile", "fountain", "car_small", "car_van", "bench", "street_lamp", "mountain_peak", "meadow_flowers", "wooden_cart",
+  "windmill", "ferris_wheel", "water_tower", "cow", "sheep", "lighthouse", "rock_cluster",
+  "hot_air_balloon", "small_plane"]; // round 2 picks: CC0, plus the two CC-BY sky props for ep12's falls (credit them in the description)
+const OUT = new Map<string, THREE.Object3D>();
+/** backdrop panoramas public/backdrops/<biome>_<mid|far>.png (Blender agent, README.md there); a missing file = no layer */
+const BD = new Map<string, THREE.Texture>();
+const bdKeys = () => [...new Set(Object.values(SETS).flatMap((v) => v.backdrop ? [`${v.backdrop.biome}_mid`, `${v.backdrop.biome}_far`] : []))];
+export const loadProps = () => (kitP ??= Promise.all([
+  ...bdKeys().map((k) => new THREE.TextureLoader().loadAsync(staticFile(`backdrops/${k}.png`)).then((t) => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; BD.set(k, t); }, () => undefined)),
+  ...PROP_FILES.map((n) =>
+  new GLTFLoader().loadAsync(staticFile(`props/${n}.glb`)).then((g) => { g.scene.updateMatrixWorld(true); KIT.set(n, g.scene); })),
+  ...OUTDOOR_FILES.map((n) => new GLTFLoader().loadAsync(staticFile(`props/outdoor/${n}.glb`)).then((g) => { g.scene.updateMatrixWorld(true); OUT.set(n, g.scene); }, () => undefined)),
+]).then(() => undefined));
 
 export type V3 = [number, number, number];
 export type SetId = "home" | "yard" | "forest" | "snow" | "bedroom"
-  | "counter" | "floor" | "kitchen" | "beach" | "reef" | "bathroom" | "party" | "lagoon" | "rooftops" | "street" | "park";
+  | "counter" | "floor" | "kitchen" | "beach" | "reef" | "bathroom" | "party" | "lagoon" | "rooftops" | "street" | "park"
+  | "town" | "desert" | "sea" | "mountains" | "field";
 export type CamHint = { pos: V3; look: V3; fov: number };
-export type SetInfo = { origin: V3; indoor: boolean; spots: Record<string, V3>; cams: Record<string, CamHint> };
+/** distant scenery rings round the set origin (farLayers below): painted, no ink, hazed by the set's fog */
+export type FarKind = "hills" | "skyline" | "dunes" | "sea" | "mountains";
+/** fog: [near, far] m replacing the light's range (big outdoor sets seen from 20-1000 m); far: distant geometry rings
+ *  (the fallback); backdrop: painted panorama cylinders (mid / far = radius m, defaults 450 / 950), used when the PNGs exist */
+export type SetInfo = { origin: V3; indoor: boolean; spots: Record<string, V3>; cams: Record<string, CamHint>; fog?: [number, number]; far?: FarKind[];
+  backdrop?: { biome: string; mid?: number; far?: number } };
 
 // Metres, local +z is the open camera side. All public staging coordinates are world-space.
-const info = (x: number, indoor: boolean, spots: Record<string, V3>, cams: Record<string, CamHint>): SetInfo => {
+const info = (x: number, indoor: boolean, spots: Record<string, V3>, cams: Record<string, CamHint>, more: Pick<SetInfo, "fog" | "far" | "backdrop"> = {}): SetInfo => {
   const world = ([a, b, c]: V3): V3 => [x + a, b, c];
-  return { origin: [x, 0, 0], indoor,
+  return { origin: [x, 0, 0], indoor, ...more,
     spots: Object.fromEntries(Object.entries(spots).map(([k, v]) => [k, world(v)])),
     cams: Object.fromEntries(Object.entries(cams).map(([k, v]) => [k, { ...v, pos: world(v.pos), look: world(v.look) }])) };
 };
@@ -92,6 +112,27 @@ export const SETS: Record<SetId, SetInfo> = {
   street: info(4200, false, { you: [0, 0, 1.5], anvil: [0.5, 0, 1.8], lamp: [-3, 0, 2.6], awning: [3.5, 0, -1.2] }, {
     wide: cam([0, 1.5, 8.5], [0, 1.4, -2], 46),
   }),
+  // ---- ep12 big outdoor sets (2026-11-07): 3 km apart, far past every older set and the 1500 m camera far plane ----
+  // a town of 13 x 13 blocks (48 m pitch), park in the centre block; "street" = the detailed lane for the ~20 m shots
+  town: info(10000, false, { you: [0, 0, 0], park: [0, 0, 0], street: [48, 0, 6], square: [-48, 0, 0] }, {
+    air: cam([0, 300, 260], [0, 0, -40], 50), low: cam([30, 20, 60], [48, 0, 0], 50), wide: cam([48, 1.6, 20], [48, 1.6, 0], 46),
+  }, { fog: [80, 1300], far: ["skyline", "hills"], backdrop: { biome: "town" } }),
+  // golden dunes, cacti, a mesa, a far mountain wall
+  desert: info(13000, false, { you: [0, 0, 0], mesa: [-120, 0, -260] }, {
+    wide: cam([0, 1.5, 8], [0, 1.6, -4], 46), air: cam([0, 260, 220], [0, 0, -60], 50),
+  }, { fog: [60, 1250], far: ["dunes", "mountains"], backdrop: { biome: "desert" } }),
+  // open sea to the horizon: swells, foam, a sailboat and a buoy
+  sea: info(16000, false, { you: [0, 0, 0], boat: [14, 0, -30] }, {
+    wide: cam([0, 4, 14], [0, 1, -20], 46), air: cam([0, 260, 220], [0, 0, -60], 50),
+  }, { fog: [60, 1300], far: ["sea"], backdrop: { biome: "sea" } }),
+  // snowy peaks round a high pine valley
+  mountains: info(19000, false, { you: [0, 0, 0], peak: [60, 0, -320] }, {
+    wide: cam([0, 2, 12], [0, 6, -30], 50), air: cam([0, 320, 240], [0, 0, -60], 50),
+  }, { fog: [80, 1300], far: ["mountains", "hills"], backdrop: { biome: "mountains" } }),
+  // a golden meadow with haystacks and a fence, rolling hills behind (the landing)
+  field: info(22000, false, { you: [0, 0, 0], hay: [-6, 0, -8] }, {
+    wide: cam([0, 1.5, 8], [0, 1.2, -4], 46), air: cam([0, 260, 220], [0, 0, -60], 50),
+  }, { fog: [50, 1200], far: ["hills"], backdrop: { biome: "field" } }),
 };
 
 // Static art profile. Change palette, architecture sizes and prop placement here; no runtime/domain decisions.
@@ -713,18 +754,226 @@ function park(b: SetBuilder) {
   b.box([cx, 0.5, cz], [11.6, 0.9, 0.05], "#e8edf2"); for (const dx of [-5.9, 5.9]) b.cylinder([cx + dx, 0.53, cz], 0.06, 1.06, P.metal);
 }
 
+// ---------------- ep12 big outdoor sets + far layers (2026-11-07) ----------------
+// Own seeded rng (the shared rnd() above drives the older sets: drawing from it here would move their props).
+let os = 5; const ornd = () => ((os = (os * 16807) % 2147483647) / 2147483647);
+/** outdoor kit GLB by name at native metres x k (OUTDOOR_FILES), or the primitive fallback when it is not loaded */
+function outdoor(b: SetBuilder, name: string, [x, y, z]: V3, k: number, yaw: number, fallback: () => void) {
+  const o = OUT.get(name);
+  if (!o) return fallback();
+  const at = new THREE.Matrix4().compose(V(x, y, z), new THREE.Quaternion().setFromAxisAngle(V(0, 1, 0), yaw), V(k, k, k));
+  o.traverse((m) => {
+    if (!(m instanceof THREE.Mesh)) return;
+    const src = m.material as THREE.MeshStandardMaterial;
+    (b.paint ? b.flat : b.batch).add(m.geometry, material(`#${src.color.getHexString()}`), at.clone().multiply(m.matrixWorld));
+  });
+}
+/** big plain ground slab */
+const ground = (b: SetBuilder, size: number, color: string) => b.box([0, -0.06, 0], [size, 0.12, size], color);
+/** a cheap gable house for distance (~20 tris): body + two roof planes + gables */
+function hut(b: SetBuilder, x: number, z: number, w: number, d: number, h: number, wall: string, roof: string, yaw = 0) {
+  const r = new THREE.Matrix4().compose(V(x, 0, z), new THREE.Quaternion().setFromAxisAngle(V(0, 1, 0), yaw), V(1, 1, 1));
+  b.batch.add(boxGeo(V(-w / 2, 0, -d / 2), V(w / 2, h, d / 2)), material(wall), r);
+  const rh = Math.min(w, d) * 0.4, ex = 0.4;
+  for (const sd of [-1, 1]) b.batch.add(quad(V(-w / 2 - ex, h + rh, 0), V(-w / 2 - ex, h - 0.2, sd * (d / 2 + ex)), V(w / 2 + ex, h - 0.2, sd * (d / 2 + ex)), V(w / 2 + ex, h + rh, 0)), material(roof), r);
+  for (const sx of [-1, 1]) b.batch.add(tri(V(sx * w / 2, h, sx * d / 2), V(sx * w / 2, h, -sx * d / 2), V(sx * w / 2, h + rh, 0)), material(wall), r);
+}
+function puff(b: SetBuilder, x: number, z: number, s: number) {
+  b.box([x, s * 1.2, z], [0.5 * s, 2.4 * s, 0.5 * s], P.roof);
+  b.geo(sph(1.8 * s, 1, 1, 1, 10), [x, 3.4 * s, z], P.foliage);
+}
+/** a ring strip at radius r: top edge prof(angle), bottom bot(angle); normals face the centre, tilted up (a slope) */
+function ring(r: number, prof: (a: number) => number, bot: (a: number) => number = () => -20, n = 360) {
+  const pos: number[] = [], nor: number[] = [], uv: number[] = [];
+  for (let i = 0; i < n; i++) {
+    const a0 = (i / n) * Math.PI * 2, a1 = ((i + 1) / n) * Math.PI * 2;
+    const t0 = prof(a0), t1 = prof(a1), b0 = Math.min(bot(a0), t0), b1 = Math.min(bot(a1), t1);
+    if (t0 - b0 < 0.01 && t1 - b1 < 0.01) continue;
+    const p0 = [Math.cos(a0) * r, Math.sin(a0) * r], p1 = [Math.cos(a1) * r, Math.sin(a1) * r];
+    for (const [[x, z], y] of [[p0, b0], [p1, b1], [p1, t1], [p0, b0], [p1, t1], [p0, t0]] as [number[], number][]) {
+      pos.push(x, y, z); const l = Math.hypot(x, z), nx = -x / l, nz = -z / l, ny = 1.1, k = Math.hypot(nx, ny, nz); nor.push(nx / k, ny / k, nz / k); uv.push(0, 0);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute("normal", new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2));
+  return g;
+}
+const hash = (k: number) => { const x = Math.sin(k * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+/** 2-3 distant layers per kind, painted (NOINK: lines at 300+ m only dot and boil), hazed by distance through the set fog */
+function farLayers(b: SetBuilder, kinds: FarKind[]) {
+  const add = (g: THREE.BufferGeometry, col: string) => { b.flat.add(g, material(col)); g.dispose(); };
+  for (const kind of kinds) {
+    if (kind === "sea") add(boxGeo(V(-1100, -0.4, -1100), V(1100, -0.25, 1100)), "#2a8fb8");
+    if (kind === "hills") ([[380, 28, "#6aa956"], [620, 48, "#5f9a6a"], [880, 72, "#6f9a8a"]] as [number, number, string][]).forEach(([r, H, c], L) =>
+      add(ring(r, (a) => H * (0.55 + 0.25 * Math.sin(3 * a + L * 2) + 0.15 * Math.sin(7 * a + L) + 0.05 * Math.sin(17 * a + 3 * L))), c));
+    if (kind === "dunes") ([[320, 22, "#e6b56a"], [560, 36, "#dca866"], [820, 52, "#c99e7c"]] as [number, number, string][]).forEach(([r, H, c], L) =>
+      add(ring(r, (a) => H * (0.25 + 0.75 * Math.pow(0.5 + 0.5 * Math.sin(5 * a + L * 1.7 + 0.4 * Math.sin(11 * a)), 2))), c));
+    if (kind === "skyline") ([[300, 34, "#8a8fa8"], [470, 58, "#9ea4bc"]] as [number, number, string][]).forEach(([r, H, c], L) => {
+      const N = 200, h = (a: number) => { const k = Math.floor((a / (Math.PI * 2)) * N); return H * (hash(k + L * 999) < 0.15 ? 0.1 : 0.3 + 0.7 * hash(k * 3 + L) ** 2); };
+      add(ring(r, h, () => -20, N), c);
+    });
+    if (kind === "mountains") ([[680, 170, "#7a7f9a"], [960, 290, "#8d93ad"]] as [number, number, string][]).forEach(([r, H, c], L) => {
+      const N = 9 + L * 4, h = (a: number) => { const x = (a / (Math.PI * 2)) * N, k = Math.floor(x), f = x - k, amp = 0.45 + 0.55 * hash(k + L * 50);
+        return H * (0.2 + amp * (1 - Math.abs(2 * f - 1)) * (0.9 + 0.1 * Math.sin(a * 41))); };
+      add(ring(r, h, () => -20, 540), c);
+      add(ring(r - 4, h, (a) => Math.max(h(a) - 0.22 * H, 0.62 * H), 540), "#f4f7fb"); // snow caps
+    });
+  }
+}
+/** per-frame backdrop uniforms (world.ts): horizon/fog colour, light tint, off in sky-fall shots (no bottom edge from above) */
+export const BACKDROP = { uFog: { value: new THREE.Color() }, uMul: { value: new THREE.Color(1, 1, 1) }, uOn: { value: 1 } };
+// horizon (eye level) = row 614 of 1024 from the top in every backdrop PNG (public/backdrops/README.md) = 40 % from the bottom
+const BD_HORIZON = 1 - 614 / 1024;
+/** atmospheric perspective per layer (director 2026-11-07; the PNGs come in neutral): contrast pivots on the haze colour,
+ *  then saturation, then a mix toward the haze; blur = px at 1080 (mip bias). The far layer stays below the mid in chroma. */
+export type BdGrade = { contrast: number; sat: number; haze: number; blur: number };
+// director's starting values, haze .25 / .5 -> .2 / .4 after backdrop_check: at golden the haze colour itself is saturated and close
+// to the horizon sky, so the full haze pushed the field's far layer above the cast's chroma and under the .05 luma gap
+const BD_MID: BdGrade = { contrast: 0.75, sat: 0.85, haze: 0.2, blur: 0 }, BD_FAR: BdGrade = { contrast: 0.5, sat: 0.7, haze: 0.4, blur: 1.5 };
+const BD_FAR_BRIGHT: BdGrade = { contrast: 0.65, sat: 0.88, haze: 0.25, blur: 1.5 }; // sea: its pale far island vanished at .5/.4 (luma gap .01)
+/** an open cylinder seen from inside, the panorama wrapped once round it (square texels), unlit, graded toward the light's haze */
+function backdrop(b: SetBuilder, r: number, tex: THREE.Texture, g: BdGrade) {
+  const img = tex.image as { width: number; height: number }, h = (2 * Math.PI * r * img.height) / img.width;
+  const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, 160, 1, true), new THREE.ShaderMaterial({
+    uniforms: { ...BACKDROP, map: { value: tex }, uCon: { value: g.contrast }, uSat: { value: g.sat }, uHaze: { value: g.haze }, uBias: { value: Math.log2(1 + g.blur) } },
+    vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+    fragmentShader: `uniform sampler2D map; uniform vec3 uFog, uMul; uniform float uCon, uSat, uHaze, uBias, uOn; varying vec2 vUv;
+      void main(){ vec4 t = texture2D(map, vec2(1.0 - vUv.x, vUv.y), uBias); float low = smoothstep(0.0, 0.08, vUv.y), a = t.a * low * uOn;
+        if (a < 0.01) discard;
+        vec3 hz = mix(vec3(dot(uFog, vec3(0.2126, 0.7152, 0.0722))), uFog, 0.6); // the preset's haze hue at 60 % chroma: golden fog is
+        vec3 c = mix(hz, t.rgb * uMul, uCon);                           // more saturated than the cast (backdrop_check rule 1)
+        c = mix(vec3(dot(c, vec3(0.2126, 0.7152, 0.0722))), c, uSat);
+        c = mix(c, hz, uHaze);
+        float lf = dot(uFog, vec3(0.2126, 0.7152, 0.0722)), lc = dot(c, vec3(0.2126, 0.7152, 0.0722));
+        c *= min(1.0, (lf - 0.1) / max(lc, 1e-3));                       // never within ~.06 (display) of the sky: the silhouette stays (rule 5)
+        gl_FragColor = vec4(mix(uFog, c, low), a); }`,                   // the bottom 8 % melts into the fog
+    transparent: true, depthWrite: false, side: THREE.BackSide, fog: false,
+  }));
+  m.position.y = (0.5 - BD_HORIZON) * h; m.layers.set(NOINK); m.userData.noCast = true; m.renderOrder = -0.4; m.frustumCulled = false;
+  b.group.add(m);
+}
+function town(b: SetBuilder) {
+  ground(b, 2400, "#86b864");
+  const pitch = 48, st = 10, n = 6, half = pitch * n + pitch / 2;
+  for (let i = -n; i <= n + 1; i++) { // streets (flat: no ink), along x and z
+    const c = (i - 0.5) * pitch;
+    b.box([c, 0.02, 0], [st, 0.02, 2 * half], "#5d6382"); b.box([0, 0.02, c], [2 * half, 0.02, st], "#5d6382"); // flat layers 3 cm apart: 2 mm steps z-fought from 300 m
+  }
+  const WALL = ["#d9c7a3", "#a7c4d9", "#e2b04e", "#b9748f", "#e8dcc1", "#c96b55"], ROOF = ["#8a4b32", "#5b4636", "#3e4a5c", "#b93c51"];
+  for (let i = -n; i <= n; i++) for (let j = -n; j <= n; j++) {
+    const cx = i * pitch, cz = j * pitch, inner = pitch - st, r = Math.hypot(i, j);
+    if (i === 0 && j === 0) { // the park: lawn, pond, paths, fountain, trees
+      b.box([cx, 0.05, cz], [inner, 0.02, inner], "#7fbf5e"); b.box([cx + 9, 0.08, cz - 9], [12, 0.02, 8], "#3fb6cf");
+      b.box([cx, 0.08, cz], [inner, 0.02, 2.4], "#c9b79a"); b.box([cx, 0.08, cz], [2.4, 0.02, inner], "#c9b79a");
+      outdoor(b, "fountain", [cx, 0, cz], 1, 0, () => { b.cylinder([cx, 0.3, cz], 2.2, 0.6, "#c9b79a"); b.cylinder([cx, 1.2, cz], 0.3, 1.8, "#c9b79a"); });
+      for (let k = 0; k < 14; k++) { const a = k * 2.4, d = 9 + (k % 4) * 3.5, x = cx + Math.cos(a) * d, z = cz + Math.sin(a) * d; if (Math.abs(x - cx) < 2 || Math.abs(z - cz) < 2) continue; outdoor(b, "tree_round", [x, 0, z], 1.2, a, () => puff(b, x, z, 1.4)); }
+      continue;
+    }
+    if (i === -2 && j === -2) { outdoor(b, "ferris_wheel", [cx, 0, cz], 1.4, 0.5, () => undefined); outdoor(b, "water_tower", [cx + 14, 0, cz + 12], 1, 0, () => undefined); b.box([cx, 0.05, cz], [inner, 0.02, inner], "#7fbf5e"); continue; } // the fairground
+    b.box([cx, 0.05, cz], [inner, 0.02, inner], "#c9b79a"); // pavement block
+    if (i === 1 && j === 0) { // the detailed lane for the ground shots (spot "street" in front of it)
+      for (const x of [-12, 0, 12]) { house(b, cx + x, cz - 8, WALL[(x / 12 + 1) | 0], ROOF[(x / 12 + 2) & 3], P.teal); }
+      for (const x of [-6, 6]) outdoor(b, "street_lamp", [cx + x, 0, cz + 2], 1, 0, () => b.beam([cx + x, 0, cz + 2], [cx + x, 4, cz + 2], 0.12, "#2f3e4f"));
+      outdoor(b, "bench", [cx - 2, 0, cz + 1.5], 1, 0, () => b.box([cx - 2, 0.45, cz + 1.5], [1.6, 0.1, 0.45], P.wood));
+      outdoor(b, "car_van", [cx + 14, 0, cz + 21], 1, Math.PI / 2, () => b.box([cx + 14, 1, cz + 21], [5, 2, 2.1], "#e8dcc1"));
+      continue;
+    }
+    if (r < 2.3 && (i + j) % 2) { // downtown: two blocks of flats
+      for (const [dx, dz] of [[-9, -6], [9, 7]]) { const k = 1 + ornd(), x = cx + dx, z = cz + dz;
+        outdoor(b, "apartment_block", [x, 0, z], k, 0, () => b.box([x, 9 * k, z], [12, 18 * k, 10], WALL[(ornd() * 6) | 0], "brick")); }
+      continue;
+    }
+    for (let k = 0; k < 8; k++) { // 2 rows of 4 houses facing the streets, gardens between
+      const row = k < 4 ? -1 : 1, x = cx - 14 + (k % 4) * 9.4, z = cz + row * 11, w = WALL[(ornd() * 6) | 0], rf = ROOF[(ornd() * 4) | 0], big = ornd() < 0.5;
+      outdoor(b, big ? "house_a" : "house_b", [x, 0, z], 1, row < 0 ? Math.PI : 0, () => hut(b, x, z, 7.5, 7, 4 + ornd() * 2.5, w, rf));
+    }
+    b.box([cx, 0.08, cz], [inner - 4, 0.02, 8], "#7fbf5e"); // the gardens
+    for (let k = 0; k < 3; k++) { const x = cx - 14 + k * 14 + ornd() * 4, z = cz + (ornd() - 0.5) * 3; outdoor(b, "tree_round", [x, 0, z], 0.9, k, () => puff(b, x, z, 1)); }
+  }
+  for (let k = 0; k < 14; k++) { const i = ((ornd() * 13) | 0) - 6, x = (i - 0.5) * pitch + 2.2, z = (ornd() - 0.5) * 2 * half; // cars
+    outdoor(b, "car_small", [x, 0, z], 1, 0, () => b.box([x, 0.6, z], [1.8, 1.2, 4], ROOF[k & 3])); }
+  outdoor(b, "small_plane", [30, 260, -30], 1.5, 2.2, () => undefined); // sky life under ep12's falls (no balloon: from the top it read as a striped disc)
+}
+function desert(b: SetBuilder) {
+  ground(b, 2400, "#ecc985");
+  for (let k = 0; k < 36; k++) { const x = (ornd() - 0.5) * 500, z = -30 - ornd() * 400, s = 0.5 + ornd() * 1.5; // dunes
+    outdoor(b, "dune", [x, 0, z], s, (ornd() - 0.5) * 0.8, () => b.geo(new THREE.SphereGeometry(20 * s, 24, 8, 0, Math.PI * 2, 0, Math.PI / 2).scale(1.6, 0.28, 1), [x, -0.5, z], "#e6bd78")); }
+  const [mx, , mz] = SETS.desert.spots.mesa.map((v, i) => v - SETS.desert.origin[i]) as V3;
+  outdoor(b, "mesa_rock", [mx, 0, mz], 1.8, 0, () => b.box([mx, 30, mz], [140, 60, 70], "#c8754a"));
+  for (let k = 0; k < 22; k++) { const x = (ornd() - 0.5) * 60, z = 6 - ornd() * 70, s = 0.7 + ornd() * 0.6; // cacti
+    if (Math.abs(x) < 3 && z > -4) continue;
+    outdoor(b, "cactus", [x, 0, z], s, k, () => { b.cylinder([x, 1.5 * s, z], 0.3 * s, 3 * s, "#5f9a4e"); b.beam([x, 1.4 * s, z], [x + 0.8 * s, 1.4 * s, z], 0.4 * s, "#5f9a4e"); }); }
+  for (let k = 0; k < 12; k++) b.geo(sph(0.5 + ornd() * 1.4, 1.3, 0.6, 1, 8), [(ornd() - 0.5) * 50, 0.2, -ornd() * 50], "#b98a5e");
+}
+function sea(b: SetBuilder) {
+  if (OUT.has("wave_tile")) for (let i = -4; i <= 4; i++) for (let j = -6; j <= 2; j++) outdoor(b, "wave_tile", [i * 20, -0.75, j * 20], 1, 0, () => undefined); // mean water at y = 0
+  b.box([0, -0.06, 0], [600, 0.12, 600], "#2a8fb8");
+  for (let k = 0; k < 50; k++) { const x = (ornd() - 0.5) * 400, z = 20 - ornd() * 400; // foam streaks (flat)
+    if (!OUT.has("wave_tile")) b.geo(new THREE.CylinderGeometry(1, 1, 18 + ornd() * 20, 16, 1).rotateZ(Math.PI / 2).scale(1, 0.35, 1.6), [x, -0.15, z], "#2685b0");
+    b.box([x + 2, 0.8, z - 1.2], [8 + ornd() * 10, 0.02, 0.6], "#e9f7fb"); }
+  const [bx, , bz] = SETS.sea.spots.boat.map((v, i) => v - SETS.sea.origin[i]) as V3;
+  outdoor(b, "sailboat", [bx, 0.35, bz], 1, 0.6, () => {
+    b.box([bx, 0.5, bz], [2.4, 1.2, 7], "#f4f1ea"); b.beam([bx, 1.1, bz - 0.6], [bx, 9, bz - 0.6], 0.15, "#5a4a3a");
+    b.geo(tri(V(0, 0, 0), V(0, 0, -3), V(0, 7, -0.2)), [bx + 0.05, 1.8, bz - 0.7], "#fbfaf6"); });
+  outdoor(b, "buoy", [-8, 0.35, -18], 1, 0, () => b.cylinder([-8, 0.8, -18], 0.5, 1.6, "#c63939"));
+  outdoor(b, "lighthouse", [-90, 0, -160], 1.5, 0, () => undefined); outdoor(b, "rock_cluster", [-90, -0.5, -160], 6, 0, () => undefined); // a rock islet
+}
+function mountains(b: SetBuilder) {
+  ground(b, 2400, "#7f9f6a");
+  const [px, , pz] = SETS.mountains.spots.peak.map((v, i) => v - SETS.mountains.origin[i]) as V3;
+  outdoor(b, "mountain_peak", [px, -2, pz], 0.6, 0.3, () => b.geo(new THREE.ConeGeometry(220, 300, 7), [px, 148, pz], "#7a7f9a"));
+  for (let k = 0; k < 7; k++) { // low-poly side peaks (7 facets: inked ridges) with snow cones
+    const x = (ornd() - 0.5) * 800, z = -200 - ornd() * 300, h = 90 + ornd() * 140, r = h * 0.75;
+    if (Math.abs(x - px) < 200) continue;
+    b.geo(new THREE.ConeGeometry(r, h, 7), [x, h / 2 - 1, z], "#7a7f9a");
+    b.geo(new THREE.ConeGeometry(r * 0.36, h * 0.36, 7), [x, h - h * 0.18 - 0.5, z], "#f4f7fb");
+  }
+  for (let k = 0; k < 40; k++) { const x = (ornd() - 0.5) * 140, z = 10 - ornd() * 130, s = 0.8 + ornd() * 0.6;
+    if (Math.abs(x) < 6 && z > -8) continue;
+    outdoor(b, k % 3 ? "tree_pine" : "pine_cluster", [x, 0, z], s, k, () => { b.box([x, s, z], [0.4 * s, 2 * s, 0.4 * s], P.roof); b.geo(new THREE.ConeGeometry(1.6 * s, 4.5 * s, 8), [x, 3.6 * s, z], "#3f6f55"); }); }
+  for (let k = 0; k < 16; k++) b.geo(sph(0.6 + ornd() * 1.4, 1.2, 0.7, 1, 8), [(ornd() - 0.5) * 60, 0.3, -ornd() * 60], "#8e8a92");
+  outdoor(b, "small_plane", [15, 230, -10], 1.5, -0.8, () => undefined); // sky life under ep12's fall
+}
+function field(b: SetBuilder) {
+  ground(b, 2400, "#a9bd5a");
+  for (let k = 0; k < 30; k++) b.box([(ornd() - 0.5) * 300, 0.01 + k * 0.006, -ornd() * 300 + 40], [30 + ornd() * 40, 0.02, 20 + ornd() * 30], k % 2 ? "#c9b45a" : "#93b455"); // patches
+  const [hx, , hz] = SETS.field.spots.hay.map((v, i) => v - SETS.field.origin[i]) as V3;
+  for (let k = 0; k < 10; k++) { const x = k ? (ornd() - 0.5) * 80 : hx, z = k ? -12 - ornd() * 60 : hz;
+    outdoor(b, "haystack", [x, 0, z], 0.7, k, () => { b.cylinder([x, 0.9, z], 1.6, 1.8, "#e2b04e"); b.geo(new THREE.ConeGeometry(1.8, 1.4, 14), [x, 2.5, z], "#d39a30"); }); }
+  outdoor(b, "wooden_cart", [5, 0, -6], 1, -0.5, () => undefined);
+  outdoor(b, "windmill", [-40, 0, -70], 1.4, 0.4, () => undefined);
+  for (let k = 0; k < 6; k++) outdoor(b, k % 2 ? "sheep" : "cow", [14 + k * 3.5, 0, -24 - (k % 3) * 4], 1, k * 1.3, () => undefined);
+  for (const y of [0.45, 0.85]) b.box([0, y, -14], [60, 0.1, 0.08], P.wood); // a plain rail fence (picket GLB too thin: it dots at range)
+  for (let x = -30; x <= 30; x += 3) b.box([x, 0.55, -14], [0.16, 1.1, 0.16], P.wood);
+  for (let k = 0; k < 10; k++) { const x = (ornd() - 0.5) * 160, z = -40 - ornd() * 120; outdoor(b, "tree_round", [x, 0, z], 1.5, k, () => puff(b, x, z, 1.5)); }
+  // flowers: flat dots only (the meadow_flowers GLB's 90 thin stems boil under ink; kept out, see the report)
+  outdoor(b, "hot_air_balloon", [-20, 45, -60], 1, 0.5, () => undefined); // sky life over ep12's landing
+  // daisies: 5 round petals + a yellow eye, flat (no ink); the old 18 cm squares read as red tiles from above (ep12 #8)
+  for (let k = 0; k < 160; k++) { const x = (ornd() - 0.5) * 30, z = 4 - ornd() * 30, r = 0.05 + 0.03 * ornd(), a0 = ornd() * 6;
+    const col = ["#f4f7fb", "#f4f7fb", "#e8705e", "#c99be0"][k % 4];
+    for (let j = 0; j < 5; j++) { const a = a0 + (j * Math.PI * 2) / 5; b.flat.add(new THREE.CylinderGeometry(r, r, 0.01, 10), material(col), new THREE.Matrix4().makeTranslation(x + 1.2 * r * Math.cos(a), 0.2, z + 1.2 * r * Math.sin(a))); }
+    b.flat.add(new THREE.CylinderGeometry(0.8 * r, 0.8 * r, 0.01, 10), material("#f5c733"), new THREE.Matrix4().makeTranslation(x, 0.207, z)); }
+}
+
 /** Builds every static set once. Caller owns root lifecycle, lighting, fog, cards and animation.
  * Geometry is owned by root; palette materials / CanvasTextures are shared caches (do not dispose per set).
  * No asset loading, environment mutation, actors, lights, cameras or runtime gameplay behavior.
  */
-export function buildSets(root: THREE.Object3D): void {
+export function buildSets(root: THREE.Object3D, used?: Set<SetId>): void {
   const start = performance.now();
   const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow, bedroom,
-    counter, floor, kitchen, beach, reef, bathroom, party, lagoon, rooftops, street, park };
+    counter, floor, kitchen, beach, reef, bathroom, party, lagoon, rooftops, street, park, town, desert, sea, mountains, field };
+  const BIG = new Set<SetId>(["town", "desert", "sea", "mountains", "field"]); // only when the episode uses them (older sets always, in order: they share rnd())
   let triangles = 0;
   for (const id of Object.keys(SETS) as SetId[]) {
+    if (BIG.has(id) && used && !used.has(id)) continue;
     const group = new THREE.Group(); group.name = `set:${id}`; group.position.set(...SETS[id].origin);
-    const b = new SetBuilder(group); builders[id](b); b.finish();
+    const b = new SetBuilder(group); builders[id](b);
+    const bd = SETS[id].backdrop, mid = bd && BD.get(`${bd.biome}_mid`), far = bd && BD.get(`${bd.biome}_far`);
+    if (mid) backdrop(b, bd!.mid ?? 450, mid, BD_MID);
+    if (far) backdrop(b, bd!.far ?? 950, far, id === "sea" ? BD_FAR_BRIGHT : BD_FAR);
+    if (SETS[id].far && !mid && !far) { b.paint = true; farLayers(b, SETS[id].far!); b.paint = false; } // the geometry rings stand in until the panoramas exist
+    b.finish();
     let count = 0;
     group.traverse((o) => { if (o instanceof THREE.Mesh) count += (o.geometry.index?.count ?? o.geometry.attributes.position.count) / 3; });
     group.userData.triangles = count; triangles += count; root.add(group);

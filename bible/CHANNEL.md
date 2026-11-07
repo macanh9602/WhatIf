@@ -7,6 +7,7 @@ Vertical 50-60 s shorts. Each episode answers one absurd "what if" with real phy
 - Voice of the answer: literal, honest numbers, deadpan understatement. Every number is computed and sourced in SCRIPT.md.
 - Length: ~1:05-1:15 after the 1.1x speed-up (user 2026-11-05, from ep04; ep01-03 were ~1:30). Publish 07:00 VN, one per day.
 - Ops: `node ops/upload.mjs` (schedule), evening report 21:00 (`ops/report.cmd` → bible/reports/<date>.md).
+- Episode standard from ep12 on (user 2026-11-07): more outdoor and varied places, few infographics, real transitions; rules in AGENTS.md "Episode standard".
 - Identity (user decisions 2026-11-05):
   - Look: the reference's construction (bean heads + bean torsos, 2.5D form shading, thin ink limbs, small detailed hair /
     accessories that never cover the brows), navy card ink, 3D ink world + 2D blueprint inserts for the "how it works" beat.
@@ -31,4 +32,5 @@ video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (st
 | 09 | What if you woke up as a sponge (extrovert premise) | v1; 1.1x (1:09) scheduled 2026-11-09 07:00 (7ppXxciUNcM); new party/lagoon sets; lead as a red sponge needs sign-off |
 | 10 | What if you lived one day inside a cartoon | v1; 1.1x (1:14) scheduled 2026-11-08 07:00 (-evU9ACFrQA); generic tropes only; new rooftops/street sets |
 | 11 | What if you could photosynthesize | v1; 1.1x (0:60) scheduled 2026-11-09 07:00 (62YTQU1p1Hs); new park set; green lead for this episode only |
+| 12 | What if you fell between dreams and reality | v1; 1.1x (1:05) scheduled 2026-11-10 07:00 (vGaHtPu6Ug0); first build on outdoor kit, backdrops, TRANS, 3D sky-fall clouds; shipped from the 1080p preview with known defects (haze, shot 27 clock blur, shot 6 roofs) |
 | bts | I Fixed the Cat (8 s before/after test, not a story) | scheduled 2026-11-10 07:00 (9Lz2k5owq_8) |

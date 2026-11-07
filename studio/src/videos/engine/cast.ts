@@ -111,10 +111,10 @@ export const stage = (id: number, t: number, cam: CamInfo, golden: boolean): Sta
     const fo: FrontOpts = {
       mode: a.mode ?? "stand", expr: exprAt(a.expr, t), ...exprAnim(a.expr, t), blink: lidAt(t, a.mirror ? 0 : a.i, swaps), prop, wave: a.wave?.(t), facing: face as -1 | 0 | 1,
       look: typeof a.look === "function" ? a.look(t) : a.look ?? 0, lookY: a.lookY?.(t) ?? 0, headTilt: a.head?.(t) ?? 0, phase: a.phase ? ((a.phase(t) % 1) + 1) % 1 : 0, tilt: a.tilt?.(t) ?? 0, light, seed: ((a.mirror ? 0 : a.i) % 7) + 1,
-      reach: a.reach ? a.reach(t) : undefined, ...(a.moveTo ? { lift: 110 } : {}), ...(a.seat ? { seat: a.seat / SU } : {}), // a run: high knees
+      reach: a.reach ? a.reach(t) : undefined, ...(a.flail ? { flail: a.flail(t) } : {}), ...(a.moveTo ? { lift: 110 } : {}), ...(a.seat ? { seat: a.seat / SU } : {}), // a run: high knees
     };
     const sc = a.scale ?? 1, d = cam.pos.distanceTo(new THREE.Vector3(x, y + 1, z)) / sc, [w, h, k] = tier(d);
-    out.places.push({ key: `F|${a.i}|${fkey(o)}|${fkey(fo)}`, draw: (p) => bodyFront(p, o, fo), x, y, z, scale: sc, size: [w, h, k], mirror: a.mirror, yaw: a.yaw });
+    out.places.push({ key: `F|${a.i}|${fkey(o)}|${fkey(fo)}`, draw: (p) => bodyFront(p, o, fo), x, y, z, scale: sc, size: [w, h, k], mirror: a.mirror, yaw: a.yaw, ...(a.roll ? { roll: (a.roll(t) * Math.PI) / 180 } : {}) });
     if (!a.mirror && Math.abs(off[1]) < 1e-6 && Math.abs(y) < 0.5 && !a.noShadow && y > -0.1) blob(out, cam.sun, golden, x, y, z, sc * (a.o.build === "kid" ? 0.85 : 1)); // no ground shadow: reflection, swimmers, slider
   }
   fx(id, t, out);

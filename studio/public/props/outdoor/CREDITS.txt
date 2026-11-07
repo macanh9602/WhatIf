@@ -1,0 +1,14 @@
+Round-1 files in props/outdoor/ were modelled for this channel in Blender (bpy, 2026-11-07). No third-party assets, no textures.
+
+Round 2 (2026-11-07), from Poly Pizza, recoloured/merged/rescaled in Blender (changes made):
+hot_air_balloon.glb: "Hot air balloon" by Poly by Google, https://poly.pizza/m/8azSIUgP0ow. CC-BY 3.0 https://creativecommons.org/licenses/by/3.0
+small_plane.glb: "Small Airplane" by Vojtěch Balák, https://poly.pizza/m/7cvx6ex-xfL. CC-BY 3.0 https://creativecommons.org/licenses/by/3.0
+bird.glb, bird_flock.glb: "Flying seagull" by Poly by Google, https://poly.pizza/m/6Tpj_vcWP3f. CC-BY 3.0 https://creativecommons.org/licenses/by/3.0
+tractor.glb: "Tractor" by Poly by Google, https://poly.pizza/m/5TGoA5N14c5. CC-BY 3.0 https://creativecommons.org/licenses/by/3.0
+windmill.glb: "Windmill" by Quaternius, https://poly.pizza/m/WUbU1Nct2W. CC0 1.0
+lighthouse.glb: "Light House" by MaverickFX, https://poly.pizza/m/KRebJXIRb8. CC0 1.0
+water_tower.glb: "Water Tower" by Quaternius, https://poly.pizza/m/tMK8bhapAK. CC0 1.0
+ferris_wheel.glb: "Ferris Wheel" by CreativeTrio, https://poly.pizza/m/6CepsZjXBw. CC0 1.0
+cow.glb: "Cow" by Quaternius, https://poly.pizza/m/5XSc2Fka3F. CC0 1.0
+sheep.glb: "Sheep" by Quaternius, https://poly.pizza/m/C39AUXUUes. CC0 1.0
+rock_cluster.glb: "Rocks" by Quaternius, https://poly.pizza/m/gYhoEOKItJ. CC0 1.0

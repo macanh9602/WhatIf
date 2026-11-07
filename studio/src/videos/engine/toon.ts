@@ -274,7 +274,8 @@ export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous
   | "embarrassed" | "scared" | "curious" | "confident" | "pouty" | "excited" | "silly" | "disgusted"
   | "sideeye" | "eyeroll" | "deadpan" | "bruh" | "cringe" | "sheepish" | "scheming" | "fake_smile" | "puppy" | "jawdrop" | "shook" | "sigh" | "mindblown" | "smirk_wink" | "nervous_laugh" | "proud_chin"
   // built from parts for the producer's acting notes (r4-sol E): not every beat fits a stock face
-  | "concentrate" | "resolve" | "concede" | "casual" | "amused" | "pressed";
+  | "concentrate" | "resolve" | "concede" | "casual" | "amused" | "pressed"
+  | "squint"; // ep12: suspicious, one brow down
 type EyeK = "happy" | "dash" | "squeeze" | "shock" | "shockHalf" | "spiral";
 /** parametric open eye: pupil oval (scale ps) under an upper lid line that covers `cov` (0 = an arc above the pupil,
  *  1 = shut) and dips `ti` / `to` u at the inner / outer end (+ = down); lower lid `lo` 0..1 pushes up from below */
@@ -342,6 +343,7 @@ const FACE: Record<Expr, { eye: [Eye, Eye]; brow: [number, number]; brow2?: [num
   smirk_wink: { eye: [O(0.35), "dash"], brow: [2, -2], brow2: [-4, -6], mouth: "smirk", fx: [] },
   nervous_laugh: { eye: [O(0.3, {ps: .7}), O(0.1, {ps: .7})], brow: [-5, 2], brow2: [-4, 1], mouth: "laugh", fx: ["sweat"] },
   proud_chin: { eye: [O(0.6), O(0.45)], brow: [1, -2], brow2: [-2, -5], mouth: "smirk", fx: [] },
+  squint: { eye: [O(0.66, { lo: 0.35, ti: 1.5 }), O(0.6, { lo: 0.3 })], brow: [5, 1], brow2: [-2, -4], mouth: "side" }, // narrowed eyes, back brow down, front brow up
 };
 export const EXPRESSION_NAMES = Object.keys(FACE) as Expr[];
 /** Library-owned acting controls; callers select a beat and never manage its internals. */
@@ -697,7 +699,8 @@ export type Arms = [P2[], P2[]];
 /** held prop; for the hammer the number is the strike 0 (raised) .. 1 (struck) */
 export type Prop = null | "icecream" | "shako" | ["hammer", number] | "pencil" | "mug" | "tray" | "paper" | "notebook" | "backpack2" | "laces" | "book"
   | "tproll" | "tape" | "peel" | "dollar" | "dollar2" | "bones" | "phone" | "clipboard"
-  | "icebags" | "foodbox" | "pitcher" | "cash" | "cash3"; // ep02 "Cold Front"
+  | "icebags" | "foodbox" | "pitcher" | "cash" | "cash3" // ep02 "Cold Front"
+  | "watch"; // wristwatch on the left arm (screen right), drawn with that arm (ep12 watch_read)
 /** arm override, relative to that shoulder: elbow (ex, ey), hand (hx, hy); x in body units u (screen +x), y in head-heights; front = drawn over the torso */
 export type Reach = { ex: number; ey: number; hx: number; hy: number; front?: boolean };
 
@@ -717,6 +720,8 @@ export const POSES: Record<string, [Reach | undefined, Reach | undefined]> = {
   wave: [undefined, {ex: 26, ey: -0.2, hx: 30, hy: -0.63, front: true}],
   hold_out: [{ex: -20, ey: 0.3, hx: -40, hy: 0.2, front: true}, undefined],
   clap: [{ex: 4, ey: 0.25, hx: 31, hy: 0.2, front: true}, {ex: -4, ey: 0.25, hx: -31, hy: 0.2, front: true}],
+  // left forearm raised across the chest under the chin (watch on it with prop "watch"), right hand pointing up at it; face stays clear
+  watch_read: [{ex: -10, ey: 0.55, hx: 27, hy: 0.27, front: true}, {ex: 22, ey: 0.32, hx: -30, hy: 0.1, front: true}],
 };
 
 // "stick-tee" style (user ref 2026-11-03): round head on a stick neck, loose tee, stick limbs as thin skin tubes, chunky
@@ -739,7 +744,9 @@ const BUILD_BEAN: Record<Build, { a: number; ua: number; torso: number; legs: nu
 const LIMB = BEAN ? 5.2 : 10, LIMB_OL = BEAN ? 0 : 0.8; // limb tube width / ink rim, in u (ref: ~7 % of the head width overall)
 
 export type FrontOpts = {
-  phase?: number; expr?: Expr; mode?: "march" | "stroll" | "stand" | "sit" | "fall" | "kneel"; look?: number; lookY?: number; blink?: boolean | number; lift?: number;
+  phase?: number; expr?: Expr; mode?: "march" | "stroll" | "stand" | "sit" | "fall" | "kneel"
+    // ep12 body poses: belly-down skydive box / bolt upright in bed / sliding off a bed edge / on the back, seen from above
+    | "fall_belly" | "jolt_bed" | "slide_off" | "lie_back"; look?: number; lookY?: number; blink?: boolean | number; lift?: number;
   prop?: Prop; tilt?: number; headTilt?: number; wave?: number;
   /** sit on a raised seat this many design units above the floor: the hips rise, the shins reach the floor (a card lifted
    *  onto a chair instead left its feet hanging at seat height, user ep01 s11) */
@@ -750,6 +757,9 @@ export type FrontOpts = {
   reach?: [Reach | undefined, Reach | undefined];
   /** canvas angle the key light comes FROM (painted crescent + thick outline side) */
   light?: number; facing?: -1 | 0 | 1; seed?: number;
+  /** fall_belly only: limb swing in degrees [right arm, left arm, right leg, left leg] (+ = up / out, mirrored per side)
+   *  and the elbow / knee follow-through bend in degrees (ep12 #11: a living fall, driven from time by the episode) */
+  flail?: [number, number, number, number, number];
 };
 
 /** chunky sneaker: a fat rounded shoe along heel a -> toe b, ink rim, sole line (w = old foot stroke width) */
@@ -763,7 +773,7 @@ const footStroke = (p: Pen, a: P2, b: P2, w: number, col: string) => {
 
 export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   const { phase = 0, expr = "neutral", mode = "march", look = 0, lookY = 0, blink = false, lift = 60, prop = null, tilt = 0, headTilt = 0, wave, reach,
-    light = DEF_LIGHT, facing = 0, seed = 1, exprT = 9, exprFrom, seat = 0 } = opts;
+    light = DEF_LIGHT, facing = 0, seed = 1, exprT = 9, exprFrom, seat = 0, flail } = opts;
   const Bd = (BEAN ? BUILD_BEAN : BUILD)[o.build ?? "adult"], skin = o.skin ?? SKIN, two = Math.PI * 2, lid = lidOf(blink);
   const H: Blob = BEAN ? headBlob(seed, Bd.a, facing) : { ...headBlob(seed, Bd.a, facing), nTop: 2, nBot: 2, egg: 0, asym: 0, rot: 0, noise: 0.004 }; if (!BEAN) H.b = 0.98 * H.a;
   // u = body unit of the old bean head (prop and limb sizes unchanged); the round head is smaller than that
@@ -771,7 +781,8 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   const tall = (1 + Bd.torso + Bd.legs) * HH, sole = 975;
   // body bob 5 % (march) / 3 % (stroll) of the height, lowest at contact (phase 0 and 0.5)
   const bob = mode === "march" ? 0.025 * tall * Math.cos(2 * two * phase) : mode === "stroll" ? 0.015 * tall * Math.cos(2 * two * phase) : 0;
-  const torsoBot = mode === "sit" ? sole - 0.2 * HH - seat : mode === "kneel" ? sole - 0.55 * HH : sole - Bd.legs * HH + bob;
+  const torsoBot = mode === "sit" ? sole - 0.2 * HH - seat : mode === "kneel" ? sole - 0.55 * HH : mode === "jolt_bed" ? sole - 0.3 * HH - seat
+    : mode === "slide_off" ? sole - 0.75 * HH : sole - Bd.legs * HH + bob;
   const chin = torsoBot - Bd.torso * HH, hc = chin - Bd.neck * HH - H.b, crown = hc - H.b, hipY = torsoBot - 0.12 * HH;
   const thick = thickAngle(light), ow = 3.7 * u;
   const legCol = mix(o.pants, INK, 0.55), armCol = mix(o.jacket, INK, 0.5), footCol = o.swimwear ? INK : o.boots;
@@ -829,6 +840,29 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
       leg(curve(h, k, f));
       shoe(p, f, [f[0] + (i ? 14 : -14) * u, f[1] + (i ? -6 : 4) * u], footW, footCol);
     });
+  } else if (mode === "fall_belly") { // box position: knees out and bent, shins swept back up
+    for (const side of [-1, 1]) {
+      const hp: P2 = [300 + side * 15 * u, hipY], sw = flail ? -side * rad(flail[side < 0 ? 2 : 3]) : 0, bd = flail ? -side * rad(flail[4]) : 0;
+      const k = rotAbout([300 + side * 58 * u, hipY + 0.5 * HH], sw, hp), f = rotAbout(rotAbout([300 + side * 80 * u, hipY + 0.3 * HH], sw, hp), bd, k);
+      const t = rotAbout(rotAbout([f[0] + side * 9 * u, f[1] - 10 * u], sw, hp), bd, k);
+      leg(curve(hp, k, f));
+      shoe(p, f, t, footW, footCol);
+    }
+  } else if (mode === "jolt_bed") { // sitting, legs out toward the lens (foreshortened), toes up
+    for (const side of [-1, 1]) {
+      const f: P2 = [300 + side * 27 * u, sole - 8 * u];
+      leg(curve([300 + side * 15 * u, hipY], [300 + side * 24 * u, hipY + 0.14 * HH], f));
+      shoe(p, f, [f[0] + side * 4 * u, f[1] - 12 * u], footW, footCol);
+    }
+  } else if (mode === "slide_off") { // hips over the edge, feet slipping down to screen left
+    const ft: [P2, P2][] = [[[300 - 62 * u, hipY + 0.22 * HH], [300 - 78 * u, sole - 6 * u]], [[300 - 30 * u, hipY + 0.3 * HH], [300 - 52 * u, sole - 22 * u]]];
+    ft.forEach(([k, f], i) => { leg(curve([300 + (i ? 15 : -15) * u, hipY], k, f)); shoe(p, f, [f[0] - 13 * u, f[1] + 3 * u], footW, footCol); });
+  } else if (mode === "lie_back") { // seen from above: legs out long, ankles crossed (a standing card never crosses them)
+    for (const side of [-1, 1]) {
+      const f: P2 = [300 - side * 9 * u, sole - 6 * u - (side > 0 ? 7 * u : 0)];
+      leg(curve([300 + side * 15 * u, hipY], [300 + side * 17 * u, (hipY + f[1]) / 2], f));
+      shoe(p, f, [f[0] + side * 12 * u, f[1] + 2 * u], footW, footCol);
+    }
   } else if (o.dress) {
     for (const side of [-1, 1]) {
       const fx = 300 + side * 12 * u, fy = sole - 4 * u;
@@ -847,7 +881,7 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   }
   // ---- upper body: rotates about the hips (tilt + a small weight-shift sway on every step) ----
   const sway = mode === "march" ? 1.6 * Math.sin(two * phase) : mode === "stroll" ? 1.0 * Math.sin(two * phase) : 0;
-  const A = tilt + sway;
+  const A = tilt + sway + (mode === "slide_off" ? 20 : 0); // slide_off leans back toward the bed (screen right)
   p.rot = A ? [rad(A), 300, hipY] : null;
   const dress = !!o.dress && mode !== "sit" && mode !== "fall";
   const hem = torsoBot + 0.06 * HH;
@@ -884,6 +918,17 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
       arms.push({ pts: [S, [(S[0] + Hd[0]) / 2 - f * 8 * u, (S[1] + Hd[1]) / 2 + 6 * u], Hd], front: side === f, side });
     }
   } else if (mode === "sit") for (const side of [-1, 1]) arms.push({ pts: [sh(side), [tcx + side * (1.1 * T.a + 6 * u), sh(side)[1] + 0.4 * AH], [tcx + side * (1.2 * T.a + 10 * u), torsoBot + 0.04 * AH]], front: false, side });
+  else if (mode === "fall_belly") for (const side of [-1, 1]) { const S = sh(side), sw = flail ? -side * rad(flail[side < 0 ? 0 : 1]) : 0, bd = flail ? -side * rad(flail[4]) : 0;
+    const E = rotAbout([tcx + side * (1.1 * T.a + 38 * u), S[1] - 0.02 * AH], sw, S), Hd = rotAbout(rotAbout([tcx + side * (1.15 * T.a + 52 * u), S[1] - 0.42 * AH], sw, S), bd, E);
+    arms.push({ pts: [S, E, Hd], front: false, side }); }
+  else if (mode === "jolt_bed") { const S = sh(-1), S1 = sh(1); // right hand clutching the chest (heart side), left arm propping on the mattress
+    arms.push({ pts: [S, [tcx - 1.05 * T.a - 4 * u, S[1] + 0.42 * AH], [tcx + 0.25 * T.a, chin + 0.3 * HH]], front: true, side: -1 });
+    arms.push({ pts: [S1, [tcx + 1.12 * T.a + 10 * u, S1[1] + 0.4 * AH], [tcx + 1.3 * T.a + 16 * u, torsoBot + 0.06 * AH]], front: false, side: 1 }); }
+  else if (mode === "slide_off") { const S = sh(-1), S1 = sh(1); // left arm reaching back up to the bed, right arm flung out low
+    arms.push({ pts: [S, [tcx - 1.1 * T.a - 16 * u, S[1] + 0.3 * AH], [tcx - 1.2 * T.a - 34 * u, S[1] + 0.12 * AH]], front: false, side: -1 });
+    arms.push({ pts: [S1, [tcx + 1.05 * T.a + 18 * u, S1[1] - 0.18 * AH], [tcx + 1.0 * T.a + 30 * u, S1[1] - 0.48 * AH]], front: false, side: 1 }); }
+  else if (mode === "lie_back") for (const side of [-1, 1]) { const S = sh(side); // loose, a little away from the body
+    arms.push({ pts: [S, [tcx + side * (1.2 * T.a + 14 * u), S[1] + 0.48 * AH], [tcx + side * (1.35 * T.a + 30 * u), chin + 0.98 * AH]], front: false, side }); }
   else if (mode === "fall") for (const side of [-1, 1]) arms.push({ pts: [sh(side), [tcx + side * (1.15 * T.a + 12 * u), sh(side)[1] - 0.25 * AH], [tcx + side * (1.3 * T.a + 24 * u), sh(side)[1] - 0.68 * AH]], front: false });
   else {
     arms.push({ pts: prop === "shako" ? hang(-1, 0) : hang(-1, -sw), front: false, side: -1 });
@@ -915,6 +960,12 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     // no sleeves at all (user, 2026-11-03, after the reference): a bare black stick from the garment's edge reads in every
     // pose; sleeves bent badly at the elbow and limited the motion
     tube(c, LIMB * u, INK);
+    if (prop === "watch" && a.side === 1) { // strap across the wrist + a round face on it, on the arm curve (never off the hand)
+      const w = c[c.length - 4], v = c[c.length - 6], d = Math.hypot(w[0] - v[0], w[1] - v[1]) || 1, nx = -(w[1] - v[1]) / d * 5 * u, ny = (w[0] - v[0]) / d * 5 * u;
+      p.stroke([[w[0] - nx, w[1] - ny], [w[0] + nx, w[1] + ny]], 6 * u, "#2b2f3a");
+      p.ell(w[0], w[1], 8 * u, 8 * u, "#f4f1ea", 2 * u);
+      p.stroke([[w[0], w[1]], [w[0], w[1] - 5 * u]], 1.4 * u, INK); p.stroke([[w[0], w[1]], [w[0] + 3.5 * u, w[1]]], 1.4 * u, INK);
+    }
     hand(a.pts[2][0], a.pts[2][1]);
     if(o.acc?.includes("watch"))p.ell(a.pts[2][0],a.pts[2][1]-8*u,5*u,4*u,"#a9b5bb",1*u);
     if (o.cast && a.side === 1) {
@@ -1064,6 +1115,10 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     p.stroke([[tcx+side*18*u,end-21*u],[tcx+side*.85*T.a,end-21*u]],1.2*u,shade(color,.6));
   } });
   if(o.layer && BEAN) p.inkRing(tp, ow, thick);
+  if (mode === "fall_belly") for (const side of [-1, 1]) { // jacket hem blown up by the wind: a flap flipping out at each side
+    const y = torsoBot - 0.12 * HH, f = 1 + 0.12 * Math.sin(two * (phase * 3 + (side + 1) / 4));
+    cloth([[tcx + side * 0.55 * T.a, y + 0.1 * HH], [tcx + side * 0.95 * T.a, y - 0.04 * HH], [tcx + side * (1.0 + 0.55 * f) * T.a, y - 0.42 * f * HH], [tcx + side * 0.85 * T.a, y + 0.14 * HH]], o.layer?.color ?? o.jacket, 2.2 * u);
+  }
   if(o.backpack)for(const side of [-1,1])p.band([[tcx+side*.68*T.a,chin+.05*HH],[tcx+side*.7*T.a,hem-.08*HH]],o.backpack,4*u,1*u);
   if(o.bottom === "scrubs") {for(const side of [-1,1])p.stroke([[tcx,hem],[tcx+side*9*u,hem+8*u]],1.2*u,WHITE);}
   if(o.acc?.includes("suspenders")) p.clip(tp, () => { for(const side of [-1,1]) { p.band([[tcx+side*.42*T.a,chin-.1*HH],[tcx+side*.36*T.a,torsoBot]],o.accCol ?? "#3b3f52",5*u,1.2*u); p.dot(tcx+side*.38*T.a,torsoBot-.2*HH,2.6*u,"#e8c45a"); } });
@@ -1255,8 +1310,8 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     const cr = hc - H.b + 1.5 * u, k = u * 0.42; // ~17 % of the head width tall (user ref: a small curl, not a horn)
     // motion: it bounces twice per stride while walking and lags behind any lean / head tilt (more at the tip than the root)
     const walk = mode === "march" || mode === "stroll" ? Math.sin(2 * two * phase) * (mode === "march" ? 0.45 : 0.3) : 0;
-    const bend = walk - rad(A + headTilt) * 0.9;
-    const flex = (q: P2): P2 => { const f = clamp((cr - q[1]) / (46 * k), 0, 1) ** 1.4, an = bend * f, dx = q[0] - 300, dy = q[1] - cr;
+    const bend = (mode === "fall_belly" ? 0.3 * Math.sin(two * phase * 4) : walk) - rad(A + headTilt) * 0.9; // free fall: blown straight up, fluttering
+    const flex = (q: P2): P2 => { const f = clamp((cr - q[1]) / (46 * k), 0, 1) ** 1.4, an = bend * f, dx = q[0] - 300, dy = (q[1] - cr) * (mode === "fall_belly" ? 1.5 : 1); // free fall: stretched up by the wind
       return [300 + dx * Math.cos(an) - dy * Math.sin(an), cr + dx * Math.sin(an) + dy * Math.cos(an)]; };
     const stem = curve([300 - 2 * k, cr + 3 * k], [300 - 6 * k, cr - 22 * k], [300 + 2 * k, cr - 38 * k], 12).map(flex);
     const tip = curve([300 + 2 * k, cr - 38 * k], [300 + 9 * k, cr - 46 * k], [300 + 16 * k, cr - 45 * k], 8).map(flex);

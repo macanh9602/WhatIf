@@ -5,7 +5,8 @@ import { Pen, fxContact, fxShadow, Outfit, Expr, FrontOpts, Prop, animSpan } fro
 import { FPS, V3, smooth } from "./shot";
 
 // ---------------- placements ----------------
-export type Place = { key: string; draw: (p: Pen) => void; x: number; y: number; z: number; scale?: number; mirror?: boolean; yaw?: number; size?: [number, number, number] };
+export type Place = { key: string; draw: (p: Pen) => void; x: number; y: number; z: number; scale?: number; mirror?: boolean; yaw?: number; size?: [number, number, number];
+  /** roll of the whole card about its own normal, radians (a tumbling faller) */ roll?: number };
 export type FxPlace = { key: string; cw: number; ch: number; draw: (p: Pen) => void; x: number; y: number; z: number; w: number; h: number; flat?: boolean; rot?: number; soft?: boolean;
   /** lies on a wall: the card's normal (world), instead of turning to the camera */
   face?: V3 };
@@ -46,7 +47,7 @@ export const pop = (base: Expr, at: number, face: Expr, dur = 0.5): Track => [[a
 export type Family = "calm" | "smug" | "happy" | "annoyed" | "worried" | "sad" | "shock";
 export const FAMILY: Record<Expr, Family> = {
   neutral: "calm", deadpan: "calm", casual: "calm", bored: "calm", tired: "calm", concentrate: "calm", smile: "calm", curious: "calm",
-  sideeye: "calm", eyeroll: "calm", bruh: "calm", whistle: "calm", lick: "calm",
+  sideeye: "calm", eyeroll: "calm", bruh: "calm", whistle: "calm", lick: "calm", squint: "calm",
   smug: "smug", sly: "smug", scheming: "smug", confident: "smug", proud_chin: "smug", smirk_wink: "smug", resolve: "smug", amused: "smug",
   grin: "happy", laugh: "happy", relief: "happy", relief_open: "happy", excited: "happy", silly: "happy", proud: "happy", smile_closed: "happy",
   stern: "annoyed", irritated: "annoyed", angry: "annoyed", rage: "annoyed", disgusted: "annoyed", pouty: "annoyed", pressed: "annoyed",
@@ -85,4 +86,6 @@ export type Act = {
   mirror?: boolean; yaw?: number; // a reflection: flipped, flat on the mirror instead of turned to the camera
   path?: (t: number) => V3 | null; // replaces at: a ride along a path; null = out of sight (under water, still climbing)
   noShadow?: boolean; // no contact shadow (a rider on the slide)
+  roll?: (t: number) => number; // whole-card roll in degrees (sky-fall: air resistance)
+  flail?: (t: number) => FrontOpts["flail"]; // fall_belly limb swing, see toon.ts
 };

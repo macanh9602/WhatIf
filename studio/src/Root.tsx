@@ -7,6 +7,6 @@ import { CastSheet } from "./videos/engine/CastSheet";
 export const Root: React.FC = () => (
   <>
     <Composition id="Short" component={Short} durationInFrames={SHORT_FRAMES} fps={30} width={1080} height={1920} />
-    <Composition id="CastSheet" component={CastSheet} durationInFrames={1} fps={30} width={2400} height={1500} />
+    <Composition id="CastSheet" component={CastSheet} durationInFrames={1} fps={30} width={2400} height={2400} />
   </>
 );

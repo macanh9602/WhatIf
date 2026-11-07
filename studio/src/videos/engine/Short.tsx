@@ -21,7 +21,8 @@ import { stagingQA } from "./qa";
 import { InkPass, noInkFallback } from "./ink";
 import { LensBlur, GrainEffect } from "./lensblur";
 import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "./grade";
-import { TOTAL, FLASH_AT, FPS, SHOTS, CAPTION_STOPS, layersAt, dofAt, shotAt, noGreenAt } from "./story";
+import { TOTAL, FLASH_AT, FPS, SHOTS, CAPTION_STOPS, layersAt, dofAt, shotAt, noGreenAt, transAt, transIn } from "./story";
+import { TransitionEffect } from "./trans";
 import { NoGreenEffect } from "./nogreen";
 import { Insert } from "@ep/inserts";
 import { chunk, phraseAt } from "./captions";
@@ -64,10 +65,12 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
     tone: new ToneMappingEffect({ mode: ToneMappingMode.NEUTRAL }),
     grade: new GradeEffect(GRADES.day, GRADE_STRENGTH.day),
     nogreen: new NoGreenEffect(),
+    trans: new TransitionEffect(),
     grain: new GrainEffect({ amount: 0.025, cellPx: 1.5 }), // film grain, OFF by default (inputProps post.grain): the reference measures no grain and it quadruples the file size
   }), [camera, scene]);
   // postprocessing 6.36 Pass may lack dispose(): guard so crossfade unmounts do not crash the render
   useEffect(() => () => (fx.ink as { dispose?: () => void }).dispose?.(), [fx]);
+  const tr = transIn(id); // the transition pass exists only on shots that take part in one (other shots: the chain as before)
   const post = useMemo(() => (
     <EffectComposer multisampling={4}>
       {on.ink ? <primitive object={fx.ink} dispose={null} /> : null}
@@ -77,15 +80,16 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
       <primitive object={fx.tone} dispose={null} />
       {on.grade ? <primitive object={fx.grade} dispose={null} /> : null}
       <primitive object={fx.nogreen} dispose={null} />
+      {tr ? <primitive object={fx.trans} dispose={null} /> : null}
       {on.grain ? <primitive object={fx.grain} dispose={null} /> : null}
     </EffectComposer>
-  ), [fx, on]);
+  ), [fx, on, tr]);
   const cam = camera as THREE.PerspectiveCamera;
   target.copy(world.update(id, f, cam, scene));
   if (!on.cast) world.hideCast(); // scripts/temporal_qa.mjs measures the static world alone
   noInkFallback(world.root);
   if (QA) {
-    console.warn("QASHOTS " + JSON.stringify(SHOTS.map((s) => [s.id, s.a, s.b])));
+    console.warn("QASHOTS " + JSON.stringify(SHOTS.filter((s) => !s.insert).map((s) => [s.id, s.a, s.b]))); // 2D inserts have no stage to judge
     console.warn("QA " + JSON.stringify(stagingQA(world, id, f, cam, scene.fog as THREE.Fog | null)));
   }
   // thin-lens focus: distance along the view axis to the shot's focus point (default: the camera's look target)
@@ -96,6 +100,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
   fx.lens.cInf = d.cInf;
   gradeFor(fx.grade, base(SHOTS[id - 1].light));
   { const g = noGreenAt(f); fx.nogreen.set(g.amt, g.wipe); }
+  fx.trans.set(transAt(f));
   fx.grain.seed = f; // deterministic per frame
   fx.ink.debug = on.inkMask ? 1 : 0; // scripts/look_qa.py: ink mask only, for the speckle count
   return (
@@ -108,8 +113,24 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
 
 /** test stills only: inputProps `{ post: { dpr: 0.5 } }` forces the WebGL buffer size (R3F clamps dpr to >= 1 by default) */
 const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
+/** 2D inserts take the same transitions as CSS (zoom / whip blur uniformly: no radial or directional blur in CSS) */
+const InsertView: React.FC<{ id: number; alpha: number }> = ({ id, alpha }) => {
+  const t = transAt(useCurrentFrame());
+  if (!t) return <AbsoluteFill style={{ opacity: alpha }}><Insert id={id} /></AbsoluteFill>;
+  const { kind, p, cx, cy, side } = t, o = `${cx * 100}% ${(1 - cy) * 100}%`;
+  const R = Math.hypot(Math.max(cx, 1 - cx) * 1080, Math.max(cy, 1 - cy) * 1920) * (1 - p);
+  const style: React.CSSProperties = kind === "iris" ? { clipPath: `circle(${R}px at ${o})` }
+    : kind === "zoom" ? { transform: `scale(${1 + 2.2 * p})`, transformOrigin: o, filter: `blur(${24 * p}px)` }
+    : kind === "whip" ? { transform: `translateX(${(side < 0 ? -1 : 1) * 0.55 * p * 1080}px)`, filter: `blur(${36 * p}px)` } : {};
+  return (
+    <AbsoluteFill style={{ opacity: alpha, background: "#000" }}>
+      <AbsoluteFill style={style}><Insert id={id} /></AbsoluteFill>
+      {kind.startsWith("dip") && <AbsoluteFill style={{ background: kind === "dipWhite" ? "#fff" : "#000", opacity: p }} />}
+    </AbsoluteFill>
+  );
+};
 const ShotView: React.FC<{ id: number; alpha: number }> = ({ id, alpha }) => SHOTS[id - 1].insert ? (
-  <AbsoluteFill style={{ opacity: alpha }}><Insert id={id} /></AbsoluteFill>
+  <InsertView id={id} alpha={alpha} />
 ) : (
   <AbsoluteFill style={{ opacity: alpha }}>
     <ThreeCanvas width={1080} height={1920} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}

@@ -1,0 +1,568 @@
+{
+ "bpm": 104,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 3.0,
+ "music_fade_out": 5.0,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   0.5,
+   76
+  ],
+  [
+   1,
+   79
+  ],
+  [
+   1.5,
+   83
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   76
+  ],
+  [
+   4.5,
+   79
+  ],
+  [
+   5,
+   81
+  ],
+  [
+   5.5,
+   79
+  ],
+  [
+   6,
+   74
+  ],
+  [
+   7,
+   71
+  ]
+ ],
+ "major_chords": [
+  [
+   43,
+   50,
+   55,
+   59
+  ],
+  [
+   48,
+   55,
+   60,
+   64
+  ],
+  [
+   40,
+   47,
+   52,
+   55
+  ],
+  [
+   38,
+   45,
+   50,
+   54
+  ]
+ ],
+ "minor_chords": [
+  [
+   40,
+   47,
+   52,
+   55
+  ],
+  [
+   36,
+   43,
+   48,
+   52
+  ],
+  [
+   43,
+   50,
+   55,
+   59
+  ],
+  [
+   38,
+   45,
+   50,
+   54
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 71.6,
+ "seed": 121212,
+ "music_sections": [
+  [
+   "Hook: falling over the town",
+   0,
+   4.62,
+   -14,
+   "pulse"
+  ],
+  [
+   "Roll off the bed",
+   4.62,
+   6.75,
+   -16,
+   "pad"
+  ],
+  [
+   "The town sky, the rooftops",
+   6.75,
+   15.17,
+   -14,
+   "pulse"
+  ],
+  [
+   "Back in bed, rolling again",
+   15.17,
+   20.52,
+   -16,
+   "dark"
+  ],
+  [
+   "Desert, sea, mountains",
+   20.52,
+   27.35,
+   -14,
+   "bounce"
+  ],
+  [
+   "Drift off: the muscles, the twitch",
+   27.35,
+   37.95,
+   -15,
+   "explain"
+  ],
+  [
+   "The door between worlds",
+   37.95,
+   43.35,
+   -14,
+   "pulse"
+  ],
+  [
+   "The watch, twice",
+   43.35,
+   55.24,
+   -15,
+   "dark"
+  ],
+  [
+   "Let the fall happen, the field",
+   55.24,
+   63.04,
+   -14,
+   "warm"
+  ],
+  [
+   "The bedroom floor, the question",
+   63.04,
+   71.6,
+   -13,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   0.0,
+   "whoosh",
+   2.5,
+   -28,
+   0,
+   "wind of the fall"
+  ],
+  [
+   1.0,
+   "clock",
+   1.5,
+   -30,
+   0.3,
+   "the alarm clock tumbling"
+  ],
+  [
+   4.55,
+   "flash",
+   0.5,
+   -22,
+   0,
+   "hook flash"
+  ],
+  [
+   5.3,
+   "roll",
+   0.7,
+   -28,
+   0,
+   "rolls off the bed"
+  ],
+  [
+   6.15,
+   "thump",
+   0.3,
+   -24,
+   0,
+   "hits the floor"
+  ],
+  [
+   6.6,
+   "whoosh",
+   0.9,
+   -24,
+   0,
+   "the floor opens"
+  ],
+  [
+   7.3,
+   "whoosh",
+   2.2,
+   -30,
+   0,
+   "wind"
+  ],
+  [
+   10.4,
+   "whoosh",
+   2.0,
+   -28,
+   0,
+   "200 km/h"
+  ],
+  [
+   10.5,
+   "tink",
+   0.3,
+   -26,
+   0.3,
+   "the dial"
+  ],
+  [
+   12.6,
+   "whoosh",
+   2.5,
+   -24,
+   0,
+   "roofs rush up"
+  ],
+  [
+   15.12,
+   "flash",
+   0.4,
+   -20,
+   0,
+   "the jerk"
+  ],
+  [
+   15.17,
+   "thump",
+   0.3,
+   -20,
+   0,
+   "jolt in bed"
+  ],
+  [
+   17.6,
+   "thump",
+   0.25,
+   -28,
+   0,
+   "heartbeat"
+  ],
+  [
+   18.0,
+   "thump",
+   0.25,
+   -30,
+   0,
+   "heartbeat"
+  ],
+  [
+   18.4,
+   "thump",
+   0.25,
+   -30,
+   0,
+   "heartbeat"
+  ],
+  [
+   18.9,
+   "roll",
+   0.8,
+   -28,
+   0,
+   "slides off again"
+  ],
+  [
+   20.45,
+   "whoosh",
+   0.6,
+   -24,
+   0,
+   "zoom into the floor"
+  ],
+  [
+   21.0,
+   "whoosh",
+   1.8,
+   -30,
+   0,
+   "desert wind"
+  ],
+  [
+   22.85,
+   "whoosh",
+   0.4,
+   -26,
+   -0.4,
+   "whip to the sea"
+  ],
+  [
+   23.9,
+   "whoosh",
+   0.4,
+   -26,
+   0.4,
+   "whip to the mountains"
+  ],
+  [
+   25.1,
+   "whoosh",
+   2.0,
+   -28,
+   0,
+   "spinning"
+  ],
+  [
+   27.35,
+   "clock",
+   2.5,
+   -32,
+   0,
+   "bedroom tick"
+  ],
+  [
+   29.6,
+   "wince",
+   0.8,
+   -30,
+   0,
+   "springs go slack"
+  ],
+  [
+   32.4,
+   "bell",
+   0.5,
+   -26,
+   0,
+   "FALLING? alarm"
+  ],
+  [
+   34.0,
+   "thump",
+   0.3,
+   -22,
+   0,
+   "the twitch"
+  ],
+  [
+   35.7,
+   "thump",
+   0.3,
+   -26,
+   0,
+   "seven sleepers jerk"
+  ],
+  [
+   36.25,
+   "tink",
+   0.3,
+   -26,
+   0,
+   "7 in 10"
+  ],
+  [
+   38.0,
+   "whoosh",
+   2.5,
+   -30,
+   0,
+   "falling to the door"
+  ],
+  [
+   41.25,
+   "thump",
+   0.35,
+   -18,
+   0,
+   "the door slams"
+  ],
+  [
+   41.3,
+   "flash",
+   0.4,
+   -22,
+   0,
+   "slam flash"
+  ],
+  [
+   41.5,
+   "water",
+   1.8,
+   -36,
+   0,
+   "the sea below"
+  ],
+  [
+   44.5,
+   "tink",
+   0.3,
+   -26,
+   -0.2,
+   "thought bubble"
+  ],
+  [
+   47.1,
+   "click",
+   0.12,
+   -24,
+   0.2,
+   "wrist up"
+  ],
+  [
+   49.2,
+   "tink",
+   0.3,
+   -24,
+   0,
+   "3:07"
+  ],
+  [
+   50.9,
+   "tink",
+   0.3,
+   -24,
+   0.1,
+   "9:40"
+  ],
+  [
+   53.4,
+   "tink",
+   0.25,
+   -28,
+   -0.3,
+   "digits"
+  ],
+  [
+   53.8,
+   "tink",
+   0.25,
+   -28,
+   0.3,
+   "digits"
+  ],
+  [
+   55.2,
+   "whoosh",
+   0.4,
+   -26,
+   0,
+   "whip to the field"
+  ],
+  [
+   58.5,
+   "whoosh",
+   2.5,
+   -32,
+   0,
+   "gentle wind"
+  ],
+  [
+   61.25,
+   "thump",
+   0.3,
+   -28,
+   0,
+   "soft landing"
+  ],
+  [
+   61.3,
+   "rustle",
+   0.6,
+   -28,
+   0,
+   "grass"
+  ],
+  [
+   65.4,
+   "clock",
+   2.6,
+   -30,
+   0.2,
+   "bedside clock"
+  ],
+  [
+   67.3,
+   "tink",
+   0.3,
+   -24,
+   0.2,
+   "3:07 twice"
+  ],
+  [
+   70.1,
+   "bell",
+   0.8,
+   -26,
+   0,
+   "the question"
+  ]
+ ]
+}

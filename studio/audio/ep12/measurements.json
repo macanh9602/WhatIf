@@ -1,0 +1,563 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999999636715,
+    "true_peak_dbtp": -1.717661902143671,
+    "lra_lu": 2.3579045882705216,
+    "sample_peak_dbfs": -1.756971763735335
+  },
+  "voice": {
+    "integrated_lufs": -16.025084594307582,
+    "true_peak_dbtp": -2.015641223466668,
+    "lra_lu": 2.398955899963598,
+    "sample_peak_dbfs": -2.021168598497737
+  },
+  "music": {
+    "integrated_lufs": -37.56575999779333,
+    "true_peak_dbtp": -20.584337231029135,
+    "lra_lu": 3.686425058103673,
+    "sample_peak_dbfs": -20.646672929328837
+  },
+  "sfx": {
+    "integrated_lufs": -37.355935923294965,
+    "true_peak_dbtp": -13.377871791412772,
+    "lra_lu": 9.545437661728187,
+    "sample_peak_dbfs": -13.408147037487556
+  },
+  "master_gain_db": -2.0129536858336934,
+  "voice_gain_db": -2.0129536858336934,
+  "source_duration_seconds": 70.35954166666667,
+  "source_sha256": "93322c605334091ed24eb073e16d66b1040d45b2ba26f74187220ea1eaa7ea7a",
+  "words_sha256": "f35cc2f3abcf65e3a1551273531ea27b847c58b7e83d10b7c0a538ef677fa8cc",
+  "music_sections": [
+    {
+      "name": "Hook: falling over the town",
+      "start": 0,
+      "end": 4.62,
+      "base_margin": -14,
+      "gain_db": -5.904908896861517
+    },
+    {
+      "name": "Roll off the bed",
+      "start": 4.62,
+      "end": 6.75,
+      "base_margin": -16,
+      "gain_db": 8.117509654453443
+    },
+    {
+      "name": "The town sky, the rooftops",
+      "start": 6.75,
+      "end": 15.17,
+      "base_margin": -14,
+      "gain_db": -6.7390654758481965
+    },
+    {
+      "name": "Back in bed, rolling again",
+      "start": 15.17,
+      "end": 20.52,
+      "base_margin": -16,
+      "gain_db": -3.0942006830330016
+    },
+    {
+      "name": "Desert, sea, mountains",
+      "start": 20.52,
+      "end": 27.35,
+      "base_margin": -14,
+      "gain_db": -7.425175336086639
+    },
+    {
+      "name": "Drift off: the muscles, the twitch",
+      "start": 27.35,
+      "end": 37.95,
+      "base_margin": -15,
+      "gain_db": -2.059601028424062
+    },
+    {
+      "name": "The door between worlds",
+      "start": 37.95,
+      "end": 43.35,
+      "base_margin": -14,
+      "gain_db": -7.15151998105846
+    },
+    {
+      "name": "The watch, twice",
+      "start": 43.35,
+      "end": 55.24,
+      "base_margin": -15,
+      "gain_db": -1.7107931638067129
+    },
+    {
+      "name": "Let the fall happen, the field",
+      "start": 55.24,
+      "end": 63.04,
+      "base_margin": -14,
+      "gain_db": -6.8326704749739235
+    },
+    {
+      "name": "The bedroom floor, the question",
+      "start": 63.04,
+      "end": 71.6,
+      "base_margin": -13,
+      "gain_db": -5.616671083935813
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.0,
+      "end": 2.5,
+      "kind": "whoosh",
+      "description": "wind of the fall",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.0,
+      "end": 2.5,
+      "kind": "clock",
+      "description": "the alarm clock tumbling",
+      "target": -38.012130908473765,
+      "pan": 0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.55,
+      "end": 5.05,
+      "kind": "flash",
+      "description": "hook flash",
+      "target": -30.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.3,
+      "end": 6.0,
+      "kind": "roll",
+      "description": "rolls off the bed",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.15,
+      "end": 6.45,
+      "kind": "thump",
+      "description": "hits the floor",
+      "target": -32.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.6,
+      "end": 7.5,
+      "kind": "whoosh",
+      "description": "the floor opens",
+      "target": -32.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.3,
+      "end": 9.5,
+      "kind": "whoosh",
+      "description": "wind",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.4,
+      "end": 12.4,
+      "kind": "whoosh",
+      "description": "200 km/h",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.5,
+      "end": 10.8,
+      "kind": "tink",
+      "description": "the dial",
+      "target": -34.012130908473765,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.6,
+      "end": 15.1,
+      "kind": "whoosh",
+      "description": "roofs rush up",
+      "target": -32.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.12,
+      "end": 15.52,
+      "kind": "flash",
+      "description": "the jerk",
+      "target": -28.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.17,
+      "end": 15.47,
+      "kind": "thump",
+      "description": "jolt in bed",
+      "target": -28.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.6,
+      "end": 17.85,
+      "kind": "thump",
+      "description": "heartbeat",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.0,
+      "end": 18.25,
+      "kind": "thump",
+      "description": "heartbeat",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.4,
+      "end": 18.65,
+      "kind": "thump",
+      "description": "heartbeat",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.9,
+      "end": 19.7,
+      "kind": "roll",
+      "description": "slides off again",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.45,
+      "end": 21.05,
+      "kind": "whoosh",
+      "description": "zoom into the floor",
+      "target": -32.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.0,
+      "end": 22.8,
+      "kind": "whoosh",
+      "description": "desert wind",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.85,
+      "end": 23.25,
+      "kind": "whoosh",
+      "description": "whip to the sea",
+      "target": -34.012130908473765,
+      "pan": -0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.9,
+      "end": 24.299999999999997,
+      "kind": "whoosh",
+      "description": "whip to the mountains",
+      "target": -34.012130908473765,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.1,
+      "end": 27.1,
+      "kind": "whoosh",
+      "description": "spinning",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.35,
+      "end": 29.85,
+      "kind": "clock",
+      "description": "bedroom tick",
+      "target": -40.012130908473765,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.6,
+      "end": 30.400000000000002,
+      "kind": "wince",
+      "description": "springs go slack",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.4,
+      "end": 32.9,
+      "kind": "bell",
+      "description": "FALLING? alarm",
+      "target": -34.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.0,
+      "end": 34.3,
+      "kind": "thump",
+      "description": "the twitch",
+      "target": -30.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.7,
+      "end": 36.0,
+      "kind": "thump",
+      "description": "seven sleepers jerk",
+      "target": -34.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.25,
+      "end": 36.55,
+      "kind": "tink",
+      "description": "7 in 10",
+      "target": -34.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.0,
+      "end": 40.5,
+      "kind": "whoosh",
+      "description": "falling to the door",
+      "target": -38.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.25,
+      "end": 41.6,
+      "kind": "thump",
+      "description": "the door slams",
+      "target": -26.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.3,
+      "end": 41.699999999999996,
+      "kind": "flash",
+      "description": "slam flash",
+      "target": -30.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.5,
+      "end": 43.3,
+      "kind": "water",
+      "description": "the sea below",
+      "target": -44.012130908473765,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.5,
+      "end": 44.8,
+      "kind": "tink",
+      "description": "thought bubble",
+      "target": -34.012130908473765,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.1,
+      "end": 47.22,
+      "kind": "click",
+      "description": "wrist up",
+      "target": -32.012130908473765,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.2,
+      "end": 49.5,
+      "kind": "tink",
+      "description": "3:07",
+      "target": -32.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.9,
+      "end": 51.199999999999996,
+      "kind": "tink",
+      "description": "9:40",
+      "target": -32.012130908473765,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.4,
+      "end": 53.65,
+      "kind": "tink",
+      "description": "digits",
+      "target": -36.012130908473765,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.8,
+      "end": 54.05,
+      "kind": "tink",
+      "description": "digits",
+      "target": -36.012130908473765,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 55.2,
+      "end": 55.6,
+      "kind": "whoosh",
+      "description": "whip to the field",
+      "target": -34.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 58.5,
+      "end": 61.0,
+      "kind": "whoosh",
+      "description": "gentle wind",
+      "target": -40.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.25,
+      "end": 61.55,
+      "kind": "thump",
+      "description": "soft landing",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.3,
+      "end": 61.9,
+      "kind": "rustle",
+      "description": "grass",
+      "target": -36.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.4,
+      "end": 68.0,
+      "kind": "clock",
+      "description": "bedside clock",
+      "target": -38.012130908473765,
+      "pan": 0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.3,
+      "end": 67.6,
+      "kind": "tink",
+      "description": "3:07 twice",
+      "target": -32.012130908473765,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.1,
+      "end": 70.89999999999999,
+      "kind": "bell",
+      "description": "the question",
+      "target": -34.012130908473765,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999937180893955,
+    "p10": 15.829130772102939,
+    "median": 21.005686417994
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3436800,
+    "duration_seconds": 71.6,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

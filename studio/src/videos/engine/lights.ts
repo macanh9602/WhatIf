@@ -75,6 +75,26 @@ export const LIGHTS: Record<Light, LightPreset> = {
     sunCol: "#fffbe8", sunI: 2.8, sky: "#c8f6f2", ground: "#e8dcb8", hemiI: 0.55,
     bias: -0.00025, normalBias: 0.015,
   },
+  // outdoor night (2026-11-07): a cool moon key from the side, navy shade, deep blue haze; moon disc, dimmed clouds
+  night: {
+    az: 70, el: 35, pool: 0,
+    lit: [0.45, 0.55, 0.85], shade: [0.11, 0.13, 0.27], lift: [0.03, 0.04, 0.1], lambert: 0.4, sideK: 0.84, term: 0.15,
+    charTint: [0.78, 0.84, 1.0], charShade: 0.7, charGrad: 0.1, bodyGrad: 0.25, sideTint: [0.7, 0.76, 1.0],
+    blob: [0.45, 0.45, 0.6], actorShadow: false,
+    top: "#0e1430", hor: "#2c3a6e", skyCurve: [0, 0.5, 0.6], fog: "#24305e", fogNear: 12, fogFar: 110, sunDisc: "#e8eeff",
+    sunCol: "#b8c8ff", sunI: 1.4, sky: "#3a4a80", ground: "#1c1a30", hemiI: 0.3,
+    bias: -0.0004, normalBias: 0.02,
+  },
+  // dawn: low pink-gold sun across the frame, lavender shade, soft peach haze (softer and cooler than golden)
+  dawn: {
+    az: 60, el: 9, pool: 0,
+    lit: [1.45, 0.98, 0.78], shade: [0.26, 0.24, 0.42], lift: [0.05, 0.06, 0.14], lambert: 0.35, sideK: 0.84, term: 0.1,
+    charTint: [1.0, 0.86, 0.8], charShade: 0.84, charGrad: 0.09, bodyGrad: 0.22, sideTint: [0.85, 0.82, 1.0],
+    blob: [0.68, 0.64, 0.82], actorShadow: true,
+    top: "#7a86c4", hor: "#f6c2a8", skyCurve: [0, 0.5, 0.8], fog: "#e9c0b4", fogNear: 30, fogFar: 260, sunDisc: "#ffe0c8",
+    sunCol: "#ffc8a0", sunI: 4.0, sky: "#c8b8e0", ground: "#8a7080", hemiI: 0.5,
+    bias: -0.0006, normalBias: 0.03,
+  },
 };
 
 /** world-only look per light (sky stops by elevation in degrees, river colours, cloud palette). All colours are
@@ -108,6 +128,11 @@ const LOOK2: Record<"day" | "golden", WorldLook> = {
 /** interiors reuse an outdoor look (sky/clouds are hidden there; only bounce and sat matter) */
 export const LOOK: Record<Light, WorldLook> = { ...LOOK2, lamp: { ...LOOK2.golden, sky: { c: ["#24305e", "#1e2a56", "#19224a", "#141b3f", "#0f1432"], e: [0, 3, 8, 16, 40] }, bounce: [0, 0, 0], sat: 1.15 }, window: { ...LOOK2.day, sat: 1.12 },
   sea: { ...LOOK2.day, sky: { c: ["#155a8a", "#1a6f9f", "#2a8fc0", "#56b3d6", "#9fe3f0"], e: [0, 8, 20, 40, 70] }, sat: 1.1 },
-  shallow: { ...LOOK2.day, sky: { c: ["#3fb6c4", "#5fcad2", "#8fdedf", "#b5ece9", "#d8f8f4"], e: [0, 8, 20, 40, 70] }, sat: 1.12 } };
+  shallow: { ...LOOK2.day, sky: { c: ["#3fb6c4", "#5fcad2", "#8fdedf", "#b5ece9", "#d8f8f4"], e: [0, 8, 20, 40, 70] }, sat: 1.12 },
+  night: { ...LOOK2.golden, sky: { c: ["#2c3a6e", "#24305e", "#1a2350", "#121a40", "#0b1030"], e: [0, 4, 10, 22, 50] }, bounce: [0, 0, 0.02], sat: 1.05,
+    water: { ...LOOK2.golden.water, far: "#2c3a6e", crest: "#8ea4d8", glint: "#e8eeff" } },
+  dawn: { ...LOOK2.golden, sky: { c: ["#f6c2a8", "#eab4b0", "#c8a8c8", "#9a9ccc", "#7a86c4"], e: [0, 4, 10, 20, 45] }, bounce: [0.03, 0.02, 0.03], sat: 1.05 } };
+/** cloud colour multiplier per light (default 1.1 grey, the clouds' look before 2026-11-07) */
+export const CLOUD_TINT: Partial<Record<Light, C3>> = { night: [0.32, 0.38, 0.6], dawn: [1.05, 0.95, 1.0] };
 /** grade, cloud and contact-blob palettes exist for day and golden only */
-export const base = (l: Light): "day" | "golden" => (l === "golden" || l === "lamp" ? "golden" : "day");
+export const base = (l: Light): "day" | "golden" => (l === "golden" || l === "lamp" || l === "night" || l === "dawn" ? "golden" : "day");

@@ -43,12 +43,15 @@ export function stagingQA(world: World, id: number, f: number, cam: THREE.Perspe
     }
     // rig gates (fb0095): islands off the body = floating accessory / prop left its hand; limb count from bodyFront
     const float = pieces((x, y) => px[(y * w + x) * 4 + 3], w, h).filter((q) => q.frac >= 0.002);
-    return { a, i, mode, pts, dist: a.mesh.position.distanceTo(cam.position), float, rig: (cv as HTMLCanvasElement & { rig?: Rig }).rig };
+    const flat = new THREE.Vector3(0, 0, 1).transformDirection(a.mesh.matrixWorld).y > 0.9; // lies on a surface (story.ts card { flat })
+    return { a, i, mode, pts, flat, dist: a.mesh.position.distanceTo(cam.position), float, rig: (cv as HTMLCanvasElement & { rig?: Rig }).rig };
   });
   // occlusion by the set: first hit closer than the sample
   for (const c of cards) for (const q of c.pts) if (q.inFrame) {
     const d = q.p.clone().sub(cam.position), len = d.length();
-    ray.set(cam.position, d.normalize()); ray.far = len - 0.03; ray.near = 0.05;
+    // a flat card lies 2 cm over its surface: the 3 cm upright-card slack let a pillow 2 cm above the card hide half the head
+    // unseen (ep12 s13), so flat cards only forgive 5 mm
+    ray.set(cam.position, d.normalize()); ray.far = len - (c.flat ? 0.005 : 0.03); ray.near = 0.05;
     q.occ = ray.intersectObjects(setMeshes, false).length > 0;
   }
   // coverage by nearer cards: a coarse screen mask of each card's opaque samples (cell = 1/40 frame width)
@@ -70,7 +73,11 @@ export function stagingQA(world: World, id: number, f: number, cam: THREE.Perspe
     const hy = head.map((q) => q.ndc.y); // whole head, also the part outside the frame
     // floor under the soles (standing cards only): gap between the card origin and the first surface below it
     let gap = 0;
-    if (c.mode !== "sit" && c.mode !== "fall") {
+    if (c.flat) { // lying: it rests on its highest support (a head on the pillow), so the gap is the smallest one under the card
+      const gs = c.pts.map((q) => { ray.set(q.p.clone().add(new THREE.Vector3(0, 0.3, 0)), new THREE.Vector3(0, -1, 0)); ray.near = 0; ray.far = 5;
+        const hit = ray.intersectObjects(setMeshes, false)[0]; return hit ? q.p.y - hit.point.y : 9; });
+      gap = gs.length && Math.min(...gs) < 9 ? +Math.min(...gs).toFixed(2) : -1;
+    } else if (c.mode !== "sit" && !c.mode.startsWith("fall")) { // fall, fall_belly: in the air
       ray.set(c.a.mesh.position.clone().add(new THREE.Vector3(0, 0.3, 0)), new THREE.Vector3(0, -1, 0)); ray.near = 0; ray.far = 5;
       const hit = ray.intersectObjects(setMeshes, false)[0];
       gap = hit ? +(c.a.mesh.position.y - hit.point.y).toFixed(2) : -1;
@@ -97,7 +104,7 @@ export function stagingQA(world: World, id: number, f: number, cam: THREE.Perspe
   const seenCards = cards.filter((c) => c.pts.filter((q) => q.inFrame).length > c.pts.length * 0.3);
   const subj = [...seenCards].sort((a, b) => (b.i < 10 ? 1 : 0) - (a.i < 10 ? 1 : 0) || b.pts.length / b.dist - a.pts.length / a.dist)[0];
   let camH = -1;
-  if (subj && subj.pts.length && subj.mode !== "fall") { // fall = swimmers / sliders: no ground to stand on
+  if (subj && subj.pts.length && !subj.mode.startsWith("fall")) { // fall = swimmers / sliders: no ground to stand on
     const ys = subj.pts.map((q) => q.p.y), top = Math.max(...ys), feet = subj.a.mesh.position.y;
     camH = +((cam.position.y - feet) / Math.max(0.3, top - feet)).toFixed(2);
   }
@@ -112,7 +119,9 @@ export function stagingQA(world: World, id: number, f: number, cam: THREE.Perspe
   // haze: fog factor at background hits (> 2.5x the subject distance and > 15 m); the reference pulls far things ~40 %
   // toward the horizon colour (outdoor only: fog exists there)
   const bgFog: number[] = [];
-  if (fog && subj && !SETS[s.set].indoor) for (let gy = 0; gy < 20; gy++) for (let gx = 0; gx < 12; gx++) {
+  // sky-fall (cam { fall }): straight down from 30-400 m the ground is the subject's only background and sits near, so no
+  // haze is correct there; depth comes from the rush clouds between (ep12 #10). Side-view sky shots are still judged.
+  if (fog && subj && !SETS[s.set].indoor && !("fall" in s.cam)) for (let gy = 0; gy < 20; gy++) for (let gx = 0; gx < 12; gx++) {
     ray.setFromCamera(new THREE.Vector2(((gx + 0.5) / 12) * 2 - 1, ((gy + 0.5) / 20) * 2 - 1), cam); ray.near = 0.05; ray.far = 1e4;
     const hit = ray.intersectObjects(setMeshes, false)[0];
     if (hit && hit.distance > Math.max(15, subj.dist * 2.5)) bgFog.push(THREE.MathUtils.clamp((hit.distance - fog.near) / (fog.far - fog.near), 0, 1));

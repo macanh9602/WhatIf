@@ -93,7 +93,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     }
   }
   // shot mix: at least a quarter of the mid / close shots need a foreground layer (reference 38 %), judged at mid frames
-  const mids = report.filter((r) => r.q.contacts !== undefined && ["mid", "close"].includes(r.q.size) && r.q.nCast > 0);
+  // fall_belly = mid-air: nothing is near in the sky (director rule 2026-11-07), so those shots do not count either way
+  const mids = report.filter((r) => r.q.contacts !== undefined && ["mid", "close"].includes(r.q.size) && r.q.nCast > 0 && !r.q.cards.some((c) => c.mode === "fall_belly"));
   const byShot = new Map(mids.map((r) => [r.id, r.q.fg]));
   if (!want && byShot.size) {
     const share = [...byShot.values()].filter((v) => v >= 0.03).length / byShot.size;
