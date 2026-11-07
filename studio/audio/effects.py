@@ -87,6 +87,19 @@ def synth(kind, dur, r):
         for start in (0, .075, .16, .235):
             S._place_mono(y, S.clink(r, f0=r.uniform(1700, 2600), dur=.13)*.25, start)
         return y + bp(noise, 400, 3500)*np.exp(-t/.03)*.12
+    if kind in ('chug', 'chugslow'): # ep13: steam engine, four exhaust beats to the turn, the fourth heaviest
+        y = np.zeros(n); step = .135 if kind == 'chug' else .3; j = 0
+        for start in np.arange(0, dur-.02, step):
+            m = int(min(.2, dur-start)*SR); u = np.arange(m)/SR; i0 = int(start*SR)
+            y[i0:i0+m] += (1 if j % 4 == 3 else .62)*(bp(r.standard_normal(m), 180, 1500)*np.exp(-u/.05) + .55*np.sin(2*np.pi*70*u)*np.exp(-u/.07)); j += 1
+        return y
+    if kind == 'crack': # ep13: the dry top of a blast, a transient over the thumps
+        return hp(noise, 900)*np.exp(-t/.014) + bp(noise, 300, 2500)*np.exp(-t/.07)*.6
+    if kind == 'riser': # ep13: rising filtered noise + a climbing tone, ends at full level on its last sample
+        k = (t/dur)**2.2
+        return (bp(noise, 500, 5000)*.6 + np.sin(phase(70+620*k))*.7)*k
+    if kind == 'bassdrop': # ep13: sub falling from 110 to 34 Hz over a long tail
+        return np.sin(phase(34+76*np.exp(-t/.28)))*np.exp(-t/(dur*.42)) + lp(noise, 300)*np.exp(-t/.06)*.5
     if kind == 'thump':
         return np.sin(phase(85+30*np.exp(-t/.018)))*np.exp(-t/.045) + lp(noise, 600)*np.exp(-t/.025)*.5
     if kind == 'lace':

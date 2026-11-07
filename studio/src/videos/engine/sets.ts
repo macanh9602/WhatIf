@@ -33,7 +33,7 @@ export const loadProps = () => (kitP ??= Promise.all([
 export type V3 = [number, number, number];
 export type SetId = "home" | "yard" | "forest" | "snow" | "bedroom"
   | "counter" | "floor" | "kitchen" | "beach" | "reef" | "bathroom" | "party" | "lagoon" | "rooftops" | "street" | "park"
-  | "town" | "desert" | "sea" | "mountains" | "field";
+  | "town" | "desert" | "sea" | "mountains" | "field" | "west";
 export type CamHint = { pos: V3; look: V3; fov: number };
 /** distant scenery rings round the set origin (farLayers below): painted, no ink, hazed by the set's fog */
 export type FarKind = "hills" | "skyline" | "dunes" | "sea" | "mountains";
@@ -133,6 +133,11 @@ export const SETS: Record<SetId, SetInfo> = {
   field: info(22000, false, { you: [0, 0, 0], hay: [-6, 0, -8] }, {
     wide: cam([0, 1.5, 8], [0, 1.2, -4], 46), air: cam([0, 260, 220], [0, 0, -60], 50),
   }, { fog: [50, 1200], far: ["hills"], backdrop: { biome: "field" } }),
+  // ep13: 1899 Wyoming. Rails along x at z = -4: rail yard (x -120), wreck + second train (x 0), night train (x 60), depot (x 130),
+  // open prairie rails (x -320); badlands round z -150; a small car interior at z 300
+  west: info(25000, false, { you: [0, 0, 0], yard: [-120, 0, -4], wreck: [0, 0, -4], night: [60, 0, -4], depot: [130, 0, -4], prairie: [-320, 0, -4], bad: [0, 0, -150], ridge: [70, 0, -170], inside: [0, 0, 300] }, {
+    wide: cam([0, 1.6, 12], [0, 1.6, -4], 46),
+  }, { fog: [60, 1250], far: ["dunes", "mountains"], backdrop: { biome: "desert" } }),
 };
 
 // Static art profile. Change palette, architecture sizes and prop placement here; no runtime/domain decisions.
@@ -905,6 +910,85 @@ function desert(b: SetBuilder) {
     outdoor(b, "cactus", [x, 0, z], s, k, () => { b.cylinder([x, 1.5 * s, z], 0.3 * s, 3 * s, "#5f9a4e"); b.beam([x, 1.4 * s, z], [x + 0.8 * s, 1.4 * s, z], 0.4 * s, "#5f9a4e"); }); }
   for (let k = 0; k < 12; k++) b.geo(sph(0.5 + ornd() * 1.4, 1.3, 0.6, 1, 8), [(ornd() - 0.5) * 50, 0.2, -ornd() * 50], "#b98a5e");
 }
+// ---------------- ep13 western set (2026-11-07): rolling stock from primitives, no third-party assets ----------------
+const axleZ = (r: number, w: number) => new THREE.CylinderGeometry(r, r, w, 18).rotateX(Math.PI / 2);
+/** a car along x centred on x, rails at z. baggage = plank car with a door on the +z side, express = dark green, wreck = no roof, walls torn */
+function railCar(b: SetBuilder, x: number, z: number, kind: "baggage" | "express" | "wreck") {
+  const L = 13, W = 2.9, y0 = 1.15, H = 2.7, col = kind === "baggage" ? "#a4452f" : "#3f6a55";
+  b.box([x, y0 - 0.12, z], [L + 0.4, 0.24, W + 0.2], "#2c2a36");
+  for (const dx of [-4.6, 4.6]) for (const dx2 of [-0.8, 0.8]) for (const s of [-1, 1]) b.geo(axleZ(0.46, 0.14), [x + dx + dx2, 0.46, z + s * 0.78], "#23222c");
+  if (kind === "wreck") { // floor, torn back wall, end frames and the split safe; no roof
+    b.box([x, y0 + 0.05, z], [L, 0.1, W], "#2b2422");
+    for (let i = 0; i < 9; i++) { const h = 0.5 + ((i * 37) % 11) / 8; b.box([x - 6 + i * 1.5, y0 + h / 2, z - W / 2], [1.2, h, 0.12], i % 2 ? "#3a2f2c" : "#4a3a33", "plain", 0.05 * (i % 3 - 1)); }
+    for (const s of [-1, 1]) b.box([x + s * L / 2, y0 + 0.9, z], [0.14, 1.8, W], "#2f2725");
+    b.box([x + 1.5, y0 + 0.65, z - 0.2], [1.1, 1.2, 1.1], "#23262f"); b.box([x + 1.5, y0 + 0.65, z + 0.5], [0.08, 1.15, 1.05], "#3b3f4e", "plain", 1.0);
+    return;
+  }
+  b.box([x, y0 + H / 2, z], [L, H, W], col);
+  b.box([x, y0 + H + 0.09, z], [L + 0.5, 0.18, W + 0.45], "#3d3540");
+  b.box([x, y0 + H + 0.28, z], [L - 1.5, 0.2, W - 0.9], "#3d3540");
+  for (let i = 0; i <= 13; i++) b.box([x - L / 2 + i, y0 + H / 2, z + W / 2 + 0.03], [0.05, H, 0.05], "#7a3323"); // planks
+  b.box([x, y0 + 1.15, z + W / 2 + 0.05], [2.5, 2.3, 0.08], kind === "baggage" ? "#caa56b" : "#2f5243");
+  b.box([x, y0 + H - 0.2, z + W / 2 + 0.05], [L, 0.14, 0.06], "#e8cf8f");
+}
+/** a steam locomotive along x, nose toward +x */
+function loco(b: SetBuilder, x: number, z: number) {
+  const dark = "#262833", red = "#a82e28";
+  b.box([x, 1.0, z], [9.6, 0.34, 2.2], dark);
+  b.geo(new THREE.CylinderGeometry(1.0, 1.0, 6.2, 20).rotateZ(Math.PI / 2), [x + 0.9, 2.35, z], dark);
+  for (const dx of [-1.2, 0.6, 2.4]) b.geo(new THREE.CylinderGeometry(1.04, 1.04, 0.16, 20).rotateZ(Math.PI / 2), [x + dx, 2.35, z], "#c9a24b"); // brass bands
+  b.geo(new THREE.CylinderGeometry(0.42, 0.26, 1.5, 14), [x + 3.1, 4.0, z], dark); b.geo(new THREE.CylinderGeometry(0.6, 0.42, 0.5, 14), [x + 3.1, 4.95, z], "#17181f"); // stack
+  b.geo(new THREE.SphereGeometry(0.46, 14, 10), [x + 0.9, 3.45, z], "#c9a24b"); // dome
+  b.box([x + 4.05, 2.35, z], [0.14, 2.0, 2.0], "#17181f");
+  b.geo(new THREE.CylinderGeometry(0.3, 0.34, 0.5, 12).rotateZ(Math.PI / 2), [x + 4.2, 3.55, z], "#e7c65c"); // headlamp
+  b.geo(new THREE.ConeGeometry(1.05, 1.5, 4).rotateZ(-Math.PI / 2).scale(1, 0.75, 1.1), [x + 5.2, 0.72, z], red); // cowcatcher
+  b.box([x - 3.3, 2.65, z], [2.7, 2.9, 2.5], red); b.box([x - 3.3, 4.2, z], [3.2, 0.2, 3.0], dark); b.box([x - 3.3, 3.1, z + 1.28], [1.2, 0.95, 0.05], "#f0d890");
+  for (const s of [-1, 1]) { for (const dx of [-1.8, 0.2, 2.2]) { b.geo(axleZ(0.82, 0.16), [x + dx, 0.82, z + s * 1.05], red); b.geo(axleZ(0.28, 0.2), [x + dx, 0.82, z + s * 1.05], "#2c2a36"); } b.beam([x - 1.8, 0.82, z + s * 1.17], [x + 2.2, 0.82, z + s * 1.17], 0.14, "#c9ccd4"); }
+}
+/** car + tender + engine, the nose at +x */
+function westTrain(b: SetBuilder, x: number, z: number, car: "baggage" | "express") {
+  railCar(b, x, z, car); tenderLoco(b, x, z);
+}
+function tenderLoco(b: SetBuilder, x: number, z: number) {
+  b.box([x + 8.6, 1.9, z], [3.2, 1.7, 2.5], "#2c2a36"); b.box([x + 8.6, 2.85, z], [2.8, 0.3, 2.1], "#14141a"); for (const d of [-0.9, 0.9]) b.geo(axleZ(0.46, 2.0), [x + 8.6 + d, 0.46, z], "#23222c");
+  loco(b, x + 15, z);
+}
+function west(b: SetBuilder) {
+  ground(b, 2400, "#cdb48c");
+  const O = SETS.west.origin, loc = (k: string) => { const v = SETS.west.spots[k]; return [v[0] - O[0], v[1], v[2]] as V3; };
+  const R = -4;
+  for (const dz of [-0.75, 0.75]) b.box([0, 0.2, R + dz], [1400, 0.11, 0.11], "#5c5c68");
+  for (let x = -560; x <= 220; x += 1.3) b.box([x, 0.07, R], [0.3, 0.13, 2.5], "#5a4230");
+  for (let k = 0; k < 90; k++) { const x = (ornd() - 0.5) * 500, z = -8 - ornd() * 240, s = 0.6 + ornd() * 0.9; if (z > -162 && z < -122) continue; if (k % 3) b.geo(sph(0.5 + ornd() * 1.2, 1.3, 0.6, 1, 8), [x, 0.2, z], "#b2845a"); else outdoor(b, "cactus", [x, 0, z], s, k, () => undefined); }
+  for (const [x, z, s, y] of [[-260, -330, 1.8, 0.3], [40, -420, 2.6, -0.5], [260, -340, 1.7, 1.1], [-90, -240, 0.8, 0.8], [160, -230, 0.7, -0.4]] as number[][]) outdoor(b, "mesa_rock", [x, 0, z], s, y, () => undefined);
+  for (const [x, z, s] of [[-34, -172, 2.4], [20, -176, 1.8], [52, -170, 2.2], [-74, -168, 2.6], [-12, -184, 1.4], [100, -176, 2]] as number[][]) outdoor(b, "rock_cluster", [x, 0, z], s, x, () => undefined);
+  // the ridge: a low mound with rocks
+  const [rx, , rz] = loc("ridge");
+  b.geo(new THREE.SphereGeometry(16, 28, 10, 0, Math.PI * 2, 0, Math.PI / 2).scale(1, 0.28, 0.7), [rx, 0, rz], "#b98a55");
+  outdoor(b, "rock_cluster", [rx - 6, 2, rz + 6], 1.5, 1, () => undefined);
+  // the rail yard: the odd car, water tower, sheds, hay
+  const [yx] = loc("yard");
+  railCar(b, yx, R, "baggage"); outdoor(b, "water_tower", [yx - 11, 0, R - 8], 1, 0.3, () => undefined);
+  hut(b, yx + 12, R - 13, 11, 7, 3.6, "#a98d6c", "#6c4a36"); hut(b, yx - 20, R - 16, 8, 6, 3, "#94775b", "#5c4230");
+  outdoor(b, "haystack", [yx + 5, 0, R + 6.5], 0.42, 1, () => undefined);
+  // the wreck + the second train
+  const [wx] = loc("wreck");
+  railCar(b, wx, R, "wreck"); for (let k = 0; k < 18; k++) b.box([wx - 8 + ornd() * 18, 0.1, R + 2 + ornd() * 5], [0.3 + ornd() * 1.2, 0.08, 0.2], "#332a28", "plain", ornd() * 3);
+  tenderLoco(b, wx, R);
+  // the rolling train: its own group, moved per shot by the episode (story.ts MOVER_AT, world.ts)
+  const mg = new THREE.Group(); mg.name = "mover"; b.group.add(mg);
+  const m = new SetBuilder(mg); westTrain(m, 0, R, "baggage"); m.finish();
+  // the depot: station house, platform, a waiting train
+  const [dx] = loc("depot");
+  westTrain(b, dx - 8, R, "baggage");
+  b.box([dx, 0.3, R + 3.6], [36, 0.6, 3.6], "#7d5f43"); hut(b, dx + 2, R + 28, 15, 7, 4.2, "#c9a877", "#7a4a33"); b.box([dx + 2, 1.2, R + 24.4], [1.3, 2.4, 0.1], "#5a3d2a");
+  outdoor(b, "water_tower", [dx - 26, 0, R + 18], 0.9, 0, () => undefined);
+  // inside the baggage car: plank floor, 3 walls, roof, hay against the back
+  const [ix, , iz] = loc("inside");
+  b.box([ix, 0.05, iz], [9, 0.1, 5], "#6f4e35"); b.box([ix, 3, iz - 2.5], [9, 6, 0.12], "#a06a48"); for (const s of [-1, 1]) b.box([ix + s * 4.5, 3, iz], [0.12, 6, 5], "#8a5a3e");
+  for (let i = 0; i < 12; i++) b.box([ix - 4.2 + i * 0.76, 3, iz - 2.42], [0.04, 6, 0.04], "#6e4530");
+  outdoor(b, "haystack", [ix + 1.4, 0.05, iz - 1.1], 0.42, 0, () => b.geo(sph(1.1, 1.2, 0.7, 1, 10), [ix + 1.4, 0.3, iz - 1.1], "#e0bf63"));
+}
 function sea(b: SetBuilder) {
   if (OUT.has("wave_tile")) for (let i = -4; i <= 4; i++) for (let j = -6; j <= 2; j++) outdoor(b, "wave_tile", [i * 20, -0.75, j * 20], 1, 0, () => undefined); // mean water at y = 0
   b.box([0, -0.06, 0], [600, 0.12, 600], "#2a8fb8");
@@ -962,8 +1046,8 @@ function field(b: SetBuilder) {
 export function buildSets(root: THREE.Object3D, used?: Set<SetId>): void {
   const start = performance.now();
   const builders: Record<SetId, (b: SetBuilder) => void> = { home, yard, forest, snow, bedroom,
-    counter, floor, kitchen, beach, reef, bathroom, party, lagoon, rooftops, street, park, town, desert, sea, mountains, field };
-  const BIG = new Set<SetId>(["town", "desert", "sea", "mountains", "field"]); // only when the episode uses them (older sets always, in order: they share rnd())
+    counter, floor, kitchen, beach, reef, bathroom, party, lagoon, rooftops, street, park, town, desert, sea, mountains, field, west };
+  const BIG = new Set<SetId>(["town", "desert", "sea", "mountains", "field", "west"]); // only when the episode uses them (older sets always, in order: they share rnd())
   let triangles = 0;
   for (const id of Object.keys(SETS) as SetId[]) {
     if (BIG.has(id) && used && !used.has(id)) continue;

@@ -89,5 +89,12 @@
     "privacy": "private",
     "uploadedAt": "2026-11-07T07:31:13.026Z",
     "file": "studio/out/Short/ep12_x1.1_upload.mp4"
+  },
+  "ep13": {
+    "id": "SUe1Lr0CjnU",
+    "publishAt": "2026-11-08T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-07T11:22:17.554Z",
+    "file": "studio/out/Short/ep13_x1.1_upload.mp4"
   }
 }

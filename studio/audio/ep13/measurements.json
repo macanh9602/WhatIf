@@ -1,0 +1,2284 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000001729,
+    "true_peak_dbtp": -1.6814722611373574,
+    "lra_lu": 2.4024049560888017,
+    "sample_peak_dbfs": -1.7303353053945603
+  },
+  "voice": {
+    "integrated_lufs": -16.029861555738673,
+    "true_peak_dbtp": -1.7079431577459192,
+    "lra_lu": 2.4394696528594437,
+    "sample_peak_dbfs": -1.7512241382798006
+  },
+  "music": {
+    "integrated_lufs": -37.9458790237192,
+    "true_peak_dbtp": -19.22183383911068,
+    "lra_lu": 5.172642570040075,
+    "sample_peak_dbfs": -19.24109507403796
+  },
+  "sfx": {
+    "integrated_lufs": -32.73751594039227,
+    "true_peak_dbtp": -4.58587970639639,
+    "lra_lu": 13.777700585617815,
+    "sample_peak_dbfs": -5.2322614548872215
+  },
+  "master_gain_db": -1.7512231028410064,
+  "voice_gain_db": -1.7512231028410064,
+  "source_duration_seconds": 78.7,
+  "source_sha256": "8cbc2731e756a32ccb7069475d9bb27666645a5f9c8ed72bd1e13a65808fb296",
+  "words_sha256": "23da2848ddbcc1ffe8829578a74137b3a0099162192c75f692494c1d6557da27",
+  "music_sections": [
+    {
+      "name": "Hook: the gallop",
+      "start": 0,
+      "end": 6.3,
+      "base_margin": -14,
+      "gain_db": -8.439704715101126
+    },
+    {
+      "name": "A train can't leave the rails",
+      "start": 6.3,
+      "end": 10.1,
+      "base_margin": -15,
+      "gain_db": -8.333126019061254
+    },
+    {
+      "name": "The odd car, the gang laughs",
+      "start": 10.1,
+      "end": 17.4,
+      "base_margin": -16,
+      "gain_db": 2.958933213730738
+    },
+    {
+      "name": "Night, the lantern",
+      "start": 17.4,
+      "end": 24.7,
+      "base_margin": -15,
+      "gain_db": -2.218487203899471
+    },
+    {
+      "name": "The blast",
+      "start": 24.7,
+      "end": 28.4,
+      "base_margin": -13,
+      "gain_db": -6.722237478106706
+    },
+    {
+      "name": "The ride, the count",
+      "start": 28.4,
+      "end": 37.8,
+      "base_margin": -14,
+      "gain_db": -8.300586678863613
+    },
+    {
+      "name": "You laugh on the ridge",
+      "start": 37.8,
+      "end": 40.8,
+      "base_margin": -15,
+      "gain_db": -6.843015963020296
+    },
+    {
+      "name": "The second train",
+      "start": 40.8,
+      "end": 48.1,
+      "base_margin": -15,
+      "gain_db": -2.9218785738919877
+    },
+    {
+      "name": "Horses down the ramp",
+      "start": 48.1,
+      "end": 52.0,
+      "base_margin": -13,
+      "gain_db": -4.294336177857943
+    },
+    {
+      "name": "You see: delivering",
+      "start": 52.0,
+      "end": 62.3,
+      "base_margin": -18,
+      "gain_db": -5.491363454865336
+    },
+    {
+      "name": "The fastest engine",
+      "start": 62.3,
+      "end": 66.4,
+      "base_margin": -15,
+      "gain_db": -8.160249629731116
+    },
+    {
+      "name": "They never catch you",
+      "start": 66.4,
+      "end": 69.1,
+      "base_margin": -14,
+      "gain_db": -8.830803625458223
+    },
+    {
+      "name": "Leaving the West",
+      "start": 69.1,
+      "end": 78.8,
+      "base_margin": -16,
+      "gain_db": -8.454847947284364
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.1,
+      "end": 0.22,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.21,
+      "end": 0.32999999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.32,
+      "end": 0.44,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.43,
+      "end": 0.55,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.7,
+      "end": 0.82,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.81,
+      "end": 0.93,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.92,
+      "end": 1.04,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.03,
+      "end": 1.15,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.3,
+      "end": 1.42,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.41,
+      "end": 1.5299999999999998,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.52,
+      "end": 1.6400000000000001,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.63,
+      "end": 1.75,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.9,
+      "end": 2.02,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.01,
+      "end": 2.13,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.12,
+      "end": 2.24,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.23,
+      "end": 2.35,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.5,
+      "end": 2.62,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.61,
+      "end": 2.73,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.72,
+      "end": 2.8400000000000003,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.83,
+      "end": 2.95,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.0,
+      "end": 3.4,
+      "kind": "whoosh",
+      "description": "whip",
+      "target": -32.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.0,
+      "end": 6.3,
+      "kind": "chug",
+      "description": "the train at speed",
+      "target": -32.27863845289726,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.1,
+      "end": 3.22,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.21,
+      "end": 3.33,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.32,
+      "end": 3.44,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.4,
+      "end": 4.3,
+      "kind": "whistle",
+      "description": "the train behind you",
+      "target": -35.27863845289726,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.43,
+      "end": 3.5500000000000003,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.7,
+      "end": 3.8200000000000003,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.81,
+      "end": 3.93,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.92,
+      "end": 4.04,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.03,
+      "end": 4.15,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.3,
+      "end": 4.42,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.41,
+      "end": 4.53,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.52,
+      "end": 4.64,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.63,
+      "end": 4.75,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.9,
+      "end": 5.0200000000000005,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.01,
+      "end": 5.13,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.12,
+      "end": 5.24,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.23,
+      "end": 5.3500000000000005,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.5,
+      "end": 5.62,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.61,
+      "end": 5.73,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.72,
+      "end": 5.84,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.83,
+      "end": 5.95,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.1,
+      "end": 6.22,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.1,
+      "end": 12.9,
+      "kind": "rustle",
+      "description": "hay",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.7,
+      "end": 14.899999999999999,
+      "kind": "click",
+      "description": "gang",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.4,
+      "end": 18.599999999999998,
+      "kind": "whoosh",
+      "description": "night wind",
+      "target": -42.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.8,
+      "end": 21.1,
+      "kind": "chugslow",
+      "description": "the night train comes in",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.9,
+      "end": 21.5,
+      "kind": "whoosh",
+      "description": "air brakes",
+      "target": -32.27863845289726,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.3,
+      "end": 21.2,
+      "kind": "clock",
+      "description": "the train slows",
+      "target": -38.27863845289726,
+      "pan": 0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.45,
+      "end": 23.7,
+      "kind": "click",
+      "description": "plunger",
+      "target": -28.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.6,
+      "end": 24.8,
+      "kind": "whoosh",
+      "description": "the spark runs",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.82,
+      "end": 25.32,
+      "kind": "flash",
+      "description": "blast",
+      "target": -24.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.86,
+      "end": 25.86,
+      "kind": "thump",
+      "description": "roof blast",
+      "target": -19.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.86,
+      "end": 25.36,
+      "kind": "crack",
+      "description": "dynamite crack, roof",
+      "target": -18.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.9,
+      "end": 26.099999999999998,
+      "kind": "thump",
+      "description": "roof low",
+      "target": -21.278638452897262,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.9,
+      "end": 27.099999999999998,
+      "kind": "whoosh",
+      "description": "fire roar",
+      "target": -28.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.2,
+      "end": 25.5,
+      "kind": "tink",
+      "description": "debris",
+      "target": -32.27863845289726,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.45,
+      "end": 25.75,
+      "kind": "tink",
+      "description": "debris",
+      "target": -34.27863845289726,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.7,
+      "end": 26.0,
+      "kind": "tink",
+      "description": "debris",
+      "target": -36.27863845289726,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.92,
+      "end": 26.82,
+      "kind": "thump",
+      "description": "walls blast",
+      "target": -20.278638452897262,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.92,
+      "end": 26.42,
+      "kind": "crack",
+      "description": "crack, walls",
+      "target": -19.278638452897262,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.95,
+      "end": 27.349999999999998,
+      "kind": "whoosh",
+      "description": "walls roar",
+      "target": -30.278638452897262,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.96,
+      "end": 26.96,
+      "kind": "thump",
+      "description": "walls low",
+      "target": -23.278638452897262,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.2,
+      "end": 26.5,
+      "kind": "tink",
+      "description": "debris",
+      "target": -32.27863845289726,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.45,
+      "end": 26.75,
+      "kind": "tink",
+      "description": "debris",
+      "target": -34.27863845289726,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.7,
+      "end": 27.0,
+      "kind": "tink",
+      "description": "debris",
+      "target": -36.27863845289726,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.0,
+      "end": 27.3,
+      "kind": "tink",
+      "description": "debris",
+      "target": -32.27863845289726,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.38,
+      "end": 28.08,
+      "kind": "thump",
+      "description": "safe blast",
+      "target": -21.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.4,
+      "end": 28.0,
+      "kind": "bell",
+      "description": "the safe door rings",
+      "target": -32.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.4,
+      "end": 27.799999999999997,
+      "kind": "crack",
+      "description": "crack, safe",
+      "target": -20.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.45,
+      "end": 28.45,
+      "kind": "rustle",
+      "description": "money",
+      "target": -30.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.7,
+      "end": 28.4,
+      "kind": "rustle",
+      "description": "money",
+      "target": -34.27863845289726,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.9,
+      "end": 28.2,
+      "kind": "tink",
+      "description": "debris",
+      "target": -34.27863845289726,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.1,
+      "end": 28.400000000000002,
+      "kind": "tink",
+      "description": "debris",
+      "target": -36.27863845289726,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.6,
+      "end": 28.720000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.71,
+      "end": 28.830000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.82,
+      "end": 28.94,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.93,
+      "end": 29.05,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.2,
+      "end": 29.32,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.31,
+      "end": 29.43,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.42,
+      "end": 29.540000000000003,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.53,
+      "end": 29.650000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.8,
+      "end": 29.92,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.91,
+      "end": 30.03,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.02,
+      "end": 30.14,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.13,
+      "end": 30.25,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.4,
+      "end": 30.52,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.51,
+      "end": 30.630000000000003,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.62,
+      "end": 30.740000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.73,
+      "end": 30.85,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.0,
+      "end": 31.12,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.11,
+      "end": 31.23,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.22,
+      "end": 31.34,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.33,
+      "end": 31.45,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.6,
+      "end": 31.720000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.71,
+      "end": 31.830000000000002,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.82,
+      "end": 31.94,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.93,
+      "end": 32.05,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.2,
+      "end": 32.32,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.31,
+      "end": 32.43,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.42,
+      "end": 32.54,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.53,
+      "end": 32.65,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.8,
+      "end": 32.919999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.91,
+      "end": 33.029999999999994,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.02,
+      "end": 33.14,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.13,
+      "end": 33.25,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.4,
+      "end": 33.519999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.51,
+      "end": 33.629999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.62,
+      "end": 33.739999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.73,
+      "end": 33.849999999999994,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.0,
+      "end": 34.12,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.11,
+      "end": 34.23,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.22,
+      "end": 34.339999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.33,
+      "end": 34.449999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.6,
+      "end": 34.72,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.71,
+      "end": 34.83,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.82,
+      "end": 34.94,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.93,
+      "end": 35.05,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.2,
+      "end": 35.32,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.31,
+      "end": 35.43,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.42,
+      "end": 35.54,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.53,
+      "end": 35.65,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.8,
+      "end": 35.919999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 35.91,
+      "end": 36.029999999999994,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.02,
+      "end": 36.14,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.13,
+      "end": 36.25,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.4,
+      "end": 36.519999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.51,
+      "end": 36.629999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.62,
+      "end": 36.739999999999995,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.73,
+      "end": 36.849999999999994,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.0,
+      "end": 37.12,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.11,
+      "end": 37.23,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.22,
+      "end": 37.339999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.33,
+      "end": 37.449999999999996,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.6,
+      "end": 37.72,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -35.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.9,
+      "end": 43.1,
+      "kind": "whoosh",
+      "description": "steam, second train",
+      "target": -32.27863845289726,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.9,
+      "end": 43.8,
+      "kind": "chugslow",
+      "description": "second train rolls in",
+      "target": -32.27863845289726,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.0,
+      "end": 41.9,
+      "kind": "whistle",
+      "description": "second train",
+      "target": -36.27863845289726,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.2,
+      "end": 43.2,
+      "kind": "clock",
+      "description": "train rolling in",
+      "target": -38.27863845289726,
+      "pan": -0.2,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.0,
+      "end": 45.98,
+      "kind": "riser",
+      "description": "riser into the ramp",
+      "target": -28.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.45,
+      "end": 45.95,
+      "kind": "whoosh",
+      "description": "the ramp falls",
+      "target": -34.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.98,
+      "end": 46.48,
+      "kind": "thump",
+      "description": "the ramp hits the ground",
+      "target": -24.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.98,
+      "end": 47.779999999999994,
+      "kind": "bassdrop",
+      "description": "bass drop: the ramp hits the ground",
+      "target": -18.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.5,
+      "end": 48.62,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.61,
+      "end": 48.73,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.72,
+      "end": 48.839999999999996,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.83,
+      "end": 48.949999999999996,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.1,
+      "end": 49.22,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.21,
+      "end": 49.33,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.32,
+      "end": 49.44,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.43,
+      "end": 49.55,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.7,
+      "end": 49.82,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.81,
+      "end": 49.93,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.92,
+      "end": 50.04,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.03,
+      "end": 50.15,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.3,
+      "end": 50.419999999999995,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.41,
+      "end": 50.529999999999994,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.52,
+      "end": 50.64,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.63,
+      "end": 50.75,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.9,
+      "end": 51.019999999999996,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.01,
+      "end": 51.129999999999995,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.12,
+      "end": 51.239999999999995,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.23,
+      "end": 51.349999999999994,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.5,
+      "end": 51.62,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.61,
+      "end": 51.73,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.72,
+      "end": 51.839999999999996,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -33.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.83,
+      "end": 51.949999999999996,
+      "kind": "thump",
+      "description": "posse hooves",
+      "target": -36.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52,
+      "end": 52.12,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.11,
+      "end": 52.23,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.22,
+      "end": 52.339999999999996,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.33,
+      "end": 52.449999999999996,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -43.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.6,
+      "end": 52.72,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.71,
+      "end": 52.83,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.82,
+      "end": 52.94,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.93,
+      "end": 53.05,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -43.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.2,
+      "end": 53.32,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.31,
+      "end": 53.43,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.42,
+      "end": 53.54,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.53,
+      "end": 53.65,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -43.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.8,
+      "end": 53.919999999999995,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 53.91,
+      "end": 54.029999999999994,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.02,
+      "end": 54.14,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.13,
+      "end": 54.25,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -43.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.4,
+      "end": 54.519999999999996,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.51,
+      "end": 54.629999999999995,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.62,
+      "end": 54.739999999999995,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -40.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.73,
+      "end": 54.849999999999994,
+      "kind": "thump",
+      "description": "posse far",
+      "target": -43.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 55.5,
+      "end": 55.8,
+      "kind": "tink",
+      "description": "delivering",
+      "target": -32.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.2,
+      "end": 61.400000000000006,
+      "kind": "rustle",
+      "description": "the horse eats hay",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 62.3,
+      "end": 66.39999999999999,
+      "kind": "chug",
+      "description": "fastest engine",
+      "target": -28.278638452897262,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 62.6,
+      "end": 65.2,
+      "kind": "whoosh",
+      "description": "engine steam",
+      "target": -34.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.5,
+      "end": 66.62,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.61,
+      "end": 66.73,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.72,
+      "end": 66.84,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.83,
+      "end": 66.95,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -39.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.1,
+      "end": 67.22,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.21,
+      "end": 67.33,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.32,
+      "end": 67.44,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.43,
+      "end": 67.55000000000001,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -39.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.7,
+      "end": 67.82000000000001,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.81,
+      "end": 67.93,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.92,
+      "end": 68.04,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.03,
+      "end": 68.15,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -39.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.3,
+      "end": 68.42,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.41,
+      "end": 68.53,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.52,
+      "end": 68.64,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.63,
+      "end": 68.75,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -39.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.9,
+      "end": 69.02000000000001,
+      "kind": "thump",
+      "description": "hooves",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.5,
+      "end": 78.75,
+      "kind": "chugslow",
+      "description": "the train you leave on, runs through the loop",
+      "target": -40.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.8,
+      "end": 72.8,
+      "kind": "whistle",
+      "description": "the depot",
+      "target": -38.27863845289726,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.7,
+      "end": 75.0,
+      "kind": "rustle",
+      "description": "ticket",
+      "target": -36.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.9,
+      "end": 76.5,
+      "kind": "bell",
+      "description": "on a train",
+      "target": -34.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 77.2,
+      "end": 77.8,
+      "kind": "rustle",
+      "description": "hay",
+      "target": -38.27863845289726,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999867878778584,
+    "p10": 12.231128123829683,
+    "median": 19.142719733657337
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3782400,
+    "duration_seconds": 78.8,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

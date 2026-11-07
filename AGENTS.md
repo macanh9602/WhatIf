@@ -1,8 +1,10 @@
 # What If channel: how this project works
 
-Skills: `D:/DucanBag/_Trick/_Short_Skill/skills` (video-pipeline = workflow, threejs-video = engine, cartoon-3d-short = look).
+Skills: `D:/DucanBag/_Trick/_Short_Skill/skills` (video-pipeline = workflow, threejs-video = engine, cartoon-3d-short = look, twist-short-script = twist-story script format, trial from ep13).
 The studio started from `cartoon-3d-short/templates/studio` (2026-11-05). Nothing here comes from another channel except the
 narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANNEL.md`. Reference study (private): `_ref/STUDY.md`.
+
+**Building an episode? Read `bible/EPISODE_KIT.md` first:** it has the flow, the shot list step (approved by the user before any render), the APIs and known traps.
 
 ## Layout
 - `bible/episodes/<ep>/SCRIPT.md`: facts + own calcs; `eps/<ep>/script.txt`, `eps/<ep>/voice/`: TTS in/out.
@@ -28,6 +30,7 @@ narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANN
 ## Episode standard (visual audit + ep12, 2026-11-07)
 - Story: 4-6 locations, >= 60 % of runtime outdoors, inserts <= 15 % (2 short ones); facts go on in-world props. Every shot the lead DOES the verb.
 - Camera: per location 1 wide, 1 high/low angle, 1 foreground layer, 1 over-the-shoulder where it fits.
+- Cinematic camera (user 2026-11-07): the 3D world is there to be used. Action shots fly a motivated move (crane reveal, orbit, tracking, dolly back head on, top-down), not a static side view with a creep. See EPISODE_KIT "Film camera".
 - Light: each location its own preset (day/golden/night/dawn). Sets: `backdrop: {biome}` panoramas in public/backdrops (PNGs stay neutral; the engine grades each layer) and props from public/props/outdoor (MANIFEST.md).
 - Transitions: `TRANS` in story.ts, 1-2 story-motivated iris/zoom per episode, 2-3 whip/dip/match, the rest hard cuts.
 - Value before colour: judge the grayscale sheet first. Near holds the darkest darks, from a REAL object, far is light. Sky-fall / mid-air shots are exempt: never paint fake dark blobs.

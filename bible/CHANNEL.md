@@ -33,4 +33,5 @@ video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (st
 | 10 | What if you lived one day inside a cartoon | v1; 1.1x (1:14) scheduled 2026-11-08 07:00 (-evU9ACFrQA); generic tropes only; new rooftops/street sets |
 | 11 | What if you could photosynthesize | v1; 1.1x (0:60) scheduled 2026-11-09 07:00 (62YTQU1p1Hs); new park set; green lead for this episode only |
 | 12 | What if you fell between dreams and reality | v1; 1.1x (1:05) scheduled 2026-11-10 07:00 (vGaHtPu6Ug0); first build on outdoor kit, backdrops, TRANS, 3D sky-fall clouds; shipped from the 1080p preview with known defects (haze, shot 27 clock blur, shot 6 roofs) |
+| 13 | What if the train came after you (first twist-format trial, 1899 Wyoming) | v1; 1.1x (1:12) scheduled 2026-11-08 07:00 (SUe1Lr0CjnU); new west set, drawn horses, rolling train, flown cameras (CAM_PATH); lead keeps only the curl, western outfit this episode (user 2026-11-07) |
 | bts | I Fixed the Cat (8 s before/after test, not a story) | scheduled 2026-11-10 07:00 (9Lz2k5owq_8) |

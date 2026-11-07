@@ -1,5 +1,6 @@
 // Ep01 world: sky + two-tone light rig (the template's, camera-relative sun frozen per shot), all five sets from
 // sets.ts, and the cast. update(id, f, camera) poses everything for shot `id` at frame f (pure function of id + f).
+import * as EP_SUN from "@ep/story";
 import * as THREE from "three";
 import { getInputProps } from "remotion";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
@@ -39,7 +40,7 @@ const cloudMat = (fade: boolean) => new THREE.ShaderMaterial({ transparent: fade
   fragmentShader: "uniform vec3 uSun, uLit, uShade; uniform float uOp; varying vec3 vN; varying float vH; void main() { float k = smoothstep(0.02, 0.5, dot(normalize(vN), uSun)) * mix(0.45, 1.0, smoothstep(-0.12, 0.22, vH)); gl_FragColor = vec4(mix(uShade, uLit * 1.08, k), uOp); }" });
 const topShadow = (k: number) => ctex(`topshadow|${k}`, 512, 512, (g) => { g.filter = "blur(14px)"; g.fillStyle = "#fff"; for (const [x, , z, r] of puffs(k)) { g.beginPath(); g.arc(256 + x * 230, 256 + z * 230, r * 230, 0, Math.PI * 2); g.fill(); } g.filter = "none"; });
 /** per-shot sun override: indoors a high sun over the open wall tops reads as window light */
-const SUN_SHOT: Record<number, { az?: number; el?: number }> = {};
+const SUN_SHOT = ((EP_SUN as Record<string, unknown>)["SUN_SHOT"] ?? {}) as Record<number, { az?: number; el?: number }>; // optional episode export (ep13: golden shots lit from behind the lens)
 const INDOOR_EL = 58;
 /** A/B for scripts (backdrop_check.py): inputProps `{ post: { backdrop: false } }` hides the panorama layers */
 const NO_BACKDROP = (getInputProps() as { post?: { backdrop?: boolean } }).post?.backdrop === false;
@@ -154,6 +155,8 @@ export class World {
     // big outdoor sets seen from high up: a near plane ~1 % of the height keeps the depth buffer fine at 300+ m (older sets: 0.05 as before)
     const near = !SETS[s.set].fog ? 0.05 : "fall" in s.cam ? 1 : Math.min(2, Math.max(0.05, c.pos[1] / 100));
     cam.fov = c.fov; cam.near = near; cam.far = 1500; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+    const mover = (EP_SUN as Record<string, unknown>)["MOVER_AT"] as ((id: number, f: number) => number | null) | undefined; // optional episode export (ep13: a train that really rolls)
+    if (mover) { const g = this.root.getObjectByName("mover"), x = mover(id, f); if (g) { g.visible = x !== null; if (x !== null) { g.position.x = x; g.updateMatrixWorld(true); } } }
     const focus = new THREE.Vector3(...c.look), fit = this.shotFit(id, s, indoor);
     cam.layers.enable(NOINK);
     // ---- light rig: camera-relative sun frozen per shot, two-tone uniforms, shadow fit around the focus ----

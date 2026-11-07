@@ -25,6 +25,7 @@ export const layersAt = (f: number): { id: number; alpha: number }[] => {
 export type Trans = { kind: TransKind; dur: number; cx?: number; cy?: number };
 // read by key: a plain named import of a missing export breaks episodes that do not define it
 const TRANS = ((EP as Record<string, unknown>)["TRANS"] ?? {}) as Record<number, Trans>;
+const CAM_PATH = ((EP as Record<string, unknown>)["CAM_PATH"] ?? {}) as Record<number, (t: number) => { p: V3; l: V3; fov: number }>;
 /** does shot `id` carry an in or out half of a transition (Short.tsx mounts the pass only then) */
 export const transIn = (id: number) => !!(TRANS[id] || TRANS[id + 1]);
 /** the transition state at frame f: p 0..1 (1 at the cut), side -1 = outgoing shot, +1 = incoming */
@@ -46,6 +47,8 @@ const len = (a: V3) => Math.hypot(a[0], a[1], a[2]) || 1;
 
 const baseCam = (s: ShotDef, f: number): { pos: V3; look: V3; fov: number } => {
   const set = SETS[s.set], c = s.cam;
+  const path = CAM_PATH[s.id]; // optional episode export (ep13): a flown camera, set-local
+  if (path) { const q = path(f / 30); return { pos: add(set.origin, q.p), look: add(set.origin, q.l), fov: q.fov }; }
   if ("fall" in c) { // straight down (a 2 % tilt keeps lookAt defined), height eased linearly across the shot
     const u = Math.min(1, Math.max(0, (f - s.a) / Math.max(1, s.b - s.a))), h = c.h[0] + (c.h[1] - c.h[0]) * u, look = add(set.origin, c.fall);
     return { pos: [look[0], look[1] + h, look[2] + h * 0.02], look, fov: c.fov ?? 50 };

@@ -616,7 +616,12 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
     for (let i = 0; i <= 12; i++) { const t = i / 12; base.push([cx + wb * (2 * t - 1), yb + 3 * u * (1 - (2 * t - 1) ** 2)]); }
     return base;
   };
-  if (o.hat === "shako" || o.hat === "shako_tall") {
+  if (o.hat === "cowboy") { // ep13: gang and posse; wide brim, dented crown, brows stay clear
+    const yb = crown + 0.2 * HH, col = o.cap ?? "#6b4a30";
+    p.shadedFill(R([[cx - 48 * u, yb + 2 * u], [cx - 38 * u, yb - 0.5 * HH], [cx - 8 * u, yb - 0.58 * HH], [cx, yb - 0.5 * HH], [cx + 8 * u, yb - 0.58 * HH], [cx + 38 * u, yb - 0.5 * HH], [cx + 48 * u, yb + 2 * u]]), col, mix(col, INK, 0.3), light, 50 * u, 0.4);
+    p.poly(R([[cx - 90 * u, yb + 4 * u], [cx - 50 * u, yb - 6 * u], [cx + 50 * u, yb - 6 * u], [cx + 90 * u, yb + 4 * u], [cx + 50 * u, yb + 11 * u], [cx - 50 * u, yb + 11 * u]]), col, 3 * u);
+    p.stroke(R([[cx - 47 * u, yb - 7 * u], [cx + 47 * u, yb - 7 * u]]), 5 * u, INK);
+  } else if (o.hat === "shako" || o.hat === "shako_tall") {
     const tall = o.hat === "shako_tall", yb = crown + 0.25 * HH, ht = (tall ? 0.66 : 0.56) * HH, wb = 46 * u, wt = 52 * u;
     const body = R([...sag(yb, wb).reverse(), [cx - wt, yb - ht], [cx + wt, yb - ht]]);
     p.shadedFill(body, "#3a3d47", "#24262d", light, wt, 0.4);
