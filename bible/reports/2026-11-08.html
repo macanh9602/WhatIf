@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo What If</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f4f6fb; --card:#ffffff; --ink:#1d1a3a; --muted:#5b6078; --line:#e2e6f0; --accent:#2f6df6; --accent-soft:#e6eeff;
+  --good:#12a150; --warn:#d97706; --zebra:#f8f9fd; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd;
+  --line:#2a3048; --accent:#7aa2ff; --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; } }
+:root[data-theme="dark"] { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd; --line:#2a3048; --accent:#7aa2ff;
+  --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; }
+header { background:linear-gradient(135deg,#1d1a3a,#2f3f8f); color:#fff; padding:28px 16px 22px; }
+header .wrap { max-width:860px; margin:0 auto; }
+header .kicker { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.75; }
+header h1 { margin:4px 0 0; font-size:clamp(22px,5vw,30px); font-weight:800; line-height:1.25; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+#doc > h1 { display:none; }
+#doc > h2 { margin:22px 0 10px; font-size:19px; font-weight:800; display:flex; align-items:center; gap:10px; }
+#doc > h2::before { content:""; width:6px; height:22px; border-radius:3px; background:var(--accent); }
+section.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px 18px 12px; margin-bottom:14px;
+  box-shadow:0 1px 2px rgba(20,24,60,.05); }
+h3 { font-size:16px; margin:16px 0 4px; }
+p, li { color:var(--ink); }
+ul, ol { padding-left:22px; }
+li { margin:4px 0; }
+strong { font-weight:800; }
+em { color:var(--muted); }
+code { background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.88em; }
+.table { overflow-x:auto; margin:8px -4px; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px; }
+th, td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+tr:nth-child(even) td { background:var(--zebra); }
+td:first-child { white-space:normal; min-width:9em; }
+blockquote { margin:10px 0; padding:8px 14px; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 10px 10px 0; }
+li:has(> input[type=checkbox]) { list-style:none; margin-left:-22px; }
+input[type=checkbox] { width:17px; height:17px; vertical-align:-3px; margin-right:8px; accent-color:var(--accent); }
+hr { border:0; border-top:1px dashed var(--line); margin:16px 0; }
+footer { max-width:860px; margin:0 auto; padding:4px 16px 32px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="kicker">What If · báo cáo tối</div><h1 id="title">2026-11-08</h1></div></header>
+<main id="doc"></main>
+<footer>Tạo tự động từ ops/report.mjs · số liệu YouTube Data + Analytics API</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const MD = "# Báo cáo 2026-11-08 (chụp 13:53 VN), kênh What If (devzanki_001)\n\nHai bản chụp 07/11 14:00Z và 08/11 06:53Z, cách nhau khoảng 17 giờ. Analytics trễ 1–2 ngày: ep06, ep07, ep08, ep13 chưa có % xem.\n\n## 1. Thực trạng\n\n| Tập | Views (Δ) | % xem | Giây TB | Likes | Like/view | Subs | Nguồn chính |\n|---|---|---|---|---|---|---|---|\n| ep03 Lên cấp | 1.422 (+59) | **90,4 %** | 80 / 89 | 28 | 2,0 % | 3 | SHORTS 1.042 |\n| ep07 Thu nhỏ | **1.377 (+246)** | n/a | n/a | 26 | 1,9 % | n/a | n/a |\n| ep05 Nghiến răng | 1.353 (+5) | 45,2 % | 33 | 22 | 1,6 % | 1 | SHORTS 1.221 |\n| ep06 Bán giấc ngủ | 1.310 (+21) | n/a | n/a | 36, 2 cmt | 2,7 % | n/a | n/a |\n| ep02 Cân nặng | 1.293 (0) | 44,9 % | 37 | 24 | 1,9 % | 3 | SHORTS 1.222 |\n| **ep13 Đoàn tàu** (mới, twist) | **1.179** trong ~7 giờ | n/a | n/a | 35, 2 cmt | **3,0 %** | n/a | n/a |\n| ep08 Thở dưới nước (mới) | 677 trong ~7 giờ | n/a | n/a | 14 | 2,1 % | n/a | n/a |\n| ep04 / ep01 | 14 / 7 | | | 0 | | 0 | SEARCH, CHANNEL |\n\n- Toàn kênh khoảng **8.650 views (+2.200)**, 7 subs từ analytics (số này trễ).\n- **ep13, tập twist đầu tiên, có like/view cao nhất kênh (3,0 %)** và chạm 1.179 views nhanh hơn mọi tập trước. Là một mẫu, nhưng là tín hiệu tốt cho twist format (ep14–18 đều theo nó).\n- ep07 vẫn được feed đẩy (+246). ep02, ep05, ep06 đã dừng ở mức ~1.300: đó là \"trần\" của một lần feed thử.\n- **ep03 bây giờ có mẫu thật (1.079 views analytics): 90 % xem, 80/89 giây.** Retention mở ở 1,48 (xem lại), vẫn 0,62 ở cuối. ep02 và ep05 kết ở 0,18–0,20.\n\n### Người xem đến từ đâu\n| Nước | Views | % xem |\n|---|---|---|\n| US | 1.129 | 67,2 % |\n| PH | 799 | 44,2 % |\n| IN | 298 | 49,9 % |\n| VN | 182 (+111) | 59,4 % |\n| ID | 134 | n/a |\n| GB | 102 | n/a |\n\n- US vừa đông nhất vừa xem lâu nhất. Giữ 07:00 VN (19:00 miền Đông Mỹ) và tiếng Anh đơn giản.\n- VN tăng mạnh (+111), có thể từ lượt chia sẻ cá nhân. Đừng đọc nó như tín hiệu thuật toán.\n\n## 2. Chẩn đoán\n- Bài học của báo cáo 07/11 vẫn đứng: **ep03 giữ lời giải đến cuối và người xem ở lại; ep05 trả lời hook sớm và mất 60 % người ở 1/3 đầu.**\n- Hai chủ đề \"cái giá bạn phải trả\" (ep03, ep06) và twist (ep13) dẫn đầu về like/view. Chủ đề \"cơ thể bạn thay đổi\" (ep02, ep05, ep08) đứng sau.\n- **Giả thuyết (user):** ep13 thắng nhờ chất lịch sử và hình quen với người Mỹ (miền Tây, đoàn tàu). Chưa tách được khỏi twist format và chuẩn camera mới. Cách kiểm: khi ep13 có analytics, so phần view và % xem của US với ep02, ep05, ep08; sau đó so ep20 (lịch sử Mỹ), ep14 (lịch sử không phải Mỹ), ep16 và ep17 (twist, không lịch sử).\n- Mọi tập Shorts dừng ở ~1.300 views sau 24–48 giờ. Subs gần như không tăng (7 subs / 8.650 views). **Shorts đang mang views, chưa mang khán giả.** Đó là lý do hợp lý để thử video dài.\n\n## 3. Lịch đăng: lỗi cần sửa ngay\n- **08/11 có hai tập lên cùng lúc (ep08 và ep13),** và ep10 vẫn ghi publishAt 08/11 nhưng còn private. Kiểm trong Studio xem ep10 đã được dời chưa, rồi sửa ops/uploaded.json.\n- **09/11 có hai tập (ep09 và ep11).** Dời ep11 sang một ngày trống (khoảng 18–23/11 đang trống).\n- bts_cat (9Lz2k5owq_8) vẫn `missing`.\n\n## 4. Video tham khảo (TikTok \"ducan.9.6.2\", 3:35, tiếng Việt)\n**Nội dung:** \"những nơi đáng lẽ không nên tồn tại\": Chân Voi Chernobyl, hang pha lê Naica, sông Rio Tinto, rừng Madidi. Bốn chương, mỗi chương ~50 giây.\n\n**Khuôn mỗi chương** (đây là thứ đáng học, không phải lời hay hình):\n1. Tên nơi + năm + một hình đẹp/lạ (\"cung điện của thần linh\").\n2. \"Một người đứng trước nó mà không có đồ bảo hộ\" → cơ thể hỏng theo từng bước, mỗi bước một con số (300 giây, 58 °C, 99 %, pH 1,5–2,5) và con số nằm trên một đạo cụ trong hình (đồng hồ nhiệt, máy đo pH).\n3. Câu chốt đạo đức: \"con người tham lam / kiêu ngạo đã tạo ra nó\".\n\n**Điểm mạnh:** hook 10 từ, vào thẳng; mỗi chương là một hook mới, nên video dài mà không cần giữ một câu hỏi suốt 3 phút; \"bạn\" là nạn nhân, đúng chất What If.\n**Điểm yếu:** hình gần như tĩnh (ảnh 2D trượt nhẹ, khung 16:9 nằm trong video dọc với nền mờ); lời đọc dày số; vài chi tiết sai hoặc phóng đại (sâu bướm Lonomia gây chảy máu, không phải sốc phản vệ).\n**Không rõ:** file không có số view/like, nên chưa biết nó có thật sự chạy hay không.\n\n## 5. Đề xuất video dài đầu tiên (8–10 phút, 16:9)\nCác con số dưới đây **chưa được kiểm**; phải kiểm và ghi nguồn trong SCRIPT.md.\n\n**A. What If You Spent One Minute in Earth's Deadliest Places? ⏱️ ⭐ Đề xuất**\n- Hook: *\"You have sixty seconds in each place. Most people don't finish the first one.\"*\n- Chuỗi: 6–7 chương leo thang, mỗi chương \"you\" bước vào với **đồng hồ 60 giây trên HUD** và cơ thể báo hỏng theo đồng hồ: hồ Natron → Danakil → hang Naica → Rio Tinto → đáy rãnh Mariana → Chân Voi Chernobyl. Chương cuối là twist: nơi nguy hiểm nhất là nơi người ta tự xây.\n- Lý do: lấy khuôn chương của video tham khảo nhưng giữ DNA của mình (you + HUD + số trên đạo cụ + twist cuối). Hơn 60 % ngoài trời. **Mỗi chương cắt được thành một Short** (6 Shorts từ một lần dựng), và mỗi Short dẫn về video dài.\n\n**B. What If You Fell Through the Earth? 🕳️**\n- Hook: *\"Jump into this hole and you'd come out the other side in 42 minutes.\"*\n- Chuỗi: một cú rơi liền mạch, HUD độ sâu / nhiệt độ / tốc độ: vỏ → manti → lõi → không trọng lượng ở tâm → dao động mãi. Giữ lời giải (\"bạn không bao giờ ra được\") đến cuối.\n- Lý do: dùng lại cảnh rơi 3D của ep12/ep18; một câu hỏi duy nhất giữ người xem như ep03. Rủi ro: ít địa điểm, khó đạt chuẩn 4–6 nơi.\n\n**C. Bản biên tập các tập What If (thử nghiệm rẻ)**\n- Ghép ep03, ep06, ep07, ep13 thành 5–6 phút với lời dẫn nối.\n- Lý do: thử phản ứng của khán giả video dài gần như không tốn công. Hạn chế: hình dọc trong khung ngang, YouTube phân phối kém; chỉ nên làm nếu muốn đo trước khi đầu tư A.\n\n**Việc kỹ thuật trước khi dựng A:** engine đang cố định 1080×1920 (SHORT_FRAMES, Short.tsx). Cần một composition 1920×1080 (camera, phụ đề, inserts đặt lại theo khung ngang). Đây là việc lớn nhất của video dài, nên làm và kiểm trên một chương trước.\n\n## 6. Việc cần làm tối nay\n- [ ] Sửa lịch: ep10 (08/11?), ep11 trùng ngày 09/11.\n- [ ] Chốt A, B hay C cho video dài; nếu A, chọn 6 nơi và kiểm số cho từng nơi.\n- [ ] Thử composition 16:9 trên một cảnh (một still) trước khi viết shot list.\n- [ ] Kiểm bts_cat trong Studio.\n- [ ] 09–10/11: đọc phần view theo nước của ep13 để kiểm giả thuyết lịch sử + US. Nếu đúng, chương của A ưu tiên những nơi người Mỹ quen (Death Valley, Yellowstone, Mount St. Helens, Centralia).\n\n---\nNhững gì chưa kiểm: số ở mục 5; số view/like của video TikTok; ep10 đã được dời trên YouTube hay chưa (uploaded.json có thể cũ).\nRủi ro: ep13 mới ~7 giờ, like/view 3,0 % có thể giảm khi feed đẩy rộng hơn.\n";
+const doc = document.getElementById("doc");
+try { doc.innerHTML = marked.parse(MD, { gfm: true }); }
+catch { doc.textContent = MD; doc.style.whiteSpace = "pre-wrap"; } // offline: still readable
+const h1 = doc.querySelector("h1"); if (h1) document.getElementById("title").textContent = h1.textContent;
+// wrap each h2 + its content in a card; tables scroll sideways on phones
+[...doc.querySelectorAll("table")].forEach((t) => { const w = document.createElement("div"); w.className = "table"; t.replaceWith(w); w.append(t); });
+let card = null;
+[...doc.childNodes].forEach((n) => {
+  if (n.nodeName === "H2") { card = document.createElement("section"); card.className = "card"; n.after(card); return; }
+  if (card && n.nodeName !== "H1") card.append(n);
+});
+doc.querySelectorAll("input[type=checkbox]").forEach((c) => (c.disabled = false));
+</script>
+</body>
+</html>

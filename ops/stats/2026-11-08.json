@@ -1,0 +1,2194 @@
+{
+  "at": "2026-11-08T06:53:24.720Z",
+  "channel": {
+    "id": "UC35_1F5Vl6BdJSCR5F3T6zQ",
+    "title": "devzanki_001",
+    "uploads": "UU35_1F5Vl6BdJSCR5F3T6zQ"
+  },
+  "videos": [
+    {
+      "ep": "ep01",
+      "id": "rGsbDC-srRg",
+      "title": "What If Green Didn't Exist? 🌲➡️⚫",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M29S",
+      "views": 7,
+      "likes": 0,
+      "comments": 0,
+      "analytics": {
+        "views": 7,
+        "estimatedMinutesWatched": 2,
+        "averageViewDuration": 38,
+        "averageViewPercentage": 43.05,
+        "likes": 0,
+        "shares": 0,
+        "subscribersGained": 0
+      },
+      "retention": [],
+      "traffic": [
+        {
+          "insightTrafficSourceType": "YT_SEARCH",
+          "views": 5
+        },
+        {
+          "insightTrafficSourceType": "YT_CHANNEL",
+          "views": 2
+        },
+        {
+          "insightTrafficSourceType": "NO_LINK_OTHER",
+          "views": 0
+        }
+      ],
+      "countries": []
+    },
+    {
+      "ep": "ep02",
+      "id": "K8_9z4otNiI",
+      "title": "What If You Could Turn Your Weight Down Like Volume? 🎚️",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M23S",
+      "views": 1293,
+      "likes": 24,
+      "comments": 0,
+      "analytics": {
+        "views": 1265,
+        "estimatedMinutesWatched": 529,
+        "averageViewDuration": 37,
+        "averageViewPercentage": 44.89,
+        "likes": 24,
+        "shares": 0,
+        "subscribersGained": 3
+      },
+      "retention": [
+        [
+          0.01,
+          1.098,
+          0.441
+        ],
+        [
+          0.02,
+          1.079,
+          0.375
+        ],
+        [
+          0.03,
+          1.066,
+          0.317
+        ],
+        [
+          0.04,
+          1.055,
+          0.284
+        ],
+        [
+          0.05,
+          1.053,
+          0.267
+        ],
+        [
+          0.06,
+          1.042,
+          0.256
+        ],
+        [
+          0.07,
+          0.975,
+          0.25
+        ],
+        [
+          0.08,
+          0.914,
+          0.244
+        ],
+        [
+          0.09,
+          0.871,
+          0.239
+        ],
+        [
+          0.1,
+          0.818,
+          0.235
+        ],
+        [
+          0.11,
+          0.762,
+          0.233
+        ],
+        [
+          0.12,
+          0.722,
+          0.232
+        ],
+        [
+          0.13,
+          0.711,
+          0.233
+        ],
+        [
+          0.14,
+          0.702,
+          0.234
+        ],
+        [
+          0.15,
+          0.696,
+          0.236
+        ],
+        [
+          0.16,
+          0.684,
+          0.237
+        ],
+        [
+          0.17,
+          0.657,
+          0.24
+        ],
+        [
+          0.18,
+          0.642,
+          0.242
+        ],
+        [
+          0.19,
+          0.634,
+          0.245
+        ],
+        [
+          0.2,
+          0.63,
+          0.247
+        ],
+        [
+          0.21,
+          0.613,
+          0.25
+        ],
+        [
+          0.22,
+          0.605,
+          0.253
+        ],
+        [
+          0.23,
+          0.605,
+          0.256
+        ],
+        [
+          0.24,
+          0.601,
+          0.259
+        ],
+        [
+          0.25,
+          0.584,
+          0.262
+        ],
+        [
+          0.26,
+          0.573,
+          0.264
+        ],
+        [
+          0.27,
+          0.57,
+          0.264
+        ],
+        [
+          0.28,
+          0.565,
+          0.263
+        ],
+        [
+          0.29,
+          0.559,
+          0.261
+        ],
+        [
+          0.3,
+          0.552,
+          0.258
+        ],
+        [
+          0.31,
+          0.545,
+          0.256
+        ],
+        [
+          0.32,
+          0.536,
+          0.254
+        ],
+        [
+          0.33,
+          0.529,
+          0.252
+        ],
+        [
+          0.34,
+          0.519,
+          0.252
+        ],
+        [
+          0.35,
+          0.513,
+          0.252
+        ],
+        [
+          0.36,
+          0.498,
+          0.253
+        ],
+        [
+          0.37,
+          0.492,
+          0.253
+        ],
+        [
+          0.38,
+          0.483,
+          0.254
+        ],
+        [
+          0.39,
+          0.478,
+          0.255
+        ],
+        [
+          0.4,
+          0.467,
+          0.255
+        ],
+        [
+          0.41,
+          0.454,
+          0.257
+        ],
+        [
+          0.42,
+          0.441,
+          0.26
+        ],
+        [
+          0.43,
+          0.433,
+          0.264
+        ],
+        [
+          0.44,
+          0.432,
+          0.27
+        ],
+        [
+          0.45,
+          0.43,
+          0.277
+        ],
+        [
+          0.46,
+          0.422,
+          0.286
+        ],
+        [
+          0.47,
+          0.418,
+          0.296
+        ],
+        [
+          0.48,
+          0.412,
+          0.307
+        ],
+        [
+          0.49,
+          0.406,
+          0.318
+        ],
+        [
+          0.5,
+          0.406,
+          0.33
+        ],
+        [
+          0.51,
+          0.401,
+          0.343
+        ],
+        [
+          0.52,
+          0.395,
+          0.355
+        ],
+        [
+          0.53,
+          0.394,
+          0.367
+        ],
+        [
+          0.54,
+          0.394,
+          0.379
+        ],
+        [
+          0.55,
+          0.394,
+          0.389
+        ],
+        [
+          0.56,
+          0.386,
+          0.398
+        ],
+        [
+          0.57,
+          0.377,
+          0.404
+        ],
+        [
+          0.58,
+          0.368,
+          0.407
+        ],
+        [
+          0.59,
+          0.366,
+          0.407
+        ],
+        [
+          0.6,
+          0.363,
+          0.404
+        ],
+        [
+          0.61,
+          0.36,
+          0.398
+        ],
+        [
+          0.62,
+          0.357,
+          0.389
+        ],
+        [
+          0.63,
+          0.355,
+          0.379
+        ],
+        [
+          0.64,
+          0.352,
+          0.368
+        ],
+        [
+          0.65,
+          0.349,
+          0.356
+        ],
+        [
+          0.66,
+          0.345,
+          0.342
+        ],
+        [
+          0.67,
+          0.341,
+          0.329
+        ],
+        [
+          0.68,
+          0.336,
+          0.316
+        ],
+        [
+          0.69,
+          0.333,
+          0.304
+        ],
+        [
+          0.7,
+          0.332,
+          0.294
+        ],
+        [
+          0.71,
+          0.325,
+          0.285
+        ],
+        [
+          0.72,
+          0.314,
+          0.278
+        ],
+        [
+          0.73,
+          0.31,
+          0.272
+        ],
+        [
+          0.74,
+          0.302,
+          0.267
+        ],
+        [
+          0.75,
+          0.295,
+          0.263
+        ],
+        [
+          0.76,
+          0.285,
+          0.26
+        ],
+        [
+          0.77,
+          0.273,
+          0.257
+        ],
+        [
+          0.78,
+          0.261,
+          0.255
+        ],
+        [
+          0.79,
+          0.26,
+          0.254
+        ],
+        [
+          0.8,
+          0.256,
+          0.256
+        ],
+        [
+          0.81,
+          0.254,
+          0.259
+        ],
+        [
+          0.82,
+          0.254,
+          0.263
+        ],
+        [
+          0.83,
+          0.249,
+          0.269
+        ],
+        [
+          0.84,
+          0.243,
+          0.275
+        ],
+        [
+          0.85,
+          0.232,
+          0.282
+        ],
+        [
+          0.86,
+          0.228,
+          0.29
+        ],
+        [
+          0.87,
+          0.223,
+          0.3
+        ],
+        [
+          0.88,
+          0.219,
+          0.31
+        ],
+        [
+          0.89,
+          0.214,
+          0.321
+        ],
+        [
+          0.9,
+          0.206,
+          0.332
+        ],
+        [
+          0.91,
+          0.202,
+          0.342
+        ],
+        [
+          0.92,
+          0.199,
+          0.351
+        ],
+        [
+          0.93,
+          0.198,
+          0.359
+        ],
+        [
+          0.94,
+          0.195,
+          0.366
+        ],
+        [
+          0.95,
+          0.194,
+          0.375
+        ],
+        [
+          0.96,
+          0.188,
+          0.386
+        ],
+        [
+          0.97,
+          0.171,
+          0.402
+        ],
+        [
+          0.98,
+          0.159,
+          0.423
+        ],
+        [
+          0.99,
+          0.128,
+          0.446
+        ],
+        [
+          1,
+          0.095,
+          0.465
+        ]
+      ],
+      "traffic": [
+        {
+          "insightTrafficSourceType": "SHORTS",
+          "views": 1222
+        },
+        {
+          "insightTrafficSourceType": "YT_SEARCH",
+          "views": 25
+        },
+        {
+          "insightTrafficSourceType": "YT_CHANNEL",
+          "views": 9
+        },
+        {
+          "insightTrafficSourceType": "YT_OTHER_PAGE",
+          "views": 6
+        },
+        {
+          "insightTrafficSourceType": "NO_LINK_OTHER",
+          "views": 1
+        }
+      ],
+      "countries": [
+        {
+          "country": "US",
+          "views": 412,
+          "averageViewDuration": 38,
+          "averageViewPercentage": 46.88
+        },
+        {
+          "country": "PH",
+          "views": 318,
+          "averageViewDuration": 36,
+          "averageViewPercentage": 43.58
+        },
+        {
+          "country": "IN",
+          "views": 89,
+          "averageViewDuration": 36,
+          "averageViewPercentage": 44.42
+        },
+        {
+          "country": "ID",
+          "views": 50,
+          "averageViewDuration": 45,
+          "averageViewPercentage": 54.79999999999999
+        },
+        {
+          "country": "MX",
+          "views": 39,
+          "averageViewDuration": 27,
+          "averageViewPercentage": 33.12
+        },
+        {
+          "country": "VN",
+          "views": 32,
+          "averageViewDuration": 31,
+          "averageViewPercentage": 38.09
+        },
+        {
+          "country": "MY",
+          "views": 20,
+          "averageViewDuration": 38,
+          "averageViewPercentage": 45.97
+        },
+        {
+          "country": "BR",
+          "views": 20,
+          "averageViewDuration": 36,
+          "averageViewPercentage": 43.58
+        },
+        {
+          "country": "CA",
+          "views": 17,
+          "averageViewDuration": 38,
+          "averageViewPercentage": 46.72
+        }
+      ]
+    },
+    {
+      "ep": "ep03",
+      "id": "U8LgA5o3et0",
+      "title": "What If Leveling Up Cost You Years of Your Life? ⏳",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M29S",
+      "views": 1422,
+      "likes": 28,
+      "comments": 0,
+      "analytics": {
+        "views": 1079,
+        "estimatedMinutesWatched": 984,
+        "averageViewDuration": 80,
+        "averageViewPercentage": 90.35,
+        "likes": 25,
+        "shares": 0,
+        "subscribersGained": 3
+      },
+      "retention": [
+        [
+          0.01,
+          1.484,
+          0.717
+        ],
+        [
+          0.02,
+          1.453,
+          0.709
+        ],
+        [
+          0.03,
+          1.427,
+          0.703
+        ],
+        [
+          0.04,
+          1.42,
+          0.701
+        ],
+        [
+          0.05,
+          1.417,
+          0.699
+        ],
+        [
+          0.06,
+          1.39,
+          0.698
+        ],
+        [
+          0.07,
+          1.369,
+          0.696
+        ],
+        [
+          0.08,
+          1.332,
+          0.695
+        ],
+        [
+          0.09,
+          1.303,
+          0.693
+        ],
+        [
+          0.1,
+          1.278,
+          0.692
+        ],
+        [
+          0.11,
+          1.252,
+          0.69
+        ],
+        [
+          0.12,
+          1.241,
+          0.688
+        ],
+        [
+          0.13,
+          1.228,
+          0.687
+        ],
+        [
+          0.14,
+          1.222,
+          0.685
+        ],
+        [
+          0.15,
+          1.218,
+          0.684
+        ],
+        [
+          0.16,
+          1.2,
+          0.682
+        ],
+        [
+          0.17,
+          1.178,
+          0.681
+        ],
+        [
+          0.18,
+          1.163,
+          0.679
+        ],
+        [
+          0.19,
+          1.156,
+          0.678
+        ],
+        [
+          0.2,
+          1.147,
+          0.676
+        ],
+        [
+          0.21,
+          1.14,
+          0.673
+        ],
+        [
+          0.22,
+          1.136,
+          0.671
+        ],
+        [
+          0.23,
+          1.134,
+          0.668
+        ],
+        [
+          0.24,
+          1.129,
+          0.665
+        ],
+        [
+          0.25,
+          1.128,
+          0.661
+        ],
+        [
+          0.26,
+          1.123,
+          0.657
+        ],
+        [
+          0.27,
+          1.119,
+          0.652
+        ],
+        [
+          0.28,
+          1.107,
+          0.647
+        ],
+        [
+          0.29,
+          1.099,
+          0.642
+        ],
+        [
+          0.3,
+          1.077,
+          0.637
+        ],
+        [
+          0.31,
+          1.067,
+          0.632
+        ],
+        [
+          0.32,
+          1.059,
+          0.627
+        ],
+        [
+          0.33,
+          1.044,
+          0.622
+        ],
+        [
+          0.34,
+          1.032,
+          0.617
+        ],
+        [
+          0.35,
+          1.021,
+          0.612
+        ],
+        [
+          0.36,
+          1.008,
+          0.607
+        ],
+        [
+          0.37,
+          1.004,
+          0.602
+        ],
+        [
+          0.38,
+          1.001,
+          0.598
+        ],
+        [
+          0.39,
+          0.995,
+          0.593
+        ],
+        [
+          0.4,
+          0.992,
+          0.589
+        ],
+        [
+          0.41,
+          0.988,
+          0.585
+        ],
+        [
+          0.42,
+          0.986,
+          0.581
+        ],
+        [
+          0.43,
+          0.975,
+          0.577
+        ],
+        [
+          0.44,
+          0.971,
+          0.573
+        ],
+        [
+          0.45,
+          0.968,
+          0.57
+        ],
+        [
+          0.46,
+          0.968,
+          0.567
+        ],
+        [
+          0.47,
+          0.967,
+          0.564
+        ],
+        [
+          0.48,
+          0.958,
+          0.561
+        ],
+        [
+          0.49,
+          0.956,
+          0.559
+        ],
+        [
+          0.5,
+          0.951,
+          0.556
+        ],
+        [
+          0.51,
+          0.947,
+          0.554
+        ],
+        [
+          0.52,
+          0.933,
+          0.552
+        ],
+        [
+          0.53,
+          0.909,
+          0.55
+        ],
+        [
+          0.54,
+          0.897,
+          0.548
+        ],
+        [
+          0.55,
+          0.893,
+          0.546
+        ],
+        [
+          0.56,
+          0.887,
+          0.544
+        ],
+        [
+          0.57,
+          0.863,
+          0.541
+        ],
+        [
+          0.58,
+          0.844,
+          0.538
+        ],
+        [
+          0.59,
+          0.822,
+          0.535
+        ],
+        [
+          0.6,
+          0.804,
+          0.531
+        ],
+        [
+          0.61,
+          0.797,
+          0.528
+        ],
+        [
+          0.62,
+          0.79,
+          0.524
+        ],
+        [
+          0.63,
+          0.786,
+          0.521
+        ],
+        [
+          0.64,
+          0.78,
+          0.518
+        ],
+        [
+          0.65,
+          0.776,
+          0.515
+        ],
+        [
+          0.66,
+          0.771,
+          0.512
+        ],
+        [
+          0.67,
+          0.748,
+          0.509
+        ],
+        [
+          0.68,
+          0.724,
+          0.506
+        ],
+        [
+          0.69,
+          0.72,
+          0.504
+        ],
+        [
+          0.7,
+          0.705,
+          0.503
+        ],
+        [
+          0.71,
+          0.68,
+          0.502
+        ],
+        [
+          0.72,
+          0.665,
+          0.502
+        ],
+        [
+          0.73,
+          0.654,
+          0.503
+        ],
+        [
+          0.74,
+          0.653,
+          0.505
+        ],
+        [
+          0.75,
+          0.649,
+          0.508
+        ],
+        [
+          0.76,
+          0.643,
+          0.512
+        ],
+        [
+          0.77,
+          0.643,
+          0.517
+        ],
+        [
+          0.78,
+          0.641,
+          0.523
+        ],
+        [
+          0.79,
+          0.641,
+          0.53
+        ],
+        [
+          0.8,
+          0.641,
+          0.539
+        ],
+        [
+          0.81,
+          0.639,
+          0.547
+        ],
+        [
+          0.82,
+          0.638,
+          0.556
+        ],
+        [
+          0.83,
+          0.634,
+          0.564
+        ],
+        [
+          0.84,
+          0.63,
+          0.57
+        ],
+        [
+          0.85,
+          0.627,
+          0.574
+        ],
+        [
+          0.86,
+          0.627,
+          0.577
+        ],
+        [
+          0.87,
+          0.624,
+          0.579
+        ],
+        [
+          0.88,
+          0.621,
+          0.58
+        ],
+        [
+          0.89,
+          0.621,
+          0.58
+        ],
+        [
+          0.9,
+          0.621,
+          0.579
+        ],
+        [
+          0.91,
+          0.617,
+          0.577
+        ],
+        [
+          0.92,
+          0.61,
+          0.574
+        ],
+        [
+          0.93,
+          0.605,
+          0.571
+        ],
+        [
+          0.94,
+          0.593,
+          0.569
+        ],
+        [
+          0.95,
+          0.58,
+          0.566
+        ],
+        [
+          0.96,
+          0.573,
+          0.564
+        ],
+        [
+          0.97,
+          0.562,
+          0.561
+        ],
+        [
+          0.98,
+          0.547,
+          0.558
+        ],
+        [
+          0.99,
+          0.524,
+          0.556
+        ],
+        [
+          1,
+          0.121,
+          0.553
+        ]
+      ],
+      "traffic": [
+        {
+          "insightTrafficSourceType": "SHORTS",
+          "views": 1042
+        },
+        {
+          "insightTrafficSourceType": "YT_SEARCH",
+          "views": 25
+        },
+        {
+          "insightTrafficSourceType": "YT_CHANNEL",
+          "views": 8
+        },
+        {
+          "insightTrafficSourceType": "YT_OTHER_PAGE",
+          "views": 4
+        },
+        {
+          "insightTrafficSourceType": "NO_LINK_OTHER",
+          "views": 0
+        }
+      ],
+      "countries": [
+        {
+          "country": "US",
+          "views": 414,
+          "averageViewDuration": 89,
+          "averageViewPercentage": 100.49
+        },
+        {
+          "country": "PH",
+          "views": 116,
+          "averageViewDuration": 46,
+          "averageViewPercentage": 52.68000000000001
+        },
+        {
+          "country": "IN",
+          "views": 65,
+          "averageViewDuration": 49,
+          "averageViewPercentage": 55.279999999999994
+        },
+        {
+          "country": "GB",
+          "views": 47,
+          "averageViewDuration": 435,
+          "averageViewPercentage": 489.45
+        },
+        {
+          "country": "CA",
+          "views": 37,
+          "averageViewDuration": 49,
+          "averageViewPercentage": 55.16
+        },
+        {
+          "country": "MY",
+          "views": 20,
+          "averageViewDuration": 37,
+          "averageViewPercentage": 41.9
+        },
+        {
+          "country": "ID",
+          "views": 14,
+          "averageViewDuration": 43,
+          "averageViewPercentage": 48.98
+        }
+      ]
+    },
+    {
+      "ep": "ep04",
+      "id": "S_5RbYfQy64",
+      "title": "What If Humans Had a Second Face on the Back of Their Heads? 👀",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M14S",
+      "views": 14,
+      "likes": 0,
+      "comments": 0,
+      "analytics": {
+        "views": 14,
+        "estimatedMinutesWatched": 13,
+        "averageViewDuration": 135,
+        "averageViewPercentage": 182.94,
+        "likes": 0,
+        "shares": 0,
+        "subscribersGained": 0
+      },
+      "retention": [],
+      "traffic": [
+        {
+          "insightTrafficSourceType": "YT_CHANNEL",
+          "views": 6
+        },
+        {
+          "insightTrafficSourceType": "SUBSCRIBER",
+          "views": 4
+        },
+        {
+          "insightTrafficSourceType": "YT_SEARCH",
+          "views": 4
+        },
+        {
+          "insightTrafficSourceType": "NO_LINK_OTHER",
+          "views": 0
+        }
+      ],
+      "countries": []
+    },
+    {
+      "ep": "ep05",
+      "id": "5mWsXt0IXAc",
+      "title": "What If Everyone on Earth Ground Their Teeth at the Same Time? 😬",
+      "privacy": "public",
+      "publishAt": "2026-11-05T00:00:00Z",
+      "duration": "PT1M15S",
+      "views": 1353,
+      "likes": 22,
+      "comments": 1,
+      "analytics": {
+        "views": 1265,
+        "estimatedMinutesWatched": 513,
+        "averageViewDuration": 33,
+        "averageViewPercentage": 45.19,
+        "likes": 21,
+        "shares": 0,
+        "subscribersGained": 1
+      },
+      "retention": [
+        [
+          0.01,
+          1.116,
+          0.485
+        ],
+        [
+          0.02,
+          1.086,
+          0.45
+        ],
+        [
+          0.03,
+          1.067,
+          0.412
+        ],
+        [
+          0.04,
+          1.056,
+          0.379
+        ],
+        [
+          0.05,
+          1.048,
+          0.354
+        ],
+        [
+          0.06,
+          1.047,
+          0.335
+        ],
+        [
+          0.07,
+          1.036,
+          0.322
+        ],
+        [
+          0.08,
+          1.018,
+          0.312
+        ],
+        [
+          0.09,
+          0.998,
+          0.303
+        ],
+        [
+          0.1,
+          0.991,
+          0.294
+        ],
+        [
+          0.11,
+          0.967,
+          0.286
+        ],
+        [
+          0.12,
+          0.938,
+          0.277
+        ],
+        [
+          0.13,
+          0.92,
+          0.268
+        ],
+        [
+          0.14,
+          0.912,
+          0.26
+        ],
+        [
+          0.15,
+          0.898,
+          0.251
+        ],
+        [
+          0.16,
+          0.887,
+          0.243
+        ],
+        [
+          0.17,
+          0.873,
+          0.234
+        ],
+        [
+          0.18,
+          0.859,
+          0.225
+        ],
+        [
+          0.19,
+          0.815,
+          0.217
+        ],
+        [
+          0.2,
+          0.8,
+          0.209
+        ],
+        [
+          0.21,
+          0.791,
+          0.202
+        ],
+        [
+          0.22,
+          0.752,
+          0.196
+        ],
+        [
+          0.23,
+          0.698,
+          0.191
+        ],
+        [
+          0.24,
+          0.659,
+          0.188
+        ],
+        [
+          0.25,
+          0.645,
+          0.186
+        ],
+        [
+          0.26,
+          0.641,
+          0.184
+        ],
+        [
+          0.27,
+          0.635,
+          0.183
+        ],
+        [
+          0.28,
+          0.626,
+          0.184
+        ],
+        [
+          0.29,
+          0.614,
+          0.185
+        ],
+        [
+          0.3,
+          0.605,
+          0.187
+        ],
+        [
+          0.31,
+          0.592,
+          0.189
+        ],
+        [
+          0.32,
+          0.572,
+          0.191
+        ],
+        [
+          0.33,
+          0.557,
+          0.194
+        ],
+        [
+          0.34,
+          0.541,
+          0.198
+        ],
+        [
+          0.35,
+          0.507,
+          0.202
+        ],
+        [
+          0.36,
+          0.495,
+          0.206
+        ],
+        [
+          0.37,
+          0.463,
+          0.211
+        ],
+        [
+          0.38,
+          0.442,
+          0.217
+        ],
+        [
+          0.39,
+          0.436,
+          0.224
+        ],
+        [
+          0.4,
+          0.425,
+          0.231
+        ],
+        [
+          0.41,
+          0.412,
+          0.238
+        ],
+        [
+          0.42,
+          0.398,
+          0.244
+        ],
+        [
+          0.43,
+          0.388,
+          0.249
+        ],
+        [
+          0.44,
+          0.374,
+          0.253
+        ],
+        [
+          0.45,
+          0.362,
+          0.255
+        ],
+        [
+          0.46,
+          0.355,
+          0.256
+        ],
+        [
+          0.47,
+          0.342,
+          0.256
+        ],
+        [
+          0.48,
+          0.333,
+          0.255
+        ],
+        [
+          0.49,
+          0.329,
+          0.254
+        ],
+        [
+          0.5,
+          0.324,
+          0.252
+        ],
+        [
+          0.51,
+          0.321,
+          0.252
+        ],
+        [
+          0.52,
+          0.321,
+          0.254
+        ],
+        [
+          0.53,
+          0.317,
+          0.258
+        ],
+        [
+          0.54,
+          0.316,
+          0.266
+        ],
+        [
+          0.55,
+          0.313,
+          0.276
+        ],
+        [
+          0.56,
+          0.308,
+          0.287
+        ],
+        [
+          0.57,
+          0.306,
+          0.3
+        ],
+        [
+          0.58,
+          0.305,
+          0.314
+        ],
+        [
+          0.59,
+          0.296,
+          0.329
+        ],
+        [
+          0.6,
+          0.292,
+          0.343
+        ],
+        [
+          0.61,
+          0.282,
+          0.358
+        ],
+        [
+          0.62,
+          0.278,
+          0.372
+        ],
+        [
+          0.63,
+          0.267,
+          0.385
+        ],
+        [
+          0.64,
+          0.262,
+          0.396
+        ],
+        [
+          0.65,
+          0.258,
+          0.404
+        ],
+        [
+          0.66,
+          0.257,
+          0.411
+        ],
+        [
+          0.67,
+          0.256,
+          0.415
+        ],
+        [
+          0.68,
+          0.252,
+          0.417
+        ],
+        [
+          0.69,
+          0.248,
+          0.419
+        ],
+        [
+          0.7,
+          0.243,
+          0.42
+        ],
+        [
+          0.71,
+          0.241,
+          0.42
+        ],
+        [
+          0.72,
+          0.237,
+          0.419
+        ],
+        [
+          0.73,
+          0.237,
+          0.418
+        ],
+        [
+          0.74,
+          0.236,
+          0.417
+        ],
+        [
+          0.75,
+          0.236,
+          0.414
+        ],
+        [
+          0.76,
+          0.238,
+          0.41
+        ],
+        [
+          0.77,
+          0.238,
+          0.406
+        ],
+        [
+          0.78,
+          0.237,
+          0.401
+        ],
+        [
+          0.79,
+          0.237,
+          0.396
+        ],
+        [
+          0.8,
+          0.235,
+          0.391
+        ],
+        [
+          0.81,
+          0.232,
+          0.388
+        ],
+        [
+          0.82,
+          0.228,
+          0.387
+        ],
+        [
+          0.83,
+          0.225,
+          0.389
+        ],
+        [
+          0.84,
+          0.215,
+          0.393
+        ],
+        [
+          0.85,
+          0.207,
+          0.401
+        ],
+        [
+          0.86,
+          0.204,
+          0.41
+        ],
+        [
+          0.87,
+          0.196,
+          0.421
+        ],
+        [
+          0.88,
+          0.191,
+          0.432
+        ],
+        [
+          0.89,
+          0.19,
+          0.443
+        ],
+        [
+          0.9,
+          0.187,
+          0.453
+        ],
+        [
+          0.91,
+          0.183,
+          0.462
+        ],
+        [
+          0.92,
+          0.181,
+          0.471
+        ],
+        [
+          0.93,
+          0.18,
+          0.479
+        ],
+        [
+          0.94,
+          0.178,
+          0.489
+        ],
+        [
+          0.95,
+          0.178,
+          0.499
+        ],
+        [
+          0.96,
+          0.163,
+          0.511
+        ],
+        [
+          0.97,
+          0.149,
+          0.524
+        ],
+        [
+          0.98,
+          0.14,
+          0.538
+        ],
+        [
+          0.99,
+          0.133,
+          0.552
+        ],
+        [
+          1,
+          0.097,
+          0.562
+        ]
+      ],
+      "traffic": [
+        {
+          "insightTrafficSourceType": "SHORTS",
+          "views": 1221
+        },
+        {
+          "insightTrafficSourceType": "YT_SEARCH",
+          "views": 29
+        },
+        {
+          "insightTrafficSourceType": "YT_OTHER_PAGE",
+          "views": 6
+        },
+        {
+          "insightTrafficSourceType": "YT_CHANNEL",
+          "views": 5
+        },
+        {
+          "insightTrafficSourceType": "SUBSCRIBER",
+          "views": 2
+        },
+        {
+          "insightTrafficSourceType": "NO_LINK_OTHER",
+          "views": 0
+        }
+      ],
+      "countries": [
+        {
+          "country": "PH",
+          "views": 348,
+          "averageViewDuration": 30,
+          "averageViewPercentage": 41.16
+        },
+        {
+          "country": "US",
+          "views": 299,
+          "averageViewDuration": 33,
+          "averageViewPercentage": 45.09
+        },
+        {
+          "country": "IN",
+          "views": 129,
+          "averageViewDuration": 36,
+          "averageViewPercentage": 49.24
+        },
+        {
+          "country": "ID",
+          "views": 57,
+          "averageViewDuration": 34,
+          "averageViewPercentage": 45.64
+        },
+        {
+          "country": "MX",
+          "views": 35,
+          "averageViewDuration": 26,
+          "averageViewPercentage": 35.63
+        },
+        {
+          "country": "VN",
+          "views": 32,
+          "averageViewDuration": 38,
+          "averageViewPercentage": 51.03
+        },
+        {
+          "country": "BD",
+          "views": 19,
+          "averageViewDuration": 32,
+          "averageViewPercentage": 43.7
+        },
+        {
+          "country": "BR",
+          "views": 18,
+          "averageViewDuration": 44,
+          "averageViewPercentage": 59.82999999999999
+        },
+        {
+          "country": "GB",
+          "views": 16,
+          "averageViewDuration": 41,
+          "averageViewPercentage": 55.09
+        },
+        {
+          "country": "MY",
+          "views": 13,
+          "averageViewDuration": 39,
+          "averageViewPercentage": 52.16
+        }
+      ]
+    },
+    {
+      "ep": "ep06",
+      "id": "sZyZj7lwwBs",
+      "title": "What If You Could Sell Your Sleep? 💤",
+      "privacy": "public",
+      "publishAt": "2026-11-07T00:00:00Z",
+      "duration": "PT1M18S",
+      "views": 1310,
+      "likes": 36,
+      "comments": 2,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep07",
+      "id": "sJ_8216KdSQ",
+      "title": "What If You Could Shrink Yourself With a Dial? 🤏",
+      "privacy": "public",
+      "publishAt": "2026-11-07T00:00:00Z",
+      "duration": "PT1M4S",
+      "views": 1377,
+      "likes": 26,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep08",
+      "id": "SFDp4bVjJOk",
+      "title": "What If You Could Breathe Underwater? 🫧",
+      "privacy": "public",
+      "publishAt": "2026-11-08T00:00:00Z",
+      "duration": "PT1M6S",
+      "views": 677,
+      "likes": 14,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep10",
+      "id": "-evU9ACFrQA",
+      "title": "What If You Lived One Day Inside a Cartoon? ✏️",
+      "privacy": "private",
+      "publishAt": "2026-11-08T00:00:00Z",
+      "duration": "PT1M15S",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep09",
+      "id": "7ppXxciUNcM",
+      "title": "What If You Woke Up as a Sponge? 🧽",
+      "privacy": "private",
+      "publishAt": "2026-11-09T00:00:00Z",
+      "duration": "PT1M10S",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "bts_cat",
+      "id": "9Lz2k5owq_8",
+      "missing": true
+    },
+    {
+      "ep": "ep11",
+      "id": "62YTQU1p1Hs",
+      "title": "What If You Could Photosynthesize? 🌱",
+      "privacy": "private",
+      "publishAt": "2026-11-09T00:00:00Z",
+      "duration": "PT1M",
+      "views": 6,
+      "likes": 0,
+      "comments": 0,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep12",
+      "id": "vGaHtPu6Ug0",
+      "title": "What If You Fell Between Dreams and Reality? 🌀",
+      "privacy": "private",
+      "publishAt": "2026-11-10T00:00:00Z",
+      "duration": "PT1M6S",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep13",
+      "id": "SUe1Lr0CjnU",
+      "title": "What If the Train Came After You? 🚂🐎",
+      "privacy": "public",
+      "publishAt": "2026-11-08T00:00:00Z",
+      "duration": "PT1M12S",
+      "views": 1179,
+      "likes": 35,
+      "comments": 2,
+      "analytics": null,
+      "retention": [],
+      "traffic": [],
+      "countries": []
+    },
+    {
+      "ep": "ep14",
+      "id": "wIUlzSxMeNk",
+      "title": "What If You Invaded Switzerland? 🇨🇭💥",
+      "privacy": "private",
+      "publishAt": "2026-11-11T00:00:00Z",
+      "duration": "PT1M15S",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep15",
+      "id": "6VquJ5tJ_qE",
+      "title": "What If You Sank Your Own Submarine? 🌊",
+      "privacy": "private",
+      "publishAt": "2026-11-12T00:00:00Z",
+      "duration": "PT1M16S",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep16",
+      "id": "5kSvQ15Q-A4",
+      "title": "What If You Had to Tip for Everything? 💸",
+      "privacy": "private",
+      "publishAt": "2026-11-13T00:00:00Z",
+      "duration": "PT1M10S",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep17",
+      "id": "F5S1RxyD7tg",
+      "title": "What If Your Salary Floated Over Your Head? 💰",
+      "privacy": "private",
+      "publishAt": "2026-11-14T00:00:00Z",
+      "duration": "PT1M11S",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep18",
+      "id": "AsSxbUUprEo",
+      "title": "What If a Tornado Picked You Up? 🌪️",
+      "privacy": "private",
+      "publishAt": "2026-11-15T00:00:00Z",
+      "duration": "PT1M12S",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep19",
+      "id": "qXrTrXgq9I4",
+      "title": "What If You Dropped a Frozen Turkey in a Fryer? 🦃🔥",
+      "privacy": "private",
+      "publishAt": "2026-11-24T00:00:00Z",
+      "duration": "PT1M13S",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep20",
+      "id": "w3UqyD7CrQE",
+      "title": "What If America Never Bought Alaska? 🇺🇸",
+      "privacy": "private",
+      "publishAt": "2026-11-16T00:00:00Z",
+      "duration": "PT1M9S",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    },
+    {
+      "ep": "ep21",
+      "id": "tnztZiELvpI",
+      "title": "What If Every Word Cost Money? 💸",
+      "privacy": "private",
+      "publishAt": "2026-11-17T00:00:00Z",
+      "duration": "PT1M12S",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "analyticsError": "412 'start-date' must be before or the same as the 'end-date'."
+    }
+  ],
+  "countries": [
+    {
+      "country": "US",
+      "views": 1129,
+      "averageViewDuration": 55,
+      "averageViewPercentage": 67.18
+    },
+    {
+      "country": "PH",
+      "views": 799,
+      "averageViewDuration": 35,
+      "averageViewPercentage": 44.21
+    },
+    {
+      "country": "IN",
+      "views": 298,
+      "averageViewDuration": 40,
+      "averageViewPercentage": 49.93
+    },
+    {
+      "country": "VN",
+      "views": 182,
+      "averageViewDuration": 46,
+      "averageViewPercentage": 59.35
+    },
+    {
+      "country": "ID",
+      "views": 134,
+      "averageViewDuration": 42,
+      "averageViewPercentage": 52.78
+    },
+    {
+      "country": "GB",
+      "views": 102,
+      "averageViewDuration": 240,
+      "averageViewPercentage": 286.4
+    },
+    {
+      "country": "MY",
+      "views": 82,
+      "averageViewDuration": 39,
+      "averageViewPercentage": 47.89
+    },
+    {
+      "country": "MX",
+      "views": 79,
+      "averageViewDuration": 29,
+      "averageViewPercentage": 36.88
+    },
+    {
+      "country": "CA",
+      "views": 74,
+      "averageViewDuration": 42,
+      "averageViewPercentage": 50.95
+    },
+    {
+      "country": "BR",
+      "views": 38,
+      "averageViewDuration": 41,
+      "averageViewPercentage": 52.66
+    },
+    {
+      "country": "AU",
+      "views": 33,
+      "averageViewDuration": 56,
+      "averageViewPercentage": 66.32
+    },
+    {
+      "country": "PK",
+      "views": 24,
+      "averageViewDuration": 30,
+      "averageViewPercentage": 38.82
+    },
+    {
+      "country": "NZ",
+      "views": 22,
+      "averageViewDuration": 35,
+      "averageViewPercentage": 44.35
+    },
+    {
+      "country": "LK",
+      "views": 20,
+      "averageViewDuration": 29,
+      "averageViewPercentage": 38.11
+    },
+    {
+      "country": "BD",
+      "views": 19,
+      "averageViewDuration": 32,
+      "averageViewPercentage": 43.7
+    }
+  ]
+}
