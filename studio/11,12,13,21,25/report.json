@@ -1,0 +1,3541 @@
+[
+ {
+  "id": 1,
+  "f": 3,
+  "bad": [
+   "no haze: far geometry only 1 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 1,
+   "f": 3,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.1,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 20,
+   "bgFog": 0.01,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 89,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1,
+  "f": 77,
+  "bad": [
+   "no haze: far geometry only 1 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 1,
+   "f": 77,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.15,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 25,
+   "bgFog": 0.01,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 90,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1,
+  "f": 149,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 1,
+   "f": 149,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 110,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 88,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.05,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "f": 156,
+  "bad": [
+   "foreground set pieces cover 38 % of the frame",
+   "camera at 0.44 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)"
+  ],
+  "q": {
+   "id": 2,
+   "f": 156,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.38,
+   "camH": 0.44,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 12,
+   "bgFog": 0.02,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 90,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.12,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 2,
+  "f": 216,
+  "bad": [
+   "foreground set pieces cover 39 % of the frame",
+   "camera at 0.44 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)"
+  ],
+  "q": {
+   "id": 2,
+   "f": 216,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.39,
+   "camH": 0.44,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 12,
+   "bgFog": 0.03,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.13,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 2,
+  "f": 275,
+  "bad": [
+   "foreground set pieces cover 33 % of the frame",
+   "camera at 0.44 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)"
+  ],
+  "q": {
+   "id": 2,
+   "f": 275,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.33,
+   "camH": 0.44,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 10,
+   "bgFog": 0.05,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 89,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.13,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 3,
+  "f": 282,
+  "bad": [],
+  "q": {
+   "id": 3,
+   "f": 282,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.21,
+   "camH": 0.09,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 90,
+     "inFrame": 0.97,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.14,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 3,
+  "f": 337,
+  "bad": [],
+  "q": {
+   "id": 3,
+   "f": 337,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.16,
+   "camH": 0.1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 0.97,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.14,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 3,
+  "f": 391,
+  "bad": [],
+  "q": {
+   "id": 3,
+   "f": 391,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.12,
+   "camH": 0.11,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 0.89,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.15,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 4,
+  "f": 398,
+  "bad": [],
+  "q": {
+   "id": 4,
+   "f": 398,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 4,
+  "f": 447,
+  "bad": [],
+  "q": {
+   "id": 4,
+   "f": 447,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 4,
+  "f": 494,
+  "bad": [],
+  "q": {
+   "id": 4,
+   "f": 494,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 5,
+  "f": 501,
+  "bad": [],
+  "q": {
+   "id": 5,
+   "f": 501,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.24,
+   "camH": -0.15,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.03,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.11,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 5,
+  "f": 527,
+  "bad": [],
+  "q": {
+   "id": 5,
+   "f": 527,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.17,
+   "camH": -0.12,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 92,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.12,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 5,
+  "f": 551,
+  "bad": [],
+  "q": {
+   "id": 5,
+   "f": 551,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.17,
+   "camH": -0.16,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.03,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.12,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 6,
+  "f": 558,
+  "bad": [],
+  "q": {
+   "id": 6,
+   "f": 558,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 6,
+  "f": 630,
+  "bad": [],
+  "q": {
+   "id": 6,
+   "f": 630,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 97,
+     "inFrame": 0,
+     "headIn": 0,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.17,
+     "gap": 0.01,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 6,
+  "f": 701,
+  "bad": [
+   "foreground set pieces cover 41 % of the frame",
+   "camera at 0.41 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)",
+   "actor 0: head hidden by set geometry (47 %)",
+   "actor 0: set geometry cuts across the body (17 % of the torso)"
+  ],
+  "q": {
+   "id": 6,
+   "f": 701,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.41,
+   "camH": 0.41,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 2,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.47,
+     "headCov": 0,
+     "torsoOcc": 0.17,
+     "feetOcc": 0.33,
+     "headH": 0.14,
+     "gap": -0.11,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 7,
+  "f": 708,
+  "bad": [],
+  "q": {
+   "id": 7,
+   "f": 708,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 7,
+  "f": 727,
+  "bad": [],
+  "q": {
+   "id": 7,
+   "f": 727,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 7,
+  "f": 745,
+  "bad": [],
+  "q": {
+   "id": 7,
+   "f": 745,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 8,
+  "f": 752,
+  "bad": [
+   "foreground set pieces cover 85 % of the frame",
+   "actor 0: head hidden by set geometry (100 %)",
+   "actor 0: body hidden by set geometry (100 %)"
+  ],
+  "q": {
+   "id": 8,
+   "f": 752,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.85,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.09,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "f": 814,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 8,
+   "f": 814,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 240,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.09,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "f": 875,
+  "bad": [
+   "no haze: far geometry only 5 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 8,
+   "f": 875,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 240,
+   "bgFog": 0.05,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 88,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.07,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "f": 882,
+  "bad": [],
+  "q": {
+   "id": 9,
+   "f": 882,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 144,
+   "bgFog": 1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.07,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "f": 920,
+  "bad": [],
+  "q": {
+   "id": 9,
+   "f": 920,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 144,
+   "bgFog": 1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.09,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "f": 957,
+  "bad": [],
+  "q": {
+   "id": 9,
+   "f": 957,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 144,
+   "bgFog": 1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "fall_belly",
+     "n": 92,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.09,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 10,
+  "f": 964,
+  "bad": [
+   "actor 0: floating 0.15 m above the surface below"
+  ],
+  "q": {
+   "id": 10,
+   "f": 964,
+   "size": "mid",
+   "angle": "top",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 6.5,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "lie_back",
+     "n": 87,
+     "inFrame": 0.95,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.17,
+     "gap": 0.15,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 10,
+  "f": 1013,
+  "bad": [
+   "actor 0: floating 0.15 m above the surface below"
+  ],
+  "q": {
+   "id": 10,
+   "f": 1013,
+   "size": "mid",
+   "angle": "top",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 17.34,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "lie_back",
+     "n": 87,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0.15,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 10,
+  "f": 1060,
+  "bad": [
+   "actor 0: floating 0.15 m above the surface below"
+  ],
+  "q": {
+   "id": 10,
+   "f": 1060,
+   "size": "mid",
+   "angle": "top",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 27.83,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "lie_back",
+     "n": 87,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.04,
+     "gap": 0.15,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 11,
+  "f": 1067,
+  "bad": [
+   "foreground set pieces cover 29 % of the frame"
+  ],
+  "q": {
+   "id": 11,
+   "f": 1067,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.29,
+   "camH": 0.35,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 85,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 11,
+  "f": 1090,
+  "bad": [
+   "foreground set pieces cover 31 % of the frame"
+  ],
+  "q": {
+   "id": 11,
+   "f": 1090,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.31,
+   "camH": 0.37,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 84,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 11,
+  "f": 1111,
+  "bad": [
+   "foreground set pieces cover 33 % of the frame"
+  ],
+  "q": {
+   "id": 11,
+   "f": 1111,
+   "size": "wide",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.33,
+   "camH": 0.37,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 85,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 12,
+  "f": 1118,
+  "bad": [],
+  "q": {
+   "id": 12,
+   "f": 1118,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.81,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 24,
+   "bgFog": 0.6,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.08,
+     "gap": 0.13,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "f": 1178,
+  "bad": [
+   "actor 7: floating 0.13 m above the surface below"
+  ],
+  "q": {
+   "id": 12,
+   "f": 1178,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.77,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 24,
+   "bgFog": 0.36,
+   "cards": [
+    {
+     "i": 7,
+     "principal": true,
+     "mode": "march",
+     "n": 91,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0.13,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "f": 1237,
+  "bad": [
+   "actor 7: floating 0.13 m above the surface below"
+  ],
+  "q": {
+   "id": 12,
+   "f": 1237,
+   "size": "wide",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.08,
+   "camH": 0.77,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 8,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 7,
+     "principal": true,
+     "mode": "march",
+     "n": 92,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.06,
+     "gap": 0.13,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": [
+    [
+     0,
+     "floating"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "f": 1244,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below",
+   "actor 0: floating 0.2 m above the surface below"
+  ],
+  "q": {
+   "id": 13,
+   "f": 1244,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.76,
+   "spread": 1.4,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 109,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.1,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.14,
+     "gap": 0.2,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 13,
+  "f": 1267,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below",
+   "actor 0: floating 0.2 m above the surface below"
+  ],
+  "q": {
+   "id": 13,
+   "f": 1267,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.76,
+   "spread": 1.4,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 109,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.11,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 95,
+     "inFrame": 0.98,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.15,
+     "gap": 0.2,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 13,
+  "f": 1289,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below",
+   "actor 0: floating 0.2 m above the surface below"
+  ],
+  "q": {
+   "id": 13,
+   "f": 1289,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.76,
+   "spread": 1.39,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 109,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.11,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 95,
+     "inFrame": 0.97,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.16,
+     "gap": 0.2,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 14,
+  "f": 1296,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below"
+  ],
+  "q": {
+   "id": 14,
+   "f": 1296,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.73,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 109,
+     "inFrame": 0.91,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.24,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 14,
+  "f": 1329,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below"
+  ],
+  "q": {
+   "id": 14,
+   "f": 1329,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.73,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 107,
+     "inFrame": 0.89,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.27,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 14,
+  "f": 1361,
+  "bad": [
+   "actor 1: floating 0.4 m above the surface below"
+  ],
+  "q": {
+   "id": 14,
+   "f": 1361,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.73,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 107,
+     "inFrame": 0.88,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.3,
+     "gap": 0.4,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 15,
+  "f": 1368,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 15,
+   "f": 1368,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.02,
+   "camH": 2.46,
+   "spread": 0.78,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 40,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stroll",
+     "n": 129,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.05,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 98,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.04,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 15,
+  "f": 1412,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 15,
+   "f": 1412,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.01,
+   "camH": 4.32,
+   "spread": 0.66,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 60,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stroll",
+     "n": 131,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 15,
+  "f": 1454,
+  "bad": [
+   "no haze: far geometry only 3 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 15,
+   "f": 1454,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 6.11,
+   "spread": 0.61,
+   "row": 1,
+   "nCast": 2,
+   "bgN": 72,
+   "bgFog": 0.03,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stroll",
+     "n": 127,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.02,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.02,
+     "gap": 0,
+     "float": [
+      {
+       "frac": 0.002,
+       "x": 0.53,
+       "y": 0.19
+      }
+     ],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 16,
+  "f": 1461,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 16,
+   "f": 1461,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.85,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 34,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 134,
+     "inFrame": 0.91,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.26,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 16,
+  "f": 1492,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 16,
+   "f": 1492,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.85,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 34,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 134,
+     "inFrame": 0.9,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.28,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 16,
+  "f": 1522,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 16,
+   "f": 1522,
+   "size": "close",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.85,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 34,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 134,
+     "inFrame": 0.9,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.29,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 17,
+  "f": 1529,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 17,
+   "f": 1529,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.83,
+   "spread": 0.24,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 22,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 136,
+     "inFrame": 0.99,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.19,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 94,
+     "inFrame": 0.96,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.21,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 17,
+  "f": 1572,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 17,
+   "f": 1572,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.86,
+   "spread": 0.24,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 34,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 137,
+     "inFrame": 0.99,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.2,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 94,
+     "inFrame": 0.9,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.22,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 17,
+  "f": 1613,
+  "bad": [
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 17,
+   "f": 1613,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.88,
+   "spread": 0.24,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 23,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 137,
+     "inFrame": 0.97,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.2,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 92,
+     "inFrame": 0.88,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.22,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 18,
+  "f": 1620,
+  "bad": [
+   "foreground set pieces cover 66 % of the frame"
+  ],
+  "q": {
+   "id": 18,
+   "f": 1620,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.66,
+   "camH": 8.36,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 3,
+   "bgFog": 0.01,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.02,
+     "gap": 0,
+     "float": [
+      {
+       "frac": 0.002,
+       "x": 0.51,
+       "y": 0.18
+      }
+     ],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 18,
+  "f": 1659,
+  "bad": [
+   "foreground set pieces cover 68 % of the frame"
+  ],
+  "q": {
+   "id": 18,
+   "f": 1659,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.68,
+   "camH": 5.76,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 4,
+   "bgFog": 0.01,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.02,
+     "gap": 0,
+     "float": [
+      {
+       "frac": 0.002,
+       "x": 0.51,
+       "y": 0.18
+      }
+     ],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 18,
+  "f": 1696,
+  "bad": [
+   "foreground set pieces cover 73 % of the frame"
+  ],
+  "q": {
+   "id": 18,
+   "f": 1696,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.73,
+   "camH": 3.43,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 19,
+  "f": 1703,
+  "bad": [],
+  "q": {
+   "id": 19,
+   "f": 1703,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.61,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.16,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 19,
+  "f": 1762,
+  "bad": [],
+  "q": {
+   "id": 19,
+   "f": 1762,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.61,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.16,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 19,
+  "f": 1819,
+  "bad": [],
+  "q": {
+   "id": 19,
+   "f": 1819,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.58,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 94,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.16,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 20,
+  "f": 1826,
+  "bad": [],
+  "q": {
+   "id": 20,
+   "f": 1826,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.77,
+   "spread": 0.03,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 2,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 86,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.13,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 116,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.13,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 20,
+  "f": 1882,
+  "bad": [],
+  "q": {
+   "id": 20,
+   "f": 1882,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.77,
+   "spread": 0.03,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 2,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 86,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0.03,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.14,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 117,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0.02,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.14,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 20,
+  "f": 1937,
+  "bad": [],
+  "q": {
+   "id": 20,
+   "f": 1937,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 0.77,
+   "spread": 0.03,
+   "row": 2,
+   "nCast": 2,
+   "bgN": 2,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 86,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0.03,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.15,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    },
+    {
+     "i": 1,
+     "principal": true,
+     "mode": "stand",
+     "n": 116,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0.02,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.15,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 21,
+  "f": 1944,
+  "bad": [],
+  "q": {
+   "id": 21,
+   "f": 1944,
+   "size": "close",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 1.09,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 8,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 86,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.17,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 21,
+  "f": 1975,
+  "bad": [],
+  "q": {
+   "id": 21,
+   "f": 1975,
+   "size": "close",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 1.09,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 6,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 83,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.17,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 21,
+  "f": 2005,
+  "bad": [],
+  "q": {
+   "id": 21,
+   "f": 2005,
+   "size": "close",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0,
+   "camH": 1.08,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 6,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "sit",
+     "n": 86,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.17,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 22,
+  "f": 2012,
+  "bad": [
+   "foreground set pieces cover 44 % of the frame",
+   "camera at 0.44 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)",
+   "actor 0: head hidden by set geometry (52 %)",
+   "actor 0: set geometry cuts across the body (34 % of the torso)"
+  ],
+  "q": {
+   "id": 22,
+   "f": 2012,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.44,
+   "camH": 0.44,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 1,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 92,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.52,
+     "headCov": 0,
+     "torsoOcc": 0.34,
+     "feetOcc": 0.33,
+     "headH": 0.15,
+     "gap": -0.11,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 22,
+  "f": 2058,
+  "bad": [
+   "foreground set pieces cover 44 % of the frame",
+   "camera at 0.4 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)",
+   "actor 0: head hidden by set geometry (57 %)",
+   "actor 0: set geometry cuts across the body (35 % of the torso)"
+  ],
+  "q": {
+   "id": 22,
+   "f": 2058,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.44,
+   "camH": 0.4,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 1,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 95,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.57,
+     "headCov": 0,
+     "torsoOcc": 0.35,
+     "feetOcc": 0.33,
+     "headH": 0.14,
+     "gap": -0.11,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 22,
+  "f": 2102,
+  "bad": [
+   "foreground set pieces cover 42 % of the frame",
+   "camera at 0.42 x subject height (eye level 0.6-1.15; mark the shot angle \"high\"/\"low\" if meant)",
+   "actor 0: head hidden by set geometry (47 %)",
+   "actor 0: set geometry cuts across the body (26 % of the torso)"
+  ],
+  "q": {
+   "id": 22,
+   "f": 2102,
+   "size": "mid",
+   "angle": "eye",
+   "unwired": 0,
+   "fg": 0.42,
+   "camH": 0.42,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 1,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 93,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 0.47,
+     "headCov": 0,
+     "torsoOcc": 0.26,
+     "feetOcc": 0.33,
+     "headH": 0.14,
+     "gap": -0.11,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 23,
+  "f": 2109,
+  "bad": [],
+  "q": {
+   "id": 23,
+   "f": 2109,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 23,
+  "f": 2127,
+  "bad": [],
+  "q": {
+   "id": 23,
+   "f": 2127,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 23,
+  "f": 2144,
+  "bad": [],
+  "q": {
+   "id": 23,
+   "f": 2144,
+   "size": "close",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 24,
+  "f": 2151,
+  "bad": [
+   "foreground set pieces cover 100 % of the frame",
+   "actor 0: head hidden by set geometry (100 %)",
+   "actor 0: body hidden by set geometry (100 %)"
+  ],
+  "q": {
+   "id": 24,
+   "f": 2151,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 1,
+   "camH": 0.75,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 89,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.09,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 24,
+  "f": 2202,
+  "bad": [
+   "foreground set pieces cover 53 % of the frame",
+   "no haze: far geometry only 0 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 24,
+   "f": 2202,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.53,
+   "camH": 4.89,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 20,
+   "bgFog": 0,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 90,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.03,
+     "gap": 0,
+     "float": [
+      {
+       "frac": 0.002,
+       "x": 0.51,
+       "y": 0.18
+      }
+     ],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 24,
+  "f": 2251,
+  "bad": [
+   "foreground set pieces cover 38 % of the frame",
+   "no haze: far geometry only 3 % fogged (want >= 15 %)"
+  ],
+  "q": {
+   "id": 24,
+   "f": 2251,
+   "size": "wide",
+   "angle": "high",
+   "unwired": 0,
+   "fg": 0.38,
+   "camH": 8.38,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 20,
+   "bgFog": 0.03,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stand",
+     "n": 90,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.02,
+     "gap": 0,
+     "float": [
+      {
+       "frac": 0.002,
+       "x": 0.51,
+       "y": 0.18
+      }
+     ],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 25,
+  "f": 2258,
+  "bad": [
+   "foreground set pieces cover 97 % of the frame",
+   "actor 0: head hidden by set geometry (100 %)",
+   "actor 0: body hidden by set geometry (100 %)"
+  ],
+  "q": {
+   "id": 25,
+   "f": 2258,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.97,
+   "camH": 0.29,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 95,
+     "inFrame": 1,
+     "headIn": 1,
+     "headOcc": 1,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.15,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 25,
+  "f": 2306,
+  "bad": [
+   "foreground set pieces cover 98 % of the frame",
+   "actor 0: head cut by the frame edge (46 % in)",
+   "actor 0: head hidden by set geometry (74 %)",
+   "actor 0: body hidden by set geometry (100 %)"
+  ],
+  "q": {
+   "id": 25,
+   "f": 2306,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0.98,
+   "camH": 0.29,
+   "spread": 0,
+   "row": 1,
+   "nCast": 1,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 97,
+     "inFrame": 0.48,
+     "headIn": 0.46,
+     "headOcc": 0.74,
+     "headCov": 0,
+     "torsoOcc": 1,
+     "feetOcc": 1,
+     "headH": 0.18,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ },
+ {
+  "id": 25,
+  "f": 2353,
+  "bad": [],
+  "q": {
+   "id": 25,
+   "f": 2353,
+   "size": "mid",
+   "angle": "low",
+   "unwired": 0,
+   "fg": 0,
+   "camH": -1,
+   "spread": 0,
+   "row": 0,
+   "nCast": 0,
+   "bgN": 0,
+   "bgFog": -1,
+   "cards": [
+    {
+     "i": 0,
+     "principal": true,
+     "mode": "stroll",
+     "n": 97,
+     "inFrame": 0,
+     "headIn": 0,
+     "headOcc": 0,
+     "headCov": 0,
+     "torsoOcc": 0,
+     "feetOcc": 0,
+     "headH": 0.21,
+     "gap": 0,
+     "float": [],
+     "rig": {
+      "arms": 2,
+      "legs": 2,
+      "hands": 2
+     },
+     "slice": null
+    }
+   ],
+   "contacts": [],
+   "waive": []
+  }
+ }
+]
