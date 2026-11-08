@@ -1,0 +1,469 @@
+{
+  "master": {
+    "integrated_lufs": -16.00000000078338,
+    "true_peak_dbtp": -1.6647188833291025,
+    "lra_lu": 2.135078262659672,
+    "sample_peak_dbfs": -1.7317823530513567
+  },
+  "voice": {
+    "integrated_lufs": -16.011111384803666,
+    "true_peak_dbtp": -1.7439342894763346,
+    "lra_lu": 2.152773240015991,
+    "sample_peak_dbfs": -1.812954738715887
+  },
+  "music": {
+    "integrated_lufs": -40.11650178999498,
+    "true_peak_dbtp": -18.671390124979855,
+    "lra_lu": 6.310364274324492,
+    "sample_peak_dbfs": -18.676917500010923
+  },
+  "sfx": {
+    "integrated_lufs": -42.700610665893294,
+    "true_peak_dbtp": -16.58166525568725,
+    "lra_lu": 9.137913472889814,
+    "sample_peak_dbfs": -16.608613349041732
+  },
+  "master_gain_db": -1.008655948013164,
+  "voice_gain_db": -1.008655948013164,
+  "source_duration_seconds": 77.292,
+  "source_sha256": "507322eec171e5cae20ded9b5c2a5e9a1e5758e66e452ea9b31dbfb7b63cdcde",
+  "words_sha256": "515211291ee9b98a1a7f4bca14b1e695024f3245eda78a96642f951def2f149c",
+  "music_sections": [
+    {
+      "name": "Morning street: light bounce",
+      "start": 0,
+      "end": 11.7,
+      "base_margin": -18,
+      "gain_db": -13.9394103147253
+    },
+    {
+      "name": "Neighbour: bounce sours",
+      "start": 11.7,
+      "end": 19.4,
+      "base_margin": -17,
+      "gain_db": -12.046715523444497
+    },
+    {
+      "name": "Office, cafe, date: awkward pulse",
+      "start": 19.4,
+      "end": 36.6,
+      "base_margin": -16,
+      "gain_db": -11.091074088001982
+    },
+    {
+      "name": "Night: lowest point",
+      "start": 36.6,
+      "end": 43.2,
+      "base_margin": -14,
+      "gain_db": -2.72473727181427
+    },
+    {
+      "name": "You see: near silence",
+      "start": 43.2,
+      "end": 45.9,
+      "base_margin": -26,
+      "gain_db": -3.669308342149087
+    },
+    {
+      "name": "Explain Norway: cold",
+      "start": 45.9,
+      "end": 59.0,
+      "base_margin": -21,
+      "gain_db": -9.420874099547035
+    },
+    {
+      "name": "So Norway changed one rule: warm",
+      "start": 59.0,
+      "end": 69.5,
+      "base_margin": -18,
+      "gain_db": -11.619787629140934
+    },
+    {
+      "name": "Seen by, waves, friendly end",
+      "start": 69.5,
+      "end": 77.3,
+      "base_margin": -17,
+      "gain_db": -12.756114010092357
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 1.4,
+      "end": 1.9,
+      "kind": "bell",
+      "description": "tag shimmer your street",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.47,
+      "end": 2.17,
+      "kind": "bell",
+      "description": "tag shimmer your street",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.3,
+      "end": 2.8,
+      "kind": "bell",
+      "description": "tag shimmer cascade",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.3699999999999997,
+      "end": 3.0699999999999994,
+      "kind": "bell",
+      "description": "tag shimmer cascade",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.1,
+      "end": 4.6,
+      "kind": "bell",
+      "description": "tag shimmer yours",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.17,
+      "end": 4.87,
+      "kind": "bell",
+      "description": "tag shimmer yours",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.0,
+      "end": 7.12,
+      "kind": "click",
+      "description": "app tap",
+      "target": -35.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.0,
+      "end": 15.6,
+      "kind": "water",
+      "description": "sprinkler on the roses",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.6,
+      "end": 15.1,
+      "kind": "bell",
+      "description": "tag shimmer neighbor",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.67,
+      "end": 15.37,
+      "kind": "bell",
+      "description": "tag shimmer neighbor",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.3,
+      "end": 20.6,
+      "kind": "thump",
+      "description": "office door",
+      "target": -37.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.1,
+      "end": 21.220000000000002,
+      "kind": "click",
+      "description": "keyboard",
+      "target": -39.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.28,
+      "end": 21.400000000000002,
+      "kind": "click",
+      "description": "keyboard",
+      "target": -40.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.42,
+      "end": 21.540000000000003,
+      "kind": "click",
+      "description": "keyboard",
+      "target": -39.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.7,
+      "end": 21.82,
+      "kind": "click",
+      "description": "keyboard",
+      "target": -40.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.9,
+      "end": 23.4,
+      "kind": "bell",
+      "description": "tag shimmer twin",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.97,
+      "end": 23.669999999999998,
+      "kind": "bell",
+      "description": "tag shimmer twin",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.7,
+      "end": 28.5,
+      "kind": "happy",
+      "description": "cafe chatter",
+      "target": -45.00245543679072,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.6,
+      "end": 29.200000000000003,
+      "kind": "tray",
+      "description": "chair scrape",
+      "target": -39.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.0,
+      "end": 29.5,
+      "kind": "bell",
+      "description": "tag shimmer big",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.07,
+      "end": 29.77,
+      "kind": "bell",
+      "description": "tag shimmer big",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.0,
+      "end": 31.3,
+      "kind": "kids",
+      "description": "cafe chatter by the bins",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.6,
+      "end": 31.1,
+      "kind": "bell",
+      "description": "tag shimmer small",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.67,
+      "end": 31.37,
+      "kind": "bell",
+      "description": "tag shimmer small",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.5,
+      "end": 33.3,
+      "kind": "whistle",
+      "description": "park birds",
+      "target": -45.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.8,
+      "end": 34.3,
+      "kind": "bell",
+      "description": "tag shimmer date",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.87,
+      "end": 34.57,
+      "kind": "bell",
+      "description": "tag shimmer date",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.4,
+      "end": 35.0,
+      "kind": "whistle",
+      "description": "park birds",
+      "target": -47.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.4,
+      "end": 40.9,
+      "kind": "bell",
+      "description": "bank app notification 1",
+      "target": -39.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.55,
+      "end": 41.25,
+      "kind": "bell",
+      "description": "bank app notification 2",
+      "target": -37.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.8,
+      "end": 68.3,
+      "kind": "bell",
+      "description": "tag shimmer line under",
+      "target": -43.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.86999999999999,
+      "end": 68.57,
+      "kind": "bell",
+      "description": "tag shimmer line under",
+      "target": -46.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.9,
+      "end": 71.35000000000001,
+      "kind": "bell",
+      "description": "seen by ping",
+      "target": -37.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.6,
+      "end": 72.5,
+      "kind": "whoosh",
+      "description": "he waves",
+      "target": -45.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 72.5,
+      "end": 73.4,
+      "kind": "whoosh",
+      "description": "you wave",
+      "target": -45.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.4,
+      "end": 75.9,
+      "kind": "bell",
+      "description": "warm end chime",
+      "target": -41.00245543679072,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 9.287051158975178,
+    "p10": 20.160249420362,
+    "median": 24.983947926669867
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3710400,
+    "duration_seconds": 77.3,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

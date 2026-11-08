@@ -7,7 +7,7 @@ import { FPS, V3, smooth } from "./shot";
 // ---------------- placements ----------------
 export type Place = { key: string; draw: (p: Pen) => void; x: number; y: number; z: number; scale?: number; mirror?: boolean; yaw?: number; size?: [number, number, number];
   /** roll of the whole card about its own normal, radians (a tumbling faller) */ roll?: number };
-export type FxPlace = { key: string; cw: number; ch: number; draw: (p: Pen) => void; x: number; y: number; z: number; w: number; h: number; flat?: boolean; rot?: number; soft?: boolean;
+export type FxPlace = { key: string; cw: number; ch: number; draw: (p: Pen) => void; x: number; y: number; z: number; w: number; h: number; flat?: boolean; rot?: number; soft?: boolean; noFog?: boolean;
   /** lies on a wall: the card's normal (world), instead of turning to the camera */
   face?: V3 };
 export type CamInfo = { pos: THREE.Vector3; right: THREE.Vector3; sun: THREE.Vector3 };
@@ -54,7 +54,7 @@ export const FAMILY: Record<Expr, Family> = {
   nervous: "worried", worried: "worried", scared: "worried", shook: "worried", cringe: "worried", fake_smile: "worried", nervous_laugh: "worried",
   embarrassed: "worried", sheepish: "worried", concede: "worried",
   sad: "sad", cry: "sad", sigh: "sad", puppy: "sad", pained: "sad",
-  shock: "shock", jawdrop: "shock", mindblown: "shock", dazed: "shock", confused: "shock",
+  shock: "shock", jawdrop: "shock", mindblown: "shock", dazed: "shock", confused: "shock", out: "calm",
 };
 export const exprAt = (tr: Track, t: number): Expr => { let e = tr[0][1]; for (const [ts, x] of tr) if (t >= ts - LEAD) e = x; return e; };
 /** face animation inputs: seconds since the current expression began (frame-quantised) and the one before it */

@@ -1,0 +1,585 @@
+{
+ "bpm": 100,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   50,
+   50,
+   50,
+   50
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -3,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 83.16666666666667,
+ "seed": 151515,
+ "music_sections": [
+  [
+   "Hook + jungle + sea: low tension",
+   0,
+   16.2,
+   -19,
+   "dark"
+  ],
+  [
+   "Cabin: dark under the drone",
+   16.2,
+   30.5,
+   -15,
+   "dark"
+  ],
+  [
+   "Plane: pulse starts",
+   30.5,
+   34.4,
+   -19,
+   "pulse"
+  ],
+  [
+   "Ship + fast boat: pulse climbs",
+   34.4,
+   38.3,
+   -15,
+   "pulse"
+  ],
+  [
+   "Roof, hatch, valve, flood: pulse peak",
+   38.3,
+   45.7,
+   -11,
+   "pulse"
+  ],
+  [
+   "You see: single bass note",
+   47.0,
+   52.5,
+   -24,
+   "pad"
+  ],
+  [
+   "Cargo, no case, blanket",
+   52.5,
+   62.0,
+   -20,
+   "dark"
+  ],
+  [
+   "They let you go: smug light turn",
+   62.0,
+   67.9,
+   -14,
+   "bounce"
+  ],
+  [
+   "2008: hard stop, heavy low end",
+   68.1,
+   81.6667,
+   -9,
+   "pulse"
+  ]
+ ],
+ "sfx": [
+  [
+   0.1,
+   "water",
+   5.6,
+   -37,
+   0,
+   "sea wash"
+  ],
+  [
+   5.8,
+   "scribble",
+   6.0,
+   -42,
+   0.3,
+   "jungle insects"
+  ],
+  [
+   6.3,
+   "rustle",
+   2.6,
+   -34,
+   -0.2,
+   "roller paint"
+  ],
+  [
+   9.9,
+   "tape",
+   0.5,
+   -34,
+   0.2,
+   "duct tape patch"
+  ],
+  [
+   12.0,
+   "water",
+   4.0,
+   -36,
+   0,
+   "sea wash, low boat"
+  ],
+  [
+   16.3,
+   "room",
+   14.1,
+   -33,
+   0,
+   "cabin engine drone"
+  ],
+  [
+   16.3,
+   "chugslow",
+   14.1,
+   -37,
+   0,
+   "cabin engine thud"
+  ],
+  [
+   17.5,
+   "sip",
+   1.2,
+   -34,
+   -0.1,
+   "empty jug slosh"
+  ],
+  [
+   19.8,
+   "crack",
+   0.25,
+   -37,
+   0,
+   "cough"
+  ],
+  [
+   20.05,
+   "crack",
+   0.25,
+   -38,
+   0,
+   "cough"
+  ],
+  [
+   21.95,
+   "tink",
+   0.4,
+   -30,
+   0.2,
+   "gauge clink"
+  ],
+  [
+   22.15,
+   "tink",
+   0.3,
+   -32,
+   0.3,
+   "gauge falls"
+  ],
+  [
+   25.0,
+   "crinkle",
+   1.4,
+   -30,
+   0,
+   "plastic crinkle, pat the stack"
+  ],
+  [
+   30.9,
+   "whoosh",
+   2.4,
+   -33,
+   -0.4,
+   "plane pass"
+  ],
+  [
+   30.9,
+   "water",
+   15.0,
+   -39,
+   0,
+   "night sea"
+  ],
+  [
+   33.1,
+   "bassdrop",
+   1.7,
+   -30,
+   0,
+   "ship horn"
+  ],
+  [
+   33.4,
+   "room",
+   1.2,
+   -34,
+   0.3,
+   "searchlight hum"
+  ],
+  [
+   34.3,
+   "chug",
+   3.9,
+   -35,
+   0.5,
+   "outboard engine"
+  ],
+  [
+   36.7,
+   "paper",
+   0.6,
+   -38,
+   0.4,
+   "megaphone shout"
+  ],
+  [
+   37.8,
+   "paper",
+   0.6,
+   -38,
+   0.5,
+   "megaphone shout"
+  ],
+  [
+   40.3,
+   "thump",
+   0.3,
+   -21,
+   0,
+   "man lands on the roof"
+  ],
+  [
+   40.3,
+   "bassdrop",
+   0.9,
+   -27,
+   0,
+   "roof boom"
+  ],
+  [
+   41.0,
+   "room",
+   5.9,
+   -33,
+   0,
+   "cabin engine drone"
+  ],
+  [
+   41.4,
+   "tray",
+   0.5,
+   -27,
+   0,
+   "hatch bang 1"
+  ],
+  [
+   41.45,
+   "thump",
+   0.2,
+   -26,
+   0,
+   "bang body"
+  ],
+  [
+   41.9,
+   "tray",
+   0.5,
+   -27,
+   0,
+   "hatch bang 2"
+  ],
+  [
+   41.95,
+   "thump",
+   0.2,
+   -26,
+   0,
+   "bang body"
+  ],
+  [
+   42.35,
+   "tray",
+   0.5,
+   -26,
+   0,
+   "hatch bang 3"
+  ],
+  [
+   42.4,
+   "thump",
+   0.2,
+   -25,
+   0,
+   "bang body"
+  ],
+  [
+   43.7,
+   "paper",
+   0.45,
+   -35,
+   0,
+   "valve squeak"
+  ],
+  [
+   44.6,
+   "whoosh",
+   2.4,
+   -29,
+   0,
+   "water rush"
+  ],
+  [
+   45.3,
+   "splash",
+   1.2,
+   -31,
+   0,
+   "water pours in"
+  ],
+  [
+   47.5,
+   "water",
+   5.0,
+   -36,
+   0,
+   "sea wash, dawn"
+  ],
+  [
+   54.5,
+   "room",
+   4.8,
+   -30,
+   0,
+   "underwater muffle"
+  ],
+  [
+   54.5,
+   "water",
+   4.8,
+   -41,
+   0,
+   "underwater bubbles"
+  ],
+  [
+   61.1,
+   "rustle",
+   1.1,
+   -32,
+   0,
+   "blanket rustle"
+  ],
+  [
+   66.0,
+   "rustle",
+   1.0,
+   -34,
+   0,
+   "blanket rustle again"
+  ],
+  [
+   68.2,
+   "bassdrop",
+   3.2,
+   -22,
+   0,
+   "heavy hit on 2008"
+  ],
+  [
+   68.6,
+   "stamp",
+   0.4,
+   -29,
+   0,
+   "stamped page"
+  ],
+  [
+   70.0,
+   "thump",
+   0.3,
+   -23,
+   0,
+   "heavy low pulse"
+  ],
+  [
+   72.0,
+   "thump",
+   0.3,
+   -22,
+   0,
+   "heavy low pulse"
+  ],
+  [
+   74.2,
+   "thump",
+   0.3,
+   -23,
+   0,
+   "heavy low pulse"
+  ],
+  [
+   76.45,
+   "click",
+   0.12,
+   -27,
+   -0.2,
+   "handcuff click"
+  ],
+  [
+   76.62,
+   "click",
+   0.12,
+   -28,
+   0.2,
+   "handcuff click"
+  ],
+  [
+   77.3,
+   "thump",
+   0.3,
+   -22,
+   0,
+   "heavy low pulse"
+  ],
+  [
+   77.8,
+   "rustle",
+   1.0,
+   -34,
+   0,
+   "blanket rustle"
+  ],
+  [
+   79.2,
+   "thump",
+   0.3,
+   -22,
+   0,
+   "heavy low pulse"
+  ],
+  [
+   80.8,
+   "crinkle",
+   0.8,
+   -29,
+   0,
+   "jumpsuit plastic crinkle, rings out"
+  ]
+ ]
+}

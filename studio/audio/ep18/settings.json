@@ -1,0 +1,626 @@
+{
+ "bpm": 112,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   50,
+   50,
+   50,
+   50
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -3,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 78.56666666666666,
+ "seed": 181818,
+ "music_sections": [
+  [
+   "Living room: low unease",
+   0,
+   13.3,
+   -22,
+   "pad"
+  ],
+  [
+   "Roar builds: dark",
+   13.3,
+   24.6,
+   -21,
+   "dark"
+  ],
+  [
+   "Flight: near-silent float",
+   24.6,
+   32.2,
+   -32,
+   "pad"
+  ],
+  [
+   "Wake, rain, GPS walk: gentle pulse",
+   32.2,
+   48.8,
+   -23,
+   "pulse"
+  ],
+  [
+   "Held note: 1307 feet",
+   48.8,
+   54.0,
+   -22,
+   "pad"
+  ],
+  [
+   "You see: near silence",
+   54.0,
+   58.0,
+   -30,
+   "pad"
+  ],
+  [
+   "Explain: low dark",
+   58.0,
+   70.3,
+   -23,
+   "dark"
+  ],
+  [
+   "Lamp: dry resolve",
+   70.3,
+   78.56666666666666,
+   -20,
+   "resolve"
+  ]
+ ],
+ "sfx": [
+  [
+   0.0,
+   "crinkle",
+   13.0,
+   -40,
+   0,
+   "rain on tin roof"
+  ],
+  [
+   0.3,
+   "room",
+   4,
+   -38,
+   0,
+   "distant roar building"
+  ],
+  [
+   4.5,
+   "room",
+   4,
+   -37,
+   0,
+   "distant roar building"
+  ],
+  [
+   8.0,
+   "tink",
+   0.3,
+   -33,
+   0.4,
+   "window rattles"
+  ],
+  [
+   8.6,
+   "tink",
+   0.3,
+   -31,
+   0.4,
+   "window rattles"
+  ],
+  [
+   9.0,
+   "tink",
+   0.3,
+   -33,
+   0.4,
+   "window rattles"
+  ],
+  [
+   9.0,
+   "room",
+   4.5,
+   -36,
+   0,
+   "distant roar building"
+  ],
+  [
+   9.7,
+   "tink",
+   0.3,
+   -35,
+   0.4,
+   "window rattles"
+  ],
+  [
+   13.0,
+   "crinkle",
+   11.5,
+   -39,
+   0,
+   "rain on tin roof"
+  ],
+  [
+   13.3,
+   "room",
+   3.2,
+   -33,
+   0,
+   "distant roar building"
+  ],
+  [
+   14.8,
+   "room",
+   3,
+   -30,
+   0,
+   "distant roar building"
+  ],
+  [
+   15.0,
+   "whoosh",
+   2.5,
+   -33,
+   -0.3,
+   "wind roar rising"
+  ],
+  [
+   16.0,
+   "room",
+   3,
+   -28,
+   0,
+   "distant roar building"
+  ],
+  [
+   17.0,
+   "room",
+   3,
+   -26,
+   0,
+   "distant roar building"
+  ],
+  [
+   17.1,
+   "chugslow",
+   1.6,
+   -32,
+   0,
+   "floor rumble jelly"
+  ],
+  [
+   18.5,
+   "room",
+   3,
+   -25,
+   0,
+   "distant roar building"
+  ],
+  [
+   18.75,
+   "tear",
+   0.7,
+   -22,
+   -0.5,
+   "front door ripped off"
+  ],
+  [
+   18.85,
+   "thump",
+   0.3,
+   -26,
+   -0.4,
+   "front door slam"
+  ],
+  [
+   19.5,
+   "whoosh",
+   3.5,
+   -28,
+   0.3,
+   "freight-train roar"
+  ],
+  [
+   20.0,
+   "room",
+   3,
+   -24,
+   0,
+   "distant roar building"
+  ],
+  [
+   20.25,
+   "tear",
+   0.8,
+   -22,
+   0.5,
+   "back door ripped off"
+  ],
+  [
+   20.35,
+   "thump",
+   0.3,
+   -26,
+   0.4,
+   "back door thud"
+  ],
+  [
+   21.5,
+   "room",
+   3,
+   -23,
+   0,
+   "distant roar building"
+  ],
+  [
+   21.5,
+   "tray",
+   0.9,
+   -24,
+   0.3,
+   "window shatters"
+  ],
+  [
+   21.6,
+   "crack",
+   0.3,
+   -28,
+   0.2,
+   "glass crack"
+  ],
+  [
+   22.5,
+   "whoosh",
+   2.0,
+   -26,
+   0,
+   "freight-train roar"
+  ],
+  [
+   22.8,
+   "room",
+   2.2,
+   -22,
+   0,
+   "distant roar building"
+  ],
+  [
+   22.85,
+   "thump",
+   0.3,
+   -20,
+   0,
+   "something hits your head"
+  ],
+  [
+   23.0,
+   "bassdrop",
+   1.4,
+   -27,
+   0,
+   "blackout drop"
+  ],
+  [
+   24.9,
+   "whoosh",
+   4.0,
+   -32,
+   -0.2,
+   "wind lifts you"
+  ],
+  [
+   25.0,
+   "room",
+   7.0,
+   -39,
+   0,
+   "far thunder in the air"
+  ],
+  [
+   28.0,
+   "whoosh",
+   4.4,
+   -33,
+   0.2,
+   "wind in the air"
+  ],
+  [
+   31.9,
+   "sheet",
+   1.0,
+   -34,
+   0,
+   "soft grass landing"
+  ],
+  [
+   32.0,
+   "crinkle",
+   17.0,
+   -39,
+   0,
+   "soft rain on the field"
+  ],
+  [
+   32.0,
+   "thump",
+   0.3,
+   -34,
+   0,
+   "soft landing"
+  ],
+  [
+   37.8,
+   "tape",
+   0.8,
+   -34,
+   -0.3,
+   "fence creak"
+  ],
+  [
+   38.4,
+   "tape",
+   0.5,
+   -36,
+   -0.3,
+   "fence creak"
+  ],
+  [
+   38.9,
+   "steps",
+   1.9,
+   -31,
+   0,
+   "gravel steps"
+  ],
+  [
+   40.95,
+   "thump",
+   0.15,
+   -26,
+   0,
+   "door knock"
+  ],
+  [
+   41.15,
+   "thump",
+   0.15,
+   -26,
+   0,
+   "door knock"
+  ],
+  [
+   41.35,
+   "thump",
+   0.15,
+   -26,
+   0,
+   "door knock"
+  ],
+  [
+   46.3,
+   "steps",
+   1.3,
+   -35,
+   0,
+   "walking the field"
+  ],
+  [
+   47.6,
+   "click",
+   0.12,
+   -26,
+   0,
+   "GPS beep"
+  ],
+  [
+   47.9,
+   "whistle",
+   0.12,
+   -47,
+   0,
+   "GPS tone"
+  ],
+  [
+   48.0,
+   "steps",
+   2.6,
+   -38,
+   0,
+   "walking on the field"
+  ],
+  [
+   48.1,
+   "click",
+   0.12,
+   -26,
+   0,
+   "GPS beep"
+  ],
+  [
+   49.0,
+   "crinkle",
+   8.0,
+   -43,
+   0,
+   "rain thinning at dawn"
+  ],
+  [
+   49.6,
+   "click",
+   0.12,
+   -30,
+   0,
+   "GPS tick"
+  ],
+  [
+   50.6,
+   "click",
+   0.12,
+   -30,
+   0,
+   "GPS tick"
+  ],
+  [
+   51.6,
+   "click",
+   0.12,
+   -30,
+   0,
+   "GPS tick"
+  ],
+  [
+   70.0,
+   "crinkle",
+   8.2,
+   -46,
+   0,
+   "last rain"
+  ],
+  [
+   70.9,
+   "thump",
+   0.3,
+   -21,
+   0,
+   "lamp base thunk"
+  ],
+  [
+   71.0,
+   "tink",
+   0.35,
+   -33,
+   0,
+   "brass ring"
+  ],
+  [
+   76.9,
+   "tink",
+   0.4,
+   -40,
+   0,
+   "lamp settles"
+  ]
+ ]
+}

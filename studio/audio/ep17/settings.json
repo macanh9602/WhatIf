@@ -1,0 +1,482 @@
+{
+ "bpm": 112,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   50,
+   50,
+   50,
+   50
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -3,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 77.3,
+ "seed": 171717,
+ "music_sections": [
+  [
+   "Morning street: light bounce",
+   0,
+   11.7,
+   -18,
+   "bounce"
+  ],
+  [
+   "Neighbour: bounce sours",
+   11.7,
+   19.4,
+   -17,
+   "pulse"
+  ],
+  [
+   "Office, cafe, date: awkward pulse",
+   19.4,
+   36.6,
+   -16,
+   "pulse"
+  ],
+  [
+   "Night: lowest point",
+   36.6,
+   43.2,
+   -14,
+   "dark"
+  ],
+  [
+   "You see: near silence",
+   43.2,
+   45.9,
+   -26,
+   "pad"
+  ],
+  [
+   "Explain Norway: cold",
+   45.9,
+   59.0,
+   -21,
+   "dark"
+  ],
+  [
+   "So Norway changed one rule: warm",
+   59.0,
+   69.5,
+   -18,
+   "warm"
+  ],
+  [
+   "Seen by, waves, friendly end",
+   69.5,
+   77.3,
+   -17,
+   "warm"
+  ]
+ ],
+ "sfx": [
+  [
+   1.4,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer your street"
+  ],
+  [
+   1.47,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer your street"
+  ],
+  [
+   2.3,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer cascade"
+  ],
+  [
+   2.3699999999999997,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer cascade"
+  ],
+  [
+   4.1,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer yours"
+  ],
+  [
+   4.17,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer yours"
+  ],
+  [
+   7.0,
+   "click",
+   0.12,
+   -26,
+   0,
+   "app tap"
+  ],
+  [
+   13.0,
+   "water",
+   2.6,
+   -34,
+   0,
+   "sprinkler on the roses"
+  ],
+  [
+   14.6,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer neighbor"
+  ],
+  [
+   14.67,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer neighbor"
+  ],
+  [
+   20.3,
+   "thump",
+   0.3,
+   -28,
+   0,
+   "office door"
+  ],
+  [
+   21.1,
+   "click",
+   0.12,
+   -30,
+   0,
+   "keyboard"
+  ],
+  [
+   21.28,
+   "click",
+   0.12,
+   -31,
+   0,
+   "keyboard"
+  ],
+  [
+   21.42,
+   "click",
+   0.12,
+   -30,
+   0,
+   "keyboard"
+  ],
+  [
+   21.7,
+   "click",
+   0.12,
+   -31,
+   0,
+   "keyboard"
+  ],
+  [
+   22.9,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer twin"
+  ],
+  [
+   22.97,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer twin"
+  ],
+  [
+   26.7,
+   "happy",
+   1.8,
+   -36,
+   0,
+   "cafe chatter"
+  ],
+  [
+   28.6,
+   "tray",
+   0.6,
+   -30,
+   0,
+   "chair scrape"
+  ],
+  [
+   29.0,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer big"
+  ],
+  [
+   29.07,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer big"
+  ],
+  [
+   30.0,
+   "kids",
+   1.3,
+   -37,
+   0,
+   "cafe chatter by the bins"
+  ],
+  [
+   30.6,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer small"
+  ],
+  [
+   30.67,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer small"
+  ],
+  [
+   32.5,
+   "whistle",
+   0.8,
+   -36,
+   0,
+   "park birds"
+  ],
+  [
+   33.8,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer date"
+  ],
+  [
+   33.87,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer date"
+  ],
+  [
+   34.4,
+   "whistle",
+   0.6,
+   -38,
+   0,
+   "park birds"
+  ],
+  [
+   40.4,
+   "bell",
+   0.5,
+   -30,
+   0,
+   "bank app notification 1"
+  ],
+  [
+   40.55,
+   "bell",
+   0.7,
+   -28,
+   0,
+   "bank app notification 2"
+  ],
+  [
+   67.8,
+   "bell",
+   0.5,
+   -34,
+   0,
+   "tag shimmer line under"
+  ],
+  [
+   67.86999999999999,
+   "bell",
+   0.7,
+   -37,
+   0,
+   "tag shimmer line under"
+  ],
+  [
+   70.9,
+   "bell",
+   0.45,
+   -28,
+   0,
+   "seen by ping"
+  ],
+  [
+   71.6,
+   "whoosh",
+   0.9,
+   -36,
+   0,
+   "he waves"
+  ],
+  [
+   72.5,
+   "whoosh",
+   0.9,
+   -36,
+   0,
+   "you wave"
+  ],
+  [
+   75.4,
+   "bell",
+   0.5,
+   -32,
+   0,
+   "warm end chime"
+  ]
+ ]
+}

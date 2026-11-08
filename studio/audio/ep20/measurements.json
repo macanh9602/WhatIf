@@ -1,0 +1,319 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999999237632,
+    "true_peak_dbtp": -1.5959803648459434,
+    "lra_lu": 2.461191508663907,
+    "sample_peak_dbfs": -1.6058979911607456
+  },
+  "voice": {
+    "integrated_lufs": -16.003914124907276,
+    "true_peak_dbtp": -1.6367611018562458,
+    "lra_lu": 2.4681463357850557,
+    "sample_peak_dbfs": -1.6482114037982298
+  },
+  "music": {
+    "integrated_lufs": -42.16440601598749,
+    "true_peak_dbtp": -22.989301666113313,
+    "lra_lu": 6.587299973685845,
+    "sample_peak_dbfs": -23.056735615480825
+  },
+  "sfx": {
+    "integrated_lufs": -43.769501960112976,
+    "true_peak_dbtp": -17.629545414738914,
+    "lra_lu": 14.425930038692321,
+    "sample_peak_dbfs": -17.63999537205901
+  },
+  "master_gain_db": -1.117451621785877,
+  "voice_gain_db": -1.117451621785877,
+  "source_duration_seconds": 74.82404166666667,
+  "source_sha256": "9fdcc10cf40203143732ba562267448796cc7b5798eacc58d431f0ce8283a8c9",
+  "words_sha256": "83c3c0756f330d117212d1292ef4fffdc59539566ac867a20c70a5155577250a",
+  "music_sections": [
+    {
+      "name": "Sitka 1867: dry march-like bounce",
+      "start": 0,
+      "end": 15.0,
+      "base_margin": -17,
+      "gain_db": -12.700756284706003
+    },
+    {
+      "name": "Tear it up: pulse",
+      "start": 15.0,
+      "end": 30.4,
+      "base_margin": -19,
+      "gain_db": -14.56916694226543
+    },
+    {
+      "name": "Gold: bounce thins",
+      "start": 30.4,
+      "end": 38.3,
+      "base_margin": -20,
+      "gain_db": -15.967159210671493
+    },
+    {
+      "name": "Oil: sparse pulse",
+      "start": 38.3,
+      "end": 46.0,
+      "base_margin": -21,
+      "gain_db": -16.08500884283762
+    },
+    {
+      "name": "The new map: explain glock",
+      "start": 46.0,
+      "end": 52.4,
+      "base_margin": -20,
+      "gain_db": -8.98845840098592
+    },
+    {
+      "name": "Cold War: low pad",
+      "start": 52.4,
+      "end": 60.4,
+      "base_margin": -24,
+      "gain_db": -4.270306516819716
+    },
+    {
+      "name": "Texas, flag: warm",
+      "start": 60.4,
+      "end": 69.4,
+      "base_margin": -20,
+      "gain_db": -14.150279147361001
+    },
+    {
+      "name": "Folly turned: dry warm tail",
+      "start": 69.4,
+      "end": 74.83,
+      "base_margin": -19,
+      "gain_db": -13.375822861282732
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.5,
+      "end": 5.5,
+      "kind": "room",
+      "description": "harbour wind and water",
+      "target": -48.88646250312114,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.9,
+      "end": 6.4,
+      "kind": "paper",
+      "description": "cheque held up",
+      "target": -42.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.4,
+      "end": 10.0,
+      "kind": "happy",
+      "description": "newspaper crowd laughs, far",
+      "target": -54.88646250312114,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.9,
+      "end": 15.200000000000001,
+      "kind": "stamp",
+      "description": "NO SALE stamp",
+      "target": -38.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.6,
+      "end": 16.5,
+      "kind": "tear",
+      "description": "cheque torn",
+      "target": -34.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.4,
+      "end": 16.7,
+      "kind": "tink",
+      "description": "scraps",
+      "target": -44.88646250312114,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.8,
+      "end": 21.1,
+      "kind": "thump",
+      "description": "cannon thud, far",
+      "target": -38.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.9,
+      "end": 29.9,
+      "kind": "whoosh",
+      "description": "flag snaps in the wind",
+      "target": -42.88646250312114,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.9,
+      "end": 34.9,
+      "kind": "water",
+      "description": "creek",
+      "target": -44.88646250312114,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.8,
+      "end": 34.099999999999994,
+      "kind": "tink",
+      "description": "gold flake in the pan",
+      "target": -40.88646250312114,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.2,
+      "end": 34.5,
+      "kind": "tink",
+      "description": "gold flake",
+      "target": -42.88646250312114,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.4,
+      "end": 37.55,
+      "kind": "click",
+      "description": "gate lock",
+      "target": -36.88646250312114,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.5,
+      "end": 43.5,
+      "kind": "room",
+      "description": "wind over the tundra",
+      "target": -44.88646250312114,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.0,
+      "end": 45.5,
+      "kind": "chugslow",
+      "description": "pump and pipeline hum",
+      "target": -46.88646250312114,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.9,
+      "end": 43.3,
+      "kind": "thump",
+      "description": "barrel stack rolls",
+      "target": -36.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.1,
+      "end": 47.45,
+      "kind": "stamp",
+      "description": "border post stamp",
+      "target": -38.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.0,
+      "end": 50.4,
+      "kind": "thump",
+      "description": "post goes up",
+      "target": -34.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.5,
+      "end": 51.7,
+      "kind": "rustle",
+      "description": "snow",
+      "target": -44.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.9,
+      "end": 57.9,
+      "kind": "chugslow",
+      "description": "far planes",
+      "target": -44.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 67.3,
+      "end": 68.2,
+      "kind": "bell",
+      "description": "flag ring",
+      "target": -42.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.9,
+      "end": 72.4,
+      "kind": "thump",
+      "description": "button",
+      "target": -38.88646250312114,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999917804010131,
+    "p10": 21.294936834079955,
+    "median": 27.34228035714966
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3592000,
+    "duration_seconds": 74.83333333333333,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

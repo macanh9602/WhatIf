@@ -78,6 +78,25 @@ def synth(kind, dur, r):
                 S._place_mono(x, h*.6, r.uniform(.1, .8))
             y += pan(lp(x, 1700 if kind == 'kids' else 2500), -.7 + k*.35)
         return y
+    if kind == 'beep':  # ep21: "out of credit", two short square-ish tones falling a fifth
+        y = np.zeros(n)
+        for st, f, d in ((0.0, 988, .11), (.14, 659, .22)):
+            seg = tt(d); tone = np.tanh(2.5*np.sin(2*np.pi*f*seg)) * np.minimum(1, seg/.004) * np.minimum(1, (d-seg)/.02)
+            S._place_mono(y, lp(tone, 4000), st)
+        return y
+    if kind == 'giggle':  # ep21 Mia: a short warm female giggle, 5 falling "hee-he" syllables (glottal source through vowel formants)
+        y = np.zeros(n)
+        st, f0 = .0, 430.
+        for i in range(5):
+            d = .085 + .01*i
+            seg = tt(d); f = f0*(1 - .12*seg/d) * (1 + .01*np.sin(2*np.pi*6*seg))
+            ph = phase(f); src = sum(np.sin(k*ph)/k**1.15 for k in range(1, 14))
+            env = np.sin(np.pi*np.minimum(1, seg/d))**.8
+            voiced = .9*bp(src, 300, 700) + .7*bp(src, 1900, 2700) + .25*bp(src, 2900, 3600)
+            breath = bp(r.standard_normal(len(seg)), 1500, 5000) * np.exp(-seg/.025) * .35
+            S._place_mono(y, (voiced + breath)*env*(1 - .12*i), st)
+            st += d + .035 + .006*i; f0 *= .955
+        return lp(y, 5200)
     if kind == 'whistle':
         return np.sin(phase(2100 + 90*np.sin(2*np.pi*25*t))) * np.sin(np.pi*t/dur)**.7
     if kind == 'boing':

@@ -20,7 +20,8 @@ export type Outfit = {
   top?: "tee" | "hoodie" | "polo" | "button" | "jersey" | "cardigan" | "blouse" | "sweater" | "tank";
   bottom?: "shorts" | "cargo" | "jeans" | "joggers" | "skirt" | "scrubs" | "overalls" | "dress";
   pattern?: "stripes" | "plaid" | "dots" | "print" | "number";
-  layer?: {kind: "cardigan" | "jacket"; color: string; long?: boolean};
+  /** blanket = wool blanket draped over the shoulders to the knees (ep15); jumpsuit = torso AND legs in `color` (ep15) */
+  layer?: {kind: "cardigan" | "jacket" | "blanket" | "jumpsuit"; color: string; long?: boolean};
   acc?: ("lanyard" | "backpack" | "headband" | "cap" | "socks_high" | "watch" | "pen_in_hair" | "bowtie" | "suspenders")[];
   /** bow tie / suspender colour */ accCol?: string;
   /** a single curly hair on the crown (the channel lead) */ sprout?: boolean;
@@ -39,6 +40,7 @@ export type Outfit = {
   strands?: number;
   /** stick-tee hair mass (bigger than the head, own silhouette); replaces the old hair cap (use with hat: null) */
   style?: "spiky" | "smooth" | "ponytail" | "curls" | "balding"; bun?: boolean; curly?: boolean; glasses?: string; backpack?: string; cast?: number; print?: boolean; cardigan?: boolean;
+  /** ep21: a chin-length bob hanging behind the head (with style smooth) */ bob?: boolean;
   /** 0 fresh .. 1 a week old: greyer paper, more tape patches */
   castWear?: number;
 };
@@ -275,7 +277,8 @@ export type Expr = "neutral" | "stern" | "grin" | "laugh" | "whistle" | "nervous
   | "sideeye" | "eyeroll" | "deadpan" | "bruh" | "cringe" | "sheepish" | "scheming" | "fake_smile" | "puppy" | "jawdrop" | "shook" | "sigh" | "mindblown" | "smirk_wink" | "nervous_laugh" | "proud_chin"
   // built from parts for the producer's acting notes (r4-sol E): not every beat fits a stock face
   | "concentrate" | "resolve" | "concede" | "casual" | "amused" | "pressed"
-  | "squint"; // ep12: suspicious, one brow down
+  | "squint" // ep12: suspicious, one brow down
+  | "out"; // ep18: knocked out, eyes shut, mouth slack
 type EyeK = "happy" | "dash" | "squeeze" | "shock" | "shockHalf" | "spiral";
 /** parametric open eye: pupil oval (scale ps) under an upper lid line that covers `cov` (0 = an arc above the pupil,
  *  1 = shut) and dips `ti` / `to` u at the inner / outer end (+ = down); lower lid `lo` 0..1 pushes up from below */
@@ -344,6 +347,7 @@ const FACE: Record<Expr, { eye: [Eye, Eye]; brow: [number, number]; brow2?: [num
   nervous_laugh: { eye: [O(0.3, {ps: .7}), O(0.1, {ps: .7})], brow: [-5, 2], brow2: [-4, 1], mouth: "laugh", fx: ["sweat"] },
   proud_chin: { eye: [O(0.6), O(0.45)], brow: [1, -2], brow2: [-2, -5], mouth: "smirk", fx: [] },
   squint: { eye: [O(0.66, { lo: 0.35, ti: 1.5 }), O(0.6, { lo: 0.3 })], brow: [5, 1], brow2: [-2, -4], mouth: "side" }, // narrowed eyes, back brow down, front brow up
+  out: { eye: ["dash", "dash"], brow: [-1, 1], mouth: "dash", fx: [] }, // ep18: unconscious (opt-in, no older episode names it)
 };
 export const EXPRESSION_NAMES = Object.keys(FACE) as Expr[];
 /** Library-owned acting controls; callers select a beat and never manage its internals. */
@@ -590,6 +594,14 @@ const BONNET = "#e9cf8f", BONNET_BRIM = "#d6b46a";
 /** parts of a hat that sit behind the head (bonnet) */
 const hatBehind = (p: Pen, o: Outfit, H: Blob, cx: number, hc: number, light: number, thick: number, ow: number, side: boolean) => {
   if (o.style === "ponytail") ponytail(p, o, H, cx, hc, ow, 0);
+  if (o.bob && o.hair) { // ep21 Mia: the bob's sides hang past the cheeks to below the chin, flicked out at the ends
+    const R = H.a, Bh = H.b, x0 = cx - (side ? 8 * (R / 50) : 0), col = o.hair;
+    const L: P2[] = [...curve([x0, hc - 1.12 * Bh], [x0 - 1.25 * R, hc - 1.0 * Bh], [x0 - 1.16 * R, hc + 0.2 * Bh], 10), ...curve([x0 - 1.16 * R, hc + 0.2 * Bh], [x0 - 1.12 * R, hc + 0.85 * Bh], [x0 - 1.34 * R, hc + 1.02 * Bh], 8)];
+    const Rr: P2[] = L.map(([x, y]) => [2 * x0 - x, y] as P2).reverse();
+    const pts: P2[] = [...L, [x0 - 0.7 * R, hc + 1.0 * Bh], [x0 + 0.7 * R, hc + 1.0 * Bh], ...Rr];
+    p.shadedFill(pts, col, mul(col, SH_FELT), light, R * 1.2, 0.35); p.poly(pts, null, ow);
+    const u = R / 50; for (const s of [-1, 1]) p.stroke(curve([x0 + s * 1.0 * R, hc - 0.3 * Bh], [x0 + s * 1.1 * R, hc + 0.4 * Bh], [x0 + s * 1.22 * R, hc + 0.92 * Bh], 8), 1.4 * u, mul(col, [0.6, 0.6, 0.6]));
+  }
   if (o.bun && o.hair) { // loose bun on the crown, slightly back
     const u = H.a / 50, bx = cx - (side ? 30 : 8) * u, by = hc - H.b - 6 * u;
     p.ell(bx, by, 22 * u, 18 * u, o.hair, ow * 0.85);
@@ -682,6 +694,18 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
         p.ell(px, py, 32 * u, 0.06 * HH, shade(col, 0.8), ow, 0, 180, deg);
       }
     }
+  } else if (o.hat === "helmet") { // ep19: fire captain; domed crown, short brim, gold front shield, the brows stay clear
+    const col = o.cap ?? "#c63939", yb = crown + 0.3 * HH;
+    const dome = R([[cx - 52 * u, yb], [cx - 50 * u, yb - 0.36 * HH], [cx - 24 * u, yb - 0.62 * HH], [cx + 24 * u, yb - 0.62 * HH], [cx + 50 * u, yb - 0.36 * HH], [cx + 52 * u, yb]]);
+    p.shadedFill(dome, col, mul(col, SH_FELT), light, 52 * u, 0.4); p.poly(dome, null, ow);
+    p.poly(R([[cx - 68 * u, yb + 6 * u], [cx - 46 * u, yb - 3 * u], [cx + 46 * u, yb - 3 * u], [cx + 68 * u, yb + 6 * u], [cx + 40 * u, yb + 12 * u], [cx - 40 * u, yb + 12 * u]]), shade(col, 0.82), 3 * u);
+    p.poly(R([[cx - 13 * u, yb - 0.14 * HH], [cx + 13 * u, yb - 0.14 * HH], [cx + 13 * u, yb - 0.4 * HH], [cx, yb - 0.5 * HH], [cx - 13 * u, yb - 0.4 * HH]]), "#e8c45a", 2.4 * u);
+  } else if (o.hat === "toque") { // ep21 baker: white chef's hat, a band on the brow line and a puffed crown
+    const yb = crown + 0.2 * HH, col = "#fbfaf4", sh = mul(col, SH_CLOTH);
+    for (const [dx, dy, r] of [[-26, -0.42, 26], [26, -0.42, 26], [0, -0.55, 30]] as [number, number, number][]) {
+      const [x, y] = R([[cx + dx * u, yb + dy * HH]])[0]; p.ell(x, y, r * u, r * 0.85 * u, col, ow); }
+    const band = R([[cx - 44 * u, yb + 2 * u], [cx - 44 * u, yb - 0.22 * HH], [cx + 44 * u, yb - 0.22 * HH], [cx + 44 * u, yb + 2 * u]]);
+    p.shadedFill(band, col, sh, light, 44 * u, 0.4); p.poly(band, null, ow);
   } else if (o.hat === "tophat") {
     const yb = crown + 0.22 * HH, ht = 0.8 * HH, wb = 0.31 * W, wt = 0.33 * W, col = "#2e2a36";
     const body = R([...sag(yb, wb).reverse(), [cx - wt, yb - ht], [cx + wt, yb - ht]]);
@@ -705,7 +729,15 @@ export type Arms = [P2[], P2[]];
 export type Prop = null | "icecream" | "shako" | ["hammer", number] | "pencil" | "mug" | "tray" | "paper" | "notebook" | "backpack2" | "laces" | "book"
   | "tproll" | "tape" | "peel" | "dollar" | "dollar2" | "bones" | "phone" | "clipboard"
   | "icebags" | "foodbox" | "pitcher" | "cash" | "cash3" // ep02 "Cold Front"
-  | "watch"; // wristwatch on the left arm (screen right), drawn with that arm (ep12 watch_read)
+  | "watch" // wristwatch on the left arm (screen right), drawn with that arm (ep12 watch_read)
+  // ep15: steel cuffs round both wrists + a short chain (cuffs_click adds the click sparks); a folded wool blanket in the
+  // outstretched hand; an empty clear plastic bag hanging from the right hand (screen left)
+  | "cuffs" | "cuffs_click" | "blanket_fold" | "bag_empty" | "roller" | "jug" | "megaphone"
+  // opt-in episode prop (ep14/ep16 round 3): drawn in card space between the arms and the hands. k = cache key (draw is not
+  // in the key), h = the hand points [right (screen left), left], u = 1 % of the head width, chest = [x, y] of the chest
+  // over (ep19, optional): drawn AFTER the hands, with the hand point of each front-drawn arm (undefined = not shown), e.g. oven mitts;
+  // e = the matching elbow points (ep19 round 2: a mitt aligned to the forearm, so it reads as the hand, not a card)
+  | { k: string; draw: (p: Pen, h: [number, number][], u: number, chest: [number, number]) => void; over?: (p: Pen, h: ([number, number] | undefined)[], u: number, e: ([number, number] | undefined)[]) => void };
 /** arm override, relative to that shoulder: elbow (ex, ey), hand (hx, hy); x in body units u (screen +x), y in head-heights; front = drawn over the torso */
 export type Reach = { ex: number; ey: number; hx: number; hy: number; front?: boolean };
 
@@ -807,6 +839,9 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   /** skin stick leg; shorts (kids) / trousers (adults) as a wider tube along the same curve, so every pose wears them */
   const leg = (c: P2[]) => {
     legs++;
+    if (BEAN && o.layer?.kind === "jumpsuit") { // coverall legs: a cloth tube to just above the ankle, ink rim, a crease
+      const seg = part(c, 0.86), col = o.layer.color; p.stroke(seg, 17 * u, INK); p.stroke(seg, 13.4 * u, col);
+      p.stroke(seg.map(([x, y]): P2 => [x + 3.5 * u, y]), 3 * u, shade(col, 0.8)); p.stroke(c.slice(-Math.ceil(c.length * 0.2)), 5.2 * u, INK); return; }
     if (BEAN) { p.stroke(c, 5.2 * u, INK); return; } // bean: legs are single thin ink strokes (no trouser tubes)
     tube(c, legW, o.leggings ?? INK);
     if(o.socks && !o.swimwear) { const sock=c.slice(o.acc?.includes("socks_high") ? 5 : 8);p.stroke(sock,7*u,o.socks);if(o.acc?.includes("socks_high")) for(const q of sock.slice(0,2))p.stroke([[q[0]-3*u,q[1]],[q[0]+3*u,q[1]]],1.5*u,o.jacket); }
@@ -1114,12 +1149,35 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     for(const side of o.swimwear ? [] : o.pleated ? [-.8,-.4,0,.4,.8] : [-.6,.6])p.stroke([[tcx+side*T.a,torsoBot],[tcx+side*1.3*T.a,end-6*u]],1*u,shade(color,.65));
     if(o.bottom === "overalls") { cloth(rrect(tcx-23*u,chin+.26*HH,tcx+23*u,hem,3*u),color,2*u);for(const side of [-1,1]){p.band([[tcx+side*25*u,chin],[tcx+side*18*u,chin+.45*HH]],color,7*u,1*u);p.dot(tcx+side*18*u,chin+.4*HH,2*u,"#edc45c");}cloth(rrect(tcx-13*u,chin+.51*HH,tcx+13*u,chin+.76*HH,2*u),shade(color,.9),1*u); }
   }
-  if(o.layer)(BEAN ? (f: () => void) => p.clip(tp, f) : (f: () => void) => f())(() => { for(const side of [-1,1]) {
+  if (o.layer?.kind === "blanket") { // draped over both shoulders, open at the front, hanging to the knees: soft hem, stitched edge
+    const col = o.layer.color, bot = Math.min(hipY + 0.62 * HH, sole - 0.25 * HH), stitch = mix(col, "#f4f1ea", 0.4);
+    for (const side of [-1, 1]) {
+      const s = (x: number, y: number): P2 => [tcx + side * x * T.a, y];
+      const outer = curve(s(1.02, chin + 0.04 * HH), s(1.3, (chin + bot) / 2), s(1.36, bot), 10); // flares out: hangs, not a tube
+      const hem = curve(s(1.36, bot), s(0.85, bot + 0.08 * HH), s(0.36, bot - 0.02 * HH), 8);
+      const inner = curve(s(0.36, bot - 0.02 * HH), s(0.3, (chin + bot) / 2), s(0.26, chin - 0.02 * HH), 10);
+      const top = curve(s(0.26, chin - 0.02 * HH), s(0.75, chin - 0.12 * HH), s(1.02, chin + 0.04 * HH), 8);
+      const pts = [...outer, ...hem.slice(1), ...inner.slice(1), ...top.slice(1, -1)];
+      p.gradFill(pts, col, mul(col, SH_CLOTH), light);
+      p.clip(pts, () => { // wool flecks + two soft fold shadows down from the shoulder
+        for (let i = 0; i < 60; i++) { const x = tcx + side * (0.3 + 0.95 * rnd(seed, 500 + i + side * 70)) * T.a, y = chin + (bot - chin) * rnd(seed, 600 + i + side * 70);
+          p.stroke([[x, y], [x + 2.5 * u, y + 1.5 * u]], 1.1 * u, shade(col, rnd(seed, 700 + i) < 0.5 ? 0.85 : 1.12)); }
+        p.stroke(curve(s(0.8, chin + 0.12 * HH), s(0.95, (chin + bot) / 2), s(0.8, bot), 8), 4 * u, shade(col, 0.88)); // one soft fold
+      });
+      p.poly(pts, null, 2.6 * u);
+      const edge = [...hem.slice(2, -1), ...inner.slice(1, -2)].map(([x, y]): P2 => [x - side * 4 * u, y - 4 * u]); // running stitch along the hem + front edge
+      for (let i = 0; i + 1 < edge.length; i += 2) p.stroke([edge[i], lerp2(edge[i], edge[i + 1], 0.6)], 1.2 * u, stitch);
+    }
+  }
+  if (o.layer?.kind === "jumpsuit") p.clip(tp, () => { // breast pocket + a waist seam on the coverall
+    const col = o.layer!.color; cloth(rrect(tcx + 0.3 * T.a, chin + 0.3 * HH, tcx + 0.62 * T.a, chin + 0.5 * HH, 2 * u), shade(col, 0.95), 1.6 * u);
+    p.stroke([[tcx - T.a, torsoBot - 0.22 * HH], [tcx + T.a, torsoBot - 0.22 * HH]], 1.6 * u, shade(col, 0.7)); });
+  if(o.layer && o.layer.kind !== "blanket" && o.layer.kind !== "jumpsuit")(BEAN ? (f: () => void) => p.clip(tp, f) : (f: () => void) => f())(() => { for(const side of [-1,1]) {
     const end=hem+(o.layer!.long ? .42 : .1)*HH,color=o.layer!.color;
     cloth([[tcx+side*12*u,chin],[tcx+side*.7*T.a,chin],[tcx+side*T.a,chin+.23*HH],[tcx+side*1.05*T.a,end],[tcx+side*12*u,end],[tcx+side*8*u,chin+.3*HH]],color);
     p.stroke([[tcx+side*18*u,end-21*u],[tcx+side*.85*T.a,end-21*u]],1.2*u,shade(color,.6));
   } });
-  if(o.layer && BEAN) p.inkRing(tp, ow, thick);
+  if(o.layer && BEAN && o.layer.kind !== "blanket") p.inkRing(tp, ow, thick);
   if (mode === "fall_belly") for (const side of [-1, 1]) { // jacket hem blown up by the wind: a flap flipping out at each side
     const y = torsoBot - 0.12 * HH, f = 1 + 0.12 * Math.sin(two * (phase * 3 + (side + 1) / 4));
     cloth([[tcx + side * 0.55 * T.a, y + 0.1 * HH], [tcx + side * 0.95 * T.a, y - 0.04 * HH], [tcx + side * (1.0 + 0.55 * f) * T.a, y - 0.42 * f * HH], [tcx + side * 0.85 * T.a, y + 0.14 * HH]], o.layer?.color ?? o.jacket, 2.2 * u);
@@ -1282,6 +1340,57 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
       p.poly([[x - 6.5 * u, y - 27 * u], [x + 6.5 * u, y - 27 * u], [x + 6.5 * u, y - 1 * u], [x - 6.5 * u, y - 1 * u]], "#9fd3f0", 0);
       hand(x, y);
     }
+    if ((prop === "cuffs" || prop === "cuffs_click") && arms[1]) { // a steel ring ON each wrist (on the arm curve) + a short sagging chain
+      const steel = "#d3d8de", W2 = arms.slice(0, 2).map((a) => { const c = curve(a.pts[0], a.pts[1], a.pts[2], 20), w = c[c.length - 4], v = c[c.length - 7];
+        const d = Math.hypot(w[0] - v[0], w[1] - v[1]) || 1; return { w, dx: (w[0] - v[0]) / d, dy: (w[1] - v[1]) / d }; });
+      const ring = ({ w, dx, dy }: typeof W2[0]) => Array.from({ length: 25 }, (_, i): P2 => { const a = (i / 24) * 2 * Math.PI;
+        return [w[0] - dy * 10.5 * u * Math.cos(a) + dx * 4.4 * u * Math.sin(a), w[1] + dx * 10.5 * u * Math.cos(a) + dy * 4.4 * u * Math.sin(a)]; });
+      const [A, B] = W2, chain = curve(A.w, [(A.w[0] + B.w[0]) / 2, Math.max(A.w[1], B.w[1]) + 7 * u], B.w, 6);
+      for (let i = 0; i < 6; i++) { const q = lerp2(chain[i], chain[i + 1], 0.5), r = Math.atan2(chain[i + 1][1] - chain[i][1], chain[i + 1][0] - chain[i][0]) * 180 / Math.PI + (i % 2 ? 90 : 0);
+        const lk = ellPts(q[0], q[1], 3.8 * u, 2.3 * u, 0, 360, r, 16); p.stroke(lk, 4 * u, INK); p.stroke(lk, 1.6 * u, steel); }
+      for (const a of arms.slice(0, 2)) hand(a.pts[2][0], a.pts[2][1]);
+      for (const R of W2) { const r = ring(R); p.stroke(r, 7.6 * u, INK); p.stroke(r, 4.4 * u, steel); p.stroke(r.slice(14, 19), 1.4 * u, "#ffffff"); p.dot(R.w[0] - R.dy * 8.5 * u, R.w[1] + R.dx * 8.5 * u, 2.4 * u, "#8a929c"); }
+      if (prop === "cuffs_click") { const m = lerp2(A.w, B.w, 0.5); for (let i = 0; i < 6; i++) { const a = rad(-160 + i * 28); // click sparks
+        p.stroke([[m[0] + Math.cos(a) * 14 * u, m[1] - 4 * u + Math.sin(a) * 14 * u], [m[0] + Math.cos(a) * 24 * u, m[1] - 4 * u + Math.sin(a) * 24 * u]], 2.6 * u, "#fff6c8"); } }
+    }
+    if (prop === "blanket_fold" && arms.length) { // a folded grey wool blanket, three soft rounded folds + a stitched edge, held out in the far hand
+      const a = arms.reduce((m, x) => (Math.abs(x.pts[2][0] - tcx) > Math.abs(m.pts[2][0] - tcx) ? x : m)), [x, y] = a.pts[2], s = Math.sign(x - tcx) || 1;
+      const cx = x + s * 34 * u, cy = y - 6 * u, col = "#9a9ea6", K = 1.6; // K: blanket size over the old hand-prop scale
+      for (let k = 2; k >= 0; k--) { const y0 = cy + (-14 + k * 9) * K * u; // back fold first; each fold a rounded slab
+        const slab = rrect(cx - 28 * K * u, y0 - 6 * K * u, cx + 28 * K * u, y0 + 6 * K * u, 6 * K * u); p.gradFill(slab, shade(col, 1 - 0.06 * k), mul(col, SH_CLOTH), light); p.poly(slab, null, 2 * u); }
+      for (let i = 0; i < 12; i++) p.stroke([[cx + (-40 + i * 6.8) * u, cy + 16 * K * u], [cx + (-37 + i * 6.8) * u, cy + 16 * K * u]], 1.4 * u, "#e2e0da"); // stitched edge
+      for (let i = 0; i < 14; i++) { const fx = cx + (rnd(seed, 900 + i) - 0.5) * 80 * u, fy = cy + (-26 + rnd(seed, 950 + i) * 44) * u; p.stroke([[fx, fy], [fx + 2.5 * u, fy + u]], 1 * u, shade(col, 0.85)); }
+      hand(x, y);
+    }
+    if (prop === "bag_empty" && R0) { // an empty clear bag hanging from the pinched hand: limp, creased, crinkle glints
+      const [x, y] = R0, g = p.g;
+      const bagP: P2[] = [[x - 4 * u, y + 2 * u], [x + 4 * u, y + 2 * u], [x + 16 * u, y + 20 * u], [x + 20 * u, y + 46 * u], [x + 12 * u, y + 56 * u], [x + 2 * u, y + 52 * u], [x - 10 * u, y + 58 * u], [x - 20 * u, y + 48 * u], [x - 16 * u, y + 22 * u]];
+      g.save(); g.globalAlpha *= 0.55; p.poly(bagP, "#e6f0f8", 0); g.restore(); p.poly(bagP, null, 1.6 * u);
+      const at = (dx: number, dy: number): P2 => [x + dx * u, y + dy * u]; // offsets in u from the hand
+      for (const [a, b, c, d] of [[-8, 18, -2, 34], [6, 22, 12, 40], [-12, 40, -4, 50]]) p.stroke([at(a, b), at(c, d)], 1.1 * u, "#9aa8b4"); // creases
+      for (const [a, b, c, d] of [[-11, 26, -6, 20], [9, 44, 15, 36], [-4, 46, 1, 42]]) p.stroke([at(a, b), at(c, d)], 2.4 * u, "#ffffff"); // crinkle glints
+      hand(x, y);
+    }
+    if (prop === "jug" && arms[1]) { // empty clear water jug held up by its handle in the left hand (screen right): ep15 s6
+      const [x, y] = arms[1].pts[2], b = rrect(x - 4 * u, y - 40 * u, x + 22 * u, y + 4 * u, 5 * u), g = p.g;
+      g.save(); g.globalAlpha *= 0.6; p.poly(b, "#dcebf0", 0); g.restore(); p.poly(b, null, 2 * u);
+      p.poly(rrect(x + 3 * u, y - 50 * u, x + 15 * u, y - 40 * u, 2 * u), "#3a6aa8", 1.8 * u); p.stroke([[x + 2 * u, y - 34 * u], [x + 2 * u, y - 8 * u]], 2.4 * u, "#ffffff");
+      hand(x, y);
+    }
+    if (prop === "megaphone" && R0) { // loud-hailer at the mouth: grip in the right hand (screen left), bell out to screen right
+      const [x, y] = R0;
+      p.poly([[x - 2 * u, y - 14 * u], [x + 30 * u, y - 26 * u], [x + 30 * u, y + 10 * u], [x - 2 * u, y - 2 * u]], "#e8e4d8", 2 * u);
+      p.ell(x + 30 * u, y - 8 * u, 6 * u, 18 * u, "#c9ccd4", 2 * u); p.band([[x + 4 * u, y - 6 * u], [x + 4 * u, y + 8 * u]], "#3a3f4a", 4 * u, 1.2 * u);
+      hand(x, y + 6 * u);
+    }
+    if (prop === "roller" && R0) { // paint roller: the handle in the fist, a bent wire frame up to a fat nap roller (ep15 s3)
+      const [x, y] = R0, top: P2 = [x - 6 * u, y - 46 * u];
+      p.band([[x + 2 * u, y + 12 * u], [x, y - 14 * u]], "#c0392b", 6 * u, 1.6 * u, "round"); // grip
+      p.stroke([[x, y - 14 * u], [x - 4 * u, y - 36 * u], top, [top[0] + 14 * u, top[1]]], 4.4 * u, INK); p.stroke([[x, y - 14 * u], [x - 4 * u, y - 36 * u], top, [top[0] + 14 * u, top[1]]], 2 * u, "#b9c0c8");
+      const r = rrect(top[0] - 6 * u, top[1] - 9 * u, top[0] + 34 * u, top[1] + 9 * u, 8 * u); p.gradFill(r, "#8fa3b4", mul("#8fa3b4", SH_CLOTH), light); p.poly(r, null, 2.2 * u);
+      for (let i = 0; i < 6; i++) p.stroke([[top[0] + i * 6 * u, top[1] - 6 * u], [top[0] + i * 6 * u + 2 * u, top[1] + 6 * u]], 1 * u, "#6d7f90");
+      hand(x, y);
+    }
     if (prop === "book") { // open book held at the chest, nose in it
       const [x, y] = book;
       for (const s of [-1, 1]) {
@@ -1290,6 +1399,11 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
         for (let i = 0; i < 3; i++) p.stroke([[x + s * 5 * u, y + (5 + 5 * i) * u], [x + s * 18 * u, y + (4 + 5 * i) * u]], 1.1 * u, "#9aa0ac");
       }
       for (const a of arms) hand(a.pts[2][0], a.pts[2][1]);
+    }
+    if (prop && typeof prop === "object" && !Array.isArray(prop)) { // episode prop: the hands go on top of it
+      prop.draw(p, arms.map((a) => a.pts[2]), u, [tcx, chin + 0.42 * AH]);
+      for (const a of arms) if (a.front) hand(a.pts[2][0], a.pts[2][1]);
+      prop.over?.(p, arms.map((a) => (a.front ? a.pts[2] : undefined)), u, arms.map((a) => (a.front ? a.pts[1] : undefined)));
     }
   };
   heldProps();

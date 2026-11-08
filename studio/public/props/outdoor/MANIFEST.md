@@ -64,3 +64,12 @@ CC-BY items must be credited in the video description: copy lines from ATTRIBUTI
 
 Not replaced: dune.glb, mesa_rock.glb (no CC0 Poly Pizza model read better; candidates were CC-BY scene chunks), palm (props/palm.glb already Quaternius CC0).
 Contact sheet: studio/out/props_outdoor_sheet2.png
+
+## ep15 additions (2026-11-07, modelled in Blender for this channel, no third-party assets)
+| file | size (m) | tris | use |
+|---|---|---|---|
+| sub_hull.glb | 3.4 x 18.4 x 2.7 | ~150 | grey-blue low fibreglass hull, cockpit (window +Z) at z +4.2, exhaust pipe at z -5.5, deck at y 1.35; afloat at y -1.6 only cockpit + pipe show |
+| sub_hatch.glb | 0.76 x 0.76 x 0.13 | ~48 | the roof hatch disc (sits on the cockpit at y 2.2) |
+| cutter.glb | 8.4 x 40.5 x 16 | ~200 | plain white patrol cutter, bow +Z, deck y 4.6, bridge + mast + searchlight, no markings |
+| fast_boat.glb | 2.6 x 8.3 x 2.2 | ~60 | dark grey interceptor boat with a console, bow +Z |
+| dome_hall.glb | 34 x 22 x 22.6 | ~1000 | generic cream domed hall, portico of 8 columns +Z, no lettering |

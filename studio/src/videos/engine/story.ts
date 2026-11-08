@@ -111,4 +111,5 @@ export const fallPos = (id: number, t: number, below = 4): V3 => { const c = cam
 // ---------------- lens blur ----------------
 export type Dof = { cInf: number; focus?: (f: number) => V3 };
 const CINF: Record<Size, number> = { close: 13, mid: 10, wide: 5 }; // depth.md 5.1: WS 5 px too (was 0: wides read flat, fb0016b)
-export const dofAt = (f: number): Dof => { const s = shotAt(f); return "fall" in s.cam ? { cInf: CINF[s.size], focus: (g) => fallPos(s.id, g / 30) } : { cInf: CINF[s.size] }; }; // sky-fall: focus on the faller
+const NO_LENS = ((EP as Record<string, unknown>)["NO_LENS"] ?? []) as number[]; // optional episode export (ep14): shots with no lens blur
+export const dofAt = (f: number): Dof => { const s = shotAt(f); if (NO_LENS.includes(s.id)) return { cInf: 0 }; return "fall" in s.cam ? { cInf: CINF[s.size], focus: (g) => fallPos(s.id, g / 30) } : { cInf: CINF[s.size] }; }; // sky-fall: focus on the faller

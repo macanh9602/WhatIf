@@ -1,0 +1,318 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999999046862,
+    "true_peak_dbtp": -1.5204838147293835,
+    "lra_lu": 2.0971725687676184,
+    "sample_peak_dbfs": -1.5260111897604525
+  },
+  "voice": {
+    "integrated_lufs": -15.943862728631021,
+    "true_peak_dbtp": -1.5510098148603557,
+    "lra_lu": 2.0134109997267355,
+    "sample_peak_dbfs": -1.5565371898914246
+  },
+  "music": {
+    "integrated_lufs": -42.01409199167141,
+    "true_peak_dbtp": -22.279811306393732,
+    "lra_lu": 7.039935278089757,
+    "sample_peak_dbfs": -22.325030436260384
+  },
+  "sfx": {
+    "integrated_lufs": -31.01221791502397,
+    "true_peak_dbtp": -12.296644048677008,
+    "lra_lu": 22.4484372895922,
+    "sample_peak_dbfs": -12.308066501973231
+  },
+  "master_gain_db": -0.16005790991044222,
+  "voice_gain_db": -0.16005790991044222,
+  "source_duration_seconds": 78.3,
+  "source_sha256": "88d29960b8f9ac7c25b992ce7588cac3c4600e15ad8540fe647727aeca343df8",
+  "words_sha256": "6fd791b572b7ef68259546a30af3bf9e4a2e8d673115a02f5941ee45102d4e91",
+  "music_sections": [
+    {
+      "name": "Talkton arrival: dry bounce",
+      "start": 0,
+      "end": 19.65,
+      "base_margin": -17,
+      "gain_db": -14.422152932728885
+    },
+    {
+      "name": "Market: thin bounce",
+      "start": 19.65,
+      "end": 39.4,
+      "base_margin": -19,
+      "gain_db": -16.190968657284632
+    },
+    {
+      "name": "Bridge, golden: warm",
+      "start": 39.4,
+      "end": 50.2,
+      "base_margin": -20,
+      "gain_db": -14.595315317363017
+    },
+    {
+      "name": "Night street: low pad",
+      "start": 50.2,
+      "end": 67.8,
+      "base_margin": -23,
+      "gain_db": -3.283455172687468
+    },
+    {
+      "name": "Ten words left: pulse, dead stop at the cut",
+      "start": 67.8,
+      "end": 73.8,
+      "base_margin": -19,
+      "gain_db": -15.573264074901392
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.2,
+      "end": 5.2,
+      "kind": "room",
+      "description": "town street, light wind",
+      "target": -49.783804818720206,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.4,
+      "end": 5.6000000000000005,
+      "kind": "whoosh",
+      "description": "bus pulls away",
+      "target": -43.783804818720206,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.4,
+      "end": 9.55,
+      "kind": "click",
+      "description": "guide box ticks",
+      "target": -37.783804818720206,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.0,
+      "end": 13.15,
+      "kind": "click",
+      "description": "meter ticks",
+      "target": -37.783804818720206,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.0,
+      "end": 26.0,
+      "kind": "room",
+      "description": "market murmur",
+      "target": -51.783804818720206,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.2,
+      "end": 24.599999999999998,
+      "kind": "paper",
+      "description": "bread bag",
+      "target": -45.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.9,
+      "end": 29.299999999999997,
+      "kind": "thump",
+      "description": "man bumps you",
+      "target": -35.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.9,
+      "end": 32.199999999999996,
+      "kind": "stamp",
+      "description": "sorry price board",
+      "target": -41.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.9,
+      "end": 37.05,
+      "kind": "click",
+      "description": "meter at half",
+      "target": -37.783804818720206,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.0,
+      "end": 44.0,
+      "kind": "water",
+      "description": "creek under the bridge",
+      "target": -47.783804818720206,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.4,
+      "end": 47.699999999999996,
+      "kind": "tink",
+      "description": "coin drops in the meter",
+      "target": -43.783804818720206,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.4,
+      "end": 54.4,
+      "kind": "room",
+      "description": "night air",
+      "target": -51.783804818720206,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 58.0,
+      "end": 59.0,
+      "kind": "steps",
+      "description": "porch steps",
+      "target": -43.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 59.3,
+      "end": 59.5,
+      "kind": "thump",
+      "description": "knock",
+      "target": -35.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 59.55,
+      "end": 59.75,
+      "kind": "thump",
+      "description": "knock",
+      "target": -35.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 60.7,
+      "end": 61.2,
+      "kind": "whoosh",
+      "description": "door opens",
+      "target": -47.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 62.9,
+      "end": 63.199999999999996,
+      "kind": "tink",
+      "description": "bills flutter into the slot",
+      "target": -41.783804818720206,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 64.8,
+      "end": 65.7,
+      "kind": "bell",
+      "description": "pling: paid",
+      "target": -39.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.7,
+      "end": 73.7,
+      "kind": "fastclock",
+      "description": "meter ticks fast",
+      "target": -47.783804818720206,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.65,
+      "end": 75.05000000000001,
+      "kind": "beep",
+      "description": "meter: out of credit",
+      "target": -23.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.68,
+      "end": 75.58000000000001,
+      "kind": "bassdrop",
+      "description": "display powers down",
+      "target": -45.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 75.2,
+      "end": 76.10000000000001,
+      "kind": "tape",
+      "description": "the strip prints",
+      "target": -35.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 76.7,
+      "end": 77.60000000000001,
+      "kind": "giggle",
+      "description": "Mia giggles, pats the jacket (synth, effects.py)",
+      "target": -20.783804818720206,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 10.303039203523202,
+    "p10": 22.395317711501757,
+    "median": 27.440987276328766
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3758400,
+    "duration_seconds": 78.3,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

@@ -1,0 +1,544 @@
+{
+ "bpm": 112,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   50,
+   50,
+   50,
+   50
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -3,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 79.3,
+ "seed": 191919,
+ "music_sections": [
+  [
+   "Backyard: cheerful holiday bounce",
+   0,
+   11.0,
+   -16,
+   "bounce"
+  ],
+  [
+   "Neighbor: bounce thins",
+   11.0,
+   19.0,
+   -19,
+   "bounce"
+  ],
+  [
+   "Oil rises: sparse pulse",
+   19.0,
+   27.4,
+   -20,
+   "pulse"
+  ],
+  [
+   "Lock, spill: pad only",
+   27.4,
+   32.3,
+   -25,
+   "pad"
+  ],
+  [
+   "Whoomp ring-out",
+   33.3,
+   37.2,
+   -24,
+   "pad"
+  ],
+  [
+   "Fine behind a chair: deadpan warm",
+   37.2,
+   41.9,
+   -21,
+   "warm"
+  ],
+  [
+   "You see: near silence",
+   41.9,
+   44.2,
+   -28,
+   "pad"
+  ],
+  [
+   "Explain: glock",
+   44.2,
+   54.2,
+   -20,
+   "explain"
+  ],
+  [
+   "Dusk: engine, leaflet",
+   54.2,
+   69.0,
+   -19,
+   "warm"
+  ],
+  [
+   "Dinner at the neighbor's: dry warm tail",
+   69.0,
+   77.8,
+   -18,
+   "warm"
+  ]
+ ],
+ "sfx": [
+  [
+   7.75,
+   "crinkle",
+   0.9,
+   -42,
+   0,
+   "frost crackle on the coat of frost"
+  ],
+  [
+   7.9,
+   "tink",
+   0.25,
+   -38,
+   0.3,
+   "frost flake"
+  ],
+  [
+   8.15,
+   "tink",
+   0.25,
+   -41,
+   -0.3,
+   "frost flake"
+  ],
+  [
+   9.5,
+   "sip",
+   5.2,
+   -44,
+   0,
+   "gentle oil simmer"
+  ],
+  [
+   16.95,
+   "splash",
+   0.9,
+   -34,
+   0,
+   "turkey sinks into oil"
+  ],
+  [
+   17.9,
+   "sip",
+   1.1,
+   -40,
+   0,
+   "simmer"
+  ],
+  [
+   19.0,
+   "sip",
+   2.0,
+   -38,
+   0,
+   "oil bubbles"
+  ],
+  [
+   20.6,
+   "crinkle",
+   1.2,
+   -44,
+   0,
+   "foam hiss"
+  ],
+  [
+   21.0,
+   "sip",
+   2.4,
+   -35,
+   0,
+   "bubbles busy"
+  ],
+  [
+   21.9,
+   "crinkle",
+   2.5,
+   -40,
+   0,
+   "fizz rising"
+  ],
+  [
+   23.8,
+   "sip",
+   3.0,
+   -32,
+   0,
+   "foams, climbs"
+  ],
+  [
+   23.9,
+   "crinkle",
+   3.0,
+   -36,
+   0,
+   "fizz at the lip"
+  ],
+  [
+   26.86,
+   "thump",
+   0.3,
+   -27,
+   0.4,
+   "door shuts"
+  ],
+  [
+   26.98,
+   "click",
+   0.12,
+   -24,
+   0.4,
+   "lock click"
+  ],
+  [
+   29.9,
+   "crinkle",
+   2.8,
+   -34,
+   0,
+   "oil over the rim hisses to flame"
+  ],
+  [
+   30.2,
+   "sip",
+   2.5,
+   -36,
+   0,
+   "oil runs down the side"
+  ],
+  [
+   33.19,
+   "bassdrop",
+   2.2,
+   -9,
+   0,
+   "WHOOMP low"
+  ],
+  [
+   33.2,
+   "thump",
+   0.9,
+   -12,
+   0,
+   "WHOOMP body"
+  ],
+  [
+   33.2,
+   "whoosh",
+   1.6,
+   -22,
+   0,
+   "flame roar"
+  ],
+  [
+   33.22,
+   "crack",
+   0.35,
+   -18,
+   0,
+   "soft top of the blast"
+  ],
+  [
+   34.0,
+   "rustle",
+   2.2,
+   -36,
+   0,
+   "ember crackle"
+  ],
+  [
+   34.3,
+   "tink",
+   0.3,
+   -30,
+   -0.5,
+   "debris patter"
+  ],
+  [
+   34.6,
+   "tink",
+   0.3,
+   -33,
+   0.5,
+   "debris patter"
+  ],
+  [
+   34.95,
+   "tink",
+   0.3,
+   -31,
+   -0.3,
+   "debris patter"
+  ],
+  [
+   35.4,
+   "tink",
+   0.3,
+   -35,
+   0.4,
+   "debris patter"
+  ],
+  [
+   35.9,
+   "tink",
+   0.3,
+   -37,
+   -0.4,
+   "debris patter"
+  ],
+  [
+   41.1,
+   "tray",
+   0.9,
+   -26,
+   0,
+   "lawn chair folds, clatter"
+  ],
+  [
+   41.4,
+   "tink",
+   0.3,
+   -32,
+   0.4,
+   "chair rattle"
+  ],
+  [
+   54.6,
+   "room",
+   4.5,
+   -33,
+   0,
+   "fire engine rumble arrives"
+  ],
+  [
+   56.2,
+   "chugslow",
+   3.8,
+   -38,
+   -0.2,
+   "engine idling"
+  ],
+  [
+   60.0,
+   "room",
+   3.0,
+   -36,
+   0,
+   "engine rumble settles"
+  ],
+  [
+   63.9,
+   "rustle",
+   0.9,
+   -28,
+   0,
+   "leaflet handed over"
+  ],
+  [
+   65.2,
+   "rustle",
+   0.5,
+   -31,
+   0.2,
+   "page one"
+  ],
+  [
+   68.9,
+   "rustle",
+   0.5,
+   -32,
+   0,
+   "leaflet flipped"
+  ],
+  [
+   69.5,
+   "happy",
+   6.4,
+   -40,
+   0,
+   "warm porch chatter"
+  ],
+  [
+   70.9,
+   "tray",
+   0.6,
+   -34,
+   0.3,
+   "tray set down"
+  ],
+  [
+   72.4,
+   "tink",
+   0.3,
+   -34,
+   -0.4,
+   "cutlery"
+  ],
+  [
+   73.95,
+   "tink",
+   0.3,
+   -36,
+   0.4,
+   "cutlery"
+  ],
+  [
+   75.0,
+   "tink",
+   0.3,
+   -37,
+   -0.2,
+   "plate clink"
+  ],
+  [
+   78.0,
+   "paper",
+   0.55,
+   -36,
+   0,
+   "small metallic roof creak"
+  ],
+  [
+   78.3,
+   "tink",
+   0.9,
+   -39,
+   0.2,
+   "roof ring-out"
+  ],
+  [
+   78.35,
+   "tink",
+   0.7,
+   -44,
+   -0.2,
+   "roof ring-out 2"
+  ]
+ ]
+}

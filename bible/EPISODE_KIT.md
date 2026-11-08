@@ -2,8 +2,9 @@
 
 ## Flow for one episode (token budget ~300k)
 1. Director: SCRIPT.md + script.txt, then SHOTLIST (below). The user approves both at once. No render before that.
-2. In parallel, one background job each: voice (GPU) and one Sonnet agent for inserts.tsx + audio settings.json.
-3. One Opus agent builds story.ts + cast.ts from the approved shot list, then a preview.
+2. Script agent = Sonnet, effort medium (SCRIPT.md, script.txt, SHOTLIST). The director checks the shot list, then runs the voice
+   (gpu.sh + Chatterbox) and the mix (audio settings.json + build.py) itself, no agent.
+3. One Opus agent builds story.ts + cast.ts (+ inserts.tsx) from the approved shot list, then a preview.
 4. The user watches the preview and sends ALL notes at once.
 5. One FRESH agent (short brief, the notes as a list) does one fix round. Never resume an agent past ~150k tokens.
 A new episode starts in a new chat session.
@@ -55,6 +56,15 @@ Shared engine files: smallest fix only when blocked, list it in the report, ep01
 - Keep heads clear of the frame edge in flat-card shots.
 - Balloon from above reads as a striped ball: side views only.
 
+## Prop check (no gate covers this: value/temporal/staging/expr QA never look at hands)
+ep15 shipped a roller floating off the hand, cuffs floating on the chest, a jumpsuit pasted over the body and a board for a blanket. Before any final: list every shot where the lead holds, wears or uses something, make start/mid/end stills of each, and open them at full size. Held = in the hand and moving with it; worn = drawn as part of the body; cloth reads as cloth. One frame per shot on a contact sheet is too small to catch it.
+
+## Flicker check
+`python scripts/flicker_qa.py <master.mp4>` (no GPU, every frame) must PASS before a final: it catches z-fighting, as on the ep17 doormat the user spotted, which temporal_qa missed because it samples 16 frames per shot, and stills and sheets can never show it. A temporal_qa fail is a different signal: open the `_boil.png` map in out/temporal/<ep> and name what lights up. Stripes along edges under a moving camera are aliasing (ep17 shots 9, 16, 24, 29); a filled patch is a bug. Never let two faces share a plane: any slab on a surface sits at least 1 cm clear of it.
+
+## Trap from ep14-16
+- Chatterbox ends the take right on the last word (ep15: 0.03 s), and mix + TOTAL follow the voice, so the video stops dead. Pad the voice with 1.5 s of silence (`ffmpeg -af apad=pad_dur=1.5`) before the mix, and let the last shot hold to it.
+
 ## Traps from ep13
 - One render at a time even for stills: a job started beside a render died with ERR_ABORTED (port 3000).
 - A full render with many soft fx passes the 600 s tool limit: run it in the background.
@@ -67,3 +77,13 @@ Shared engine files: smallest fix only when blocked, list it in the report, ep01
 3. Preview needs no full run: `COMP=Short PREVIEW=1 CONCURRENCY=3 EP=<ep> node scripts/render.mjs <ep> all`.
 4. Full gates once, before a final. SELF_CHECK.md: one line per shot.
 Report under 200 words. No upload, no commit.
+
+## Token budget (director, 2026-11-08)
+Measured: Sonnet script+voice+mix 140-185k, Opus first picture build 330-450k, Opus fix round ~240k. Most of a build is images and big file reads, so:
+- Review stills as ONE sheet per shot: `COMP=Short EP=<ep> node scripts/selfcheck.mjs out/<ep>/sc <ids>` then `python scripts/selfcheck_sheet.py out/<ep>/sc`. Never open loose stills one by one (ep19 left 347 jpgs). After a fix, re-sheet only the changed shot ids.
+- Open the full contact sheet at most twice: after the first stills pass and before the final.
+- Do not read ep13/ep19 cast.ts whole (43-59 kB): grep for the helper you need (fireball, held prop, CAM_PATH) and read that range.
+- Wait for GPU jobs with one `until` loop in the background, not repeated foreground checks; kill your loops before you finish.
+- Don't chase boil numbers on previews; the user judges the preview.
+- Fix your own "still weak" list before you report (user 2026-11-08): a build or fix agent hands over a list of known defects only when a fix is truly out of reach, with the reason. Self-check every shot for: the lead whole in frame (no cut heads, no half bodies at the edge), no pole/prop crossing sign text, every held/key prop readable, no empty-looking street (towns get background people doing things).
+- Before any hand-over to the user (user 2026-11-08, ep21): run flicker_qa AND temporal_qa on the WHOLE episode and fix every span (light pools on the ground, night lamps, fences/rails, thin posts). A contact sheet shows one frame per shot and cannot catch motion defects. The director checks the QA output files, not only the sheet.

@@ -8,4 +8,7 @@ while ! mkdir "$L" 2>/dev/null; do
   sleep 5
 done
 trap 'rmdir "$L" 2>/dev/null' EXIT INT TERM
+# Remotion never deletes its bundles (~420 MB each, a copy of public/) or Chrome profiles: 58 GB filled D: on 2026-11-07.
+# With the lock held no other GPU job runs, so anything older than 15 min is a dead job's leftover.
+find D:/remotion-tmp -mindepth 1 -maxdepth 1 ! -name gpu.lock -mmin +15 -exec rm -rf {} + 2>/dev/null
 "$@"

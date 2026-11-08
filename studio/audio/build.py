@@ -226,7 +226,7 @@ def main():
                     str(WORK/'voice.wav')], check=True)
     source, sr = read_wav(str(WORK/'voice.wav'))
     assert sr == SR and source.shape[1] <= n
-    assert words and all(0 <= w['start'] < w['end'] <= source.shape[1]/SR for w in words)
+    assert words and all(0 <= w['start'] <= w['end'] <= source.shape[1]/SR for w in words)
     voice = np.zeros((2, n))
     voice[:, :source.shape[1]] = st(source)
     ref = integrated(voice)

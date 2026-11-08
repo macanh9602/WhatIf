@@ -42,6 +42,7 @@ const topShadow = (k: number) => ctex(`topshadow|${k}`, 512, 512, (g) => { g.fil
 /** per-shot sun override: indoors a high sun over the open wall tops reads as window light */
 const SUN_SHOT = ((EP_SUN as Record<string, unknown>)["SUN_SHOT"] ?? {}) as Record<number, { az?: number; el?: number }>; // optional episode export (ep13: golden shots lit from behind the lens)
 const INDOOR_EL = 58;
+const NO_SKY = ((EP_SUN as Record<string, unknown>)["NO_SKY_CLOUDS"] ?? []) as number[]; // optional episode export (ep18): shots without the painted sky clouds (a storm)
 /** A/B for scripts (backdrop_check.py): inputProps `{ post: { backdrop: false } }` hides the panorama layers */
 const NO_BACKDROP = (getInputProps() as { post?: { backdrop?: boolean } }).post?.backdrop === false;
 
@@ -199,7 +200,7 @@ export class World {
     }
     const o = SETS[s.set].origin;
     this.clouds.forEach((m, i) => {
-      m.visible = !indoor && !fall && s.light !== "sea" && s.light !== "shallow";
+      m.visible = !indoor && !fall && s.light !== "sea" && s.light !== "shallow" && !NO_SKY.includes(id);
       (m.material as THREE.MeshBasicMaterial).color.setRGB(...(CLOUD_TINT[s.light] ?? [1.1, 1.1, 1.1]));
       const a = (i / 9) * Math.PI * 2 + 0.3, d = 520 + (i % 3) * 60, w = 120 + (i % 4) * 30;
       m.position.set(o[0] + Math.cos(a) * d, 110 + (i % 4) * 36, o[2] + Math.sin(a) * d); m.scale.set(w, w / 2, 1);
@@ -264,7 +265,7 @@ export class World {
       if (!this.frustum.intersectsSphere(this.sph.set(this.v.set(p.x, p.y, p.z), Math.max(p.w, p.h)))) continue;
       const e2 = this.fx(fi++);
       e2.r = this.pool.req(p.key, p.cw, p.ch, 1, p.draw);
-      e2.use(!!p.soft);
+      e2.use(!!p.soft, !!p.noFog);
       e2.mesh.visible = true;
       e2.mesh.position.set(p.x, p.y, p.z);
       if (p.flat) e2.mesh.rotation.set(-Math.PI / 2, 0, p.rot ?? 0);

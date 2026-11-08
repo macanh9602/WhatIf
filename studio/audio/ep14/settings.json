@@ -1,0 +1,1529 @@
+{
+ "bpm": 100,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -4,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 81.93333333333334,
+ "seed": 141414,
+ "music_sections": [
+  [
+   "Hook: the column",
+   0,
+   11.8,
+   -14,
+   "pulse"
+  ],
+  [
+   "Border, the march",
+   11.8,
+   26.7,
+   -14,
+   "bounce"
+  ],
+  [
+   "One village, then two (smug)",
+   26.7,
+   28.8,
+   -12,
+   "bounce"
+  ],
+  [
+   "The house opens fire: rumble",
+   28.8,
+   36.9,
+   -17,
+   "pad"
+  ],
+  [
+   "The retreat, tense",
+   36.9,
+   48.1,
+   -15,
+   "dark"
+  ],
+  [
+   "You see: nearly silent",
+   48.1,
+   53.0,
+   -29,
+   "pad"
+  ],
+  [
+   "Facts",
+   53.0,
+   67.0,
+   -18,
+   "explain"
+  ],
+  [
+   "One piece, soft rebuild",
+   67.0,
+   73.0,
+   -17,
+   "warm"
+  ],
+  [
+   "Calm ending",
+   73.0,
+   80.43333333333334,
+   -18,
+   "warm"
+  ]
+ ],
+ "sfx": [
+  [
+   0.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   0.1,
+   "roll",
+   5.6,
+   -33,
+   0,
+   "treads, column"
+  ],
+  [
+   0.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   0.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   1.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   1.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   1.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   1.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   2.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   2.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   2.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   3.0,
+   "whoosh",
+   0.5,
+   -30,
+   0,
+   "whip"
+  ],
+  [
+   3.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   3.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   3.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   4.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   4.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   4.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   4.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   5.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   5.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   5.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   6.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   6.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   6.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   7.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   7.0,
+   "chug",
+   2.6,
+   -34,
+   -0.3,
+   "train chase"
+  ],
+  [
+   7.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   7.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   7.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   8.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   8.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   8.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   9.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   9.2,
+   "whistle",
+   0.6,
+   -34,
+   -0.3,
+   "train whistle"
+  ],
+  [
+   9.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   9.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   10.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   10.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   10.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   10.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   11.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   11.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   11.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   12.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   12.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   12.6,
+   "crack",
+   0.5,
+   -16,
+   0,
+   "barrier crunch"
+  ],
+  [
+   12.62,
+   "rustle",
+   0.7,
+   -22,
+   0,
+   "barrier splinters"
+  ],
+  [
+   12.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   12.7,
+   "roll",
+   2.6,
+   -31,
+   0,
+   "treads, meadow"
+  ],
+  [
+   13.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   13.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   13.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   13.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   14.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   14.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   14.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   15.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   15.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   15.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   15.95,
+   "bell",
+   0.6,
+   -26,
+   0.2,
+   "bell: just cows"
+  ],
+  [
+   16.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   16.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   16.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   16.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   17.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   17.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   17.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   18.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   18.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   18.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   19.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   19.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   19.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   19.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   20.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   20.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   20.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   21.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   21.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   21.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   22.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   22.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   22.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   22.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   23.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   23.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   23.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   24.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   24.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   24.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   24.7,
+   "roll",
+   3.6,
+   -31,
+   0,
+   "treads, valley"
+  ],
+  [
+   25.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   25.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   25.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   25.9,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   26.2,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   26.5,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   26.8,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   27.1,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   27.4,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   27.7,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   28.0,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   28.3,
+   "thump",
+   0.12,
+   -26,
+   0,
+   "march drum"
+  ],
+  [
+   28.6,
+   "thump",
+   0.12,
+   -31,
+   0,
+   "march drum"
+  ],
+  [
+   30.03,
+   "tear",
+   0.8,
+   -27,
+   -0.2,
+   "shutter creak"
+  ],
+  [
+   30.8,
+   "tink",
+   0.3,
+   -20,
+   0.2,
+   "hinge clank"
+  ],
+  [
+   30.82,
+   "thump",
+   0.15,
+   -22,
+   0,
+   "hinge thud"
+  ],
+  [
+   32.4,
+   "crack",
+   0.5,
+   -11,
+   0,
+   "house fires"
+  ],
+  [
+   32.4,
+   "bassdrop",
+   1.4,
+   -15,
+   0,
+   "house fires boom"
+  ],
+  [
+   32.5,
+   "bassdrop",
+   3.5,
+   -24,
+   0,
+   "low rumble"
+  ],
+  [
+   33.3,
+   "crack",
+   0.5,
+   -11,
+   0.3,
+   "barn fires"
+  ],
+  [
+   33.3,
+   "bassdrop",
+   1.4,
+   -15,
+   0.3,
+   "barn fires boom"
+  ],
+  [
+   34.5,
+   "crack",
+   0.5,
+   -11,
+   -0.3,
+   "rock fires"
+  ],
+  [
+   34.5,
+   "bassdrop",
+   1.4,
+   -15,
+   -0.3,
+   "rock fires boom"
+  ],
+  [
+   36.55,
+   "bell",
+   0.6,
+   -26,
+   0.2,
+   "bell: the cow watches"
+  ],
+  [
+   37.0,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   37.0,
+   "roll",
+   6.2,
+   -29,
+   0,
+   "treads, retreat"
+  ],
+  [
+   37.45,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   37.9,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   38.35,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   38.8,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   39.25,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   39.7,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   39.7,
+   "roll",
+   1.7,
+   -26,
+   0,
+   "tank onto the bridge"
+  ],
+  [
+   40.15,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   40.6,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   41.05,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   41.5,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   41.95,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   42.4,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   42.85,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   43.3,
+   "thump",
+   0.12,
+   -27,
+   0,
+   "retreat drum"
+  ],
+  [
+   43.45,
+   "crack",
+   0.5,
+   -13,
+   0,
+   "bridge blast"
+  ],
+  [
+   43.45,
+   "bassdrop",
+   1.2,
+   -17,
+   0,
+   "bridge boom"
+  ],
+  [
+   43.75,
+   "thump",
+   0.12,
+   -32,
+   0,
+   "retreat drum"
+  ],
+  [
+   43.78,
+   "crack",
+   0.5,
+   -13,
+   0,
+   "bridge blast"
+  ],
+  [
+   43.78,
+   "bassdrop",
+   1.2,
+   -17,
+   0,
+   "bridge boom"
+  ],
+  [
+   44.1,
+   "crack",
+   0.5,
+   -10,
+   0,
+   "bridge blast"
+  ],
+  [
+   44.1,
+   "bassdrop",
+   1.2,
+   -14,
+   0,
+   "bridge boom"
+  ],
+  [
+   46.0,
+   "rustle",
+   3.0,
+   -25,
+   0,
+   "rockslide grit"
+  ],
+  [
+   46.1,
+   "whoosh",
+   2.4,
+   -29,
+   0.2,
+   "rockslide roar"
+  ],
+  [
+   46.209,
+   "tink",
+   0.25,
+   -27,
+   0.24310262878422662,
+   "rock tumble"
+  ],
+  [
+   46.422,
+   "thump",
+   0.12,
+   -28,
+   0.5284228674793415,
+   "rock tumble"
+  ],
+  [
+   46.562,
+   "tink",
+   0.25,
+   -27,
+   -0.293069383880353,
+   "rock tumble"
+  ],
+  [
+   46.769,
+   "thump",
+   0.12,
+   -28,
+   0.19014002188809087,
+   "rock tumble"
+  ],
+  [
+   46.904,
+   "tink",
+   0.25,
+   -27,
+   0.22107975369234656,
+   "rock tumble"
+  ],
+  [
+   47.082,
+   "thump",
+   0.12,
+   -28,
+   0.33301990546813476,
+   "rock tumble"
+  ],
+  [
+   47.229,
+   "tink",
+   0.25,
+   -27,
+   -0.3320806604253005,
+   "rock tumble"
+  ],
+  [
+   47.462,
+   "thump",
+   0.12,
+   -28,
+   -0.17036078446044806,
+   "rock tumble"
+  ],
+  [
+   47.581,
+   "tink",
+   0.25,
+   -27,
+   0.3651375409906662,
+   "rock tumble"
+  ],
+  [
+   47.781,
+   "thump",
+   0.12,
+   -28,
+   -0.42035573278918426,
+   "rock tumble"
+  ],
+  [
+   47.944,
+   "tink",
+   0.25,
+   -27,
+   0.19679886348840603,
+   "rock tumble"
+  ],
+  [
+   48.083,
+   "thump",
+   0.12,
+   -28,
+   0.18203795018735636,
+   "rock tumble"
+  ],
+  [
+   48.25,
+   "tink",
+   0.25,
+   -27,
+   -0.19552052890252342,
+   "rock tumble"
+  ],
+  [
+   48.417,
+   "thump",
+   0.12,
+   -28,
+   -0.35469396244812845,
+   "rock tumble"
+  ],
+  [
+   50.6,
+   "sheet",
+   0.7,
+   -32,
+   0,
+   "paint scrape"
+  ],
+  [
+   52.4,
+   "sheet",
+   0.5,
+   -36,
+   0,
+   "paint scrape 2"
+  ],
+  [
+   65.5,
+   "click",
+   0.2,
+   -22,
+   0,
+   "plunger click"
+  ],
+  [
+   65.52,
+   "thump",
+   0.15,
+   -26,
+   0,
+   "plunger thud"
+  ],
+  [
+   72.95,
+   "tink",
+   0.3,
+   -26,
+   0.3,
+   "pebble"
+  ],
+  [
+   73.12,
+   "tink",
+   0.3,
+   -32,
+   0.3,
+   "pebble 2"
+  ],
+  [
+   78.95,
+   "whistle",
+   0.5,
+   -34,
+   -0.4,
+   "train horn"
+  ],
+  [
+   79.2,
+   "chug",
+   1.0,
+   -30,
+   0.3,
+   "train pass"
+  ],
+  [
+   79.2,
+   "whoosh",
+   1.1,
+   -30,
+   0.3,
+   "train air"
+  ],
+  [
+   79.55,
+   "bell",
+   0.85,
+   -26,
+   0,
+   "last: cow bell"
+  ]
+ ]
+}

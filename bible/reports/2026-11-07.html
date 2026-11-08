@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo What If</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f4f6fb; --card:#ffffff; --ink:#1d1a3a; --muted:#5b6078; --line:#e2e6f0; --accent:#2f6df6; --accent-soft:#e6eeff;
+  --good:#12a150; --warn:#d97706; --zebra:#f8f9fd; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd;
+  --line:#2a3048; --accent:#7aa2ff; --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; } }
+:root[data-theme="dark"] { --bg:#0f1220; --card:#181c2e; --ink:#e9ebf5; --muted:#9aa1bd; --line:#2a3048; --accent:#7aa2ff;
+  --accent-soft:#1f2a4d; --good:#3ddc84; --warn:#fbbf24; --zebra:#1c2136; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; }
+header { background:linear-gradient(135deg,#1d1a3a,#2f3f8f); color:#fff; padding:28px 16px 22px; }
+header .wrap { max-width:860px; margin:0 auto; }
+header .kicker { font-size:13px; letter-spacing:.12em; text-transform:uppercase; opacity:.75; }
+header h1 { margin:4px 0 0; font-size:clamp(22px,5vw,30px); font-weight:800; line-height:1.25; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+#doc > h1 { display:none; }
+#doc > h2 { margin:22px 0 10px; font-size:19px; font-weight:800; display:flex; align-items:center; gap:10px; }
+#doc > h2::before { content:""; width:6px; height:22px; border-radius:3px; background:var(--accent); }
+section.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:6px 18px 12px; margin-bottom:14px;
+  box-shadow:0 1px 2px rgba(20,24,60,.05); }
+h3 { font-size:16px; margin:16px 0 4px; }
+p, li { color:var(--ink); }
+ul, ol { padding-left:22px; }
+li { margin:4px 0; }
+strong { font-weight:800; }
+em { color:var(--muted); }
+code { background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.88em; }
+.table { overflow-x:auto; margin:8px -4px; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px; }
+th, td { padding:8px 10px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+tr:nth-child(even) td { background:var(--zebra); }
+td:first-child { white-space:normal; min-width:9em; }
+blockquote { margin:10px 0; padding:8px 14px; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 10px 10px 0; }
+li:has(> input[type=checkbox]) { list-style:none; margin-left:-22px; }
+input[type=checkbox] { width:17px; height:17px; vertical-align:-3px; margin-right:8px; accent-color:var(--accent); }
+hr { border:0; border-top:1px dashed var(--line); margin:16px 0; }
+footer { max-width:860px; margin:0 auto; padding:4px 16px 32px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="kicker">What If · báo cáo tối</div><h1 id="title">2026-11-07</h1></div></header>
+<main id="doc"></main>
+<footer>Tạo tự động từ ops/report.mjs · số liệu YouTube Data + Analytics API</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+const MD = "# Báo cáo tối 2026-11-07, kênh What If\n\nHai bản chụp lúc 06/11 14:00Z và 07/11 14:00Z cách nhau 24 giờ. Từ hôm nay đã có `analytics`, nhưng số liệu này trễ: ep03 có 1.363 views công khai mà analytics chỉ ghi 282.\n\n## 1. Thực trạng\n\n| Tập | Views (Δ) | % xem | Giây TB | Likes (Δ) | Subs | Nguồn chính |\n|---|---|---|---|---|---|---|\n| ep03 Lên cấp | 1.363 (+279) | **134,4 %** | 119 | 28 (0) | 1 | SHORTS 267 |\n| ep05 Nghiến răng | 1.348 (+79) | 44,3 % | 33 | 22 (0) | 1 | SHORTS 1.155 |\n| ep02 Cân nặng | 1.295 (+29) | 44,7 % | 37 | 24 (0) | 2 | SHORTS 1.156 |\n| ep06 Bán giấc ngủ | **1.289** (mới) | n/a | n/a | 36, 2 cmt | n/a | n/a |\n| ep07 Thu nhỏ | 1.131 (mới) | n/a | n/a | 23 | n/a | n/a |\n| ep04 Mặt sau | 14 (0) | 3,0 % | 2 | 0 | 0 | SEARCH 3 |\n| ep01 Màu xanh | 8 (+1) | 32,5 % | 28 | 0 | 0 | SEARCH 2 |\n\n- Toàn kênh có **6.448 views (+2.808)** và 133 likes (+59).\n- **Feed đang đẩy ep06 và ep07.** Mỗi tập vượt 1.100 views trong 14 giờ. ep06 có like/view cao nhất kênh (2,79 %).\n- **ep03 vẫn tăng (+279).** ep02 và ep05 gần như đã dừng. ep01 và ep04 không được feed thử, chỉ có lượt xem từ tìm kiếm.\n\n### Người xem đến từ đâu\n| Nước | Views | % xem |\n|---|---|---|\n| US | 811 | 73,6 % |\n| PH | 698 | 42,2 % |\n| IN | 208 | 49,1 % |\n| ID | 118 | 53,1 % |\n| MX | 79 | 36,9 % |\n| VN | 71 | 46,4 % |\n| GB | 46 | 83,8 % |\n\n- Theo từng tập: ep02 có US 395 và PH 318. ep05 có PH 348 và US 285. ep03 có US 131 với 209,7 % xem, tức có người xem lặp lại nhiều lần.\n- **Giờ đăng:** 07:00 VN là 19:00 tối ở miền Đông Mỹ và 08:00 sáng ở Philippines, hợp với cả hai thị trường lớn nhất. Giữ nguyên giờ này.\n- **Ngôn ngữ:** giữ tiếng Anh nhưng dùng từ đơn giản, vì PH, IN và ID là người nói tiếng Anh như ngôn ngữ thứ hai. MX có tỷ lệ xem thấp nhất (33–37 %), không nên nhắm tới.\n\n## 2. Chẩn đoán\n\nMẫu còn mỏng: mới có 3 đường retention, và ep03 chỉ có 282 views analytics.\n\n- **ep02 (83 s):** tỷ lệ xem rơi từ 1,045 xuống 0,721 ở giây 5–10. Vị trí này ứng với từ khoảng 16 đến 32, tức đúng lúc hook kết thúc và câu dẫn *\"Imagine a little dial on your wrist…\"* bắt đầu. Hook của tập này dài 20 từ, vượt mức 15.\n- **ep05 (75 s):** có hai lần rơi.\n  - Giây 13–19 (0,85 xuống 0,64), ứng với câu *\"But the person next to you only hears a tiny squeak\"*. Đây là lúc hook (\"the loudest grinder is you\") đã được trả lời.\n  - Giây 22–34 (0,60 xuống 0,35), ứng với khối số liên tiếp: 8 tỷ tiếng kêu, 70 kg, 100 kim tự tháp.\n  - Người xem nào qua được đến đoạn men răng thì ở lại (khoảng 0,31 đến 0,23).\n- **ep03 (89 s):** đường retention dốc đều, không có điểm rơi gắt. Lời giải cho hook (\"teenagers richest\") đến muộn, khoảng 40 % thời lượng. Tập này có lượt xem lặp lại (tỷ lệ 1,88 ở đầu video).\n- **Thắng và thua:** tập nào giữ lời giải của hook đến muộn (ep03) thì giữ người xem tốt. Tập nào trả lời hook sớm (ep05) thì mất người ngay sau đó. Độ dài 1:15–1:29 không phân biệt được tập tốt với tập kém.\n- Chủ đề kiểu \"cái giá, bạn chọn dùng bao nhiêu\" (ep03, ep06) có like/view cao nhất. Đây chỉ là gợi ý.\n\n## 3. Feedback cho tập tới\n\n1. **Hook tối đa 15 từ, rồi vào hành động ngay.** Bỏ câu dẫn \"Imagine…\" dạng mô tả, vì đó là chỗ ep02 mất người.\n2. **Giữ lời giải cho hook đến 1/3 cuối,** như ep03. Không trả lời hook trước giây 20.\n3. **Mỗi beat chỉ một con số, và có hình đi kèm.** Khối ba con số liên tiếp ở ep05 làm mất 25 điểm retention.\n4. **Trong 2 giây đầu,** cho thấy hệ quả của hook trên hình, có \"you\" và có HUD hoặc con số.\n5. Giữ độ dài **1:05–1:15**, vì chưa có bằng chứng cần đổi.\n\n## 4. Đề xuất tập tiếp theo\nCác con số dưới đây **chưa được kiểm**. Phải kiểm và ghi nguồn trong SCRIPT.md.\n\n**A. What If Every Lie Cost You a Day of Your Life? 🤥 ⭐ Đề xuất**\n- Hook: *\"If every lie cost a day, most people would die years early.\"*\n- Chuỗi: nghiên cứu nhật ký của DePaulo (1996) ghi nhận khoảng 1–2 lời nói dối mỗi ngày → cộng dồn cả đời → lời nói dối xã giao (\"I'm fine\") tốn nhiều nhất → bạn phải chọn nói thật.\n- Lý do: đúng khuôn của ep03 và ep06 (cái giá, bạn chọn), và lời giải nằm ở cuối.\n\n**B. What If You Could Skip Boring Days? ⏩**\n- Hook: *\"If you could skip boring days, you'd be old by next summer.\"*\n- Chuỗi: phần lớn các ngày đều \"nhàm\" → bỏ qua thì mất luôn những ngày đó → trí nhớ dài ra nhờ những ngày bình thường.\n- Lý do: có nút để chọn, như ep02.\n\n**C. What If Air Cost Money? 💨**\n- Hook: *\"If air cost money, your morning jog would cost more than lunch.\"*\n- Chuỗi: lượng khí thở mỗi ngày → quy ra giá một bình lặn → người giàu hít sâu, người nghèo nín thở.\n- Lý do: cái giá gắn với người, rất dễ hình dung.\n\n## 5. Việc cần làm tối nay\n\n- [ ] **Lịch 08/11 đang có 3 tập (ep08, ep10, ep13),** trái quy tắc một tập mỗi ngày. Cần dời hai tập.\n- [ ] **ep08 (08/11) và ep09 (09/11) liền ngày, mà cả hai đều quay dưới nước.** SCRIPT của ep09 cấm xếp như vậy.\n- [ ] **bts_cat (9Lz2k5owq_8) trả về `missing: true`.** Kiểm trong Studio xem video có bị xoá hoặc bị giới hạn không.\n- [ ] Chốt chủ đề A cho sau ep14 và ep15, viết SCRIPT.md và kiểm từng con số.\n- [ ] Áp dụng góp ý 1–3 vào bản nháp script của ep14 và ep15.\n\n---\nNhững gì chưa kiểm: các số ở mục 4. Vị trí từ trong lời thoại tính theo tỷ lệ × số từ, nên lệch khoảng ±1 câu.\n\nRủi ro: số % xem của ep03 bị đẩy lên bởi vài người xem lặp lại ở Mỹ, trên mẫu 282 views, nên chưa đủ để kết luận chủ đề.\n";
+const doc = document.getElementById("doc");
+try { doc.innerHTML = marked.parse(MD, { gfm: true }); }
+catch { doc.textContent = MD; doc.style.whiteSpace = "pre-wrap"; } // offline: still readable
+const h1 = doc.querySelector("h1"); if (h1) document.getElementById("title").textContent = h1.textContent;
+// wrap each h2 + its content in a card; tables scroll sideways on phones
+[...doc.querySelectorAll("table")].forEach((t) => { const w = document.createElement("div"); w.className = "table"; t.replaceWith(w); w.append(t); });
+let card = null;
+[...doc.childNodes].forEach((n) => {
+  if (n.nodeName === "H2") { card = document.createElement("section"); card.className = "card"; n.after(card); return; }
+  if (card && n.nodeName !== "H1") card.append(n);
+});
+doc.querySelectorAll("input[type=checkbox]").forEach((c) => (c.disabled = false));
+</script>
+</body>
+</html>

@@ -15,5 +15,8 @@ export const RUNNER: Outfit = { jacket: "#f0b93a", pants: "#2c3550", boots: "#f4
   bottom: "shorts", shoe: "sneaker", style: "smooth", hair: "#1e1a1a", skin: SKINS[2], acc: ["headband"] };
 export const BILLIONAIRE: Outfit = { jacket: "#f4f1ea", pants: "#2b2f3d", boots: "#1e1a1a", hat: null, build: "adult", top: "button", bottom: "jeans",
   layer: { kind: "jacket", color: "#2b2f3d", long: true }, style: "spiky", hair: "#c9ccd4", shoe: "boot", skin: SKINS[1], acc: ["bowtie"], accCol: "#e8c45a" };
+/** ep21: Mia, warm mustard cardigan over a cream blouse, a brown chin-length bob (toon.ts bob) */
+export const MIA: Outfit = { fem: true, jacket: "#f6efd6", pants: "#5a4a6a", boots: "#7a4b36", hat: null, build: "adult", top: "blouse", bottom: "skirt",
+  layer: { kind: "cardigan", color: "#d9973a" }, style: "smooth", bob: true, hair: "#5a3420", shoe: "flat", skin: SKINS[1] };
 /** the cast sheet row (CastSheet composition) */
 export const CHANNEL_CAST: [string, Outfit][] = [["You", YOU], ["Neighbor", NEIGHBOR], ["Grandma", GRANDMA], ["Teen", TEEN], ["Runner", RUNNER], ["Billionaire", BILLIONAIRE]];

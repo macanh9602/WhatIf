@@ -74,24 +74,24 @@ export class Actor {
   bind() { const t = this.r?.tex; if (t) { this.mat.map = t; this.dmat.map = t; } }
 }
 export class Fx {
-  mesh: THREE.Mesh; mat: THREE.MeshBasicMaterial; soft: THREE.MeshBasicMaterial; blob: THREE.MeshBasicMaterial; r: Req | null = null;
+  mesh: THREE.Mesh; mat: THREE.MeshBasicMaterial; soft: THREE.MeshBasicMaterial; blob: THREE.MeshBasicMaterial; clear: THREE.MeshBasicMaterial; r: Req | null = null;
   constructor(parent: THREE.Object3D) {
     this.mat = new THREE.MeshBasicMaterial({ map: blank, alphaTest: 0.5, side: THREE.DoubleSide });
     this.mat.alphaToCoverage = false;
     this.soft = new THREE.MeshBasicMaterial({ map: blank, transparent: true, depthWrite: false, side: THREE.DoubleSide });
-    this.blob = blobMaterial(blank);
+    this.blob = blobMaterial(blank); this.clear = new THREE.MeshBasicMaterial({ map: blank, transparent: true, depthWrite: false, side: THREE.DoubleSide, fog: false }); // ep14: glows over haze
     this.mesh = new THREE.Mesh(CARD, this.mat);
     this.mesh.visible = false; this.mesh.layers.set(NOINK);
     parent.add(this.mesh);
   }
-  use(soft: boolean) { this.mesh.material = soft ? this.soft : this.mat; }
+  use(soft: boolean, noFog = false) { this.mesh.material = noFog ? this.clear : soft ? this.soft : this.mat; }
   bind() {
     const t = this.r?.tex;
     if (!t) return;
     if (this.r!.key.includes("|blob|")) {
       if (t.generateMipmaps) { t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; t.needsUpdate = true; }
       this.blob.map = t; this.mesh.material = this.blob; this.mesh.renderOrder = 0.5;
-    } else { this.mat.map = t; this.soft.map = t; this.mesh.renderOrder = 0; }
+    } else { this.mat.map = t; this.soft.map = t; this.clear.map = t; this.mesh.renderOrder = 0; }
   }
 }
 

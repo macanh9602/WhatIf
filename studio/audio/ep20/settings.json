@@ -1,0 +1,362 @@
+{
+ "bpm": 112,
+ "target_lufs": -16.0,
+ "ceiling_dbtp": -1.2,
+ "duck_db": -9.0,
+ "duck_pre": 0.09,
+ "duck_post": 0.08,
+ "duck_attack": 0.025,
+ "duck_release": 0.18,
+ "music_standard_db": -7.0,
+ "music_eq": {
+  "highpass_hz": 180,
+  "mid_cut": [
+   500,
+   -3.0,
+   0.7
+  ],
+  "presence_cut": [
+   2000,
+   -3.0,
+   0.8
+  ]
+ },
+ "music_fade_in": 0.1,
+ "music_fade_out": 0.15,
+ "sfx_standard_db": 6.0,
+ "min_speech_margin_lu": 8.0,
+ "theme": [
+  [
+   0,
+   74
+  ],
+  [
+   1,
+   74
+  ],
+  [
+   1.5,
+   77
+  ],
+  [
+   2,
+   81
+  ],
+  [
+   3,
+   79
+  ],
+  [
+   4,
+   77
+  ],
+  [
+   5,
+   77
+  ],
+  [
+   5.5,
+   74
+  ],
+  [
+   6,
+   76
+  ],
+  [
+   7,
+   69
+  ]
+ ],
+ "major_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   46,
+   53,
+   58,
+   62
+  ],
+  [
+   53,
+   60,
+   65,
+   69
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "minor_chords": [
+  [
+   50,
+   57,
+   62,
+   65
+  ],
+  [
+   43,
+   50,
+   55,
+   58
+  ],
+  [
+   50,
+   50,
+   50,
+   50
+  ],
+  [
+   45,
+   52,
+   57,
+   61
+  ]
+ ],
+ "music_levels": {
+  "bass": -3,
+  "chord": -12,
+  "melody": -6,
+  "brush": -15,
+  "glock": -14,
+  "pad": -13,
+  "musicbox": -10,
+  "brass": -6
+ },
+ "duration": 74.83333333333333,
+ "seed": 202020,
+ "music_sections": [
+  [
+   "Sitka 1867: dry march-like bounce",
+   0,
+   15.0,
+   -17,
+   "bounce"
+  ],
+  [
+   "Tear it up: pulse",
+   15.0,
+   30.4,
+   -19,
+   "pulse"
+  ],
+  [
+   "Gold: bounce thins",
+   30.4,
+   38.3,
+   -20,
+   "bounce"
+  ],
+  [
+   "Oil: sparse pulse",
+   38.3,
+   46.0,
+   -21,
+   "pulse"
+  ],
+  [
+   "The new map: explain glock",
+   46.0,
+   52.4,
+   -20,
+   "explain"
+  ],
+  [
+   "Cold War: low pad",
+   52.4,
+   60.4,
+   -24,
+   "pad"
+  ],
+  [
+   "Texas, flag: warm",
+   60.4,
+   69.4,
+   -20,
+   "warm"
+  ],
+  [
+   "Folly turned: dry warm tail",
+   69.4,
+   74.83,
+   -19,
+   "warm"
+  ]
+ ],
+ "sfx": [
+  [
+   0.5,
+   "room",
+   5.0,
+   -40,
+   0,
+   "harbour wind and water"
+  ],
+  [
+   5.9,
+   "paper",
+   0.5,
+   -34,
+   0,
+   "cheque held up"
+  ],
+  [
+   8.4,
+   "happy",
+   1.6,
+   -46,
+   0,
+   "newspaper crowd laughs, far"
+  ],
+  [
+   14.9,
+   "stamp",
+   0.3,
+   -30,
+   0,
+   "NO SALE stamp"
+  ],
+  [
+   15.6,
+   "tear",
+   0.9,
+   -26,
+   0,
+   "cheque torn"
+  ],
+  [
+   16.4,
+   "tink",
+   0.3,
+   -36,
+   0.3,
+   "scraps"
+  ],
+  [
+   20.8,
+   "thump",
+   0.3,
+   -30,
+   0,
+   "cannon thud, far"
+  ],
+  [
+   28.9,
+   "whoosh",
+   1.0,
+   -34,
+   0.2,
+   "flag snaps in the wind"
+  ],
+  [
+   32.9,
+   "water",
+   2.0,
+   -36,
+   0,
+   "creek"
+  ],
+  [
+   33.8,
+   "tink",
+   0.3,
+   -32,
+   0.3,
+   "gold flake in the pan"
+  ],
+  [
+   34.2,
+   "tink",
+   0.3,
+   -34,
+   -0.3,
+   "gold flake"
+  ],
+  [
+   37.4,
+   "click",
+   0.15,
+   -28,
+   0.2,
+   "gate lock"
+  ],
+  [
+   39.5,
+   "room",
+   4.0,
+   -36,
+   0,
+   "wind over the tundra"
+  ],
+  [
+   41.0,
+   "chugslow",
+   4.5,
+   -38,
+   0.2,
+   "pump and pipeline hum"
+  ],
+  [
+   42.9,
+   "thump",
+   0.4,
+   -28,
+   0,
+   "barrel stack rolls"
+  ],
+  [
+   47.1,
+   "stamp",
+   0.35,
+   -30,
+   0,
+   "border post stamp"
+  ],
+  [
+   50.0,
+   "thump",
+   0.4,
+   -26,
+   0,
+   "post goes up"
+  ],
+  [
+   50.5,
+   "rustle",
+   1.2,
+   -36,
+   0,
+   "snow"
+  ],
+  [
+   54.9,
+   "chugslow",
+   3.0,
+   -36,
+   0,
+   "far planes"
+  ],
+  [
+   67.3,
+   "bell",
+   0.9,
+   -34,
+   0,
+   "flag ring"
+  ],
+  [
+   71.9,
+   "thump",
+   0.5,
+   -30,
+   0,
+   "button"
+  ]
+ ]
+}

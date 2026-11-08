@@ -34,4 +34,9 @@ video-pipeline (workflow) + threejs-video (engine) + style: cartoon-3d-short (st
 | 11 | What if you could photosynthesize | v1; 1.1x (0:60) scheduled 2026-11-09 07:00 (62YTQU1p1Hs); new park set; green lead for this episode only |
 | 12 | What if you fell between dreams and reality | v1; 1.1x (1:05) scheduled 2026-11-10 07:00 (vGaHtPu6Ug0); first build on outdoor kit, backdrops, TRANS, 3D sky-fall clouds; shipped from the 1080p preview with known defects (haze, shot 27 clock blur, shot 6 roofs) |
 | 13 | What if the train came after you (first twist-format trial, 1899 Wyoming) | v1; 1.1x (1:12) scheduled 2026-11-08 07:00 (SUe1Lr0CjnU); new west set, drawn horses, rolling train, flown cameras (CAM_PATH); lead keeps only the curl, western outfit this episode (user 2026-11-07) |
+| 14 | What If You Invaded Switzerland (twist format) | v1; 1.1x (1:14) scheduled 2026-11-11 07:00 (wIUlzSxMeNk); new alps set; olive jacket, this episode only |
+| 15 | What If You Sank Your Own Submarine (twist format) | v1; 1.1x (1:15) scheduled 2026-11-12 07:00 (6VquJ5tJ_qE); new pacific set; grey sweater, this episode only |
+| 16 | What If You Had to Tip for Everything (twist format) | v1; 1.1x (1:10) scheduled 2026-11-13 07:00 (5kSvQ15Q-A4); new tips set |
+| 17 | What If Your Salary Floated Over Your Head (twist format) | v1; 1.1x (1:10) scheduled 2026-11-14 07:00 (F5S1RxyD7tg); new salary set; flicker_qa gate added |
+| 18 | What If a Tornado Picked You Up (twist format, real survivor) | v1; 1.1x (1:11) scheduled 2026-11-15 07:00 (AsSxbUUprEo); new tornado set; not reviewed by the user before scheduling |
 | bts | I Fixed the Cat (8 s before/after test, not a story) | scheduled 2026-11-10 07:00 (9Lz2k5owq_8) |

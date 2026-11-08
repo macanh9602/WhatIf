@@ -1,0 +1,1776 @@
+{
+  "master": {
+    "integrated_lufs": -16.00233595210087,
+    "true_peak_dbtp": -1.2000003376972939,
+    "lra_lu": 2.2605055585483633,
+    "sample_peak_dbfs": -1.654304148155334
+  },
+  "voice": {
+    "integrated_lufs": -16.05898905027794,
+    "true_peak_dbtp": -1.6851592008647365,
+    "lra_lu": 2.2849902630508776,
+    "sample_peak_dbfs": -1.6906865758958058
+  },
+  "music": {
+    "integrated_lufs": -38.59518528503536,
+    "true_peak_dbtp": -20.309499226446842,
+    "lra_lu": 6.909628227303621,
+    "sample_peak_dbfs": -20.315026601477907
+  },
+  "sfx": {
+    "integrated_lufs": -33.87144244911915,
+    "true_peak_dbtp": 0.22000917253074415,
+    "lra_lu": 16.098570151799514,
+    "sample_peak_dbfs": -0.7457919175983195
+  },
+  "master_gain_db": -0.9204297349757216,
+  "voice_gain_db": -0.9204297349757216,
+  "source_duration_seconds": 81.9225625,
+  "source_sha256": "d2f83cedbf4b912452de6da66ff3410cea5f94bbe844a6d873de890e4ada7eb3",
+  "words_sha256": "feededbaecd23f7d56452895005f628c08083f3976786736906826ee4dc70361",
+  "music_sections": [
+    {
+      "name": "Hook: the column",
+      "start": 0,
+      "end": 11.8,
+      "base_margin": -14,
+      "gain_db": -7.659849872042805
+    },
+    {
+      "name": "Border, the march",
+      "start": 11.8,
+      "end": 26.7,
+      "base_margin": -14,
+      "gain_db": -8.529500398896317
+    },
+    {
+      "name": "One village, then two (smug)",
+      "start": 26.7,
+      "end": 28.8,
+      "base_margin": -12,
+      "gain_db": -7.486065213786709
+    },
+    {
+      "name": "The house opens fire: rumble",
+      "start": 28.8,
+      "end": 36.9,
+      "base_margin": -17,
+      "gain_db": 2.934187346442272
+    },
+    {
+      "name": "The retreat, tense",
+      "start": 36.9,
+      "end": 48.1,
+      "base_margin": -15,
+      "gain_db": -2.4470758816225313
+    },
+    {
+      "name": "You see: nearly silent",
+      "start": 48.1,
+      "end": 53.0,
+      "base_margin": -29,
+      "gain_db": -12.262592874818743
+    },
+    {
+      "name": "Facts",
+      "start": 53.0,
+      "end": 67.0,
+      "base_margin": -18,
+      "gain_db": -6.044324267561052
+    },
+    {
+      "name": "One piece, soft rebuild",
+      "start": 67.0,
+      "end": 73.0,
+      "base_margin": -17,
+      "gain_db": -10.148816743609121
+    },
+    {
+      "name": "Calm ending",
+      "start": 73.0,
+      "end": 80.43333333333334,
+      "base_margin": -18,
+      "gain_db": -12.295147394377992
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.1,
+      "end": 0.22,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.1,
+      "end": 5.699999999999999,
+      "kind": "roll",
+      "description": "treads, column",
+      "target": -42.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.4,
+      "end": 0.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.7,
+      "end": 0.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.0,
+      "end": 1.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.3,
+      "end": 1.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.6,
+      "end": 1.7200000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 1.9,
+      "end": 2.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.2,
+      "end": 2.3200000000000003,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.5,
+      "end": 2.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 2.8,
+      "end": 2.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.0,
+      "end": 3.5,
+      "kind": "whoosh",
+      "description": "whip",
+      "target": -39.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.1,
+      "end": 3.22,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.4,
+      "end": 3.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 3.7,
+      "end": 3.8200000000000003,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.0,
+      "end": 4.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.3,
+      "end": 4.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.6,
+      "end": 4.72,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.9,
+      "end": 5.0200000000000005,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.2,
+      "end": 5.32,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.5,
+      "end": 5.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.8,
+      "end": 5.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.1,
+      "end": 6.22,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.4,
+      "end": 6.5200000000000005,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.7,
+      "end": 6.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.0,
+      "end": 7.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.0,
+      "end": 9.6,
+      "kind": "chug",
+      "description": "train chase",
+      "target": -43.13855931530183,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.3,
+      "end": 7.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.6,
+      "end": 7.72,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.9,
+      "end": 8.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.2,
+      "end": 8.319999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.5,
+      "end": 8.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.8,
+      "end": 8.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.1,
+      "end": 9.219999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.2,
+      "end": 9.799999999999999,
+      "kind": "whistle",
+      "description": "train whistle",
+      "target": -43.13855931530183,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.4,
+      "end": 9.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.7,
+      "end": 9.819999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.0,
+      "end": 10.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.3,
+      "end": 10.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.6,
+      "end": 10.719999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.9,
+      "end": 11.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.2,
+      "end": 11.319999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.5,
+      "end": 11.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 11.8,
+      "end": 11.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.1,
+      "end": 12.219999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.4,
+      "end": 12.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.6,
+      "end": 13.1,
+      "kind": "crack",
+      "description": "barrier crunch",
+      "target": -25.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.62,
+      "end": 13.319999999999999,
+      "kind": "rustle",
+      "description": "barrier splinters",
+      "target": -31.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.7,
+      "end": 12.819999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.7,
+      "end": 15.299999999999999,
+      "kind": "roll",
+      "description": "treads, meadow",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.0,
+      "end": 13.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.3,
+      "end": 13.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.6,
+      "end": 13.719999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.9,
+      "end": 14.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.2,
+      "end": 14.319999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.5,
+      "end": 14.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.8,
+      "end": 14.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.1,
+      "end": 15.219999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.4,
+      "end": 15.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.7,
+      "end": 15.819999999999999,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.95,
+      "end": 16.55,
+      "kind": "bell",
+      "description": "bell: just cows",
+      "target": -35.13855931530183,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.0,
+      "end": 16.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.3,
+      "end": 16.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.6,
+      "end": 16.720000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.9,
+      "end": 17.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.2,
+      "end": 17.32,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.5,
+      "end": 17.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.8,
+      "end": 17.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.1,
+      "end": 18.220000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.4,
+      "end": 18.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.7,
+      "end": 18.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.0,
+      "end": 19.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.3,
+      "end": 19.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.6,
+      "end": 19.720000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.9,
+      "end": 20.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.2,
+      "end": 20.32,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.5,
+      "end": 20.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.8,
+      "end": 20.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.1,
+      "end": 21.220000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.4,
+      "end": 21.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.7,
+      "end": 21.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.0,
+      "end": 22.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.3,
+      "end": 22.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.6,
+      "end": 22.720000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.9,
+      "end": 23.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.2,
+      "end": 23.32,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.5,
+      "end": 23.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.8,
+      "end": 23.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.1,
+      "end": 24.220000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.4,
+      "end": 24.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.7,
+      "end": 24.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.7,
+      "end": 28.3,
+      "kind": "roll",
+      "description": "treads, valley",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.0,
+      "end": 25.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.3,
+      "end": 25.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.6,
+      "end": 25.720000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.9,
+      "end": 26.02,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.2,
+      "end": 26.32,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.5,
+      "end": 26.62,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.8,
+      "end": 26.92,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.1,
+      "end": 27.220000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.4,
+      "end": 27.52,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.7,
+      "end": 27.82,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.0,
+      "end": 28.12,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.3,
+      "end": 28.42,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.6,
+      "end": 28.720000000000002,
+      "kind": "thump",
+      "description": "march drum",
+      "target": -40.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.03,
+      "end": 30.830000000000002,
+      "kind": "tear",
+      "description": "shutter creak",
+      "target": -36.13855931530183,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.8,
+      "end": 31.1,
+      "kind": "tink",
+      "description": "hinge clank",
+      "target": -29.138559315301833,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.82,
+      "end": 30.97,
+      "kind": "thump",
+      "description": "hinge thud",
+      "target": -31.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.4,
+      "end": 32.9,
+      "kind": "crack",
+      "description": "house fires",
+      "target": -20.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.4,
+      "end": 33.8,
+      "kind": "bassdrop",
+      "description": "house fires boom",
+      "target": -24.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.5,
+      "end": 36.0,
+      "kind": "bassdrop",
+      "description": "low rumble",
+      "target": -33.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.3,
+      "end": 33.8,
+      "kind": "crack",
+      "description": "barn fires",
+      "target": -20.138559315301833,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.3,
+      "end": 34.699999999999996,
+      "kind": "bassdrop",
+      "description": "barn fires boom",
+      "target": -24.138559315301833,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.5,
+      "end": 35.0,
+      "kind": "crack",
+      "description": "rock fires",
+      "target": -20.138559315301833,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.5,
+      "end": 35.9,
+      "kind": "bassdrop",
+      "description": "rock fires boom",
+      "target": -24.138559315301833,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.55,
+      "end": 37.15,
+      "kind": "bell",
+      "description": "bell: the cow watches",
+      "target": -35.13855931530183,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.0,
+      "end": 37.12,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.0,
+      "end": 43.2,
+      "kind": "roll",
+      "description": "treads, retreat",
+      "target": -38.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.45,
+      "end": 37.57,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.9,
+      "end": 38.019999999999996,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.35,
+      "end": 38.47,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.8,
+      "end": 38.919999999999995,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.25,
+      "end": 39.37,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.7,
+      "end": 39.82,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.7,
+      "end": 41.400000000000006,
+      "kind": "roll",
+      "description": "tank onto the bridge",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.15,
+      "end": 40.269999999999996,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.6,
+      "end": 40.72,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.05,
+      "end": 41.169999999999995,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.5,
+      "end": 41.62,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.95,
+      "end": 42.07,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.4,
+      "end": 42.519999999999996,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.85,
+      "end": 42.97,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.3,
+      "end": 43.419999999999995,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -36.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.45,
+      "end": 43.95,
+      "kind": "crack",
+      "description": "bridge blast",
+      "target": -22.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.45,
+      "end": 44.650000000000006,
+      "kind": "bassdrop",
+      "description": "bridge boom",
+      "target": -26.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.75,
+      "end": 43.87,
+      "kind": "thump",
+      "description": "retreat drum",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.78,
+      "end": 44.28,
+      "kind": "crack",
+      "description": "bridge blast",
+      "target": -22.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.78,
+      "end": 44.980000000000004,
+      "kind": "bassdrop",
+      "description": "bridge boom",
+      "target": -26.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.1,
+      "end": 44.6,
+      "kind": "crack",
+      "description": "bridge blast",
+      "target": -19.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.1,
+      "end": 45.300000000000004,
+      "kind": "bassdrop",
+      "description": "bridge boom",
+      "target": -23.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.0,
+      "end": 49.0,
+      "kind": "rustle",
+      "description": "rockslide grit",
+      "target": -34.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.1,
+      "end": 48.5,
+      "kind": "whoosh",
+      "description": "rockslide roar",
+      "target": -38.13855931530183,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.209,
+      "end": 46.459,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": 0.24310262878422662,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.422,
+      "end": 46.541999999999994,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": 0.5284228674793415,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.562,
+      "end": 46.812,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": -0.293069383880353,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.769,
+      "end": 46.888999999999996,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": 0.19014002188809087,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.904,
+      "end": 47.154,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": 0.22107975369234656,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.082,
+      "end": 47.202,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": 0.33301990546813476,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.229,
+      "end": 47.479,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": -0.3320806604253005,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.462,
+      "end": 47.582,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": -0.17036078446044806,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.581,
+      "end": 47.831,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": 0.3651375409906662,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.781,
+      "end": 47.900999999999996,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": -0.42035573278918426,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.944,
+      "end": 48.194,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": 0.19679886348840603,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.083,
+      "end": 48.202999999999996,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": 0.18203795018735636,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.25,
+      "end": 48.5,
+      "kind": "tink",
+      "description": "rock tumble",
+      "target": -36.13855931530183,
+      "pan": -0.19552052890252342,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.417,
+      "end": 48.537,
+      "kind": "thump",
+      "description": "rock tumble",
+      "target": -37.13855931530183,
+      "pan": -0.35469396244812845,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.6,
+      "end": 51.300000000000004,
+      "kind": "sheet",
+      "description": "paint scrape",
+      "target": -41.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 52.4,
+      "end": 52.9,
+      "kind": "sheet",
+      "description": "paint scrape 2",
+      "target": -45.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.5,
+      "end": 65.7,
+      "kind": "click",
+      "description": "plunger click",
+      "target": -31.138559315301833,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.52,
+      "end": 65.67,
+      "kind": "thump",
+      "description": "plunger thud",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 72.95,
+      "end": 73.25,
+      "kind": "tink",
+      "description": "pebble",
+      "target": -35.13855931530183,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 73.12,
+      "end": 73.42,
+      "kind": "tink",
+      "description": "pebble 2",
+      "target": -41.13855931530183,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 78.95,
+      "end": 79.45,
+      "kind": "whistle",
+      "description": "train horn",
+      "target": -43.13855931530183,
+      "pan": -0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.2,
+      "end": 80.2,
+      "kind": "chug",
+      "description": "train pass",
+      "target": -39.13855931530183,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.2,
+      "end": 80.3,
+      "kind": "whoosh",
+      "description": "train air",
+      "target": -39.13855931530183,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.55,
+      "end": 80.39999999999999,
+      "kind": "bell",
+      "description": "last: cow bell",
+      "target": -35.13855931530183,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999674839708813,
+    "p10": 14.03836370128087,
+    "median": 20.464666530866406
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3932800,
+    "duration_seconds": 81.93333333333334,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": 1.0110528190145727,
+    "limiter_active_percent_above_0_1_db": 0.2311838893409276
+  }
+}

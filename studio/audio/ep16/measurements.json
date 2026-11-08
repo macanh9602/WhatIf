@@ -1,0 +1,596 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999998384704,
+    "true_peak_dbtp": -1.3334726521473352,
+    "lra_lu": 2.5209458928133603,
+    "sample_peak_dbfs": -1.3689625493560078
+  },
+  "voice": {
+    "integrated_lufs": -16.006283068151802,
+    "true_peak_dbtp": -1.3318671139637406,
+    "lra_lu": 2.5492085548941272,
+    "sample_peak_dbfs": -1.4030860876357543
+  },
+  "music": {
+    "integrated_lufs": -39.532905993936936,
+    "true_peak_dbtp": -22.446774740859894,
+    "lra_lu": 6.633221521810036,
+    "sample_peak_dbfs": -22.452302115890962
+  },
+  "sfx": {
+    "integrated_lufs": -38.366281198179315,
+    "true_peak_dbtp": -14.812500549066073,
+    "lra_lu": 16.247884610245876,
+    "sample_peak_dbfs": -14.838682314486228
+  },
+  "master_gain_db": -0.058725318291184436,
+  "voice_gain_db": -0.058725318291184436,
+  "source_duration_seconds": 76.73645833333333,
+  "source_sha256": "63b1238fee4094fe49ae0cf0e09e574756b82e3d81a266f4dbe22964fe9f9289",
+  "words_sha256": "5b2b6441fb8c71eb206530cd10187caf9e31b518404b3fb0df5aefd575478773",
+  "music_sections": [
+    {
+      "name": "Hook + town: light bounce",
+      "start": 0,
+      "end": 22.4,
+      "base_margin": -18,
+      "gain_db": -14.589410916771858
+    },
+    {
+      "name": "Skip tip, bench: bounce quickens",
+      "start": 22.4,
+      "end": 28.9,
+      "base_margin": -16,
+      "gain_db": -11.582424040233075
+    },
+    {
+      "name": "Bench, bus stop: frantic starts",
+      "start": 28.9,
+      "end": 38.0,
+      "base_margin": -16,
+      "gain_db": -12.172458421608574
+    },
+    {
+      "name": "Steps, elevator: climbs",
+      "start": 38.0,
+      "end": 44.2,
+      "base_margin": -13,
+      "gain_db": -8.360149811060943
+    },
+    {
+      "name": "Bedtime zero",
+      "start": 44.2,
+      "end": 46.9,
+      "base_margin": -15,
+      "gain_db": -10.037485898741181
+    },
+    {
+      "name": "Bed strike: peak",
+      "start": 46.9,
+      "end": 50.1,
+      "base_margin": -11,
+      "gain_db": -6.5935190959321694
+    },
+    {
+      "name": "You see: bare note",
+      "start": 50.1,
+      "end": 52.6,
+      "base_margin": -24,
+      "gain_db": -1.2247709076036912
+    },
+    {
+      "name": "Explain tipped wage",
+      "start": 52.6,
+      "end": 62.57,
+      "base_margin": -21,
+      "gain_db": -8.365340123362472
+    },
+    {
+      "name": "Cart job: warm ironic tail",
+      "start": 62.57,
+      "end": 75.237,
+      "base_margin": -17,
+      "gain_db": -12.288137025496397
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.75,
+      "end": 1.25,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.89,
+      "end": 1.5899999999999999,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.9,
+      "end": 6.5,
+      "kind": "whoosh",
+      "description": "overnight screens wave",
+      "target": -45.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.3,
+      "end": 6.8,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.4399999999999995,
+      "end": 7.14,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.75,
+      "end": 7.25,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -43.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.89,
+      "end": 7.59,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -45.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.2,
+      "end": 7.7,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -43.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 7.34,
+      "end": 8.04,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -45.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.0,
+      "end": 10.5,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 10.14,
+      "end": 10.84,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.4,
+      "end": 14.9,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.540000000000001,
+      "end": 15.24,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.0,
+      "end": 22.5,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.14,
+      "end": 22.84,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.0,
+      "end": 24.5,
+      "kind": "paper",
+      "description": "no-tip low buzz",
+      "target": -43.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.6,
+      "end": 24.720000000000002,
+      "kind": "click",
+      "description": "lock clunk",
+      "target": -33.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.65,
+      "end": 24.95,
+      "kind": "thump",
+      "description": "lock thud",
+      "target": -31.947557749860522,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.3,
+      "end": 26.8,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 26.44,
+      "end": 27.14,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 27.4,
+      "end": 27.9,
+      "kind": "boing",
+      "description": "bench tip",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.3,
+      "end": 28.6,
+      "kind": "thump",
+      "description": "grass thud",
+      "target": -30.947557749860522,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 29.9,
+      "end": 30.4,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.04,
+      "end": 30.74,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.6,
+      "end": 32.2,
+      "kind": "tray",
+      "description": "roof rail rattle",
+      "target": -43.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.7,
+      "end": 32.7,
+      "kind": "whoosh",
+      "description": "roof slides away",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.0,
+      "end": 33.5,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.14,
+      "end": 33.84,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.9,
+      "end": 39.4,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.04,
+      "end": 39.74,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.6,
+      "end": 40.1,
+      "kind": "tray",
+      "description": "steps fold",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 39.9,
+      "end": 40.4,
+      "kind": "tray",
+      "description": "steps fold 2",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.2,
+      "end": 40.5,
+      "kind": "thump",
+      "description": "ramp flat",
+      "target": -34.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.3,
+      "end": 41.8,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.44,
+      "end": 42.14,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.9,
+      "end": 42.199999999999996,
+      "kind": "thump",
+      "description": "elevator stall",
+      "target": -31.947557749860522,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.95,
+      "end": 42.85,
+      "kind": "bassdrop",
+      "description": "elevator jolt",
+      "target": -37.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.3,
+      "end": 44.5,
+      "kind": "room",
+      "description": "elevator muzak hum",
+      "target": -45.94755774986052,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.0,
+      "end": 44.5,
+      "kind": "bell",
+      "description": "POS chime note 1",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.14,
+      "end": 44.84,
+      "kind": "bell",
+      "description": "POS chime note 2",
+      "target": -41.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.1,
+      "end": 46.7,
+      "kind": "paper",
+      "description": "card decline buzz",
+      "target": -35.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.15,
+      "end": 46.65,
+      "kind": "paper",
+      "description": "decline buzz 2",
+      "target": -35.94755774986052,
+      "pan": 0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.6,
+      "end": 48.2,
+      "kind": "boing",
+      "description": "bed spring",
+      "target": -39.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.3,
+      "end": 48.599999999999994,
+      "kind": "thump",
+      "description": "bed into wall",
+      "target": -31.947557749860522,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.9,
+      "end": 50.019999999999996,
+      "kind": "click",
+      "description": "picket sign tap",
+      "target": -35.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 65.66999999999999,
+      "end": 66.66999999999999,
+      "kind": "sip",
+      "description": "coffee steam hiss",
+      "target": -47.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.66999999999999,
+      "end": 75.21999999999998,
+      "kind": "bell",
+      "description": "final POS chime 1",
+      "target": -38.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.78999999999999,
+      "end": 75.22999999999999,
+      "kind": "bell",
+      "description": "final POS chime 2",
+      "target": -40.94755774986052,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999983984540535,
+    "p10": 16.98585597687277,
+    "median": 24.010281970771388
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3684800,
+    "duration_seconds": 76.76666666666667,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

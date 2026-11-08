@@ -1,0 +1,596 @@
+{
+  "master": {
+    "integrated_lufs": -16.000000000011536,
+    "true_peak_dbtp": -1.5455938900220314,
+    "lra_lu": 2.497165009589958,
+    "sample_peak_dbfs": -1.551121265053101
+  },
+  "voice": {
+    "integrated_lufs": -15.994242233102579,
+    "true_peak_dbtp": -1.546058083547888,
+    "lra_lu": 2.499606034548288,
+    "sample_peak_dbfs": -1.585730564235772
+  },
+  "music": {
+    "integrated_lufs": -36.22975057054286,
+    "true_peak_dbtp": -14.390712040323157,
+    "lra_lu": 12.63342645843466,
+    "sample_peak_dbfs": -14.396239415354227
+  },
+  "sfx": {
+    "integrated_lufs": -40.319435203587574,
+    "true_peak_dbtp": -15.225991193807358,
+    "lra_lu": 10.798199808234315,
+    "sample_peak_dbfs": -15.231518568838428
+  },
+  "master_gain_db": -0.9069515757422426,
+  "voice_gain_db": -0.9069515757422426,
+  "source_duration_seconds": 83.142375,
+  "source_sha256": "3026df002cd966a70ffa443990a91685f3a63802712e6487f09f47d75450f8f0",
+  "words_sha256": "cb759e24a9099a5e8c77b973dd867b127b0c473f614e7c202e7bcb0806c49c86",
+  "music_sections": [
+    {
+      "name": "Hook + jungle + sea: low tension",
+      "start": 0,
+      "end": 16.2,
+      "base_margin": -19,
+      "gain_db": -6.501159712282394
+    },
+    {
+      "name": "Cabin: dark under the drone",
+      "start": 16.2,
+      "end": 30.5,
+      "base_margin": -15,
+      "gain_db": -4.0717782887418466
+    },
+    {
+      "name": "Plane: pulse starts",
+      "start": 30.5,
+      "end": 34.4,
+      "base_margin": -19,
+      "gain_db": -14.380302302669111
+    },
+    {
+      "name": "Ship + fast boat: pulse climbs",
+      "start": 34.4,
+      "end": 38.3,
+      "base_margin": -15,
+      "gain_db": -9.915392116573596
+    },
+    {
+      "name": "Roof, hatch, valve, flood: pulse peak",
+      "start": 38.3,
+      "end": 45.7,
+      "base_margin": -11,
+      "gain_db": -5.446438318856163
+    },
+    {
+      "name": "You see: single bass note",
+      "start": 47.0,
+      "end": 52.5,
+      "base_margin": -24,
+      "gain_db": -1.2520002316091876
+    },
+    {
+      "name": "Cargo, no case, blanket",
+      "start": 52.5,
+      "end": 62.0,
+      "base_margin": -20,
+      "gain_db": -7.7304623325913155
+    },
+    {
+      "name": "They let you go: smug light turn",
+      "start": 62.0,
+      "end": 67.9,
+      "base_margin": -14,
+      "gain_db": -9.254828998535583
+    },
+    {
+      "name": "2008: hard stop, heavy low end",
+      "start": 68.1,
+      "end": 81.6667,
+      "base_margin": -9,
+      "gain_db": -3.6946502535721883
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.1,
+      "end": 5.699999999999999,
+      "kind": "water",
+      "description": "sea wash",
+      "target": -46.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 5.8,
+      "end": 11.8,
+      "kind": "scribble",
+      "description": "jungle insects",
+      "target": -51.08729065736041,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 6.3,
+      "end": 8.9,
+      "kind": "rustle",
+      "description": "roller paint",
+      "target": -43.08729065736041,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.9,
+      "end": 10.4,
+      "kind": "tape",
+      "description": "duct tape patch",
+      "target": -43.08729065736041,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 12.0,
+      "end": 16.0,
+      "kind": "water",
+      "description": "sea wash, low boat",
+      "target": -45.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.3,
+      "end": 30.4,
+      "kind": "room",
+      "description": "cabin engine drone",
+      "target": -42.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.3,
+      "end": 30.4,
+      "kind": "chugslow",
+      "description": "cabin engine thud",
+      "target": -46.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.5,
+      "end": 18.7,
+      "kind": "sip",
+      "description": "empty jug slosh",
+      "target": -43.08729065736041,
+      "pan": -0.1,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.8,
+      "end": 20.05,
+      "kind": "crack",
+      "description": "cough",
+      "target": -46.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.05,
+      "end": 20.3,
+      "kind": "crack",
+      "description": "cough",
+      "target": -47.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.95,
+      "end": 22.349999999999998,
+      "kind": "tink",
+      "description": "gauge clink",
+      "target": -39.08729065736041,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.15,
+      "end": 22.45,
+      "kind": "tink",
+      "description": "gauge falls",
+      "target": -41.08729065736041,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.0,
+      "end": 26.4,
+      "kind": "crinkle",
+      "description": "plastic crinkle, pat the stack",
+      "target": -39.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.9,
+      "end": 33.3,
+      "kind": "whoosh",
+      "description": "plane pass",
+      "target": -42.08729065736041,
+      "pan": -0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 30.9,
+      "end": 45.9,
+      "kind": "water",
+      "description": "night sea",
+      "target": -48.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.1,
+      "end": 34.800000000000004,
+      "kind": "bassdrop",
+      "description": "ship horn",
+      "target": -39.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 33.4,
+      "end": 34.6,
+      "kind": "room",
+      "description": "searchlight hum",
+      "target": -43.08729065736041,
+      "pan": 0.3,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 34.3,
+      "end": 38.199999999999996,
+      "kind": "chug",
+      "description": "outboard engine",
+      "target": -44.08729065736041,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 36.7,
+      "end": 37.300000000000004,
+      "kind": "paper",
+      "description": "megaphone shout",
+      "target": -47.08729065736041,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.8,
+      "end": 38.4,
+      "kind": "paper",
+      "description": "megaphone shout",
+      "target": -47.08729065736041,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.3,
+      "end": 40.599999999999994,
+      "kind": "thump",
+      "description": "man lands on the roof",
+      "target": -30.087290657360413,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.3,
+      "end": 41.199999999999996,
+      "kind": "bassdrop",
+      "description": "roof boom",
+      "target": -36.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.0,
+      "end": 46.9,
+      "kind": "room",
+      "description": "cabin engine drone",
+      "target": -42.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.4,
+      "end": 41.9,
+      "kind": "tray",
+      "description": "hatch bang 1",
+      "target": -36.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.45,
+      "end": 41.650000000000006,
+      "kind": "thump",
+      "description": "bang body",
+      "target": -35.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.9,
+      "end": 42.4,
+      "kind": "tray",
+      "description": "hatch bang 2",
+      "target": -36.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.95,
+      "end": 42.150000000000006,
+      "kind": "thump",
+      "description": "bang body",
+      "target": -35.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.35,
+      "end": 42.85,
+      "kind": "tray",
+      "description": "hatch bang 3",
+      "target": -35.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 42.4,
+      "end": 42.6,
+      "kind": "thump",
+      "description": "bang body",
+      "target": -34.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 43.7,
+      "end": 44.150000000000006,
+      "kind": "paper",
+      "description": "valve squeak",
+      "target": -44.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 44.6,
+      "end": 47.0,
+      "kind": "whoosh",
+      "description": "water rush",
+      "target": -38.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 45.3,
+      "end": 46.5,
+      "kind": "splash",
+      "description": "water pours in",
+      "target": -40.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.5,
+      "end": 52.5,
+      "kind": "water",
+      "description": "sea wash, dawn",
+      "target": -45.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.5,
+      "end": 59.3,
+      "kind": "room",
+      "description": "underwater muffle",
+      "target": -39.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 54.5,
+      "end": 59.3,
+      "kind": "water",
+      "description": "underwater bubbles",
+      "target": -50.08729065736041,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 61.1,
+      "end": 62.2,
+      "kind": "rustle",
+      "description": "blanket rustle",
+      "target": -41.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 66.0,
+      "end": 67.0,
+      "kind": "rustle",
+      "description": "blanket rustle again",
+      "target": -43.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.2,
+      "end": 71.4,
+      "kind": "bassdrop",
+      "description": "heavy hit on 2008",
+      "target": -31.087290657360413,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 68.6,
+      "end": 69.0,
+      "kind": "stamp",
+      "description": "stamped page",
+      "target": -38.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.0,
+      "end": 70.3,
+      "kind": "thump",
+      "description": "heavy low pulse",
+      "target": -32.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 72.0,
+      "end": 72.3,
+      "kind": "thump",
+      "description": "heavy low pulse",
+      "target": -31.087290657360413,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 74.2,
+      "end": 74.5,
+      "kind": "thump",
+      "description": "heavy low pulse",
+      "target": -32.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 76.45,
+      "end": 76.57000000000001,
+      "kind": "click",
+      "description": "handcuff click",
+      "target": -36.08729065736041,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 76.62,
+      "end": 76.74000000000001,
+      "kind": "click",
+      "description": "handcuff click",
+      "target": -37.08729065736041,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 77.3,
+      "end": 77.6,
+      "kind": "thump",
+      "description": "heavy low pulse",
+      "target": -31.087290657360413,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 77.8,
+      "end": 78.8,
+      "kind": "rustle",
+      "description": "blanket rustle",
+      "target": -43.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 79.2,
+      "end": 79.5,
+      "kind": "thump",
+      "description": "heavy low pulse",
+      "target": -31.087290657360413,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 80.8,
+      "end": 81.6,
+      "kind": "crinkle",
+      "description": "jumpsuit plastic crinkle, rings out",
+      "target": -38.08729065736041,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.9997463727531155,
+    "p10": 15.084303094371618,
+    "median": 21.59320401010737
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3992000,
+    "duration_seconds": 83.16666666666667,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}

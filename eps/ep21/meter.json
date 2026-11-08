@@ -1,0 +1,1267 @@
+{
+"rule": "balance drops 0.10 at each word's START (shows the post-word value); starts at 18.00 before word 1; word 180 'love' brings it to 0.00; the next word is unpayable: cut at 73.80 s",
+"start_balance": 18.0,
+"cut_s": 73.8,
+"words": [
+{
+"k": 1,
+"word": "In",
+"start": 0.1,
+"end": 0.28,
+"balance": 17.9
+},
+{
+"k": 2,
+"word": "this",
+"start": 0.28,
+"end": 0.5,
+"balance": 17.8
+},
+{
+"k": 3,
+"word": "town",
+"start": 0.5,
+"end": 0.8,
+"balance": 17.7
+},
+{
+"k": 4,
+"word": "I",
+"start": 0.92,
+"end": 1.12,
+"balance": 17.6
+},
+{
+"k": 5,
+"word": "love",
+"start": 1.12,
+"end": 1.46,
+"balance": 17.5
+},
+{
+"k": 6,
+"word": "you",
+"start": 1.46,
+"end": 1.84,
+"balance": 17.4
+},
+{
+"k": 7,
+"word": "costs",
+"start": 2.1,
+"end": 2.42,
+"balance": 17.3
+},
+{
+"k": 8,
+"word": "three",
+"start": 2.42,
+"end": 2.74,
+"balance": 17.2
+},
+{
+"k": 9,
+"word": "dollars",
+"start": 2.74,
+"end": 3.06,
+"balance": 17.1
+},
+{
+"k": 10,
+"word": "You",
+"start": 3.963,
+"end": 4.283,
+"balance": 17.0
+},
+{
+"k": 11,
+"word": "step",
+"start": 4.283,
+"end": 4.643,
+"balance": 16.9
+},
+{
+"k": 12,
+"word": "off",
+"start": 4.643,
+"end": 4.923,
+"balance": 16.8
+},
+{
+"k": 13,
+"word": "the",
+"start": 4.923,
+"end": 5.103,
+"balance": 16.7
+},
+{
+"k": 14,
+"word": "bus",
+"start": 5.103,
+"end": 5.383,
+"balance": 16.6
+},
+{
+"k": 15,
+"word": "in",
+"start": 5.383,
+"end": 5.683,
+"balance": 16.5
+},
+{
+"k": 16,
+"word": "Talkton",
+"start": 5.683,
+"end": 6.143,
+"balance": 16.4
+},
+{
+"k": 17,
+"word": "Every",
+"start": 6.609,
+"end": 6.949,
+"balance": 16.3
+},
+{
+"k": 18,
+"word": "word",
+"start": 6.949,
+"end": 7.289,
+"balance": 16.2
+},
+{
+"k": 19,
+"word": "here",
+"start": 7.289,
+"end": 7.609,
+"balance": 16.1
+},
+{
+"k": 20,
+"word": "costs",
+"start": 7.609,
+"end": 7.929,
+"balance": 16.0
+},
+{
+"k": 21,
+"word": "ten",
+"start": 7.929,
+"end": 8.409,
+"balance": 15.9
+},
+{
+"k": 22,
+"word": "cents",
+"start": 8.409,
+"end": 8.709,
+"balance": 15.8
+},
+{
+"k": 23,
+"word": "Even",
+"start": 9.32,
+"end": 9.56,
+"balance": 15.7
+},
+{
+"k": 24,
+"word": "mine",
+"start": 9.56,
+"end": 9.88,
+"balance": 15.6
+},
+{
+"k": 25,
+"word": "I",
+"start": 10.409,
+"end": 10.729,
+"balance": 15.5
+},
+{
+"k": 26,
+"word": "am",
+"start": 10.729,
+"end": 10.989,
+"balance": 15.4
+},
+{
+"k": 27,
+"word": "your",
+"start": 10.989,
+"end": 11.149,
+"balance": 15.3
+},
+{
+"k": 28,
+"word": "rented",
+"start": 11.149,
+"end": 11.429,
+"balance": 15.2
+},
+{
+"k": 29,
+"word": "guide",
+"start": 11.429,
+"end": 11.789,
+"balance": 15.1
+},
+{
+"k": 30,
+"word": "Watch",
+"start": 12.267,
+"end": 12.547,
+"balance": 15.0
+},
+{
+"k": 31,
+"word": "my",
+"start": 12.547,
+"end": 12.787,
+"balance": 14.9
+},
+{
+"k": 32,
+"word": "meter",
+"start": 12.787,
+"end": 13.027,
+"balance": 14.8
+},
+{
+"k": 33,
+"word": "go",
+"start": 13.027,
+"end": 13.287,
+"balance": 14.7
+},
+{
+"k": 34,
+"word": "down",
+"start": 13.287,
+"end": 13.647,
+"balance": 14.6
+},
+{
+"k": 35,
+"word": "Mia",
+"start": 14.124,
+"end": 14.444,
+"balance": 14.5
+},
+{
+"k": 36,
+"word": "lives",
+"start": 14.444,
+"end": 14.884,
+"balance": 14.4
+},
+{
+"k": 37,
+"word": "at",
+"start": 14.884,
+"end": 15.184,
+"balance": 14.3
+},
+{
+"k": 38,
+"word": "the",
+"start": 15.184,
+"end": 15.304,
+"balance": 14.2
+},
+{
+"k": 39,
+"word": "end",
+"start": 15.304,
+"end": 15.564,
+"balance": 14.1
+},
+{
+"k": 40,
+"word": "of",
+"start": 15.564,
+"end": 15.764,
+"balance": 14.0
+},
+{
+"k": 41,
+"word": "Main",
+"start": 15.764,
+"end": 15.984,
+"balance": 13.9
+},
+{
+"k": 42,
+"word": "Street",
+"start": 15.984,
+"end": 16.344,
+"balance": 13.8
+},
+{
+"k": 43,
+"word": "You",
+"start": 16.792,
+"end": 16.952,
+"balance": 13.7
+},
+{
+"k": 44,
+"word": "carry",
+"start": 16.952,
+"end": 17.292,
+"balance": 13.6
+},
+{
+"k": 45,
+"word": "exactly",
+"start": 17.292,
+"end": 17.812,
+"balance": 13.5
+},
+{
+"k": 46,
+"word": "enough",
+"start": 17.812,
+"end": 18.212,
+"balance": 13.4
+},
+{
+"k": 47,
+"word": "for",
+"start": 18.212,
+"end": 18.412,
+"balance": 13.3
+},
+{
+"k": 48,
+"word": "one",
+"start": 18.412,
+"end": 18.672,
+"balance": 13.2
+},
+{
+"k": 49,
+"word": "sentence",
+"start": 18.672,
+"end": 19.092,
+"balance": 13.1
+},
+{
+"k": 50,
+"word": "At",
+"start": 19.652,
+"end": 19.852,
+"balance": 13.0
+},
+{
+"k": 51,
+"word": "the",
+"start": 19.852,
+"end": 19.992,
+"balance": 12.9
+},
+{
+"k": 52,
+"word": "market",
+"start": 19.992,
+"end": 20.392,
+"balance": 12.8
+},
+{
+"k": 53,
+"word": "nobody",
+"start": 20.972,
+"end": 21.312,
+"balance": 12.7
+},
+{
+"k": 54,
+"word": "wastes",
+"start": 21.312,
+"end": 21.932,
+"balance": 12.6
+},
+{
+"k": 55,
+"word": "a",
+"start": 21.932,
+"end": 22.152,
+"balance": 12.5
+},
+{
+"k": 56,
+"word": "word",
+"start": 22.152,
+"end": 22.412,
+"balance": 12.4
+},
+{
+"k": 57,
+"word": "The",
+"start": 22.896,
+"end": 23.016,
+"balance": 12.3
+},
+{
+"k": 58,
+"word": "baker",
+"start": 23.016,
+"end": 23.216,
+"balance": 12.2
+},
+{
+"k": 59,
+"word": "says",
+"start": 23.216,
+"end": 23.576,
+"balance": 12.1
+},
+{
+"k": 60,
+"word": "Bread",
+"start": 24.076,
+"end": 24.436,
+"balance": 12.0
+},
+{
+"k": 61,
+"word": "You",
+"start": 25.076,
+"end": 25.216,
+"balance": 11.9
+},
+{
+"k": 62,
+"word": "point",
+"start": 25.216,
+"end": 25.516,
+"balance": 11.8
+},
+{
+"k": 63,
+"word": "Pointing",
+"start": 26.012,
+"end": 26.492,
+"balance": 11.7
+},
+{
+"k": 64,
+"word": "is",
+"start": 26.492,
+"end": 26.712,
+"balance": 11.6
+},
+{
+"k": 65,
+"word": "free",
+"start": 26.712,
+"end": 27.052,
+"balance": 11.5
+},
+{
+"k": 66,
+"word": "A",
+"start": 27.549,
+"end": 27.669,
+"balance": 11.4
+},
+{
+"k": 67,
+"word": "man",
+"start": 27.669,
+"end": 27.929,
+"balance": 11.3
+},
+{
+"k": 68,
+"word": "bumps",
+"start": 27.929,
+"end": 28.229,
+"balance": 11.2
+},
+{
+"k": 69,
+"word": "into",
+"start": 28.229,
+"end": 28.609,
+"balance": 11.1
+},
+{
+"k": 70,
+"word": "you",
+"start": 28.609,
+"end": 28.829,
+"balance": 11.0
+},
+{
+"k": 71,
+"word": "He",
+"start": 29.257,
+"end": 29.457,
+"balance": 10.9
+},
+{
+"k": 72,
+"word": "does",
+"start": 29.457,
+"end": 29.637,
+"balance": 10.8
+},
+{
+"k": 73,
+"word": "not",
+"start": 29.637,
+"end": 29.917,
+"balance": 10.7
+},
+{
+"k": 74,
+"word": "say",
+"start": 29.917,
+"end": 30.237,
+"balance": 10.6
+},
+{
+"k": 75,
+"word": "sorry",
+"start": 30.237,
+"end": 30.557,
+"balance": 10.5
+},
+{
+"k": 76,
+"word": "Sorry",
+"start": 31.115,
+"end": 31.535,
+"balance": 10.4
+},
+{
+"k": 77,
+"word": "costs",
+"start": 31.535,
+"end": 31.975,
+"balance": 10.3
+},
+{
+"k": 78,
+"word": "five",
+"start": 31.975,
+"end": 32.255,
+"balance": 10.2
+},
+{
+"k": 79,
+"word": "dollars",
+"start": 32.255,
+"end": 32.535,
+"balance": 10.1
+},
+{
+"k": 80,
+"word": "You",
+"start": 33.356,
+"end": 33.536,
+"balance": 10.0
+},
+{
+"k": 81,
+"word": "walk",
+"start": 33.536,
+"end": 33.776,
+"balance": 9.9
+},
+{
+"k": 82,
+"word": "on",
+"start": 33.776,
+"end": 34.076,
+"balance": 9.8
+},
+{
+"k": 83,
+"word": "I",
+"start": 34.552,
+"end": 34.732,
+"balance": 9.7
+},
+{
+"k": 84,
+"word": "keep",
+"start": 34.732,
+"end": 34.912,
+"balance": 9.6
+},
+{
+"k": 85,
+"word": "talking",
+"start": 34.912,
+"end": 35.292,
+"balance": 9.5
+},
+{
+"k": 86,
+"word": "My",
+"start": 35.812,
+"end": 36.012,
+"balance": 9.4
+},
+{
+"k": 87,
+"word": "meter",
+"start": 36.012,
+"end": 36.312,
+"balance": 9.3
+},
+{
+"k": 88,
+"word": "is",
+"start": 36.312,
+"end": 36.572,
+"balance": 9.2
+},
+{
+"k": 89,
+"word": "half",
+"start": 36.572,
+"end": 36.852,
+"balance": 9.1
+},
+{
+"k": 90,
+"word": "empty",
+"start": 36.852,
+"end": 37.292,
+"balance": 9.0
+},
+{
+"k": 91,
+"word": "and",
+"start": 37.292,
+"end": 37.792,
+"balance": 8.9
+},
+{
+"k": 92,
+"word": "we",
+"start": 37.792,
+"end": 37.952,
+"balance": 8.8
+},
+{
+"k": 93,
+"word": "have",
+"start": 37.952,
+"end": 38.072,
+"balance": 8.7
+},
+{
+"k": 94,
+"word": "not",
+"start": 38.072,
+"end": 38.332,
+"balance": 8.6
+},
+{
+"k": 95,
+"word": "met",
+"start": 38.332,
+"end": 38.592,
+"balance": 8.5
+},
+{
+"k": 96,
+"word": "Mia",
+"start": 38.592,
+"end": 38.892,
+"balance": 8.4
+},
+{
+"k": 97,
+"word": "You",
+"start": 39.419,
+"end": 39.619,
+"balance": 8.3
+},
+{
+"k": 98,
+"word": "cross",
+"start": 39.619,
+"end": 39.919,
+"balance": 8.2
+},
+{
+"k": 99,
+"word": "the",
+"start": 39.919,
+"end": 40.159,
+"balance": 8.1
+},
+{
+"k": 100,
+"word": "old",
+"start": 40.159,
+"end": 40.419,
+"balance": 8.0
+},
+{
+"k": 101,
+"word": "stone",
+"start": 40.419,
+"end": 40.779,
+"balance": 7.9
+},
+{
+"k": 102,
+"word": "bridge",
+"start": 40.779,
+"end": 41.159,
+"balance": 7.8
+},
+{
+"k": 103,
+"word": "It",
+"start": 41.745,
+"end": 41.865,
+"balance": 7.7
+},
+{
+"k": 104,
+"word": "is",
+"start": 41.865,
+"end": 42.005,
+"balance": 7.6
+},
+{
+"k": 105,
+"word": "long",
+"start": 42.005,
+"end": 42.385,
+"balance": 7.5
+},
+{
+"k": 106,
+"word": "and",
+"start": 42.385,
+"end": 43.045,
+"balance": 7.4
+},
+{
+"k": 107,
+"word": "old",
+"start": 43.045,
+"end": 43.485,
+"balance": 7.3
+},
+{
+"k": 108,
+"word": "and",
+"start": 43.485,
+"end": 44.105,
+"balance": 7.2
+},
+{
+"k": 109,
+"word": "pretty",
+"start": 44.105,
+"end": 44.345,
+"balance": 7.1
+},
+{
+"k": 110,
+"word": "Why",
+"start": 44.861,
+"end": 45.121,
+"balance": 7.0
+},
+{
+"k": 111,
+"word": "am",
+"start": 45.121,
+"end": 45.261,
+"balance": 6.9
+},
+{
+"k": 112,
+"word": "I",
+"start": 45.261,
+"end": 45.441,
+"balance": 6.8
+},
+{
+"k": 113,
+"word": "describing",
+"start": 45.441,
+"end": 45.921,
+"balance": 6.7
+},
+{
+"k": 114,
+"word": "a",
+"start": 45.921,
+"end": 46.161,
+"balance": 6.6
+},
+{
+"k": 115,
+"word": "bridge",
+"start": 46.161,
+"end": 46.481,
+"balance": 6.5
+},
+{
+"k": 116,
+"word": "That",
+"start": 47.103,
+"end": 47.323,
+"balance": 6.4
+},
+{
+"k": 117,
+"word": "is",
+"start": 47.323,
+"end": 47.703,
+"balance": 6.3
+},
+{
+"k": 118,
+"word": "money",
+"start": 47.703,
+"end": 48.203,
+"balance": 6.2
+},
+{
+"k": 119,
+"word": "I",
+"start": 48.725,
+"end": 48.865,
+"balance": 6.1
+},
+{
+"k": 120,
+"word": "will",
+"start": 48.865,
+"end": 49.005,
+"balance": 6.0
+},
+{
+"k": 121,
+"word": "be",
+"start": 49.005,
+"end": 49.165,
+"balance": 5.9
+},
+{
+"k": 122,
+"word": "quiet",
+"start": 49.165,
+"end": 49.465,
+"balance": 5.8
+},
+{
+"k": 123,
+"word": "now",
+"start": 49.465,
+"end": 49.785,
+"balance": 5.7
+},
+{
+"k": 124,
+"word": "Night",
+"start": 50.241,
+"end": 50.521,
+"balance": 5.6
+},
+{
+"k": 125,
+"word": "falls",
+"start": 50.521,
+"end": 50.921,
+"balance": 5.5
+},
+{
+"k": 126,
+"word": "Mia's",
+"start": 51.523,
+"end": 51.963,
+"balance": 5.4
+},
+{
+"k": 127,
+"word": "porch",
+"start": 51.963,
+"end": 52.263,
+"balance": 5.3
+},
+{
+"k": 128,
+"word": "light",
+"start": 52.263,
+"end": 52.543,
+"balance": 5.2
+},
+{
+"k": 129,
+"word": "is",
+"start": 52.543,
+"end": 52.783,
+"balance": 5.1
+},
+{
+"k": 130,
+"word": "on",
+"start": 52.783,
+"end": 53.043,
+"balance": 5.0
+},
+{
+"k": 131,
+"word": "A",
+"start": 53.572,
+"end": 53.732,
+"balance": 4.9
+},
+{
+"k": 132,
+"word": "neighbor",
+"start": 53.732,
+"end": 54.072,
+"balance": 4.8
+},
+{
+"k": 133,
+"word": "waves",
+"start": 54.072,
+"end": 54.512,
+"balance": 4.7
+},
+{
+"k": 134,
+"word": "from",
+"start": 54.512,
+"end": 54.892,
+"balance": 4.6
+},
+{
+"k": 135,
+"word": "a",
+"start": 54.892,
+"end": 55.012,
+"balance": 4.5
+},
+{
+"k": 136,
+"word": "window",
+"start": 55.012,
+"end": 55.252,
+"balance": 4.4
+},
+{
+"k": 137,
+"word": "Waving",
+"start": 55.771,
+"end": 56.251,
+"balance": 4.3
+},
+{
+"k": 138,
+"word": "is",
+"start": 56.251,
+"end": 56.591,
+"balance": 4.2
+},
+{
+"k": 139,
+"word": "free",
+"start": 56.591,
+"end": 56.971,
+"balance": 4.1
+},
+{
+"k": 140,
+"word": "You",
+"start": 57.479,
+"end": 57.799,
+"balance": 4.0
+},
+{
+"k": 141,
+"word": "climb",
+"start": 57.799,
+"end": 58.139,
+"balance": 3.9
+},
+{
+"k": 142,
+"word": "the",
+"start": 58.139,
+"end": 58.319,
+"balance": 3.8
+},
+{
+"k": 143,
+"word": "steps",
+"start": 58.319,
+"end": 58.559,
+"balance": 3.7
+},
+{
+"k": 144,
+"word": "You",
+"start": 59.101,
+"end": 59.401,
+"balance": 3.6
+},
+{
+"k": 145,
+"word": "knock",
+"start": 59.401,
+"end": 59.921,
+"balance": 3.5
+},
+{
+"k": 146,
+"word": "She",
+"start": 60.532,
+"end": 60.732,
+"balance": 3.4
+},
+{
+"k": 147,
+"word": "opens",
+"start": 60.732,
+"end": 61.072,
+"balance": 3.3
+},
+{
+"k": 148,
+"word": "the",
+"start": 61.072,
+"end": 61.352,
+"balance": 3.2
+},
+{
+"k": 149,
+"word": "door",
+"start": 61.352,
+"end": 61.572,
+"balance": 3.1
+},
+{
+"k": 150,
+"word": "You",
+"start": 62.091,
+"end": 62.231,
+"balance": 3.0
+},
+{
+"k": 151,
+"word": "say",
+"start": 62.231,
+"end": 62.471,
+"balance": 2.9
+},
+{
+"k": 152,
+"word": "it",
+"start": 62.471,
+"end": 62.651,
+"balance": 2.8
+},
+{
+"k": 153,
+"word": "and",
+"start": 62.851,
+"end": 62.951,
+"balance": 2.7
+},
+{
+"k": 154,
+"word": "your",
+"start": 62.951,
+"end": 63.091,
+"balance": 2.6
+},
+{
+"k": 155,
+"word": "money",
+"start": 63.091,
+"end": 63.311,
+"balance": 2.5
+},
+{
+"k": 156,
+"word": "jumps",
+"start": 63.311,
+"end": 63.631,
+"balance": 2.4
+},
+{
+"k": 157,
+"word": "into",
+"start": 63.631,
+"end": 63.891,
+"balance": 2.3
+},
+{
+"k": 158,
+"word": "the",
+"start": 63.891,
+"end": 64.031,
+"balance": 2.2
+},
+{
+"k": 159,
+"word": "box",
+"start": 64.031,
+"end": 64.271,
+"balance": 2.1
+},
+{
+"k": 160,
+"word": "Pling",
+"start": 64.801,
+"end": 65.281,
+"balance": 2.0
+},
+{
+"k": 161,
+"word": "It",
+"start": 65.805,
+"end": 65.965,
+"balance": 1.9
+},
+{
+"k": 162,
+"word": "is",
+"start": 65.965,
+"end": 66.245,
+"balance": 1.8
+},
+{
+"k": 163,
+"word": "paid",
+"start": 66.245,
+"end": 66.565,
+"balance": 1.7
+},
+{
+"k": 164,
+"word": "in",
+"start": 66.565,
+"end": 67.005,
+"balance": 1.6
+},
+{
+"k": 165,
+"word": "full",
+"start": 67.005,
+"end": 67.345,
+"balance": 1.5
+},
+{
+"k": 166,
+"word": "I",
+"start": 67.812,
+"end": 67.972,
+"balance": 1.4
+},
+{
+"k": 167,
+"word": "have",
+"start": 67.972,
+"end": 68.152,
+"balance": 1.3
+},
+{
+"k": 168,
+"word": "ten",
+"start": 68.152,
+"end": 68.512,
+"balance": 1.2
+},
+{
+"k": 169,
+"word": "words",
+"start": 68.512,
+"end": 68.912,
+"balance": 1.1
+},
+{
+"k": 170,
+"word": "left",
+"start": 68.912,
+"end": 69.332,
+"balance": 1.0
+},
+{
+"k": 171,
+"word": "Mia",
+"start": 69.669,
+"end": 69.889,
+"balance": 0.9
+},
+{
+"k": 172,
+"word": "smiles",
+"start": 69.889,
+"end": 70.489,
+"balance": 0.8
+},
+{
+"k": 173,
+"word": "She",
+"start": 70.929,
+"end": 71.109,
+"balance": 0.7
+},
+{
+"k": 174,
+"word": "opens",
+"start": 71.109,
+"end": 71.409,
+"balance": 0.6
+},
+{
+"k": 175,
+"word": "her",
+"start": 71.409,
+"end": 71.609,
+"balance": 0.5
+},
+{
+"k": 176,
+"word": "mouth",
+"start": 71.609,
+"end": 71.809,
+"balance": 0.4
+},
+{
+"k": 177,
+"word": "She",
+"start": 72.232,
+"end": 72.472,
+"balance": 0.3
+},
+{
+"k": 178,
+"word": "says",
+"start": 72.472,
+"end": 72.792,
+"balance": 0.2
+},
+{
+"k": 179,
+"word": "I",
+"start": 73.172,
+"end": 73.332,
+"balance": 0.1
+},
+{
+"k": 180,
+"word": "love",
+"start": 73.332,
+"end": 73.752,
+"balance": 0.0
+}
+]
+}

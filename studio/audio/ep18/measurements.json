@@ -1,0 +1,649 @@
+{
+  "master": {
+    "integrated_lufs": -15.999999998955989,
+    "true_peak_dbtp": -1.407604975218493,
+    "lra_lu": 2.0624671890543294,
+    "sample_peak_dbfs": -1.4150437366497868
+  },
+  "voice": {
+    "integrated_lufs": -16.011793642006857,
+    "true_peak_dbtp": -1.7096291759394013,
+    "lra_lu": 2.144551101265739,
+    "sample_peak_dbfs": -1.7440524640051787
+  },
+  "music": {
+    "integrated_lufs": -45.49705023956809,
+    "true_peak_dbtp": -26.542568578570737,
+    "lra_lu": 8.867046375345907,
+    "sample_peak_dbfs": -26.54855447702396
+  },
+  "sfx": {
+    "integrated_lufs": -35.712047175798034,
+    "true_peak_dbtp": -13.058693707659149,
+    "lra_lu": 23.847038744025333,
+    "sample_peak_dbfs": -13.296011630322557
+  },
+  "master_gain_db": -0.8689722238115163,
+  "voice_gain_db": -0.8689722238115163,
+  "source_duration_seconds": 78.55264583333333,
+  "source_sha256": "d832c6e1c98d2128d4d73496bdc9b0c037deaa6e4dee6fc4689e501b537acc85",
+  "words_sha256": "c7dcbc775815eb9c496f0e842ba730b0501d7a95969bddaa00c0a758ea72d602",
+  "music_sections": [
+    {
+      "name": "Living room: low unease",
+      "start": 0,
+      "end": 13.3,
+      "base_margin": -22,
+      "gain_db": -2.6008182985445814
+    },
+    {
+      "name": "Roar builds: dark",
+      "start": 13.3,
+      "end": 24.6,
+      "base_margin": -21,
+      "gain_db": -10.923022703965998
+    },
+    {
+      "name": "Flight: near-silent float",
+      "start": 24.6,
+      "end": 32.2,
+      "base_margin": -32,
+      "gain_db": -9.561961634708084
+    },
+    {
+      "name": "Wake, rain, GPS walk: gentle pulse",
+      "start": 32.2,
+      "end": 48.8,
+      "base_margin": -23,
+      "gain_db": -18.111905060738124
+    },
+    {
+      "name": "Held note: 1307 feet",
+      "start": 48.8,
+      "end": 54.0,
+      "base_margin": -22,
+      "gain_db": -0.21445383133595897
+    },
+    {
+      "name": "You see: near silence",
+      "start": 54.0,
+      "end": 58.0,
+      "base_margin": -30,
+      "gain_db": -6.194880767239994
+    },
+    {
+      "name": "Explain: low dark",
+      "start": 58.0,
+      "end": 70.3,
+      "base_margin": -23,
+      "gain_db": -11.223964552452372
+    },
+    {
+      "name": "Lamp: dry resolve",
+      "start": 70.3,
+      "end": 78.56666666666666,
+      "base_margin": -20,
+      "gain_db": -14.06421733371873
+    }
+  ],
+  "sfx_cues": [
+    {
+      "start": 0.0,
+      "end": 13.0,
+      "kind": "crinkle",
+      "description": "rain on tin roof",
+      "target": -49.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 0.3,
+      "end": 4.3,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -47.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 4.5,
+      "end": 8.5,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -46.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.0,
+      "end": 8.3,
+      "kind": "tink",
+      "description": "window rattles",
+      "target": -42.14282141819506,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 8.6,
+      "end": 8.9,
+      "kind": "tink",
+      "description": "window rattles",
+      "target": -40.14282141819506,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.0,
+      "end": 9.3,
+      "kind": "tink",
+      "description": "window rattles",
+      "target": -42.14282141819506,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.0,
+      "end": 13.5,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -45.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 9.7,
+      "end": 10.0,
+      "kind": "tink",
+      "description": "window rattles",
+      "target": -44.14282141819506,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.0,
+      "end": 24.5,
+      "kind": "crinkle",
+      "description": "rain on tin roof",
+      "target": -48.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 13.3,
+      "end": 16.5,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -42.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 14.8,
+      "end": 17.8,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -39.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 15.0,
+      "end": 17.5,
+      "kind": "whoosh",
+      "description": "wind roar rising",
+      "target": -42.14282141819506,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 16.0,
+      "end": 19.0,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -37.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.0,
+      "end": 20.0,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 17.1,
+      "end": 18.700000000000003,
+      "kind": "chugslow",
+      "description": "floor rumble jelly",
+      "target": -41.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.5,
+      "end": 21.5,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -34.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.75,
+      "end": 19.45,
+      "kind": "tear",
+      "description": "front door ripped off",
+      "target": -31.142821418195062,
+      "pan": -0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 18.85,
+      "end": 19.150000000000002,
+      "kind": "thump",
+      "description": "front door slam",
+      "target": -35.14282141819506,
+      "pan": -0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 19.5,
+      "end": 23.0,
+      "kind": "whoosh",
+      "description": "freight-train roar",
+      "target": -37.14282141819506,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.0,
+      "end": 23.0,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -33.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.25,
+      "end": 21.05,
+      "kind": "tear",
+      "description": "back door ripped off",
+      "target": -31.142821418195062,
+      "pan": 0.5,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 20.35,
+      "end": 20.650000000000002,
+      "kind": "thump",
+      "description": "back door thud",
+      "target": -35.14282141819506,
+      "pan": 0.4,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.5,
+      "end": 24.5,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -32.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.5,
+      "end": 22.4,
+      "kind": "tray",
+      "description": "window shatters",
+      "target": -33.14282141819506,
+      "pan": 0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 21.6,
+      "end": 21.900000000000002,
+      "kind": "crack",
+      "description": "glass crack",
+      "target": -37.14282141819506,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.5,
+      "end": 24.5,
+      "kind": "whoosh",
+      "description": "freight-train roar",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.8,
+      "end": 25.0,
+      "kind": "room",
+      "description": "distant roar building",
+      "target": -31.142821418195062,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 22.85,
+      "end": 23.150000000000002,
+      "kind": "thump",
+      "description": "something hits your head",
+      "target": -29.142821418195062,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 23.0,
+      "end": 24.4,
+      "kind": "bassdrop",
+      "description": "blackout drop",
+      "target": -36.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 24.9,
+      "end": 28.9,
+      "kind": "whoosh",
+      "description": "wind lifts you",
+      "target": -41.14282141819506,
+      "pan": -0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 25.0,
+      "end": 32.0,
+      "kind": "room",
+      "description": "far thunder in the air",
+      "target": -48.14282141819506,
+      "pan": 0,
+      "mode": "integrated",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 28.0,
+      "end": 32.4,
+      "kind": "whoosh",
+      "description": "wind in the air",
+      "target": -42.14282141819506,
+      "pan": 0.2,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 31.9,
+      "end": 32.9,
+      "kind": "sheet",
+      "description": "soft grass landing",
+      "target": -43.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.0,
+      "end": 49.0,
+      "kind": "crinkle",
+      "description": "soft rain on the field",
+      "target": -48.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 32.0,
+      "end": 32.3,
+      "kind": "thump",
+      "description": "soft landing",
+      "target": -43.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 37.8,
+      "end": 38.599999999999994,
+      "kind": "tape",
+      "description": "fence creak",
+      "target": -43.14282141819506,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.4,
+      "end": 38.9,
+      "kind": "tape",
+      "description": "fence creak",
+      "target": -45.14282141819506,
+      "pan": -0.3,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 38.9,
+      "end": 40.8,
+      "kind": "steps",
+      "description": "gravel steps",
+      "target": -40.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 40.95,
+      "end": 41.1,
+      "kind": "thump",
+      "description": "door knock",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.15,
+      "end": 41.3,
+      "kind": "thump",
+      "description": "door knock",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 41.35,
+      "end": 41.5,
+      "kind": "thump",
+      "description": "door knock",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 46.3,
+      "end": 47.599999999999994,
+      "kind": "steps",
+      "description": "walking the field",
+      "target": -44.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.6,
+      "end": 47.72,
+      "kind": "click",
+      "description": "GPS beep",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 47.9,
+      "end": 48.019999999999996,
+      "kind": "whistle",
+      "description": "GPS tone",
+      "target": -56.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.0,
+      "end": 50.6,
+      "kind": "steps",
+      "description": "walking on the field",
+      "target": -47.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 48.1,
+      "end": 48.22,
+      "kind": "click",
+      "description": "GPS beep",
+      "target": -35.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.0,
+      "end": 57.0,
+      "kind": "crinkle",
+      "description": "rain thinning at dawn",
+      "target": -52.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 49.6,
+      "end": 49.72,
+      "kind": "click",
+      "description": "GPS tick",
+      "target": -39.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 50.6,
+      "end": 50.72,
+      "kind": "click",
+      "description": "GPS tick",
+      "target": -39.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 51.6,
+      "end": 51.72,
+      "kind": "click",
+      "description": "GPS tick",
+      "target": -39.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.0,
+      "end": 78.2,
+      "kind": "crinkle",
+      "description": "last rain",
+      "target": -55.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 70.9,
+      "end": 71.2,
+      "kind": "thump",
+      "description": "lamp base thunk",
+      "target": -30.142821418195062,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 71.0,
+      "end": 71.35,
+      "kind": "tink",
+      "description": "brass ring",
+      "target": -42.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    },
+    {
+      "start": 76.9,
+      "end": 77.30000000000001,
+      "kind": "tink",
+      "description": "lamp settles",
+      "target": -49.14282141819506,
+      "pan": 0,
+      "mode": "momentary",
+      "edge_abs_max": 0.0
+    }
+  ],
+  "speech_margin_lu": {
+    "minimum": 7.999879994908937,
+    "p10": 16.66843555223099,
+    "median": 27.507626471365803
+  },
+  "checks": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "frames": 3771200,
+    "duration_seconds": 78.56666666666666,
+    "clipped_samples": 0,
+    "max_sfx_endpoint_amplitude": 0.0,
+    "final_endpoint_amplitude": 0.0,
+    "music_silent_22_32_to_25_5": true,
+    "max_master_gain_reduction_db": -0.0,
+    "limiter_active_percent_above_0_1_db": 0.0
+  }
+}
