@@ -49,10 +49,30 @@ const ch = await myChannel();
 console.log(`channel: ${ch.title} (${ch.id})`);
 if (ch.id !== cards.channelId) throw new Error(`wrong channel: logged in as ${ch.id}, cards are for ${cards.channelId}. Run: node ops/google.mjs login`);
 
+// node ops/upload.mjs resched [--go]: moves uploaded, still-private videos to their card's publishAt (videos.update needs the youtube scope)
+if (process.argv[2] === "resched") {
+  const todo = cards.videos.filter((c) => done[c.ep] && Date.parse(c.publishAt) > Date.now());
+  const live = (await (await gfetch(`https://www.googleapis.com/youtube/v3/videos?part=status&id=${todo.map((c) => done[c.ep].id).join(",")}`)).json()).items;
+  for (const c of todo) {
+    const v = live.find((x) => x.id === done[c.ep].id), at = meta(c).status.publishAt;
+    if (!v) { console.log(`${c.ep}: ${done[c.ep].id} not on YouTube, skipped`); continue; }
+    if (v.status.privacyStatus !== "private") { console.log(`${c.ep}: already ${v.status.privacyStatus}, skipped`); continue; }
+    if (Date.parse(v.status.publishAt) === Date.parse(at)) continue;
+    console.log(`${c.ep}: ${v.status.publishAt ?? "no schedule"} → ${at}`);
+    if (process.argv[3] !== "--go") continue;
+    const { privacyStatus, selfDeclaredMadeForKids, containsSyntheticMedia, embeddable, license, publicStatsViewable } = v.status; // writable fields only
+    const r = await (await gfetch("https://www.googleapis.com/youtube/v3/videos?part=status", { method: "PUT", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ id: v.id, status: { privacyStatus, selfDeclaredMadeForKids, containsSyntheticMedia, embeddable, license, publicStatsViewable, publishAt: at } }) })).json();
+    done[c.ep].publishAt = r.status.publishAt;
+    fs.writeFileSync(LOG, JSON.stringify(done, null, 2));
+  }
+  process.exit(0);
+}
+
 for (const c of cards.videos.filter((v) => !only.length || only.includes(v.ep))) {
+  if (done[c.ep]) { console.log(`${c.ep}: already uploaded ${done[c.ep].id}, skipped`); continue; }
   const file = path.join(ROOT, c.file), body = meta(c);
   if (!fs.existsSync(file)) throw new Error(`${c.ep}: missing ${c.file}`);
-  if (done[c.ep]) { console.log(`${c.ep}: already uploaded ${done[c.ep].id}, skipped`); continue; }
   console.log(`${c.ep}: ${c.title} | ${(fs.statSync(file).size / 1e6).toFixed(1)} MB | publishes ${c.publishAt}`);
   if (!go) continue;
   const v = await upload(file, body);

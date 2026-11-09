@@ -239,7 +239,8 @@ export const fx = (id: number, t: number, out: Stage) => {
   if (id === 1) { const s = L(1, YOUP);
     sunAt(880, 470, 280);
     out.fx.push({ key: "plate1", cw: 460, ch: 460, draw: (p) => plate(p, "morsel"), x: s[0] - 0.68, y: 1.06, z: s[2] + 0.2, w: 0.74, h: 0.74 });
-    hold("bite1", 0, 4.3, (p) => { panel(p, 8, 8, 352, 112, "#ff5a4f", 8); text(p, "1 BITE", 180, 60, 66, "#ffffff", "#7a1a14"); }, 360, 120, [s[0] - 0.68, 1.54, s[2] + 0.25], 0.66, 0.22); }
+    // hook 2026-11-08: no "1 BITE" tag here, it gave the answer away in the first second
+  }
   if (id === 2) { const s = L(2, BY), g = word("green"); burst("ex2", g - LEAD, 0.8, (p, u) => fxExclaim(p, u), 200, 260, [s[0] + 0.5, 1.75, s[2] + 0.1], 0.3, 0.39); }
   if (id === 3) { const w = word("makes");
     scr("beam3", 600, 1000, beam, 730, 900, 800, 4.6, true);

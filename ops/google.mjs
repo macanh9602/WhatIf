@@ -14,7 +14,7 @@ export const DIR = process.env.WHATIF_OPS_DIR || path.join(os.homedir(), ".confi
 const hasSecret = (d) => fs.existsSync(d) && fs.readdirSync(d).some((x) => /^client_secret.*.json$/.test(x));
 const SECRETS = process.env.OAUTH_CLIENT_DIR || [DIR, path.join(os.homedir(), ".config/owen-ops")].find(hasSecret) || DIR;
 const TOKEN = path.join(DIR, "token.json");
-export const SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
+export const SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube" /* videos.update for resched */, "https://www.googleapis.com/auth/youtube.readonly",
   "https://www.googleapis.com/auth/yt-analytics.readonly"];
 
 const client = () => {

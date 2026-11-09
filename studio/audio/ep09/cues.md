@@ -17,12 +17,12 @@ Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue n�
 
 | Signal | Integrated LUFS | True peak dBTP | LRA LU |
 |---|---:|---:|---:|
-| master | -16.00 | -1.52 | 2.25 |
-| voice | -16.01 | -1.67 | 2.26 |
-| music | -37.22 | -18.15 | 4.00 |
-| sfx | -39.68 | -12.73 | 10.08 |
+| master | -16.00 | -1.57 | 2.66 |
+| voice | -16.01 | -1.64 | 2.67 |
+| music | -37.25 | -18.24 | 4.59 |
+| sfx | -39.67 | -12.72 | 10.07 |
 
-Voice gain tổng: **-1.71 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
+Voice gain tổng: **-1.36 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
 Master limiter linked stereo, detector 4x, look-ahead 3 ms, release 80 ms, ceiling -1.2 dBTP. Max reduction **-0.00 dB**; active >0.1 dB trên 0.00% samples.
 
 ffmpeg `ebur128=peak=true` cross-check:
@@ -35,13 +35,13 @@ Summary:
     Threshold: -26.3 LUFS
 
   Loudness range:
-    LRA:         2.3 LU
+    LRA:         2.7 LU
     Threshold: -36.3 LUFS
-    LRA low:   -17.4 LUFS
-    LRA high:  -15.1 LUFS
+    LRA low:   -17.5 LUFS
+    LRA high:  -14.8 LUFS
 
   True peak:
-    Peak:       -1.5 dBFS
+    Peak:       -1.6 dBFS
 ```
 
 ## Music
@@ -126,7 +126,7 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 Đo margin voice − (music + SFX) bằng cửa sổ 400 ms, hop 10 ms, tâm nằm trong spoken word; chỉ loại voice thấp hơn integrated voice 14 LU hoặc bed dưới −70 LUFS.
 
-- Speech margin toàn tập: min **8.00 LU**, p10 **16.09 LU**, median **21.26 LU**.
+- Speech margin toàn tập: min **8.00 LU**, p10 **16.14 LU**, median **21.27 LU**.
 - Tất cả cue có fades; SFX endpoint bằng 0. Master bắt đầu/kết thúc bằng 0; không hard clipping.
 - WAV được đọc lại để kiểm tra frame count, format, peak và loudness sau quantization.
 - Voice stem được so với decoded source × gain: sai số tối đa ≤ 1 LSB 24-bit.
@@ -134,13 +134,13 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 | Section | Voice LUFS | Music LUFS | SFX LUFS | Speech min / p10 LU |
 |---|---:|---:|---:|---:|
-| Hook: the reef's biggest party | -16.0 | -37.9 | -39.9 | 8.0 / 15.5 |
-| The party, the loudest person | -15.7 | -35.7 | -40.5 | 10.9 / 15.7 |
-| Wake up a sponge: nothing | -15.9 | -37.9 | -41.1 | 8.0 / 17.0 |
-| Water through you, a pool a day | -16.2 | -38.2 | -42.7 | 10.2 / 17.0 |
-| Eat, sneeze, the guests move in | -15.7 | -36.8 | -39.4 | 8.0 / 16.1 |
-| A crowd of cells | -16.2 | -38.7 | -39.8 | 8.0 / 15.6 |
-| 1907: squeezed through a cloth | -15.1 | -37.1 | -39.3 | 8.0 / 15.3 |
-| Your cells find each other | -16.4 | -37.4 | -38.7 | 10.7 / 17.3 |
-| The party you can't feel | -16.8 | -38.2 | -36.4 | 8.0 / 15.3 |
-| The question | -16.5 | -47.7 | -43.0 | 17.6 / 21.6 |
+| Hook: the reef's biggest party | -15.0 | -37.5 | -39.8 | 9.8 / 16.5 |
+| The party, the loudest person | -15.8 | -35.8 | -40.5 | 11.1 / 15.9 |
+| Wake up a sponge: nothing | -15.9 | -38.0 | -41.1 | 8.0 / 17.0 |
+| Water through you, a pool a day | -16.3 | -38.3 | -42.7 | 10.2 / 17.0 |
+| Eat, sneeze, the guests move in | -15.8 | -36.9 | -39.4 | 8.0 / 16.1 |
+| A crowd of cells | -16.3 | -38.8 | -39.8 | 8.0 / 15.6 |
+| 1907: squeezed through a cloth | -15.2 | -37.2 | -39.3 | 8.0 / 15.3 |
+| Your cells find each other | -16.5 | -37.5 | -38.7 | 10.6 / 17.3 |
+| The party you can't feel | -16.9 | -38.3 | -36.4 | 8.0 / 15.2 |
+| The question | -16.6 | -47.7 | -43.0 | 17.5 / 21.5 |

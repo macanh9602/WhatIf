@@ -54,7 +54,7 @@ export const FLASH_AT = -99;
 export const CAPTION_STOPS: string[] = [];
 export const REFRAME: Record<number, number> = {};
 /** word beats (raw s) */
-export const BEATS = { head: 2.56, salary: 5.52, fine: 10.96, neighbor: 12.14, looks7: 16.28, oh: 17.5, nice: 18.8, mug: 22.2, wave10: 24.0, hi: 24.88,
+export const BEATS = { head: 2.167, /* hook line 2026-11-08 */ salary: 5.52, fine: 10.96, neighbor: 12.14, looks7: 16.28, oh: 17.5, nice: 18.8, mug: 22.2, wave10: 24.0, hi: 24.88,
   sorts: 27.54, sit13: 30.9, flowers: 33.0, above: 33.7, face: 35.96, night: 36.84, same17: 41.98, paper18: 43.9, open18: 44.15, look20: 52.4,
   name23: 63.74, duck23: 63.95, cliff: 65.28, waves: 71.78, wave28: 72.5 };
 export const KICKS: number[] = [];

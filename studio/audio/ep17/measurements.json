@@ -1,89 +1,89 @@
 {
   "master": {
-    "integrated_lufs": -16.00000000078338,
-    "true_peak_dbtp": -1.6647188833291025,
-    "lra_lu": 2.135078262659672,
-    "sample_peak_dbfs": -1.7317823530513567
+    "integrated_lufs": -16.000000000271996,
+    "true_peak_dbtp": -1.2701670759718187,
+    "lra_lu": 2.3321040535512108,
+    "sample_peak_dbfs": -1.3198742779752284
   },
   "voice": {
-    "integrated_lufs": -16.011111384803666,
-    "true_peak_dbtp": -1.7439342894763346,
-    "lra_lu": 2.152773240015991,
-    "sample_peak_dbfs": -1.812954738715887
+    "integrated_lufs": -15.999057463993255,
+    "true_peak_dbtp": -1.303396361219945,
+    "lra_lu": 2.3511910195576213,
+    "sample_peak_dbfs": -1.3508565199253177
   },
   "music": {
-    "integrated_lufs": -40.11650178999498,
-    "true_peak_dbtp": -18.671390124979855,
-    "lra_lu": 6.310364274324492,
-    "sample_peak_dbfs": -18.676917500010923
+    "integrated_lufs": -40.13165110753797,
+    "true_peak_dbtp": -18.759451933669112,
+    "lra_lu": 6.309860496059969,
+    "sample_peak_dbfs": -18.764979308700184
   },
   "sfx": {
-    "integrated_lufs": -42.700610665893294,
-    "true_peak_dbtp": -16.58166525568725,
-    "lra_lu": 9.137913472889814,
-    "sample_peak_dbfs": -16.608613349041732
+    "integrated_lufs": -42.688556745082835,
+    "true_peak_dbtp": -16.569611334877045,
+    "lra_lu": 9.137913472889409,
+    "sample_peak_dbfs": -16.59655942823153
   },
-  "master_gain_db": -1.008655948013164,
-  "voice_gain_db": -1.008655948013164,
+  "master_gain_db": -0.6515926826519429,
+  "voice_gain_db": -0.6515926826519429,
   "source_duration_seconds": 77.292,
-  "source_sha256": "507322eec171e5cae20ded9b5c2a5e9a1e5758e66e452ea9b31dbfb7b63cdcde",
-  "words_sha256": "515211291ee9b98a1a7f4bca14b1e695024f3245eda78a96642f951def2f149c",
+  "source_sha256": "8975791b640f964f0da9fd9dd5d62265360a8046b7da01905b0d8e4c7b141be6",
+  "words_sha256": "87eee83b4066ea07bafcb111c571f2653b84cd1b89d831b9291cd9a7d352f521",
   "music_sections": [
     {
       "name": "Morning street: light bounce",
       "start": 0,
       "end": 11.7,
       "base_margin": -18,
-      "gain_db": -13.9394103147253
+      "gain_db": -15.171608368805387
     },
     {
       "name": "Neighbour: bounce sours",
       "start": 11.7,
       "end": 19.4,
       "base_margin": -17,
-      "gain_db": -12.046715523444497
+      "gain_db": -12.493590679402132
     },
     {
       "name": "Office, cafe, date: awkward pulse",
       "start": 19.4,
       "end": 36.6,
       "base_margin": -16,
-      "gain_db": -11.091074088001982
+      "gain_db": -11.537043586527368
     },
     {
       "name": "Night: lowest point",
       "start": 36.6,
       "end": 43.2,
       "base_margin": -14,
-      "gain_db": -2.72473727181427
+      "gain_db": -3.1698623458647504
     },
     {
       "name": "You see: near silence",
       "start": 43.2,
       "end": 45.9,
       "base_margin": -26,
-      "gain_db": -3.669308342149087
+      "gain_db": -4.112277744793765
     },
     {
       "name": "Explain Norway: cold",
       "start": 45.9,
       "end": 59.0,
       "base_margin": -21,
-      "gain_db": -9.420874099547035
+      "gain_db": -9.866339819812957
     },
     {
       "name": "So Norway changed one rule: warm",
       "start": 59.0,
       "end": 69.5,
       "base_margin": -18,
-      "gain_db": -11.619787629140934
+      "gain_db": -12.06310999357164
     },
     {
       "name": "Seen by, waves, friendly end",
       "start": 69.5,
       "end": 77.3,
       "base_margin": -17,
-      "gain_db": -12.756114010092357
+      "gain_db": -13.200654290836336
     }
   ],
   "sfx_cues": [
@@ -92,7 +92,7 @@
       "end": 1.9,
       "kind": "bell",
       "description": "tag shimmer your street",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -102,7 +102,7 @@
       "end": 2.17,
       "kind": "bell",
       "description": "tag shimmer your street",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -112,7 +112,7 @@
       "end": 2.8,
       "kind": "bell",
       "description": "tag shimmer cascade",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -122,7 +122,7 @@
       "end": 3.0699999999999994,
       "kind": "bell",
       "description": "tag shimmer cascade",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -132,7 +132,7 @@
       "end": 4.6,
       "kind": "bell",
       "description": "tag shimmer yours",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -142,7 +142,7 @@
       "end": 4.87,
       "kind": "bell",
       "description": "tag shimmer yours",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -152,7 +152,7 @@
       "end": 7.12,
       "kind": "click",
       "description": "app tap",
-      "target": -35.00245543679072,
+      "target": -35.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -162,7 +162,7 @@
       "end": 15.6,
       "kind": "water",
       "description": "sprinkler on the roses",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "integrated",
       "edge_abs_max": 0.0
@@ -172,7 +172,7 @@
       "end": 15.1,
       "kind": "bell",
       "description": "tag shimmer neighbor",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -182,7 +182,7 @@
       "end": 15.37,
       "kind": "bell",
       "description": "tag shimmer neighbor",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -192,7 +192,7 @@
       "end": 20.6,
       "kind": "thump",
       "description": "office door",
-      "target": -37.00245543679072,
+      "target": -37.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -202,7 +202,7 @@
       "end": 21.220000000000002,
       "kind": "click",
       "description": "keyboard",
-      "target": -39.00245543679072,
+      "target": -39.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -212,7 +212,7 @@
       "end": 21.400000000000002,
       "kind": "click",
       "description": "keyboard",
-      "target": -40.00245543679072,
+      "target": -40.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -222,7 +222,7 @@
       "end": 21.540000000000003,
       "kind": "click",
       "description": "keyboard",
-      "target": -39.00245543679072,
+      "target": -39.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -232,7 +232,7 @@
       "end": 21.82,
       "kind": "click",
       "description": "keyboard",
-      "target": -40.00245543679072,
+      "target": -40.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -242,7 +242,7 @@
       "end": 23.4,
       "kind": "bell",
       "description": "tag shimmer twin",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -252,7 +252,7 @@
       "end": 23.669999999999998,
       "kind": "bell",
       "description": "tag shimmer twin",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -262,7 +262,7 @@
       "end": 28.5,
       "kind": "happy",
       "description": "cafe chatter",
-      "target": -45.00245543679072,
+      "target": -45.347464781341735,
       "pan": 0,
       "mode": "integrated",
       "edge_abs_max": 0.0
@@ -272,7 +272,7 @@
       "end": 29.200000000000003,
       "kind": "tray",
       "description": "chair scrape",
-      "target": -39.00245543679072,
+      "target": -39.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -282,7 +282,7 @@
       "end": 29.5,
       "kind": "bell",
       "description": "tag shimmer big",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -292,7 +292,7 @@
       "end": 29.77,
       "kind": "bell",
       "description": "tag shimmer big",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -302,7 +302,7 @@
       "end": 31.3,
       "kind": "kids",
       "description": "cafe chatter by the bins",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "integrated",
       "edge_abs_max": 0.0
@@ -312,7 +312,7 @@
       "end": 31.1,
       "kind": "bell",
       "description": "tag shimmer small",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -322,7 +322,7 @@
       "end": 31.37,
       "kind": "bell",
       "description": "tag shimmer small",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -332,7 +332,7 @@
       "end": 33.3,
       "kind": "whistle",
       "description": "park birds",
-      "target": -45.00245543679072,
+      "target": -45.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -342,7 +342,7 @@
       "end": 34.3,
       "kind": "bell",
       "description": "tag shimmer date",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -352,7 +352,7 @@
       "end": 34.57,
       "kind": "bell",
       "description": "tag shimmer date",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -362,7 +362,7 @@
       "end": 35.0,
       "kind": "whistle",
       "description": "park birds",
-      "target": -47.00245543679072,
+      "target": -47.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -372,7 +372,7 @@
       "end": 40.9,
       "kind": "bell",
       "description": "bank app notification 1",
-      "target": -39.00245543679072,
+      "target": -39.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -382,7 +382,7 @@
       "end": 41.25,
       "kind": "bell",
       "description": "bank app notification 2",
-      "target": -37.00245543679072,
+      "target": -37.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -392,7 +392,7 @@
       "end": 68.3,
       "kind": "bell",
       "description": "tag shimmer line under",
-      "target": -43.00245543679072,
+      "target": -43.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -402,7 +402,7 @@
       "end": 68.57,
       "kind": "bell",
       "description": "tag shimmer line under",
-      "target": -46.00245543679072,
+      "target": -46.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -412,7 +412,7 @@
       "end": 71.35000000000001,
       "kind": "bell",
       "description": "seen by ping",
-      "target": -37.00245543679072,
+      "target": -37.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -422,7 +422,7 @@
       "end": 72.5,
       "kind": "whoosh",
       "description": "he waves",
-      "target": -45.00245543679072,
+      "target": -45.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -432,7 +432,7 @@
       "end": 73.4,
       "kind": "whoosh",
       "description": "you wave",
-      "target": -45.00245543679072,
+      "target": -45.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
@@ -442,16 +442,16 @@
       "end": 75.9,
       "kind": "bell",
       "description": "warm end chime",
-      "target": -41.00245543679072,
+      "target": -41.347464781341735,
       "pan": 0,
       "mode": "momentary",
       "edge_abs_max": 0.0
     }
   ],
   "speech_margin_lu": {
-    "minimum": 9.287051158975178,
-    "p10": 20.160249420362,
-    "median": 24.983947926669867
+    "minimum": 9.253408543870567,
+    "p10": 20.193564173642482,
+    "median": 25.131026155606808
   },
   "checks": {
     "sample_rate": 48000,

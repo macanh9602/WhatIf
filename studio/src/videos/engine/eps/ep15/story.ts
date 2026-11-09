@@ -123,7 +123,8 @@ export const DK = (lx: number, lz: number): [number, number] => [lz, KZ - lx];
 const arc = (a0: number, a1: number, t0: number, t1: number) => (t: number): Path => { const a = lerp(a0, a1, ez(t, t0, t1)), R = 4.6, cx = -13.2, cz = -202.1; return { p: [cx + R * Math.sin(a), DECK_Y + 1.5, cz + R * Math.cos(a)], l: [cx, DECK_Y + 1.1, cz], fov: 44 }; };
 const haul = (t0: number, t1: number) => fly(t0, t1, [-2.6, 0.45, 33.6], [-2.0, 0.6, 32.6], [0.5, 1.0, 30], [0.5, 1.1, 30], 46);
 export const CAM_PATH: Record<number, (t: number) => Path> = {
-  1: fly(0, 3.0, [-1.4, 2.2, 5.6], [-3.2, 5.5, 8.8], [0.4, 0.2, 0.6], [1.0, -0.2, -0.6], 46),
+  // hook (2026-11-08): opens looking down on your grin afloat (the low side view read as a tiny dark shape), then cranes up
+  1: fly(1.3, 3.0, [-0.3, 4.6, 4.4], [-3.2, 5.5, 8.8], [-0.5, 0.45, 2.5], [1.0, -0.2, -0.6], 46),
   2: haul(3.0, 5.75),
   3: fly(5.75, 9.0, [-506, 22, 24], [-503, 3.0, 10], [-499, 4, 0], [-500, 1.6, 0.5], 46),
   4: fly(9.25, 11.7, [-504.6, 1.9, 5.6], [-503.2, 1.9, 5.4], [-501.4, 1.4, 1.9], [-500.9, 1.4, 1.9], 50),

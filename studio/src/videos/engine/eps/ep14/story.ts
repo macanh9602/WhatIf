@@ -174,7 +174,8 @@ const fly = (a: number, b: number, p0: V3, p1: V3, l0: V3, l1: V3, fov = 46) => 
 /** the flight of shot 3 at clock u */
 const flight = (u: number): Path => { const c = car3(u), k = ez(u, 6.6, 9.4); return { p: [lerp(c - 40, 68, k), lerp(34, 20, k), lerp(292, 262, k)], l: [lerp(c, 112, k), lerp(2, 5, k), RZ], fov: 46 }; };
 export const CAM_PATH: Record<number, (t: number) => Path> = {
-  1: (t) => { const x = R1(t), k = ez(t, 0, 2.9); return { p: [lerp(x - 70, x + 11, k), lerp(95, 4.6, k), lerp(120, 14, k)], l: [x, lerp(0, 3, k), 0], fov: 46 }; },
+  // hook (2026-11-08): opens close on you in the turret (ep13 lost 58 % to a wide first frame), then cranes up to show the column
+  1: (t) => { const x = R1(t), k = 0.45 * ez(t, 1.1, 2.9); return { p: [lerp(x + 6, x - 70, k), lerp(4.4, 95, k), lerp(8, 120, k)], l: [x, lerp(3.2, 0, k), 0], fov: 46 }; },
   2: (t) => { const k = ez(t, 2.9, 5.2), q = ez(t, 4.95, 5.6); return { p: [lerp(197, 203, k) + 3 * q, lerp(15.6, 16.2, k), lerp(10, 8, k)], l: [lerp(212, 247, q), lerp(16.4, 19, q), 0], fov: 50 }; },
   3: (t) => flight(t),
   4: fly(9.8, 11.75, [-360, 3, 12.2], [-360, 2.5, 11], [-360, 1.2, 7.4], [-360, 1.15, 7.7], 44),

@@ -17,12 +17,12 @@ Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue n�
 
 | Signal | Integrated LUFS | True peak dBTP | LRA LU |
 |---|---:|---:|---:|
-| master | -16.00 | -1.96 | 2.41 |
-| voice | -16.03 | -1.99 | 2.41 |
-| music | -37.63 | -17.03 | 3.82 |
-| sfx | -37.63 | -12.79 | 8.19 |
+| master | -16.00 | -1.88 | 2.44 |
+| voice | -16.03 | -1.83 | 2.46 |
+| music | -37.54 | -16.96 | 4.06 |
+| sfx | -37.62 | -12.79 | 8.19 |
 
-Voice gain tổng: **-2.03 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
+Voice gain tổng: **-1.51 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
 Master limiter linked stereo, detector 4x, look-ahead 3 ms, release 80 ms, ceiling -1.2 dBTP. Max reduction **-0.00 dB**; active >0.1 dB trên 0.00% samples.
 
 ffmpeg `ebur128=peak=true` cross-check:
@@ -38,10 +38,10 @@ Summary:
     LRA:         2.4 LU
     Threshold: -36.4 LUFS
     LRA low:   -17.6 LUFS
-    LRA high:  -15.2 LUFS
+    LRA high:  -15.1 LUFS
 
   True peak:
-    Peak:       -2.0 dBFS
+    Peak:       -1.9 dBFS
 ```
 
 ## Music
@@ -112,7 +112,7 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 Đo margin voice − (music + SFX) bằng cửa sổ 400 ms, hop 10 ms, tâm nằm trong spoken word; chỉ loại voice thấp hơn integrated voice 14 LU hoặc bed dưới −70 LUFS.
 
-- Speech margin toàn tập: min **8.00 LU**, p10 **16.36 LU**, median **21.47 LU**.
+- Speech margin toàn tập: min **8.00 LU**, p10 **16.25 LU**, median **21.51 LU**.
 - Tất cả cue có fades; SFX endpoint bằng 0. Master bắt đầu/kết thúc bằng 0; không hard clipping.
 - WAV được đọc lại để kiểm tra frame count, format, peak và loudness sau quantization.
 - Voice stem được so với decoded source × gain: sai số tối đa ≤ 1 LSB 24-bit.
@@ -120,12 +120,12 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 | Section | Voice LUFS | Music LUFS | SFX LUFS | Speech min / p10 LU |
 |---|---:|---:|---:|---:|
-| Hook: one bite of toast | -15.3 | -37.9 | -34.0 | 8.7 / 17.0 |
-| Wake up green, step outside | -15.1 | -36.1 | -37.5 | 14.1 / 16.7 |
-| The long stand in the sun | -15.4 | -36.4 | -39.0 | 10.3 / 16.9 |
-| 1 percent, the leaf | -16.3 | -38.3 | -36.0 | 9.3 / 15.0 |
-| Tree, brain, skin | -15.9 | -37.9 | -37.5 | 9.2 / 16.4 |
-| The tennis court | -15.8 | -36.8 | -37.2 | 8.0 / 12.6 |
-| The sea slug | -16.5 | -38.6 | -38.0 | 8.0 / 16.8 |
-| Sunset and the one bite | -16.7 | -39.0 | -40.0 | 11.0 / 17.7 |
-| The question | -15.7 | -51.6 | -38.4 | 19.4 / 21.1 |
+| Hook: one bite of toast | -16.5 | -38.8 | -34.0 | 9.3 / 14.9 |
+| Wake up green, step outside | -15.0 | -36.0 | -37.5 | 14.3 / 17.0 |
+| The long stand in the sun | -15.3 | -36.3 | -38.9 | 10.3 / 16.9 |
+| 1 percent, the leaf | -16.2 | -38.2 | -36.0 | 9.3 / 15.1 |
+| Tree, brain, skin | -15.9 | -37.9 | -37.5 | 9.3 / 16.5 |
+| The tennis court | -15.7 | -36.7 | -37.1 | 8.0 / 12.6 |
+| The sea slug | -16.4 | -38.5 | -38.0 | 8.0 / 16.9 |
+| Sunset and the one bite | -16.7 | -38.9 | -40.0 | 11.0 / 17.7 |
+| The question | -15.7 | -51.5 | -38.4 | 19.5 / 21.1 |

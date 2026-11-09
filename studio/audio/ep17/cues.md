@@ -17,12 +17,12 @@ Rebuild: `python audio/build.py`. Không cần cài package. Tunable mix/cue n�
 
 | Signal | Integrated LUFS | True peak dBTP | LRA LU |
 |---|---:|---:|---:|
-| master | -16.00 | -1.66 | 2.14 |
-| voice | -16.01 | -1.74 | 2.15 |
-| music | -40.12 | -18.67 | 6.31 |
-| sfx | -42.70 | -16.58 | 9.14 |
+| master | -16.00 | -1.27 | 2.33 |
+| voice | -16.00 | -1.30 | 2.35 |
+| music | -40.13 | -18.76 | 6.31 |
+| sfx | -42.69 | -16.57 | 9.14 |
 
-Voice gain tổng: **-1.01 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
+Voice gain tổng: **-0.65 dB**, cùng gain cố định trên toàn voice. Voice stem không EQ, compression, time-stretch hoặc pitch shift; chỉ master bus có limiter chung.
 Master limiter linked stereo, detector 4x, look-ahead 3 ms, release 80 ms, ceiling -1.2 dBTP. Max reduction **-0.00 dB**; active >0.1 dB trên 0.00% samples.
 
 ffmpeg `ebur128=peak=true` cross-check:
@@ -32,16 +32,16 @@ Summary:
 
   Integrated loudness:
     I:         -16.0 LUFS
-    Threshold: -26.4 LUFS
+    Threshold: -26.5 LUFS
 
   Loudness range:
-    LRA:         2.1 LU
-    Threshold: -36.3 LUFS
-    LRA low:   -17.4 LUFS
+    LRA:         2.4 LU
+    Threshold: -36.4 LUFS
+    LRA low:   -17.6 LUFS
     LRA high:  -15.2 LUFS
 
   True peak:
-    Peak:       -1.7 dBFS
+    Peak:       -1.3 dBFS
 ```
 
 ## Music
@@ -110,7 +110,7 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 Đo margin voice − (music + SFX) bằng cửa sổ 400 ms, hop 10 ms, tâm nằm trong spoken word; chỉ loại voice thấp hơn integrated voice 14 LU hoặc bed dưới −70 LUFS.
 
-- Speech margin toàn tập: min **9.29 LU**, p10 **20.16 LU**, median **24.98 LU**.
+- Speech margin toàn tập: min **9.25 LU**, p10 **20.19 LU**, median **25.13 LU**.
 - Tất cả cue có fades; SFX endpoint bằng 0. Master bắt đầu/kết thúc bằng 0; không hard clipping.
 - WAV được đọc lại để kiểm tra frame count, format, peak và loudness sau quantization.
 - Voice stem được so với decoded source × gain: sai số tối đa ≤ 1 LSB 24-bit.
@@ -118,11 +118,11 @@ Target bên dưới là LUFS tại final gain, trước accompaniment protection
 
 | Section | Voice LUFS | Music LUFS | SFX LUFS | Speech min / p10 LU |
 |---|---:|---:|---:|---:|
-| Morning street: light bounce | -16.4 | -41.5 | -41.7 | 16.1 / 21.3 |
-| Neighbour: bounce sours | -15.5 | -39.5 | -43.3 | 9.8 / 20.0 |
-| Office, cafe, date: awkward pulse | -15.7 | -38.7 | -43.0 | 9.3 / 19.0 |
-| Night: lowest point | -16.6 | -37.6 | -39.4 | 11.8 / 15.8 |
-| You see: near silence | -16.3 | -49.3 | silence | 25.1 / 28.7 |
-| Explain Norway: cold | -16.0 | -44.0 | silence | 15.7 / 24.4 |
-| So Norway changed one rule: warm | -16.0 | -41.0 | -45.0 | 15.0 / 20.8 |
-| Seen by, waves, friendly end | -15.6 | -39.6 | -43.6 | 16.2 / 22.1 |
+| Morning street: light bounce | -15.9 | -41.0 | -41.7 | 11.3 / 21.5 |
+| Neighbour: bounce sours | -15.6 | -39.6 | -43.3 | 9.8 / 20.0 |
+| Office, cafe, date: awkward pulse | -15.8 | -38.8 | -43.0 | 9.3 / 19.0 |
+| Night: lowest point | -16.7 | -37.7 | -39.4 | 11.8 / 15.8 |
+| You see: near silence | -16.4 | -49.4 | silence | 25.1 / 28.7 |
+| Explain Norway: cold | -16.1 | -44.1 | silence | 15.7 / 24.4 |
+| So Norway changed one rule: warm | -16.1 | -41.1 | -45.0 | 15.0 / 20.8 |
+| Seen by, waves, friendly end | -15.7 | -39.7 | -43.6 | 16.1 / 22.1 |

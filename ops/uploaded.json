@@ -57,17 +57,10 @@
   },
   "ep10": {
     "id": "-evU9ACFrQA",
-    "publishAt": "2026-11-08T00:00:00Z",
+    "publishAt": "2026-11-17T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-06T18:03:56.276Z",
     "file": "studio/out/Short/ep10_x1.1_upload.mp4"
-  },
-  "ep09": {
-    "id": "7ppXxciUNcM",
-    "publishAt": "2026-11-09T00:00:00Z",
-    "privacy": "private",
-    "uploadedAt": "2026-11-06T18:04:12.248Z",
-    "file": "studio/out/Short/ep09_x1.1_upload.mp4"
   },
   "bts_cat": {
     "id": "9Lz2k5owq_8",
@@ -76,16 +69,9 @@
     "uploadedAt": "2026-11-06T18:04:15.874Z",
     "file": "studio/out/Short/bts_cat_upload.mp4"
   },
-  "ep11": {
-    "id": "62YTQU1p1Hs",
-    "publishAt": "2026-11-09T00:00:00Z",
-    "privacy": "private",
-    "uploadedAt": "2026-11-06T18:38:37.799Z",
-    "file": "studio/out/Short/ep11_x1.1_upload.mp4"
-  },
   "ep12": {
     "id": "vGaHtPu6Ug0",
-    "publishAt": "2026-11-10T00:00:00Z",
+    "publishAt": "2026-11-16T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-07T07:31:13.026Z",
     "file": "studio/out/Short/ep12_x1.1_upload.mp4"
@@ -97,37 +83,16 @@
     "uploadedAt": "2026-11-07T11:22:17.554Z",
     "file": "studio/out/Short/ep13_x1.1_upload.mp4"
   },
-  "ep14": {
-    "id": "wIUlzSxMeNk",
-    "publishAt": "2026-11-11T00:00:00Z",
-    "privacy": "private",
-    "uploadedAt": "2026-11-07T19:09:04.185Z",
-    "file": "studio/out/Short/ep14_x1.1_upload.mp4"
-  },
-  "ep15": {
-    "id": "6VquJ5tJ_qE",
-    "publishAt": "2026-11-12T00:00:00Z",
-    "privacy": "private",
-    "uploadedAt": "2026-11-07T19:09:08.146Z",
-    "file": "studio/out/Short/ep15_x1.1_upload.mp4"
-  },
   "ep16": {
     "id": "5kSvQ15Q-A4",
-    "publishAt": "2026-11-13T00:00:00Z",
+    "publishAt": "2026-11-09T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-07T19:09:12.128Z",
     "file": "studio/out/Short/ep16_x1.1_upload.mp4"
   },
-  "ep17": {
-    "id": "F5S1RxyD7tg",
-    "publishAt": "2026-11-14T00:00:00Z",
-    "privacy": "private",
-    "uploadedAt": "2026-11-07T19:13:45.307Z",
-    "file": "studio/out/Short/ep17_x1.1_upload.mp4"
-  },
   "ep18": {
     "id": "AsSxbUUprEo",
-    "publishAt": "2026-11-15T00:00:00Z",
+    "publishAt": "2026-11-12T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-07T19:58:55.645Z",
     "file": "studio/out/Short/ep18_x1.1_upload.mp4"
@@ -141,16 +106,67 @@
   },
   "ep20": {
     "id": "w3UqyD7CrQE",
-    "publishAt": "2026-11-16T00:00:00Z",
+    "publishAt": "2026-11-10T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-08T04:40:41.723Z",
     "file": "studio/out/Short/ep20_x1.1_upload.mp4"
   },
   "ep21": {
     "id": "tnztZiELvpI",
-    "publishAt": "2026-11-17T00:00:00Z",
+    "publishAt": "2026-11-13T00:00:00Z",
     "privacy": "private",
     "uploadedAt": "2026-11-08T05:50:18.410Z",
     "file": "studio/out/Short/ep21_x1.1_upload.mp4"
+  },
+  "ep14_old": {
+    "id": "wIUlzSxMeNk",
+    "publishAt": null,
+    "privacy": "private",
+    "uploadedAt": "2026-11-07T19:09:04.185Z",
+    "file": "studio/out/Short/ep14_x1.1_upload.mp4",
+    "note": "replaced 2026-11-08 (new hook), schedule removed, kept private"
+  },
+  "ep15_old": {
+    "id": "6VquJ5tJ_qE",
+    "publishAt": null,
+    "privacy": "private",
+    "uploadedAt": "2026-11-07T19:09:08.146Z",
+    "file": "studio/out/Short/ep15_x1.1_upload.mp4",
+    "note": "replaced 2026-11-08 (new hook), schedule removed, kept private"
+  },
+  "ep14": {
+    "id": "Z0CINnDCS48",
+    "publishAt": "2026-11-11T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-08T16:17:11.435Z",
+    "file": "studio/out/Short/ep14_x1.1_upload.mp4"
+  },
+  "ep15": {
+    "id": "1Pc_LBjF4vQ",
+    "publishAt": "2026-11-15T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-08T16:17:15.336Z",
+    "file": "studio/out/Short/ep15_x1.1_upload.mp4"
+  },
+  "ep17": {
+    "id": "F5S1RxyD7tg",
+    "publishAt": "2026-11-14T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-07T19:13:45.307Z",
+    "file": "studio/out/Short/ep17_x1.1_upload.mp4"
+  },
+  "ep11": {
+    "id": "62YTQU1p1Hs",
+    "publishAt": "2026-11-17T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-06T18:38:37.799Z",
+    "file": "studio/out/Short/ep11_x1.1_upload.mp4"
+  },
+  "ep09": {
+    "id": "7ppXxciUNcM",
+    "publishAt": "2026-11-16T00:00:00Z",
+    "privacy": "private",
+    "uploadedAt": "2026-11-06T18:04:12.248Z",
+    "file": "studio/out/Short/ep09_x1.1_upload.mp4"
   }
 }
