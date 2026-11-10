@@ -12,7 +12,9 @@ import { renderStill, selectComposition } from "@remotion/renderer";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 
-const [outDir = "out/selfcheck", only] = process.argv.slice(2);
+if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/selfcheck.mjs ...  (one job at a time on the 8 GB card)");
+let [outDir = "out/selfcheck", only] = process.argv.slice(2);
+if (/^[\d,]+$/.test(outDir)) [outDir, only] = ["out/selfcheck", outDir]; // ids given first: no folder named "11,12"
 fs.mkdirSync(outDir, { recursive: true });
 const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const chromiumOptions = { gl: "angle" };

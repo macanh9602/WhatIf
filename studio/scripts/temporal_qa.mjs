@@ -60,6 +60,7 @@ export const decode = (file, from = 0, n = 1e9) => {
 };
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/temporal_qa.mjs ...  (one job at a time on the 8 GB card)");
   const { bundle } = await import("@remotion/bundler");
   const { renderMedia, selectComposition } = await import("@remotion/renderer");
   const { epOverride, epPaths, activeEp } = await import("./ep.mjs");

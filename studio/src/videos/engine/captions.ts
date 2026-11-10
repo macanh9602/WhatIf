@@ -34,7 +34,7 @@ export const phraseAt = (cs: Word[][], t: number): Word[] | null => {
   return null;
 };
 
-if (typeof process !== "undefined" && process.argv?.[1]?.endsWith("captions.ts")) {
+if ((globalThis as any).process?.argv?.[1]?.endsWith("captions.ts")) {
   const w = (text: string, start: number, end = start + 0.2): Word => ({ text, start, end });
   const cs = chunk([w("My", 0), w("son", 0.25), w("faked", 0.5), w("a", 0.75), w("Honestly", 2), w("right-handed", 2.25)], 3, 16);
   console.assert(JSON.stringify(cs.map((c) => c.map((x) => x.text))) === '[["My","son"],["faked","a"],["Honestly"],["right-handed"]]', "chunk"); // even split, no orphan

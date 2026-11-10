@@ -13,6 +13,8 @@ import { AbsoluteFill, OffthreadVideo, cancelRender, continueRender, delayRender
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
+// types only: the library types children as Element, so "cond ? <x/> : null" fails tsc; runtime is the same component
+const Composer = EffectComposer as unknown as React.FC<{ multisampling: number; children: React.ReactNode }>;
 import { BlendFunction, BloomEffect, ToneMappingEffect, ToneMappingMode } from "postprocessing";
 import { World } from "./world";
 import { loadProps } from "./sets";
@@ -72,7 +74,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
   useEffect(() => () => (fx.ink as { dispose?: () => void }).dispose?.(), [fx]);
   const tr = transIn(id); // the transition pass exists only on shots that take part in one (other shots: the chain as before)
   const post = useMemo(() => (
-    <EffectComposer multisampling={4}>
+    <Composer multisampling={4}>
       {on.ink ? <primitive object={fx.ink} dispose={null} /> : null}
       {on.lens && on.pre ? <primitive object={fx.lens.pre} dispose={null} /> : null}
       {on.lens ? <primitive object={fx.lens.main} dispose={null} /> : null}
@@ -82,7 +84,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
       <primitive object={fx.nogreen} dispose={null} />
       {tr ? <primitive object={fx.trans} dispose={null} /> : null}
       {on.grain ? <primitive object={fx.grain} dispose={null} /> : null}
-    </EffectComposer>
+    </Composer>
   ), [fx, on, tr]);
   const cam = camera as THREE.PerspectiveCamera;
   target.copy(world.update(id, f, cam, scene));

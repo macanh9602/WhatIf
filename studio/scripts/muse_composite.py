@@ -2,17 +2,21 @@
 tank hatch, tracking the dark hatch hole (scipy connected components, no OpenCV).
 
 usage: python scripts/muse_composite.py <world.mp4> <card.mov> <out.mp4> --box x0 y0 x1 y1 --scale S --cut CY [--tint R G B]
+   or: ... --sprite tank.png --keys keys.json --box <hole bbox in the sprite>  (vehicle-free plate: we draw + animate the tank)
   --box   the dark hatch hole in frame 0 (pixels); tracked per frame (position AND width, so the card grows with the tank)
   --scale card scale (600x1000 card) at frame 0       --cut  card row (unscaled) placed at the hole centre: rows below hidden
   --tint  multiply the card by the scene light (dawn ~ 200 205 235); --tint2 R G B T0 T1 eases to a second light; --bob px Hz
 """
 import argparse, subprocess, numpy as np
 from scipy import ndimage
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFilter
 
 ap = argparse.ArgumentParser()
 ap.add_argument("world"); ap.add_argument("card"); ap.add_argument("out")
-ap.add_argument("--box", type=int, nargs=4, required=True, help="hatch hole bbox in frame 0")
+ap.add_argument("--box", type=int, nargs=4, required=True, help="hatch hole bbox in frame 0 (in the sprite with --sprite)")
+ap.add_argument("--sprite", help="tank PNG drawn by us on a vehicle-free plate: no tracking, the hatch rides the sprite")
+ap.add_argument("--keys", help="--sprite path: JSON [[t_s, x, y, deg, scale=1], ...] = sprite bottom centre in frame px, + deg = nose (right) down; scale for a tank driving in depth")
+ap.add_argument("--shadow", type=float, default=0.45, help="--sprite: contact shadow darkness under the tracks")
 ap.add_argument("--dark", type=float, default=25); ap.add_argument("--smooth", type=int, default=5, help="odd frame count"); ap.add_argument("--open", type=int, default=2);
 ap.add_argument("--autolight", action="store_true", help="scale the tint by the plate's colour change where the card stands (flashes, fades)")
 ap.add_argument("--follow", type=float, default=0, help="0..1: rotate the card with the hatch tilt")
@@ -36,6 +40,7 @@ card = list(frames(a.card, 600, 1000, "rgba", 4))
 def hole(g, cx, cy, w0):  # the hatch hole = the solid near-black blob (fill > 60 %, width within 40 % of the first) nearest the prediction
     x0, y0 = max(int(cx - 2 * w0), 0), max(int(cy - 2 * w0), 0)
     m = g[y0:int(cy + 2 * w0), x0:int(cx + 2 * w0)] < a.dark
+    if not m.size: return None  # the lost hole's prediction coasted off frame (ep14 C v2: hatch gone at 2.5 s)
     if a.open: m = ndimage.binary_opening(m, iterations=a.open)  # cut ink lines that touch the hole (they are thinner than it)
     lab, _ = ndimage.label(m)
     best = None
@@ -52,7 +57,16 @@ def hole(g, cx, cy, w0):  # the hatch hole = the solid near-black blob (fill > 6
 gray = lambda f: f.astype(np.float32).mean(2)
 cx, cy, w0 = (a.box[0] + a.box[2]) / 2, (a.box[1] + a.box[3]) / 2, a.box[2] - a.box[0]
 track, vx, vy = [], 0.0, 0.0
-for f in world:  # fixed-size window at the predicted position (last + velocity); reject widths off by > 25 %
+if a.sprite:  # the hole centre is a fixed point on the sprite: rotate it about the bottom-centre pivot, like the sprite
+    import json
+    spr = Image.open(a.sprite).convert("RGBA"); sw, sh = spr.size
+    K = np.array(json.load(open(a.keys)), np.float32); ts = np.arange(len(world)) / 24
+    if K.shape[1] == 4: K = np.c_[K, np.ones(len(K), np.float32)]
+    pose = np.stack([np.interp(ts, K[:, 0], K[:, j]) for j in (1, 2, 3, 4)], 1)  # x, y, deg, scale per frame
+    hx, hy = cx - sw / 2, cy - sh
+    for x, y, d, s in pose:  # width * scale: the card grows with the tank, as on the tracked path
+        r = np.radians(d); track.append((x + s * (hx * np.cos(r) - hy * np.sin(r)), y + s * (hx * np.sin(r) + hy * np.cos(r)), w0 * s, d))
+for f in ([] if a.sprite else world):  # fixed-size window at the predicted position (last + velocity); reject widths off by > 25 %
     h = hole(gray(f), cx + vx, cy + vy, w0)
     if h:
         if track: vx, vy = h[0] - cx, h[1] - cy
@@ -67,6 +81,7 @@ tint = np.array(a.tint, np.float32) / 255  # multiply the card by the scene's li
 enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", "24", "-i", "-",
                         "-c:v", "libx264", "-crf", "14", "-pix_fmt", "yuv420p", a.out], stdin=subprocess.PIPE)
 def region(f, i):  # mean plate colour of the turret around the hatch: the light that falls on the man in it
+    if a.sprite: return f.reshape(-1, 3).mean(0)  # our tank hides nothing of Muse's: behind it is background (dust turned it orange), so use the whole frame
     w = sm[i, 2]; x0, x1, y0, y1 = int(sm[i, 0] - w), int(sm[i, 0] + w), int(sm[i, 1] - 0.3 * w), int(sm[i, 1] + 0.5 * w)
     r = f[max(y0, 0):max(y1, 1), max(x0, 0):max(x1, 1)].reshape(-1, 3)
     return r.mean(0) if len(r) else np.ones(3)
@@ -74,6 +89,22 @@ if a.autolight:
     ref = region(world[0], 0) + 1
     gain = np.array([np.clip((region(f, i) + 1) / ref, 0.6, 1.8) for i, f in enumerate(world)])
     gain = np.stack([np.convolve(np.pad(gain[:, j], 2, mode="edge"), np.ones(5) / 5, "valid") for j in range(3)], 1)
+def paste(out, rgba, ox, oy):  # alpha-over an RGBA float array at (ox, oy), clipped to the frame
+    ys, xs, ye, xe = max(oy, 0), max(ox, 0), min(oy + rgba.shape[0], H), min(ox + rgba.shape[1], W)
+    if xe > xs and ye > ys:
+        c = rgba[ys - oy:ye - oy, xs - ox:xe - ox]; al = c[..., 3:4] / 255
+        out[ys:ye, xs:xe] = np.clip(c[..., :3], 0, 255) * al + out[ys:ye, xs:xe] * (1 - al)
+    return out
+def draw_tank(out, i):  # contact shadow on the deck, then the sprite rotated about its bottom centre
+    x, y, d, s = pose[i]
+    sw, sh = max(int(spr.width * s), 2), max(int(spr.height * s), 2); sp = spr if s == 1 else spr.resize((sw, sh), Image.LANCZOS)
+    sd = Image.new("L", (sw + 40, 80)); ImageDraw.Draw(sd).ellipse((20 + sw * 0.05, 26, 20 + sw * 0.95, 54), fill=int(255 * a.shadow))
+    sd = np.asarray(sd.filter(ImageFilter.GaussianBlur(7)), np.float32)  # padded so the blur is not cut to a box
+    out = paste(out, np.dstack([np.zeros(sd.shape + (3,), np.float32), sd]), int(x - sw / 2) - 20, int(y) - 42)  # paste clips at the frame edge
+    S = 2 * max(sw, sh); sq = Image.new("RGBA", (S, S)); sq.paste(sp, (S // 2 - sw // 2, S // 2 - sh))
+    c = np.asarray(sq.rotate(-d, resample=Image.BICUBIC)).astype(np.float32)
+    if a.autolight: c[..., :3] *= np.maximum(gain[i], 1)  # flashes light the tank; smoke passing BEHIND it must not darken it
+    return paste(out, c, int(round(x - S / 2)), int(round(y - S / 2)))
 for i, f in enumerate(world):
     sc = a.scale * sm[i, 2] / sm[0, 2]
     cw, chh = int(600 * sc), int(a.cut * sc)
@@ -87,8 +118,9 @@ for i, f in enumerate(world):
     c = np.asarray(sq).astype(np.float32); c[..., :3] *= ti
     ox = int(round(sm[i, 0] - S2 / 2)); oy = int(round(sm[i, 1] - S2 / 2 + a.bob[0] * abs(np.sin(np.pi * a.bob[1] * tt))))
     out = f.astype(np.float32).copy()
+    if a.sprite: out = draw_tank(out, i)
     ys, xs = max(oy, 0), max(ox, 0); ye, xe = min(oy + S2, H), min(ox + S2, W)
-    if xe <= xs or ye <= ys: enc.stdin.write(f.tobytes()); continue  # card fully off frame
+    if xe <= xs or ye <= ys: enc.stdin.write(out.astype(np.uint8).tobytes()); continue  # card fully off frame
     al = c[ys - oy:ye - oy, xs - ox:xe - ox, 3:4] / 255
     out[ys:ye, xs:xe] = np.clip(c[ys - oy:ye - oy, xs - ox:xe - ox, :3], 0, 255) * al + out[ys:ye, xs:xe] * (1 - al)
     enc.stdin.write(out.astype(np.uint8).tobytes())

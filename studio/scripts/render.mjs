@@ -13,6 +13,7 @@ import { execFileSync, spawnSync } from "node:child_process";
 import path from "node:path";
 import os from "node:os";
 
+if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/render.mjs ...  (one job at a time on the 8 GB card)");
 const [name, pick = "all"] = process.argv.slice(2);
 if (!name) throw new Error("usage: node scripts/render.mjs <name> [all | 7,12,...]");
 const COMP = process.env.COMP || "Short";

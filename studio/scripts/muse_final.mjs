@@ -10,6 +10,7 @@ import { epOverride, epPaths } from "./ep.mjs";
 
 if (process.env.REMOTION_TMP) { fs.mkdirSync(process.env.REMOTION_TMP, { recursive: true }); process.env.TEMP = process.env.TMP = process.env.REMOTION_TMP; }
 const [bg, out, scale = "1"] = process.argv.slice(2);
+if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/muse_final.mjs ...  (one job at a time on the 8 GB card)");
 const name = process.env.EP;
 if (!bg || !out || !name) { console.error("usage: EP=<ep> node scripts/muse_final.mjs <public-relative picture.mp4> <out.mp4> [scale]"); process.exit(1); }
 if (!fs.existsSync(path.resolve("public", bg))) throw new Error(`public/${bg} missing`);

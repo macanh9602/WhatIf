@@ -26,7 +26,7 @@ find what a viewer would notice. A review with no findings is suspicious: look a
 ## The lead is checked EVERY frame (the owner's top priority)
 - Any frame where the lead is off-model (face swaps, ears, eye whites, nose, gloves/fingers, shoulders or limbs with
   volume instead of stick limbs, torso shape change) is **P0**, even if it lasts 3 frames or the figure is tiny.
-- Extract the lead at the clip's native fps (24), crop around him and upscale to >= 400 px even when his head is 40 px.
+- Extract the lead at the clip's native fps (ffprobe it: Muse clips are 24, engine renders 30), crop around him and upscale to >= 400 px even when his head is 40 px.
   A small figure is where drift hides (ep14 H11: the critic missed the stick-limb -> shaped-body change in sC because the
   head was 40 px and sampling was 4-8 fps). Lay the crops out as one strip per shot and compare frame to frame.
 

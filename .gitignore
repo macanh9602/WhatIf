@@ -1,3 +1,6 @@
 _ref/
 out/
 node_modules/
+__pycache__/
+studio/audio/*/*.wav
+*.log

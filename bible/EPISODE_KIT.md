@@ -1,6 +1,6 @@
 # Episode kit: all a build agent needs (read this + eps/ep12/story.ts and cast.ts; open skills only when stuck)
 
-## Flow for one episode (token budget ~300k)
+## Flow for one episode (token budget: measured numbers at the end)
 1. Director: SCRIPT.md + script.txt, then SHOTLIST (below). The user approves both at once. No render before that.
 2. Script agent = Sonnet, effort medium (SCRIPT.md, script.txt, SHOTLIST). The director checks the shot list, then runs the voice
    (gpu.sh + Chatterbox) and the mix (audio settings.json + build.py) itself, no agent.
@@ -14,13 +14,21 @@ A new episode starts in a new chat session.
 Check it before asking for approval: lying or sleeping = lie_back + card flat, never a standing card; the payoff prop is sharp;
 each location has a wide; insert time <= 15 %; >= 60 % outdoors; action shots have a flown move; a chase is shown from at least 3 views; every subject named on the line fits the vertical frame.
 
+## Episode standard (visual audit + ep12, 2026-11-07; moved here from AGENTS.md 2026-11-10)
+- Story: 4-6 locations, >= 60 % of runtime outdoors, inserts <= 15 % (2 short ones); facts go on in-world props. Every shot the lead DOES the verb.
+- Camera: per location 1 wide, 1 high/low angle, 1 foreground layer, 1 over-the-shoulder where it fits.
+- Cinematic camera (user 2026-11-07): the 3D world is there to be used. Action shots fly a motivated move (crane reveal, orbit, tracking, dolly back head on, top-down), not a static side view with a creep. See EPISODE_KIT "Film camera".
+- Light: each location its own preset (day/golden/night/dawn). Sets: `backdrop: {biome}` panoramas in public/backdrops (PNGs stay neutral; the engine grades each layer) and props from public/props/outdoor (MANIFEST.md).
+- Transitions: `TRANS` in story.ts, 1-2 story-motivated iris/zoom per episode, 2-3 whip/dip/match, the rest hard cuts.
+- Fall shots: 3D mesh clouds, ground haze ~15 % (30-40 % washed ep12 out), `fall_belly` flails, calm beats slow to a starfish.
+
 ## Files (write only here)
 `engine/eps/<ep>/`: story.ts, cast.ts, inserts.tsx, words.ts (+ kit.tsx). `public/eps/<ep>/`, `audio/<ep>/settings.json`, `bible/episodes/<ep>/`.
 Shared engine files: smallest fix only when blocked, list it in the report, ep01-11 must not change.
 
 ## story.ts
 - `S(id, aSec, bSec, set, cam, size, light, extra)`; `I(id, a, b, "insertName")` = 2D card. Copy the S/I helpers from ep12.
-- set: bedroom kitchen bathroom party home (rooms); town desert sea mountains field beach reef lagoon rooftops street park yard forest snow counter floor.
+- set: bedroom kitchen bathroom party home (rooms); town desert sea mountains field beach reef lagoon rooftops street park yard forest snow counter floor; episode sets west alps pacific tips salary tornado turkey alaska talkton (`SetId` in sets.ts is the list).
 - light: day golden night dawn lamp window sea shallow. size: close mid wide.
 - cam: `{cam:"wide"}` set hint (town also "air" 300 m, "low" 20 m) | `{local:[x,y,z], lookAt:[x,y,z], fov}` set-local | `{fall:[x,0,z], h:[from,to], rush}` sky-fall, looking down.
 - extra: `angle:"high"|"low"|"top"`, `card:"cam"` (faces the lens; default in fall shots) or `card:{flat:yaw}` (lies on the ground).
@@ -45,7 +53,7 @@ Shared engine files: smallest fix only when blocked, list it in the report, ep01
 `eps/ep13/cast.ts`: horse (side, front, top), rider pinned to the seat, breathing light (lightAt: size + 4 opacity steps, not redrawn lines), staged blast (fireball, sootCol, flashCard, ring, flung), hinged ramp (the card's normal must be square to the board: a wrong sign tilts it the other way and it reads as flipped).
 
 ## Assets
-`public/props/outdoor/MANIFEST.md`: 46 GLBs. A new file must also be listed in PROP_FILES (sets.ts). CC-BY props seen on screen go in the description.
+`public/props/outdoor/MANIFEST.md` lists them (71 GLBs in the folder on 2026-11-10, 52 in the manifest). A new file must also be listed in PROP_FILES (sets.ts). CC-BY props seen on screen go in the description.
 `public/backdrops/<biome>_<far|mid>.png` via set `backdrop:{biome}`. Fence and meadow flowers are too thin at range (they boil).
 
 ## Known traps (each cost a round on ep12)
@@ -69,18 +77,19 @@ ep15 shipped a roller floating off the hand, cuffs floating on the chest, a jump
 - One render at a time even for stills: a job started beside a render died with ERR_ABORTED (port 3000).
 - A full render with many soft fx passes the 600 s tool limit: run it in the background.
 - In a heredoc through Bash an apostrophe can break the outer quoting: write patch scripts with the Write tool.
-- Before scheduling, read what is already booked: the channel takes 2 videos a day. The OAuth token can upload but not edit a video, so a schedule cannot be moved by API.
+- Before scheduling, read what is already booked: the channel takes 2 videos a day. Move a schedule with `node ops/upload.mjs resched [--go]` (card publishAt -> YouTube), swap a file with `node ops/replace.mjs <ep>`.
 
 ## Checks, cheapest first (studio/, GPU through `sh scripts/gpu.sh`, logs to a file)
 1. One contact sheet per round (one frame per shot, changed shots only), grayscale first. `python scripts/value_qa.py <sheet> --grid CxR` (CPU, seconds).
 2. staging_qa, temporal_qa with the changed ids only. expr_qa.
-3. Preview needs no full run: `COMP=Short PREVIEW=1 CONCURRENCY=3 EP=<ep> node scripts/render.mjs <ep> all`.
+3. Preview needs no full run: `COMP=Short PREVIEW=1 CONCURRENCY=2 EP=<ep> sh scripts/gpu.sh node scripts/render.mjs <ep> all`.
 4. Full gates once, before a final. SELF_CHECK.md: one line per shot.
+5. Upload copy only through `node scripts/ship_gate.mjs <ep> <preview_master.mp4>` (flicker_qa + expr_qa block it; no GPU).
 Report under 200 words. No upload, no commit.
 
 ## Token budget (director, 2026-11-08)
 Measured: Sonnet script+voice+mix 140-185k, Opus first picture build 330-450k, Opus fix round ~240k. Most of a build is images and big file reads, so:
-- Review stills as ONE sheet per shot: `COMP=Short EP=<ep> node scripts/selfcheck.mjs out/<ep>/sc <ids>` then `python scripts/selfcheck_sheet.py out/<ep>/sc`. Never open loose stills one by one (ep19 left 347 jpgs). After a fix, re-sheet only the changed shot ids.
+- Review stills as ONE sheet per shot: `COMP=Short EP=<ep> sh scripts/gpu.sh node scripts/selfcheck.mjs out/<ep>/sc <ids>` then `python scripts/selfcheck_sheet.py out/<ep>/sc`. Never open loose stills one by one (ep19 left 347 jpgs). After a fix, re-sheet only the changed shot ids.
 - Open the full contact sheet at most twice: after the first stills pass and before the final.
 - Do not read ep13/ep19 cast.ts whole (43-59 kB): grep for the helper you need (fireball, held prop, CAM_PATH) and read that range.
 - Wait for GPU jobs with one `until` loop in the background, not repeated foreground checks; kill your loops before you finish.

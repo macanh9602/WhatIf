@@ -1,4 +1,5 @@
 # Episode backlog (user, 2026-11-07)
+**Status 2026-11-10: ep16-21 are all built and scheduled (CHANNEL.md continuity log). The backlog is empty; the script rules below the table still apply.**
 Build after ep15, in this order. No shot list yet. The facts below are from the user's table: every number must still be sourced again in SCRIPT.md.
 
 | ep | title | hook | content | facts to re-check |

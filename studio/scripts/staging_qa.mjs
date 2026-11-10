@@ -55,7 +55,9 @@ export function judge(q) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const [outDir = "out/staging_qa", only] = process.argv.slice(2);
+  if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/staging_qa.mjs ...  (one job at a time on the 8 GB card)");
+  let [outDir = "out/staging_qa", only] = process.argv.slice(2);
+  if (/^[\d,]+$/.test(outDir)) [outDir, only] = ["out/staging_qa", outDir]; // ids given first, as temporal_qa takes them: no folder named "11,12"
   fs.mkdirSync(outDir, { recursive: true });
   const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
   const chromiumOptions = { gl: "angle" };

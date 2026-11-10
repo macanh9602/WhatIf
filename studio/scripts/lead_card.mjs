@@ -8,6 +8,7 @@ import { epOverride } from "./ep.mjs";
 
 if (process.env.REMOTION_TMP) { fs.mkdirSync(process.env.REMOTION_TMP, { recursive: true }); process.env.TEMP = process.env.TMP = process.env.REMOTION_TMP; }
 const [out, frames = "120"] = process.argv.slice(2);
+if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/lead_card.mjs ...  (one job at a time on the 8 GB card)");
 if (!out || !process.env.EP) { console.error("usage: EP=<ep> PROPS=... node scripts/lead_card.mjs <out.mov> [frames]"); process.exit(1); }
 const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const inputProps = JSON.parse(process.env.PROPS || "{}");

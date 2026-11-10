@@ -9,6 +9,7 @@ import { epOverride, epPaths } from "./ep.mjs";
 import { renderStill, selectComposition } from "@remotion/renderer";
 import path from "node:path";
 const [prefix, frames, scale = "0.5"] = process.argv.slice(2);
+if (!process.env.GPU_LOCK) throw new Error("GPU job: run it as  sh scripts/gpu.sh node scripts/stills.mjs ...  (one job at a time on the 8 GB card)");
 const browserExecutable = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const chromiumOptions = { gl: "angle" };
 const serveUrl = await bundle({ entryPoint: path.resolve(process.env.BRIDGE_ENTRY || "src/index.ts"), publicDir: path.resolve("public"), webpackOverride: epOverride() });
