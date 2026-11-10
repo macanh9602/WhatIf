@@ -4,6 +4,8 @@ Skills: `D:/DucanBag/_Trick/_Short_Skill/skills` (video-pipeline = workflow, thr
 The studio started from `cartoon-3d-short/templates/studio` (2026-11-05). Nothing here comes from another channel except the
 narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANNEL.md`. Reference study (private): `_ref/STUDY.md`.
 
+**Muse (muse.ai) is an experiment: its lab notebook is `bible/MUSE.md`. Log every round there; not part of the build flow yet.**
+
 **Building an episode? Read `bible/EPISODE_KIT.md` first:** it has the flow, the shot list step (approved by the user before any render), the APIs and known traps.
 
 ## Layout
@@ -24,6 +26,8 @@ narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANN
 
 - Value gate: `python scripts/value_qa.py out/<ep>/contact_<ep>.jpg --grid 7x4` (p5..p95 luma >= .40; ep12's washed-out shots scored .21-.36). Manual step, not wired into render.mjs.
 - Gates while iterating: pass only the changed shot ids to staging_qa / temporal_qa (a full run is ~15 min). Previews need no full run; one full run before the final.
+- Independent critic (user 2026-11-10): before any upload and after every Muse/engine round, run a fresh Opus agent with
+  `.claude/agents/video-critic.md` (muted viewing, AI-artifact hunt, no team notes). The director does not self-approve.
 - Upload copy: `ffmpeg -i <preview_master.mp4> -filter_complex "[0:v]setpts=PTS/1.1,fps=30[v];[0:a]atempo=1.1[a]" -map "[v]" -map "[a]" -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart out/Short/<ep>_x1.1_upload.mp4`
 - Publish: add a card to ops/cards.json, `node ops/upload.mjs dry <ep>`, then `node ops/upload.mjs --go <ep>`. CC-BY props used on screen go in the description (public/props/outdoor/ATTRIBUTION_FOR_DESCRIPTION.txt).
 

@@ -9,7 +9,7 @@
 // Place changes crossfade by stacking a second canvas for the fade frames; the hook ends on a 4-frame white flash.
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { AbsoluteFill, cancelRender, continueRender, delayRender, getInputProps, useCurrentFrame } from "remotion";
+import { AbsoluteFill, OffthreadVideo, cancelRender, continueRender, delayRender, getInputProps, staticFile, useCurrentFrame } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
@@ -169,12 +169,15 @@ const useProps = () => {
 export const Short: React.FC = () => {
   const f = useCurrentFrame();
   if (!useProps()) return null;
+  const { bg, capTop = [] } = getInputProps() as { bg?: string; capTop?: [number, number][] }; // capTop: [from s, to s) caption-on-top windows for a bg cut
   const flash = f >= FLASH_AT && f < FLASH_AT + 4 ? [1, 0.75, 0.45, 0.2][f - FLASH_AT] : 0;
   return (
     <AbsoluteFill style={{ background: "#cfe3f2" }}>
-      {layersAt(f).map((l, i) => <ShotView key={i ? "over" : "base"} id={l.id} alpha={l.alpha} />)}
+      {/* inputProps.bg = a picture-only cut in public/ (Muse lab test): replaces the 3D world, keeps flash + captions */}
+      {bg ? <OffthreadVideo src={staticFile(bg)} muted style={{ width: "100%", height: "100%" }} />
+        : layersAt(f).map((l, i) => <ShotView key={i ? "over" : "base"} id={l.id} alpha={l.alpha} />)}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      {(getInputProps() as { captions?: boolean }).captions !== false && <Captions t={f / FPS} top={shotAt(f).cap === "top"} />}
+      {(getInputProps() as { captions?: boolean }).captions !== false && <Captions t={f / FPS} top={shotAt(f).cap === "top" || capTop.some(([a, b]) => f / FPS >= a && f / FPS < b)} />}
     </AbsoluteFill>
   );
 };
