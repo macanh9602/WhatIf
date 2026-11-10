@@ -1,3 +1,5 @@
+ep14 set parts (barn_door, barn_shell, barrier_arm, barrier_post, border_hut, bridge_deck, bridge_pier, chalet_front, chalet_shell, chalet_side, cliff, gun, portal_rubble, rock_half, tank_hull, tank_turret, tunnel_portal): no source was recorded and the user does not remember one (2026-11-10). The files are untextured Blender exports of 1-117 kB with no copyright field, like the round-1 files, so they are most likely our own; not proven.
+
 Round-1 files in props/outdoor/ were modelled for this channel in Blender (bpy, 2026-11-07). No third-party assets, no textures.
 
 Round 2 (2026-11-07), from Poly Pizza, recoloured/merged/rescaled in Blender (changes made):

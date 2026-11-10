@@ -2,7 +2,7 @@
 
 Skills: `D:/_Module/skills` (video-pipeline = workflow, threejs-video = engine, cartoon-3d-short = look, twist-short-script = twist-story script format, trial from ep13).
 The studio started from `cartoon-3d-short/templates/studio` (2026-11-05). Nothing here comes from another channel except the
-narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANNEL.md`. Reference study (private): `_ref/STUDY.md`.
+narrator voice clone, which the user chose to reuse. Channel rules: `bible/CHANNEL.md`. Reference study (private): `_ref/STUDY.md` (missing since the folder move, 2026-11-10; the format it described is summarised in CHANNEL.md "Series").
 
 **Muse (muse.ai) is an experiment: its lab notebook is `bible/MUSE.md`. Log every round there; not part of the build flow yet.**
 **Running a Muse round? Follow `bible/MUSE_PIPELINE.md` (layers: Muse draws the world, we draw the lead and hero objects;
@@ -23,7 +23,7 @@ Every render command goes through `sh scripts/gpu.sh` (one job at a time); the r
 - Cast sheet: `COMP=CastSheet sh scripts/gpu.sh node scripts/stills.mjs out/cast_ 0 0.5`
 - Stills: `COMP=Short EP=<ep> sh scripts/gpu.sh node scripts/stills.mjs out/<ep>/x_ <frames> 0.5 > log 2>&1` (never pipe into `head`)
 - Mix: `EP=<ep> python audio/build.py` · Preview: `COMP=Short PREVIEW=1 CONCURRENCY=2 EP=<ep> sh scripts/gpu.sh node scripts/render.mjs <ep> all`
-- The 2K path (render.mjs without PREVIEW) is unused since ep12: its gates need LOOK_SCORES.md, SELF_CHECK.md and a ticked muted review in SCRIPT.md, which no episode has. Episodes ship from the preview master through the ship gate below.
+- Episodes ship from the preview master through the ship gate below. A 2K render (render.mjs without PREVIEW) still runs expr_qa and temporal_qa first; its LOOK_SCORES / SELF_CHECK gates were removed 2026-11-10.
 - Boil ("nhiễu") gate: `EP=<ep> sh scripts/gpu.sh node scripts/temporal_qa.mjs [shotIds]` (2K render.mjs runs it and refuses on > 1.5 k/Mpx;
   `_boil.png` maps in out/temporal/<ep>). Ink = 16 jittered masks, shadow fit frozen per shot (synced from the skill template 2026-11-06).
 

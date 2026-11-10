@@ -74,6 +74,7 @@ ep15 shipped a roller floating off the hand, cuffs floating on the chest, a jump
 - Chatterbox ends the take right on the last word (ep15: 0.03 s), and mix + TOTAL follow the voice, so the video stops dead. Pad the voice with 1.5 s of silence (`ffmpeg -af apad=pad_dur=1.5`) before the mix, and let the last shot hold to it.
 
 ## Traps from ep13
+- `studio/out/` is not in git and was lost once (folder move, 2026-11-10): the upload copies of ep01-21 that ops/cards.json names are gone, so `ops/replace.mjs <ep>` needs a fresh preview + ship gate first.
 - One render at a time even for stills: a job started beside a render died with ERR_ABORTED (port 3000).
 - A full render with many soft fx passes the 600 s tool limit: run it in the background.
 - In a heredoc through Bash an apostrophe can break the outer quoting: write patch scripts with the Write tool.
@@ -83,7 +84,7 @@ ep15 shipped a roller floating off the hand, cuffs floating on the chest, a jump
 1. One contact sheet per round (one frame per shot, changed shots only), grayscale first. `python scripts/value_qa.py <sheet> --grid CxR` (CPU, seconds).
 2. staging_qa, temporal_qa with the changed ids only. expr_qa.
 3. Preview needs no full run: `COMP=Short PREVIEW=1 CONCURRENCY=2 EP=<ep> sh scripts/gpu.sh node scripts/render.mjs <ep> all`.
-4. Full gates once, before a final. SELF_CHECK.md: one line per shot.
+4. Full gates once, before a final.
 5. Upload copy only through `node scripts/ship_gate.mjs <ep> <preview_master.mp4>` (flicker_qa + expr_qa block it; no GPU).
 Report under 200 words. No upload, no commit.
 

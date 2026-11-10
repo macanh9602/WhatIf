@@ -23,30 +23,9 @@ const OUT_ROOT = process.env.OUT_ROOT || path.resolve("out/final"); // a synced 
 const PREVIEW = !!process.env.PREVIEW;
 const HALF = process.env.PREVIEW === "half";
 const SCALE = HALF ? 0.5 : PREVIEW ? 1 : 1.3333333333333333; // 2K; "1.3333" breaks the stitching step (AGENTS.md log)
-// look gate (fb0016): a 2K render needs bible/episodes/<name>-*/LOOK_SCORES.md with every "n/10" score >= 7
+// 2K gates. The look / self-check / muted-review / said-not-shown gates were removed 2026-11-10 (user): no episode since ep12
+// had their files, and episodes ship from the preview master through scripts/ship_gate.mjs.
 if (!PREVIEW) {
-  const ep = fs.readdirSync("../bible/episodes").find((d) => d === name || d.startsWith(name + "-"));
-  const scores = ep && fs.existsSync(`../bible/episodes/${ep}/LOOK_SCORES.md`) ? fs.readFileSync(`../bible/episodes/${ep}/LOOK_SCORES.md`, "utf8") : "";
-  const low = [...scores.matchAll(/([\d.]+)\s*\/\s*10/g)].map((m) => +m[1]).filter((v) => v < 7);
-  if (!scores || low.length) throw new Error(`look gate: ${scores ? `scores below 7: ${low.join(", ")}` : `no LOOK_SCORES.md for ${name}`} (PREVIEW=1 skips)`);
-  // self-check gate (fb0099): SELF_CHECK.md (scripts/selfcheck.mjs sheets + review_prompts/F.md) with a "<shot> CLEAN" line for every
-  // shot, written AFTER the last change to the episode code: a verdict on older frames proves nothing
-  const sc = `../bible/episodes/${ep}/SELF_CHECK.md`, src = "src/videos/engine", P = epPaths(name);
-  // the shared engine (files directly in engine/) + this episode's folder; other episodes' edits do not stale this verdict
-  const code = [...fs.readdirSync(src).map((f) => `${src}/${f}`).filter((f) => fs.statSync(f).isFile()), ...fs.readdirSync(P.code).map((f) => `${P.code}/${f}`)];
-  const newest = Math.max(...code.map((f) => fs.statSync(f).mtimeMs));
-  const text = fs.existsSync(sc) ? fs.readFileSync(sc, "utf8") : "";
-  const ids = [...fs.readFileSync(P.story, "utf8").matchAll(/^\s*S\((\d+),/gm)].map((m) => +m[1]);
-  const notClean = ids.filter((i) => !new RegExp(`^\\s*-?\\s*${i}\\s+CLEAN\\b`, "m").test(text));
-  if (!text || fs.statSync(sc).mtimeMs < newest || notClean.length)
-    throw new Error(`self-check gate: ${!text ? "no SELF_CHECK.md" : fs.statSync(sc).mtimeMs < newest ? "SELF_CHECK.md is older than the code" : `shots not CLEAN: ${notClean.join(", ")}`} (PREVIEW=1 skips)`);
-  // muted-viewer + said-not-shown gate (fb0110): the script was reviewed muted, and every shot says what its words show
-  {
-    const script = fs.readFileSync(`../bible/episodes/${ep}/SCRIPT.md`, "utf8");
-    if (!/^- \[x\] .*tắt tiếng/m.test(script)) throw new Error("muted-review gate: tick the muted viewer review in SCRIPT.md (PREVIEW=1 skips)");
-    const missing = ids.filter((i) => !new RegExp(`^\\s*-?\\s*${i}\\s+CLEAN\\b.*said-not-shown OK`, "m").test(text));
-    if (missing.length) throw new Error(`said-not-shown gate: SELF_CHECK.md lines without "said-not-shown OK": ${missing.join(", ")} (PREVIEW=1 skips)`);
-  }
   // expression gate (fb0106): faces hold a baseline per shot (no per-episode exemptions: a tool never names an episode)
   if (spawnSync(process.execPath, ["scripts/expr_qa.mjs"], { stdio: "inherit", env: { ...process.env, EP: name } }).status !== 0)
     throw new Error("expression gate: scripts/expr_qa.mjs failed (PREVIEW=1 skips)");

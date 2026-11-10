@@ -73,3 +73,6 @@ Contact sheet: studio/out/props_outdoor_sheet2.png
 | cutter.glb | 8.4 x 40.5 x 16 | ~200 | plain white patrol cutter, bow +Z, deck y 4.6, bridge + mast + searchlight, no markings |
 | fast_boat.glb | 2.6 x 8.3 x 2.2 | ~60 | dark grey interceptor boat with a console, bow +Z |
 | dome_hall.glb | 34 x 22 x 22.6 | ~1000 | generic cream domed hall, portico of 8 columns +Z, no lettering |
+
+## Not described yet (ep14 set parts, wired in sets.ts; source note in CREDITS.txt)
+barn_door, barn_shell, barrier_arm, barrier_post, border_hut, bridge_deck, bridge_pier, chalet_front, chalet_shell, chalet_side, cliff, gun, portal_rubble, rock_half, tank_hull, tank_turret, tunnel_portal
